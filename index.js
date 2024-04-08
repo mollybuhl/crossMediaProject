@@ -208,21 +208,43 @@ function renderMap(){
     
                 main.appendChild(popUp);
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e =>{
-                    renderCharracterPage(selectedCharracter);
+                    
+                    main.classList.remove("mainMap");
+                    main.innerHTML = `
+                    <h2>Vilken färg är dörren? (blå)</h2>
+                    <input>Svar</input>
+                    <button class="btnUnlock">Lås upp</button>
+                    `;
+                
+                    let input = main.querySelector("input");
+
+                    main.querySelector(".btnUnlock").addEventListener("click", e =>{
+                        let answer = input.value;
+                        if(answer === "blå"){
+                            renderCharracterPage(selectedCharracter)
+                        }else{
+                            console.log("Wrong answer");
+                        }
+                    })
                 })
             }
         })    
     )
 }
 
-function renderSiteConfirmation(){
-    
-}
 
 function renderCharracterPage(charracter){
     main.classList.remove("mainMap");
     main.innerHTML = `
-    <h1>${charracter}</h1>
+    <div>
+        <div class="charracterImage"></div>
+        <div class="charracterInfo">
+            <h2>${charracter}</h2>
+            <p>Relationship to victim</p>
+            <button class="btnPlayAudio"><img src="media/playIcon.svg"></button>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.  </p>
     `;
 }
 
