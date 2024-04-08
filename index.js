@@ -112,5 +112,12 @@ function renderHomepage(){
     let main = document.querySelector("main");
     main.innerHTML = `
     <p>GAME</p>
-    `
+    <button class="logOutBtn">Log out</button>
+    `;
+
+    main.querySelector(".logOutBtn").addEventListener("click", async e => {
+        window.localStorage.setItem("loggedIn", "false");
+        window.localStorage.removeItem("userId");
+        renderLogin();
+    })
 }
