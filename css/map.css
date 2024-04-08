@@ -1,0 +1,52 @@
+
+.mainMap{
+    background-image: url(../media/preliminaryBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.pin{
+    background-image: url(../media/pinIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 4vh;
+    width: 4vh;
+
+    position: absolute;
+}
+
+.hock{
+    top: 50vh;
+    right: 50vw;
+}
+
+.cruella{
+    top: 30vh;
+    right: 10vw;
+}
+
+.princeJohn{
+    top: 30vh;
+    right: 70vw;
+}
+
+.ursulla{
+    top: 70vh;
+    right: 50vw;
+}
+
+.popUp{
+    background-color: #ffffffbf;
+    border-radius:  30px 0 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.popUp > div{
+    display: flex;
+}

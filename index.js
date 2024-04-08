@@ -1,4 +1,6 @@
 
+let main = document.querySelector("main");
+
 if(localStorage.getItem("loggedIn") === "true"){
     renderHomepage();
 }else{
@@ -9,8 +11,8 @@ if(localStorage.getItem("loggedIn") === "true"){
 
 function renderRegister(){
 
-    let main = document.querySelector("main");
     main.innerHTML = `
+    <h1>Register</h1>
     <div id="registerField">
         <label for="registerUsername">Username</label>
         <input type="text" id="registerUsername" placeholder="Username">
@@ -59,8 +61,8 @@ function renderRegister(){
 
 function renderLogin(){
 
-    let main = document.querySelector("main");
     main.innerHTML = `
+    <h1>Login</h1>
     <div id="loginField">
         <label for="loginUsername">Username</label>
         <input type="text" id="loginUsername" placeholder="Username">
@@ -109,15 +111,118 @@ function renderLogin(){
 }
 
 function renderHomepage(){
-    let main = document.querySelector("main");
     main.innerHTML = `
-    <p>GAME</p>
+    <h1>How to play</h1>
+    <ul>
+        <li>Lyssna på storyn</li>
+        <li>Prata med misstänkta och vitnen</li>
+        <li>Hitta mördaren</li>
+    </ul>
+    <button id="btnStartPlaying">Börja spela</button>
     <button class="logOutBtn">Log out</button>
     `;
 
-    main.querySelector(".logOutBtn").addEventListener("click", async e => {
+    main.querySelector("#btnStartPlaying").addEventListener("click", renderIntroductionpage)
+
+    main.querySelector(".logOutBtn").addEventListener("click", e => {
         window.localStorage.setItem("loggedIn", "false");
         window.localStorage.removeItem("userId");
         renderLogin();
     })
 }
+
+function renderIntroductionpage(){
+    main.innerHTML = `
+    <h1>Det har skett ett mord</h1>
+    <button class="btnPlayAudio"><img src="media/playIcon.svg"></button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.  
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. </p>
+    <button class="btnNextPage">Nästa</button>
+    `;
+
+    main.querySelector(".btnNextPage").addEventListener("click", renderMap);
+}
+
+function renderMap(){
+    main.classList.add("mainMap");
+    main.innerHTML=`
+    <div class="pin hoock"></div>
+    <div class="pin cruella"></div>
+    <div class="pin princeJohn"></div>
+    <div class="pin ursulla"></div>
+    `;
+
+    let charracters = ["Hoock", "Cruella", "Prince John", "Ursulla"];
+
+    main.querySelectorAll(".pin").forEach(pin =>
+
+        pin.addEventListener("click", e => {
+
+            if(pin.classList.contains("selected")){
+                pin.classList.remove("selected");
+                document.querySelector(".popUp").remove();
+            }else{
+                if(document.querySelector(".popUp")){
+                    document.querySelector(".popUp").remove();
+                }
+
+                main.querySelectorAll(".pin.selected").forEach(selectedPin => {
+                    selectedPin.classList.remove("selected");
+                });
+
+                pin.classList.add("selected");
+                let classList = pin.classList;
+                let selectedCharracter;
+               
+    
+                for (let i = 0; i < classList.length; i++) {
+                    switch (classList[i]) {
+                        case "hoock":
+                            selectedCharracter = "Hoock";
+                            break;
+                        case "cruella":
+                            selectedCharracter = "Cruella";
+                            break;
+                        case "princeJohn":
+                            selectedCharracter = "Prince John";
+                            break;
+                        case "ursulla":
+                            selectedCharracter = "Ursulla";
+                            break;
+                    }
+                }
+                
+                let popUp = document.createElement("div");
+                popUp.classList.add("popUp");
+    
+                popUp.innerHTML = `
+                    <div>
+                        <div class="charracterImage"></div>
+                        <div class="charracterInfo">
+                            <h3>${selectedCharracter}</h3>
+                            <p>1000 1000</p>
+                        </div>
+                    </div>
+                    <button class="btnTalkToCharracter">Talk to ${selectedCharracter}</button>
+                `;
+    
+                main.appendChild(popUp);
+                document.querySelector(".btnTalkToCharracter").addEventListener("click", e =>{
+                    renderCharracterPage(selectedCharracter);
+                })
+            }
+        })    
+    )
+}
+
+function renderSiteConfirmation(){
+    
+}
+
+function renderCharracterPage(charracter){
+    main.classList.remove("mainMap");
+    main.innerHTML = `
+    <h1>${charracter}</h1>
+    `;
+}
+
