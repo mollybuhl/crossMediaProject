@@ -8,7 +8,7 @@ function renderIntroductionpage(){
     `;
 
     let audio = new Audio("../media/testMusic.mp3");
-    
+
     main.querySelector(".btnNextPage").addEventListener("click", renderMap);
     main.querySelector(".btnPlayAudio").addEventListener("click", e => {
 
@@ -120,7 +120,7 @@ function renderCharracterPage(charracter){
         <div class="charracterInfo">
             <h2>${charracter}</h2>
             <p>Relationship to victim</p>
-            <button class="btnPlayAudio"><img src="media/playIcon.svg"></button>
+            <button class="btnPlayAudio"></button>
         </div>
     </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.  </p>
