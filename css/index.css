@@ -19,11 +19,14 @@ button{
 .btnPlayAudio{
     width: 13vw;
     height: 6vh;
+    background-image: url(../media/playIcon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.btnPlayAudio > img{
-    height: 4vh;
-    width: 4vh;
+.btnPauseAudio{
+    background-image: url(../media/pauseIcon.svg);
 }
 
 main{
