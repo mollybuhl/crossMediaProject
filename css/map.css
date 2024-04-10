@@ -50,3 +50,33 @@
 .popUp > div{
     display: flex;
 }
+
+.navbar{
+    position: fixed;
+    background-color: white;
+    width: 90%;
+    bottom: 2vh;
+    height: 8vh;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar.hidden{
+    display: none;
+}
+
+.logOutBtn{
+    width: 7vh;
+    height: 7vh;
+    border: none;
+    background-color: white;
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    z-index: 2;
+}

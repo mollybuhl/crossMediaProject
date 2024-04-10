@@ -2,7 +2,7 @@
 let main = document.querySelector("main");
 
 if(localStorage.getItem("loggedIn") === "true"){
-    renderHomepage();
+    renderMap();
 }else{
     renderRegister();
 }
@@ -16,16 +16,9 @@ function renderHomepage(){
         <li>Hitta mördaren</li>
     </ul>
     <button id="btnStartPlaying">Börja spela</button>
-    <button class="logOutBtn">Log out</button>
     `;
 
     main.querySelector("#btnStartPlaying").addEventListener("click", renderIntroductionpage)
-
-    main.querySelector(".logOutBtn").addEventListener("click", e => {
-        window.localStorage.setItem("loggedIn", "false");
-        window.localStorage.removeItem("userId");
-        renderLogin();
-    })
 }
 
 
