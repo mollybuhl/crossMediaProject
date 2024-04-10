@@ -10,14 +10,19 @@
 
         $username = $requestData["username"];
         $password = $requestData["password"];
+        $confirmPassword = $requestData["confirmPassword"];
 
         // Check if the given username or password is shorter than 3 characters. If so, send a message with status 400(Bad request).
         if(strlen($username) < 3 or strlen($password) < 3){
-            $message = ["message" => "Both the username and password must be 3 characters or longer. Please try again."];
+            $message = ["message" => "Användarnamn och lösenord måste minst vara tre karraktärer."];
             sendJSON($message, 400); 
         }
         if(strlen($username) > 10){
-            $message = ["message" => "Sorry, the username can only have 10 characters"];
+            $message = ["message" => "Användarnamet kan endast ha 10 karraktärer"];
+            sendJSON($message, 400);
+        }
+        if($password != $confirmPassword){
+            $message = ["message" => "Fel bekräftat lösenord"];
             sendJSON($message, 400);
         }
 
@@ -42,6 +47,7 @@
             "id" => $highestID + 1,
             "username" => $username,
             "password" => $password,
+            "time" => 0
         ];
         
         $users[] = $newUser;

@@ -4,21 +4,21 @@ function renderRegister(){
     main.innerHTML = `
     <h1>Register</h1>
     <div id="registerField">
-        <label for="registerUsername">Username</label>
-        <input type="text" id="registerUsername" placeholder="Username">
-        <label for="registerPassword">Password</label>
-        <input type="password" id="registerPassword" placeholder="Password">
+        <input type="text" id="registerUsername" placeholder="Användarnamn">
+        <input type="password" id="registerPassword" placeholder="Lösenord">
+        <input type="password" id="confirmPassword" placeholder="Bekräfta lösenord">
     </div>
     <p class="userInfo"></p>
-    <button id="regButton">Register</button>
-    <button id="loginPageBtn">Already playing</button>
+    <button id="regButton">Registrera</button>
+    <p class="btnLoginPage">Har du redan ett konto? <span> Logga in</span></p>
     `
 
-    document.querySelector("#loginPageBtn").addEventListener("click", renderLogin)
+    document.querySelector(".btnLoginPage").addEventListener("click", renderLogin)
     document.querySelector("#regButton").addEventListener("click", async e => {
 
         const username = document.querySelector("#registerUsername").value;
         const password = document.querySelector("#registerPassword").value;
+        const confirmPassword = document.querySelector("#confirmPassword").value;
 
         let requestOptions = {
             method: "POST",
@@ -26,6 +26,7 @@ function renderRegister(){
             body: JSON.stringify({
                 username: username,
                 password: password,
+                confirmPassword: confirmPassword,
                 action: "register"
             })
         };
@@ -54,16 +55,14 @@ function renderLogin(){
     main.innerHTML = `
     <h1>Login</h1>
     <div id="loginField">
-        <label for="loginUsername">Username</label>
         <input type="text" id="loginUsername" placeholder="Username">
-        <label for="loginPassword">Password</label>
         <input type="password" id="loginPassword" placeholder="Password">
     </div>
     <p class="userInfo"></p>
     <button>Login</button>
-    <button id="regPageBtn">Not registered?</button>
+    <p class="btnRegPage">Har du inget konto? <span>Registrera dig</span></button>
     `
-    document.querySelector("#regPageBtn").addEventListener("click", renderRegister)
+    document.querySelector(".btnRegPage").addEventListener("click", renderRegister)
     document.querySelector("button").addEventListener("click", async e => {
 
         const username = document.querySelector("#loginUsername").value;
