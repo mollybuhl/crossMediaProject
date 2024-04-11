@@ -3,22 +3,34 @@
     --black: #000000;
 
     --padding: 3vh;
+    --borderRadius: 30px;
 
     --btnHeight: 4.7vh;
+
+    --paragraphFontSize: 16px;
+    --buttonFontSize: 20px;
+
+}
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 body{
     margin: 0;
     box-sizing: border-box;
+    font-family: openSans;
 }
 
 button{
-    border-radius: 30px;
-    width: 100%;
+    border-radius: var(--borderRadius);
+    width: 90%;
     height: var(--btnHeight);
     border: 1px solid var(--black);
     background-color: transparent;
     cursor: pointer;
+    font-size: var(--buttonFontSize);
 }
 
 p.btnLoginPage, p.btnRegPage{
