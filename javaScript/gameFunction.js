@@ -9,7 +9,13 @@ function renderIntroductionpage(){
 
     let audio = new Audio("../media/testMusic.mp3");
 
-    main.querySelector(".btnNextPage").addEventListener("click", renderMap);
+    main.querySelector(".btnNextPage").addEventListener("click", e =>{
+        // Set start timer
+        let startTime = new Date().toString();
+        window.localStorage.setItem("startTime", startTime);  
+
+        renderMap();
+    });
     main.querySelector(".btnPlayAudio").addEventListener("click", e => {
 
         if(main.querySelector(".btnPlayAudio").classList.contains("btnPauseAudio")){
@@ -22,32 +28,38 @@ function renderIntroductionpage(){
     })
 }
 
-function startTimer(){
-    console.log("Starting timer");
+
+function updateTimer() {
     const currentTime = new Date();
-    const hours = currentTime.getHours();
-    const minutes = currentTime.getMinutes();
-    const seconds = currentTime.getSeconds()
+    let startTime = new Date(localStorage.getItem("startTime"));
+    
+    const elapsedTime = currentTime - startTime;
+    
+    const minutes = Math.floor(elapsedTime / (1000 * 60));
+    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+    
+    const timerElement = document.querySelector(".timer");
+    timerElement.textContent = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
 }
 
 function renderMap(){
 
-    //Start game timer
-    startTimer();
-
     //Map structure
     main.classList.add("mainMap");
     main.innerHTML=`
-    <button class="logOutBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-        <mask id="mask0_108_37" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="35" height="35">
-        <rect width="35" height="35" fill="#D9D9D9"/>
-        </mask>
-        <g mask="url(#mask0_108_37)">
-        <path d="M17.6667 17.5C16.0625 17.5 14.6892 16.9288 13.5469 15.7864C12.4045 14.6441 11.8333 13.2708 11.8333 11.6666C11.8333 10.0625 12.4045 8.68922 13.5469 7.54685C14.6892 6.40449 16.0625 5.83331 17.6667 5.83331C19.2708 5.83331 20.6441 6.40449 21.7865 7.54685C22.9288 8.68922 23.5 10.0625 23.5 11.6666C23.5 13.2708 22.9288 14.6441 21.7865 15.7864C20.6441 16.9288 19.2708 17.5 17.6667 17.5ZM6 29.1666V25.0833C6 24.2569 6.21267 23.4974 6.63802 22.8047C7.06337 22.112 7.62847 21.5833 8.33333 21.2187C9.84028 20.4653 11.3715 19.9002 12.9271 19.5234C14.4826 19.1467 16.0625 18.9583 17.6667 18.9583C19.2708 18.9583 20.8507 19.1467 22.4062 19.5234C23.9618 19.9002 25.4931 20.4653 27 21.2187C27.7049 21.5833 28.27 22.112 28.6953 22.8047C29.1207 23.4974 29.3333 24.2569 29.3333 25.0833V29.1666H6ZM8.91667 26.25H26.4167V25.0833C26.4167 24.816 26.3498 24.5729 26.2161 24.3541C26.0825 24.1354 25.9062 23.9653 25.6875 23.8437C24.375 23.1875 23.0503 22.6953 21.7135 22.3672C20.3767 22.039 19.0278 21.875 17.6667 21.875C16.3056 21.875 14.9566 22.039 13.6198 22.3672C12.283 22.6953 10.9583 23.1875 9.64583 23.8437C9.42708 23.9653 9.25087 24.1354 9.11719 24.3541C8.98351 24.5729 8.91667 24.816 8.91667 25.0833V26.25ZM17.6667 14.5833C18.4688 14.5833 19.1554 14.2977 19.7266 13.7265C20.2977 13.1554 20.5833 12.4687 20.5833 11.6666C20.5833 10.8646 20.2977 10.1779 19.7266 9.60675C19.1554 9.03557 18.4688 8.74998 17.6667 8.74998C16.8646 8.74998 16.178 9.03557 15.6068 9.60675C15.0356 10.1779 14.75 10.8646 14.75 11.6666C14.75 12.4687 15.0356 13.1554 15.6068 13.7265C16.178 14.2977 16.8646 14.5833 17.6667 14.5833Z" fill="#1C1B1F" fill-opacity="0.47"/>
-        </g>
-        </svg>
-    </button>
+    <div class="topbar">
+        <button class="logOutBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+            <mask id="mask0_108_37" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="35" height="35">
+            <rect width="35" height="35" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_108_37)">
+            <path d="M17.6667 17.5C16.0625 17.5 14.6892 16.9288 13.5469 15.7864C12.4045 14.6441 11.8333 13.2708 11.8333 11.6666C11.8333 10.0625 12.4045 8.68922 13.5469 7.54685C14.6892 6.40449 16.0625 5.83331 17.6667 5.83331C19.2708 5.83331 20.6441 6.40449 21.7865 7.54685C22.9288 8.68922 23.5 10.0625 23.5 11.6666C23.5 13.2708 22.9288 14.6441 21.7865 15.7864C20.6441 16.9288 19.2708 17.5 17.6667 17.5ZM6 29.1666V25.0833C6 24.2569 6.21267 23.4974 6.63802 22.8047C7.06337 22.112 7.62847 21.5833 8.33333 21.2187C9.84028 20.4653 11.3715 19.9002 12.9271 19.5234C14.4826 19.1467 16.0625 18.9583 17.6667 18.9583C19.2708 18.9583 20.8507 19.1467 22.4062 19.5234C23.9618 19.9002 25.4931 20.4653 27 21.2187C27.7049 21.5833 28.27 22.112 28.6953 22.8047C29.1207 23.4974 29.3333 24.2569 29.3333 25.0833V29.1666H6ZM8.91667 26.25H26.4167V25.0833C26.4167 24.816 26.3498 24.5729 26.2161 24.3541C26.0825 24.1354 25.9062 23.9653 25.6875 23.8437C24.375 23.1875 23.0503 22.6953 21.7135 22.3672C20.3767 22.039 19.0278 21.875 17.6667 21.875C16.3056 21.875 14.9566 22.039 13.6198 22.3672C12.283 22.6953 10.9583 23.1875 9.64583 23.8437C9.42708 23.9653 9.25087 24.1354 9.11719 24.3541C8.98351 24.5729 8.91667 24.816 8.91667 25.0833V26.25ZM17.6667 14.5833C18.4688 14.5833 19.1554 14.2977 19.7266 13.7265C20.2977 13.1554 20.5833 12.4687 20.5833 11.6666C20.5833 10.8646 20.2977 10.1779 19.7266 9.60675C19.1554 9.03557 18.4688 8.74998 17.6667 8.74998C16.8646 8.74998 16.178 9.03557 15.6068 9.60675C15.0356 10.1779 14.75 10.8646 14.75 11.6666C14.75 12.4687 15.0356 13.1554 15.6068 13.7265C16.178 14.2977 16.8646 14.5833 17.6667 14.5833Z" fill="#1C1B1F" fill-opacity="0.47"/>
+            </g>
+            </svg>
+        </button>
+        <p class="timer"></p>
+    </div>
     
    
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hoock">
@@ -178,15 +190,25 @@ function renderMap(){
     )
 
     //Navbar
-    main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
-    main.querySelector(".charracterChart").addEventListener("click", renderCharracterboard);
+    main.querySelector(".leaderboard").addEventListener("click", e => {
+        clearInterval(timerInterval);
+        renderLeaderboard();
+    });
+    main.querySelector(".charracterChart").addEventListener("click", e=> {
+        clearInterval(timerInterval);
+        renderCharracterboard();
+    });
 
     // Logout
     main.querySelector(".logOutBtn").addEventListener("click", e => {
+        clearInterval(timerInterval);
         window.localStorage.setItem("loggedIn", "false");
         window.localStorage.removeItem("userId");
         renderLogin();
     })
+
+    //Update timer
+    let timerInterval = setInterval(updateTimer, 1000);
 }
 
 //Function to render controll questions before player get the information from a charracter

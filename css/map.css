@@ -9,6 +9,14 @@
     padding: 0;
 }
 
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    color: var(--black);
+}
+
 .pin{
     position: absolute;
 }
@@ -73,10 +81,6 @@
     height: 7vh;
     border: none;
     background-color: white;
-    position: fixed;
-    top: 2vh;
-    left: 2vh;
-    z-index: 2;
 }
 
 

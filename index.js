@@ -20,7 +20,7 @@ function renderStartpage(){
     main.querySelector(".btnResumeGame").addEventListener("click", renderLogin)
 }
 
-function renderHomepage(){
+function renderInstructionpage(){
     main.innerHTML = `
     <h1>Hur man spelar</h1>
     <ul>

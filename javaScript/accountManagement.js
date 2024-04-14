@@ -39,7 +39,10 @@ function renderRegister(){
             if(!response.ok) {
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
-                renderLogin();
+                window.localStorage.setItem("userId", `${resource.id}`);
+                window.localStorage.setItem("loggedIn", "true");   
+ 
+                renderInstructionpage();
             }
     
         }catch(error){
@@ -88,8 +91,8 @@ function renderLogin(){
             } else {
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("loggedIn", "true");   
-
-                renderHomepage();
+ 
+                renderMap();
             }
     
         }catch(error){
