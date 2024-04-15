@@ -11,6 +11,7 @@
         $username = $requestData["username"];
         $password = $requestData["password"];
         $confirmPassword = $requestData["confirmPassword"];
+        $profilePic = $requestData["profilePic"];
 
         // Check if the given username or password is shorter than 3 characters. If so, send a message with status 400(Bad request).
         if(strlen($username) < 3 or strlen($password) < 3){
@@ -23,6 +24,10 @@
         }
         if($password != $confirmPassword){
             $message = ["message" => "Fel bekräftat lösenord"];
+            sendJSON($message, 400);
+        }
+        if($profilePic == "none"){
+            $message = ["message" => "Välj en profilbild"];
             sendJSON($message, 400);
         }
 
@@ -47,6 +52,7 @@
             "id" => $highestID + 1,
             "username" => $username,
             "password" => $password,
+            "profilePic" => $profilePic,
             "time" => 0
         ];
         
@@ -54,7 +60,7 @@
 
         // Encode $users and save it in $filename, then send the username of the created user.
         putInUsersJSON($users);
-        sendJSON($newUser["username"], 200);
+        sendJSON($newUser, 200);
 
     }
     

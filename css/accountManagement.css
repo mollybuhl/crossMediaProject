@@ -1,0 +1,70 @@
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.input-container{
+    position: relative;
+    display: inline-block;
+}
+
+.input-container input{
+    padding-left: 15vw;
+}
+
+.input-container svg {
+    position: absolute;
+    top: 50%;
+    left: 5vw; 
+    transform: translateY(-50%);
+    fill: #BCBCBC; /* Apply desired fill color to the SVG */
+}
+
+p.btnLoginPage, p.btnRegPage{
+    text-align: center;
+    cursor: pointer;
+}
+
+p.btnLoginPage > span, p.btnRegPage > span{
+    font-weight: bold;
+}
+
+.selectProfilePic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectProfilePic > div{
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.selectProfilePic > div.selected{
+    border: 2px solid blue;
+}
+
+.mulan{
+    background-image: url(../media/mulan.jpeg);
+}
+.ariel{
+    background-image: url(../media/ariel.jpeg);
+}
+.belle{
+    background-image: url(../media/belle.jpeg);
+}
+.pluto{
+    background-image: url(../media/pluto.jpg);
+}
+.edna{
+    background-image: url(../media/edna.jpg);
+}
+.rapunzel{
+    background-image: url(../media/rapunzel.jpeg);
+}
+

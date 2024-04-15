@@ -30,5 +30,11 @@
             break;
         case "login":
             login($requestData, $users);
+        case "getUserInfo":
+            $userID = $requestData["userID"];
+            $userPassword = $requestData["userPassword"];
+            checkCredentials($userID, $userPassword, $users);
+
+            getUserInfo($userID, $users);
     }
 ?>

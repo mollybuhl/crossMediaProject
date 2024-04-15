@@ -39,5 +39,19 @@
         file_put_contents($filename, json_encode($newData, JSON_PRETTY_PRINT));
     }
 
+    function getUserInfo($userID, $users){
+
+        $loggedInUserLimitedAcces;
+
+        foreach($users as $user){
+            if($user["id"] == $userID){
+                $loggedInUser = $user;
+                $loggedInUserLimitedAcces = ["id" => $user["id"], "username" => $user["username"], "time" => $user["time"],"profilePic" => $user["profilePic"]];
+            }
+        }
+
+        sendJSON($loggedInUserLimitedAcces);
+    }
+
 
 ?>

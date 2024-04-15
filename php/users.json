@@ -4,5 +4,46 @@
         "username": "moll",
         "password": "moll",
         "time": 0
+    },
+    {
+        "id": 2,
+        "username": "molly",
+        "password": "molly",
+        "time": 0
+    },
+    {
+        "id": 3,
+        "username": "sam",
+        "password": "sam",
+        "profilePic": "edna",
+        "time": 0
+    },
+    {
+        "id": 4,
+        "username": "test",
+        "password": "test",
+        "profilePic": "ariel",
+        "time": 0
+    },
+    {
+        "id": 5,
+        "username": "test1",
+        "password": "test1",
+        "profilePic": "rapunzel",
+        "time": 0
+    },
+    {
+        "id": 6,
+        "username": "lala",
+        "password": "lala",
+        "profilePic": "mulan",
+        "time": 0
+    },
+    {
+        "id": 7,
+        "username": "kalle",
+        "password": "kalle",
+        "profilePic": "rapunzel",
+        "time": 0
     }
 ]
