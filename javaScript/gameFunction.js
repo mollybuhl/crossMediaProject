@@ -63,6 +63,7 @@ async function renderMap(){
     let currentTimer;
 
     try{
+        console.log(userID, userPassword);
         let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();

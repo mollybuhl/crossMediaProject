@@ -10,8 +10,9 @@
             $arrayPassword = $users[$i]["password"];
         
             if($loginUsername == $arrayUsername && $loginPassword == $arrayPassword) {
-                $message = ["id" => $user["id"], "username" => $user["username"]];
-                sendJSON($message);      
+                $userID = $user["id"];
+
+                sendJSON($user);
             } 
         }
         

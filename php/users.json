@@ -45,5 +45,26 @@
         "password": "kalle",
         "profilePic": "rapunzel",
         "time": 0
+    },
+    {
+        "id": 8,
+        "username": "testtest",
+        "password": "testtest",
+        "profilePic": "edna",
+        "time": 0
+    },
+    {
+        "id": 9,
+        "username": "hahah",
+        "password": "hahah",
+        "profilePic": "belle",
+        "time": 0
+    },
+    {
+        "id": 10,
+        "username": "hej",
+        "password": "hej",
+        "profilePic": "mulan",
+        "time": 0
     }
 ]

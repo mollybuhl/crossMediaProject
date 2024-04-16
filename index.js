@@ -9,9 +9,7 @@ if(localStorage.getItem("loggedIn") === "true"){
 
 function renderStartpage(){
     main.innerHTML = `
-    <h1>GAME NAME</h1>
-    <h3>Ett Disney mordmysterium</h3>
-    <p>Välkommen till en Disney-värld där magin förenas med mörkret på festivalområdet. Mitt i festligheterna har Walt Disney mördats. Utforska platserna och avslöja sanningen bland bekanta ansikten.</p>
+    <h1>Happily Never After</h1>
     <button class="btnNewGame">Nytt spel</button>
     <button class="btnResumeGame">Fortsätt spela</button>
     `;
