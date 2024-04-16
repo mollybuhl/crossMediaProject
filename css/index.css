@@ -1,15 +1,27 @@
 :root {
-    --white: #5D5D5D;
+    /*Colors*/
+    --white: #FFFFFF;
     --black: #000000;
+    /*
+    --blue:
+    --yellow:
+    --red:
+    */
 
     --padding: 3vh;
     --borderRadius: 30px;
 
     --btnHeight: 4.7vh;
 
+    /*Font size*/
     --paragraphFontSize: 16px;
     --buttonFontSize: 20px;
 
+}
+
+@font-face {
+    font-family: lakkiReddy;
+    src: url(../fonts/LakkiReddy-Regular.ttf);
 }
 
 @font-face {
@@ -64,4 +76,13 @@ main{
 
 h1{
     margin-top: 0;
+    font-family: lakkiReddy;
+}
+
+h2,h3{
+    font-family: lakkiReddy;
+}
+
+p{
+    font-size: var(--paragraphFontSize);
 }

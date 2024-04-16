@@ -111,3 +111,26 @@
 .confirmPopup > div{
     display: flex;
 }
+
+.charracterImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    top: -80px;
+}
+
+.charracterInfo{
+    padding-left: 45vw;
+}
+.Cruella{
+    background-image: url(../media/cruella.png);
+}
+
+.coordinates{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}

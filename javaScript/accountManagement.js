@@ -8,7 +8,8 @@ function renderRegister(){
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                 <path d="M2.625 4.375C2.26406 4.375 1.96875 4.65625 1.96875 5V5.86328L9.04395 11.3945C9.89297 12.0586 11.1111 12.0586 11.9602 11.3945L19.0312 5.86328V5C19.0312 4.65625 18.7359 4.375 18.375 4.375H2.625ZM1.96875 8.28906V15C1.96875 15.3438 2.26406 15.625 2.625 15.625H18.375C18.7359 15.625 19.0312 15.3438 19.0312 15V8.28906L13.207 12.8438C11.632 14.0742 9.36387 14.0742 7.79297 12.8438L1.96875 8.28906ZM0 5C0 3.62109 1.17715 2.5 2.625 2.5H18.375C19.8229 2.5 21 3.62109 21 5V15C21 16.3789 19.8229 17.5 18.375 17.5H2.625C1.17715 17.5 0 16.3789 0 15V5Z" fill="#BCBCBC"/>
             </svg>
-            <input type="text" id="registerUsername" placeholder="Användarnamn">
+            <input type="text" id="registerUsername">
+            <label for="registerUsername">Användarnamn</label>
         </div>
         <div class="input-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
@@ -21,7 +22,8 @@ function renderRegister(){
                     </clipPath>
                 </defs>
             </svg>
-            <input type="password" id="registerPassword" placeholder="Lösenord">
+            <input type="password" id="registerPassword">
+            <label for="registerUsername">Lösenord</label>
         </div>
         <div class="input-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
@@ -34,7 +36,8 @@ function renderRegister(){
                     </clipPath>
                 </defs>
             </svg>
-            <input type="password" id="confirmPassword" placeholder="Bekräfta lösenord">
+            <input type="password" id="confirmPassword">
+            <label for="registerUsername">Bekräfta lösenord</label>
         </div>
 
         <div class="selectProfilePic">
@@ -119,7 +122,8 @@ function renderLogin(){
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                 <path d="M2.625 4.375C2.26406 4.375 1.96875 4.65625 1.96875 5V5.86328L9.04395 11.3945C9.89297 12.0586 11.1111 12.0586 11.9602 11.3945L19.0312 5.86328V5C19.0312 4.65625 18.7359 4.375 18.375 4.375H2.625ZM1.96875 8.28906V15C1.96875 15.3438 2.26406 15.625 2.625 15.625H18.375C18.7359 15.625 19.0312 15.3438 19.0312 15V8.28906L13.207 12.8438C11.632 14.0742 9.36387 14.0742 7.79297 12.8438L1.96875 8.28906ZM0 5C0 3.62109 1.17715 2.5 2.625 2.5H18.375C19.8229 2.5 21 3.62109 21 5V15C21 16.3789 19.8229 17.5 18.375 17.5H2.625C1.17715 17.5 0 16.3789 0 15V5Z" fill="#BCBCBC"/>
             </svg>
-            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="text" id="loginUsername">
+            <label for="loginUsername">Användarnamn</label>
             </div>
         <div class="input-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
@@ -132,7 +136,8 @@ function renderLogin(){
                     </clipPath>
                 </defs>
             </svg>
-            <input type="password" id="loginPassword" placeholder="Password">
+            <input type="password" id="loginPassword">
+            <label for="loginPassword">Lösenord</label>
             </div>
     </div>
     <p class="userInfo"></p>
@@ -144,7 +149,6 @@ function renderLogin(){
 
         const username = document.querySelector("#loginUsername").value;
         const password = document.querySelector("#loginPassword").value;
-        console.log("loging password: " + password);
 
         let requestOptions = {
             method: "POST",
@@ -164,7 +168,6 @@ function renderLogin(){
             if(!response.ok) {
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
-                console.log("resource password: " + resource.password);
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
                 window.localStorage.setItem("loggedIn", "true");   

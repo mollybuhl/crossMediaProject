@@ -22,6 +22,21 @@
     fill: #BCBCBC; /* Apply desired fill color to the SVG */
 }
 
+label{
+    position: absolute;
+    left: 15vw;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+input:focus ~ label{
+    top: 1vh;
+    font-size: 12px;
+}
+
+
+
 p.btnLoginPage, p.btnRegPage{
     text-align: center;
     cursor: pointer;

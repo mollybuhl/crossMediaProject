@@ -139,7 +139,6 @@ async function renderMap(){
     `;
 
     // Add correct profile pic
-
     document.querySelector(".logOutBtn").classList.add(`${profilePic}`)
 
     //When selecting a pin, display charracter pop up
@@ -167,22 +166,33 @@ async function renderMap(){
 
                 pin.classList.add("selected");
                 let classList = pin.classList;
+
                 let selectedCharracter;
+                let coordinates;
+                let locationDescription;
                
                 //Find selected charracter
                 for (let i = 0; i < classList.length; i++) {
                     switch (classList[i]) {
                         case "hoock":
                             selectedCharracter = "Hoock";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
                             break;
                         case "cruella":
                             selectedCharracter = "Cruella";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
                             break;
                         case "musse":
                             selectedCharracter = "Musse";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
                             break;
                     }
                 }
@@ -195,13 +205,26 @@ async function renderMap(){
                         <div class="charracterImage"></div>
                         <div class="charracterInfo">
                             <h3>${selectedCharracter}</h3>
-                            <p>1000 1000</p>
+                            <div class="coordinates">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                    <mask id="mask0_159_189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19">
+                                        <rect width="18.9998" height="19" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_159_189)">
+                                        <path d="M9.50027 9.50016C9.93568 9.50016 10.3084 9.34513 10.6185 9.03506C10.9286 8.72499 11.0836 8.35225 11.0836 7.91683C11.0836 7.48141 10.9286 7.10867 10.6185 6.7986C10.3084 6.48853 9.93568 6.3335 9.50027 6.3335C9.06486 6.3335 8.69212 6.48853 8.38205 6.7986C8.07198 7.10867 7.91695 7.48141 7.91695 7.91683C7.91695 8.35225 8.07198 8.72499 8.38205 9.03506C8.69212 9.34513 9.06486 9.50016 9.50027 9.50016ZM9.50027 17.4168C7.37598 15.6092 5.78936 13.9302 4.74042 12.3799C3.69147 10.8295 3.16699 9.39461 3.16699 8.07516C3.16699 6.096 3.80362 4.51926 5.07687 3.34495C6.35012 2.17065 7.82459 1.5835 9.50027 1.5835C11.1759 1.5835 12.6504 2.17065 13.9237 3.34495C15.1969 4.51926 15.8335 6.096 15.8335 8.07516C15.8335 9.39461 15.3091 10.8295 14.2601 12.3799C13.2112 13.9302 11.6246 15.6092 9.50027 17.4168Z" fill="#E34A4A"/>
+                                    </g>
+                                </svg>
+                                <p>${coordinates}</p>
+                            </div>
+                            <p>${locationDescription}</p>
                         </div>
                     </div>
-                    <button class="btnTalkToCharracter">Talk to ${selectedCharracter}</button>
+                    <button class="btnTalkToCharracter">Prata med ${selectedCharracter}</button>
                 `;
-    
+
                 main.appendChild(popUp);
+                popUp.querySelector(".charracterImage").classList.add(`${selectedCharracter}`);
+    
 
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e =>{
@@ -209,6 +232,7 @@ async function renderMap(){
                     //Check if controll questio has already been answered 
 
                     //If controll question has not been answered before
+                    clearInterval(timerInterval);
                     renderControlQuestion(selectedCharracter);
 
                     //If controll question has already been answered before
@@ -217,7 +241,21 @@ async function renderMap(){
                 })
             }
         })    
-    )
+    );
+
+    //Remove charracter popup when clicking on map
+    main.addEventListener("click", e => {
+        if (!e.target.closest('svg')) {
+            // This block of code will execute only if the clicked element or any of its ancestors are not SVG elements
+            main.querySelectorAll(".pin").forEach(pin => {
+                if(pin.classList.contains("selected")){
+                    pin.classList.remove("selected");
+                    document.querySelector(".popUp").remove();
+                    main.querySelector(".navbar").classList.remove("hidden");
+                }
+            });
+        }
+    });
 
     //Navbar
     main.querySelector(".leaderboard").addEventListener("click", e => {
@@ -267,9 +305,29 @@ function renderControlQuestion(charracter){
             answer = "9";
             break;
         case "Ursulla":
+            typeOfQuestion = "number";
+            question = "Hur många broar och bänkar kan du se? titta noga.";
+            answer = [3,8];
+            break;
+        case "Snövit":
+            typeOfQuestion = "number";
+            question = "Hur många hjortar ser du?";
+            answer = 17;
+            break;
+        case "Chef Skinner":
+            typeOfQuestion = "number";
+            question = "Ange kombinationen av (bokstav+siffror) som står på fågelholkarna nära entren till restaurangen (ange minsta siffran först) (S11, S12)";
+            answer = ["S11", "S12"];
+            break;
+        case "Darla":
             typeOfQuestion = "word";
-            question = "Vilken färg har dörren? (blå)";
-            answer = "blå";
+            question = "Ange vilken färg jag syftar på? Bland många hytter där jag står, sticker jag ut som ett litet får. Bland många röda smälter jag in, längst med vägen tätt intill.";
+            answer = "Blå";
+            break;
+        case "Törnrosa":
+            typeOfQuestion = "number";
+            question = "Spelaren ska lista fram ordet fönster och sedan ange antalet fönster på väderkvarnen. (18,2)";
+            answer = 18;
             break;
     }
 
