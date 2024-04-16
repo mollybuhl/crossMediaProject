@@ -63,12 +63,10 @@ async function renderMap(){
     let currentTimer;
 
     try{
-        console.log(userID, userPassword);
         let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();
 
-        console.log(resource);
         profilePic = resource.profilePic;
     }catch(error){
         alert(`Something went wrong, ${error.message}`);
@@ -81,7 +79,7 @@ async function renderMap(){
     main.classList.add("mainMap");
     main.innerHTML=`
     <div class="topbar">
-        <button class="logOutBtn">
+        <button class="btnProfile">
             
         </button>
         <p class="timer"></p>
@@ -139,7 +137,7 @@ async function renderMap(){
     `;
 
     // Add correct profile pic
-    document.querySelector(".logOutBtn").classList.add(`${profilePic}`)
+    document.querySelector(".btnProfile").classList.add(`${profilePic}`)
 
     //When selecting a pin, display charracter pop up
     main.querySelectorAll(".pin").forEach(pin =>
@@ -267,12 +265,9 @@ async function renderMap(){
         renderCharracterboard();
     });
 
-    // Logout
-    main.querySelector(".logOutBtn").addEventListener("click", e => {
+    main.querySelector(".btnProfile").addEventListener("click", e =>{
         clearInterval(timerInterval);
-        window.localStorage.setItem("loggedIn", "false");
-        window.localStorage.removeItem("userId");
-        renderLogin();
+        renderProfilepage();
     })
 
     //Update timer
