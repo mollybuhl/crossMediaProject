@@ -1,19 +1,20 @@
 :root {
     /*Colors*/
-    --white: #FFFFFF;
+    --white: #EFEFEF;
     --black: #000000;
-    /*
-    --blue:
-    --yellow:
-    --red:
-    */
+    --blue:#001937;
+    --yellow: #FFE19A;
+    --red: #E34A4A;
+    
 
     --padding: 3vh;
     --borderRadius: 30px;
 
     --btnHeight: 4.7vh;
 
-    /*Font size*/
+    /*Font sizes*/
+    --heading1: 28px;
+    --heading2: 24px;
     --paragraphFontSize: 16px;
     --buttonFontSize: 20px;
 

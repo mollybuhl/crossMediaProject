@@ -12,5 +12,12 @@
         "password": "sanna",
         "profilePic": "pluto",
         "time": 0
+    },
+    {
+        "id": 3,
+        "username": "molly",
+        "password": "molly",
+        "profilePic": "pluto",
+        "time": 0
     }
 ]
