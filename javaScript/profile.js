@@ -49,7 +49,7 @@ async function renderProfilepage(){
             <input type="password" id="passwordForDelete">
             <label for="passwordForDelete">Ange lösenord</label>
     </div>
-    <button>Radera konto</button>
+    <button class="btnDeleteAccount">Radera konto</button>
     `;
 
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
@@ -143,6 +143,43 @@ async function renderProfilepage(){
     main.querySelector(".btnLogout").addEventListener("click", e => {
         window.localStorage.setItem("loggedIn", "false");
         window.localStorage.removeItem("userId");
-        renderLogin();
+        renderStartpage();
     })
+
+    main.querySelector(".btnDeleteAccount").addEventListener("click", async e => {
+
+        const password = document.querySelector("#passwordForDelete").value;
+
+        let requestOptions = {
+            method: "POST",
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+            body: JSON.stringify({
+                userId: userID,
+                username: username,
+                password: password,
+                action: "profile",
+                profileSetting: "deleteAccount"
+            })
+        }; 
+        
+        try{
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if(!response.ok) {
+                console.log(response);                    
+            } else {
+                console.log("Account deleted");
+                window.localStorage.setItem("loggedIn", "false");
+                window.localStorage.removeItem("userId");
+                window.localStorage.removeItem("password");
+                renderStartpage();
+            }
+    
+        }catch(error){
+            alert(`Something went wrong, ${error.message}`);
+        }
+    });
+
 }

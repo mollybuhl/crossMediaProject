@@ -12,12 +12,5 @@
         "password": "sanna",
         "profilePic": "pluto",
         "time": 0
-    },
-    {
-        "id": 3,
-        "username": "molly",
-        "password": "tolly",
-        "profilePic": "edna",
-        "time": 0
     }
 ]

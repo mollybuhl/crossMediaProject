@@ -15,8 +15,8 @@ function profile($requestData, $users){
             changePassword($requestData, $users);
             break;
         case "deleteAccount":
-            break;
-            
+            deleteAccount($requestData, $users);
+            break;      
     }
 }
 
@@ -63,7 +63,28 @@ function changePassword($requestData, $users){
             sendJSON($message);
         }
     }
+}
 
+function deleteAccount($requestData, $users){
+    $userId = $requestData["userId"];
+    $username = $requestData["username"];
+    $givenPassword = $requestData["password"];
+    checkCredentials($userId, $givenPassword, $users);
+
+    for($i = 0; $i < count($users); $i++){
+        $storedUserId = $users[$i]["id"];
+        $storedUsername = $users[$i]["username"];
+        $storedPassword = $users[$i]["password"];
+
+        if($storedUserId == $userId && $storedUsername == $username && $storedPassword == $givenPassword) {
+            
+            array_splice($users, $i, 1);
+
+            putInUsersJSON($users);
+            $message = ["message" => "Your account was successfully deleted"];
+            sendJSON($message);
+        }
+    }
 }
 
 
