@@ -1,0 +1,21 @@
+
+.profileInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4vh;
+}
+
+.profilePic{
+    height: 20vh;
+    width: 20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.selectProfilePic > div.selected{
+    border: 1px solid black;
+}

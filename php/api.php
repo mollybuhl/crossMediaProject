@@ -4,6 +4,7 @@
     require_once "functions.php";
     require_once "login.php";
     require_once "register.php";
+    require_once "profile.php";
 
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     if($requestMethod === "GET"){
@@ -30,11 +31,16 @@
             break;
         case "login":
             login($requestData, $users);
+            break;
         case "getUserInfo":
             $userID = $requestData["userID"];
             $userPassword = $requestData["userPassword"];
             checkCredentials($userID, $userPassword, $users);
 
             getUserInfo($userID, $users);
+            break;
+        case "profile":
+            profile($requestData, $users);
+            break;
     }
 ?>
