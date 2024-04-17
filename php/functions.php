@@ -29,7 +29,7 @@
             }
         }
         if(!$userFound){
-            $message = ["message" => "No user found."];
+            $message = ["message" => "Användare hittas inte."];
             sendJSON($message, 404);
         }
     }

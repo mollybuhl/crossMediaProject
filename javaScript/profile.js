@@ -17,6 +17,7 @@ async function renderProfilepage(){
         alert(`Something went wrong, ${error.message}`);
     }
 
+    // Structure of main
     main.classList.remove("mainMap");
     main.innerHTML = `
     <div class="profileInfoWrapper">
@@ -55,6 +56,7 @@ async function renderProfilepage(){
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
     main.querySelector(`.selectProfilePic > .${profilePic}`).classList.add("selected");
 
+    // Change profile picture
     let charracters = ["mulan", "ariel", "belle", "rapunzel", "pluto", "edna"];
 
     main.querySelectorAll(".selectProfilePic > div").forEach(pic => {
@@ -102,6 +104,7 @@ async function renderProfilepage(){
         })
     })
 
+    // Change password
     main.querySelector(".btnChangePassword").addEventListener("click", async e => {
         
         const password = document.querySelector("#password").value;
@@ -146,6 +149,7 @@ async function renderProfilepage(){
         renderStartpage();
     })
 
+    // Delete account
     main.querySelector(".btnDeleteAccount").addEventListener("click", async e => {
 
         const password = document.querySelector("#passwordForDelete").value;

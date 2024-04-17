@@ -16,6 +16,7 @@ function renderIntroductionpage(){
 
         renderMap();
     });
+
     main.querySelector(".btnPlayAudio").addEventListener("click", e => {
 
         if(main.querySelector(".btnPlayAudio").classList.contains("btnPauseAudio")){
@@ -28,39 +29,12 @@ function renderIntroductionpage(){
     })
 }
 
-
-function updateTimer() {
-    const currentTime = new Date();
-    let startTime = new Date(localStorage.getItem("startTime"));
-    
-    const elapsedTime = currentTime - startTime;
-    
-    const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-    const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
-
-    let formattedTime;
-    if(hours > 0){
-        formattedTime = padZero(hours) + ":" + padZero(minutes) + ":" + padZero(seconds);
-    }else{
-        formattedTime = padZero(minutes) + ":" + padZero(seconds);
-    }
-    
-    const timerElement = document.querySelector(".timer");
-    timerElement.textContent = formattedTime;
-
-    function padZero(num) {
-        return num < 10 ? "0" + num : num;
-    }
-}
-
 async function renderMap(){
 
     //Get player info
     let userID = Number(window.localStorage.getItem("userId")); 
     let userPassword = window.localStorage.getItem("userPassword");
     let profilePic;
-    let currentTimer;
 
     try{
         let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
@@ -69,11 +43,8 @@ async function renderMap(){
 
         profilePic = resource.profilePic;
     }catch(error){
-        alert(`Something went wrong, ${error.message}`);
+        alert(`Kan inte hämta spelarens data, ${error.message}`);
     }
-
-    
-
 
     //Map structure
     main.classList.add("mainMap");
@@ -82,7 +53,6 @@ async function renderMap(){
         <button class="btnProfile"></button>
         <p class="timer"></p>
     </div>
-    
    
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hoock">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
@@ -225,10 +195,9 @@ async function renderMap(){
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e =>{
                     
-                    //Check if controll questio has already been answered 
+                    //Check if controll question has already been answered 
 
                     //If controll question has not been answered before
-                    clearInterval(timerInterval);
                     renderControlQuestion(selectedCharracter);
 
                     //If controll question has already been answered before
@@ -255,16 +224,13 @@ async function renderMap(){
 
     //Navbar
     main.querySelector(".leaderboard").addEventListener("click", e => {
-        clearInterval(timerInterval);
         renderLeaderboard();
     });
     main.querySelector(".charracterChart").addEventListener("click", e=> {
-        clearInterval(timerInterval);
         renderCharracterboard();
     });
 
     main.querySelector(".btnProfile").addEventListener("click", e =>{
-        clearInterval(timerInterval);
         renderProfilepage();
     })
 
@@ -360,7 +326,63 @@ function renderControlQuestion(charracter){
 
 }
 
+// Function to update timer
+async function updateTimer() {
+    const currentTime = new Date();
+    let startTime = new Date(localStorage.getItem("startTime"));
+    
+    const elapsedTime = currentTime - startTime;
+    
+    const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
 
+    let formattedTime;
+    if(hours > 0){
+        formattedTime = padZero(hours) + ":" + padZero(minutes) + ":" + padZero(seconds);
+    }else{
+        formattedTime = padZero(minutes) + ":" + padZero(seconds);
+    }
+    
+    if(document.querySelector(".timer")){
+        const timerElement = document.querySelector(".timer");
+        timerElement.textContent = formattedTime;
+    }
+    
+    function padZero(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    //Update time saved for user
+    let userID = Number(window.localStorage.getItem("userId")); 
+    let userPassword = window.localStorage.getItem("userPassword");
+
+    let requestOptions = {
+        method: "POST",
+        headers: {"Content-type": "application/json; charset=UTF-8"},
+        body: JSON.stringify({
+            userId: userID,
+            password: userPassword,
+            time: formattedTime,
+            action: "updateTime",
+        })
+    };
+
+    try{
+        let request = new Request("php/api.php", requestOptions);
+        const response = await fetch(request);
+        let resource = await response.json();
+
+        if(!response.ok) {
+            console.log("Tiden uppdaterades ej");                    
+        }
+
+    }catch(error){
+        alert(`Something went wrong, ${error.message}`);
+    }
+}
+
+// Function to render charracter page based on the carracter that was clicked
 function renderCharracterPage(charracter){
 
     let charracterText;

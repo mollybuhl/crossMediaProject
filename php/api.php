@@ -5,6 +5,7 @@
     require_once "login.php";
     require_once "register.php";
     require_once "profile.php";
+    require_once "timer.php";
 
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     if($requestMethod === "GET"){
@@ -41,6 +42,9 @@
             break;
         case "profile":
             profile($requestData, $users);
+            break;
+        case "updateTime":
+            updateTime($requestData, $users);
             break;
     }
 ?>
