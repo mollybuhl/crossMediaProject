@@ -11,8 +11,8 @@ function profile($requestData, $users){
         case "profilePicture":
             changeProfilePic($requestData, $users);
             break;
-        case "password":
-            
+        case "changePassword":
+            changePassword($requestData, $users);
             break;
         case "deleteAccount":
             break;
@@ -35,13 +35,35 @@ function changeProfilePic($requestData, $users){
             $profilePic = $requestData["profilePic"];
             $users[$i]["profilePic"] = $profilePic;
 
-            //$users = json_encode($users, JSON_PRETTY_PRINT);
-            //file_put_contents($filename, $usersArrayJSON);
             putInUsersJSON($users);
             $message = ["message" => "Your password was successfully changed"];
             sendJSON($message);
         }
     }
+}
+
+function changePassword($requestData, $users){
+    $userId = $requestData["userId"];
+    $username = $requestData["username"];
+    $givenPassword = $requestData["password"];
+    checkCredentials($userId, $givenPassword, $users);
+
+    for($i = 0; $i < count($users); $i++){
+        $storedUserId = $users[$i]["id"];
+        $storedUsername = $users[$i]["username"];
+        $storedPassword = $users[$i]["password"];
+
+        if($storedUserId == $userId && $storedUsername == $username && $storedPassword == $givenPassword) {
+            
+            $newPassword = $requestData["newPassword"];
+            $users[$i]["password"] = $newPassword;
+
+            putInUsersJSON($users);
+            $message = ["message" => "Your password was successfully changed"];
+            sendJSON($message);
+        }
+    }
+
 }
 
 

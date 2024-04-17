@@ -79,9 +79,7 @@ async function renderMap(){
     main.classList.add("mainMap");
     main.innerHTML=`
     <div class="topbar">
-        <button class="btnProfile">
-            
-        </button>
+        <button class="btnProfile"></button>
         <p class="timer"></p>
     </div>
     

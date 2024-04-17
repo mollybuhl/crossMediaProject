@@ -24,17 +24,34 @@ async function renderProfilepage(){
         <div class="profilePic"></div>
     </div>
     <div class="selectProfilePic">
-            <div class="mulan"></div>
-            <div class="ariel"></div>
-            <div class="belle"></div>
-            <div class="rapunzel"></div>
-            <div class="pluto"></div>
-            <div class="edna"></div>
-        </div>
+        <div class="mulan"></div>
+        <div class="ariel"></div>
+        <div class="belle"></div>
+        <div class="rapunzel"></div>
+        <div class="pluto"></div>
+        <div class="edna"></div>
+    </div>
+
     <h5>Ändra lösenord</h5>
+    <div class="input-container">
+            <input type="password" id="password">
+            <label for="password">Nuvarande lösenord</label>
+    </div>
+    <div class="input-container">
+            <input type="password" id="newPassword">
+            <label for="confirmPassword">Nytt lösenord</label>
+    </div>
+    <button class="btnChangePassword">Byta lösenord</button>
+
     <h5 class="btnLogout">Logga ut</h5>
     <h5>Radera konto</h5>
+    <div class="input-container">
+            <input type="password" id="passwordForDelete">
+            <label for="passwordForDelete">Ange lösenord</label>
+    </div>
+    <button>Radera konto</button>
     `;
+
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
     main.querySelector(`.selectProfilePic > .${profilePic}`).classList.add("selected");
 
@@ -85,6 +102,42 @@ async function renderProfilepage(){
         })
     })
 
+    main.querySelector(".btnChangePassword").addEventListener("click", async e => {
+        
+        const password = document.querySelector("#password").value;
+        const newPassword = document.querySelector("#newPassword").value;
+        
+        let requestOptions = {
+            method: "POST",
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+            body: JSON.stringify({
+                userId: userID,
+                username: username,
+                password: password,
+                newPassword: newPassword,
+                action: "profile",
+                profileSetting: "changePassword"
+            })
+        };
+
+        try{
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if(!response.ok) {
+                console.log(response);                    
+            } else {
+                console.log("Password changed!"); 
+                document.querySelector("#password").value = "";
+                document.querySelector("#newPassword").value = ""; 
+                window.localStorage.setItem("userPassword", `${newPassword}`);
+            }
+    
+        }catch(error){
+            alert(`Something went wrong, ${error.message}`);
+        }
+    })
 
     // Logout
     main.querySelector(".btnLogout").addEventListener("click", e => {
