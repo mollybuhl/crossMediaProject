@@ -1,0 +1,47 @@
+
+.leaders{
+    display: flex;
+    gap: 2vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playerProfilePic{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
+
+.leaders > div {
+    text-align: center;
+}
+
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.scoreboard > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scoreboard > div > div{
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.leaderNumber{
+    position: absolute;
+}
+
+
+
+

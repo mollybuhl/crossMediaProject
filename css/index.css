@@ -1,22 +1,27 @@
+/*
+    TO DO:
+    - Change background (is currently set to color)
+*/
 :root {
     /*Colors*/
     --white: #EFEFEF;
     --black: #000000;
+    --grey: #828FA0;
     --blue:#001937;
     --yellow: #FFE19A;
     --red: #E34A4A;
-    
 
+    /*Font sizes*/
+    --mainHeading: 28px;
+    --subHeading: 24px;
+    --paragraphFontSize: 16px;
+    --buttonFontSize: 20px;
+
+    /*Other*/
     --padding: 3vh;
     --borderRadius: 30px;
 
     --btnHeight: 4.7vh;
-
-    /*Font sizes*/
-    --heading1: 28px;
-    --heading2: 24px;
-    --paragraphFontSize: 16px;
-    --buttonFontSize: 20px;
 
 }
 
@@ -30,10 +35,36 @@
     src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
+h1{
+    margin-top: 0;
+    font-family: lakkiReddy;
+}
+
+h2{
+    margin-top: 0;
+    font-family: lakkiReddy;
+    font-size: var(--mainHeading);
+    color: var(--yellow);
+}
+
+h3{
+
+}
+
+p{
+    font-size: var(--paragraphFontSize);
+    color: var(--white);
+}
+
+p.secondaryText{
+    color: var(--grey);
+}
+
 body{
     margin: 0;
     box-sizing: border-box;
     font-family: openSans;
+    background-color: var(--blue);
 }
 
 button{
@@ -75,15 +106,4 @@ main{
     padding-right: var(--padding);
 }
 
-h1{
-    margin-top: 0;
-    font-family: lakkiReddy;
-}
 
-h2,h3{
-    font-family: lakkiReddy;
-}
-
-p{
-    font-size: var(--paragraphFontSize);
-}

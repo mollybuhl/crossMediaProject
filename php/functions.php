@@ -53,5 +53,17 @@
         sendJSON($loggedInUserLimitedAcces);
     }
 
+    function getAllUsersTime($users){
+        $usersTime = [];
+
+        foreach($users as $userIndex => $user){
+            if(!in_array($user["id"], $usersTime)){
+                $usersTime[] = ["id" => $user["id"], "username" => $user["username"],"profilePic" => $user["profilePic"], "finishingTime" => $user["finishingTime"]];
+            }
+        } 
+        
+        sendJSON($usersTime);
+    }
+
 
 ?>

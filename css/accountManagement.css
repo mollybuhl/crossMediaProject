@@ -65,6 +65,7 @@ p.btnLoginPage > span, p.btnRegPage > span{
     border: 2px solid blue;
 }
 
+/*CHANGE TO CORRECT CLASSES AND PICTURES*/
 .mulan{
     background-image: url(../media/mulan.jpeg);
 }

@@ -46,5 +46,12 @@
         case "updateTime":
             updateTime($requestData, $users);
             break;
+        case "getAllUsers":
+            $userID = $requestData["userID"];
+            $userPassword = $requestData["userPassword"];
+            checkCredentials($userID, $userPassword, $users);
+
+            getAllUsersTime($users);            
+            break;
     }
 ?>
