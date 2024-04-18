@@ -1,3 +1,9 @@
+/*
+    To Do:
+    - Include feedback message to user in UI
+*/
+
+// Function to render player profile page with account settings
 async function renderProfilepage(){
 
     //Get player info
@@ -33,7 +39,7 @@ async function renderProfilepage(){
         <div class="edna"></div>
     </div>
 
-    <h5>Ändra lösenord</h5>
+    <p>Ändra lösenord</p>
     <div class="input-container">
             <input type="password" id="password">
             <label for="password">Nuvarande lösenord</label>
@@ -44,8 +50,8 @@ async function renderProfilepage(){
     </div>
     <button class="btnChangePassword">Byta lösenord</button>
 
-    <h5 class="btnLogout">Logga ut</h5>
-    <h5>Radera konto</h5>
+    <p class="btnLogout">Logga ut</p>
+    <p>Radera konto</p>
     <div class="input-container">
             <input type="password" id="passwordForDelete">
             <label for="passwordForDelete">Ange lösenord</label>
@@ -53,6 +59,7 @@ async function renderProfilepage(){
     <button class="btnDeleteAccount">Radera konto</button>
     `;
 
+    // Set correct profile picture
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
     main.querySelector(`.selectProfilePic > .${profilePic}`).classList.add("selected");
 
@@ -92,13 +99,13 @@ async function renderProfilepage(){
                     let resource = await response.json();
         
                     if(!response.ok) {
-                        console.log(response);                    
+                        console.log("Din profilbild har inte ändrats");                    
                     } else {
-                        console.log(response);  
+                        console.log(resource.message);  
                     }
             
                 }catch(error){
-                    alert(`Something went wrong, ${error.message}`);
+                    alert(`Något gick fel, ${error.message}`);
                 }
             }
         })
@@ -129,24 +136,21 @@ async function renderProfilepage(){
             let resource = await response.json();
 
             if(!response.ok) {
-                console.log(response);                    
+                console.log("Ditt lösenord har inte uppdaterats");                    
             } else {
-                console.log("Password changed!"); 
+                console.log(resource.message); 
+
+                // Clear input 
                 document.querySelector("#password").value = "";
                 document.querySelector("#newPassword").value = ""; 
+
+                // Update password saved in local storage
                 window.localStorage.setItem("userPassword", `${newPassword}`);
             }
     
         }catch(error){
-            alert(`Something went wrong, ${error.message}`);
+            alert(`Något gick fel, ${error.message}`);
         }
-    })
-
-    // Logout
-    main.querySelector(".btnLogout").addEventListener("click", e => {
-        window.localStorage.setItem("loggedIn", "false");
-        window.localStorage.removeItem("userId");
-        renderStartpage();
     })
 
     // Delete account
@@ -172,18 +176,30 @@ async function renderProfilepage(){
             let resource = await response.json();
 
             if(!response.ok) {
-                console.log(response);                    
+                console.log("Ditt konto har inte raderats");                    
             } else {
-                console.log("Account deleted");
+                console.log(resource.message);
+
+                // Logout user and render start page
                 window.localStorage.setItem("loggedIn", "false");
                 window.localStorage.removeItem("userId");
                 window.localStorage.removeItem("password");
+
                 renderStartpage();
             }
     
         }catch(error){
-            alert(`Something went wrong, ${error.message}`);
+            alert(`Något gick fel, ${error.message}`);
         }
     });
+
+    // Logout
+    main.querySelector(".btnLogout").addEventListener("click", e => {
+        window.localStorage.setItem("loggedIn", "false");
+        window.localStorage.removeItem("userId");
+        window.localStorage.removeItem("password");
+
+        renderStartpage();
+    })
 
 }

@@ -1,4 +1,5 @@
 
+// Function to render registration page
 function renderRegister(){
 
     main.innerHTML = `
@@ -55,6 +56,7 @@ function renderRegister(){
     <p class="btnLoginPage">Har du redan ett konto? <span> Logga in</span></p>
     `;
 
+    // Selecting profile picture
     let selectedProfilePic = "none";
     document.querySelectorAll(".selectProfilePic > div").forEach(div => {
         div.addEventListener("click", e => {
@@ -71,7 +73,7 @@ function renderRegister(){
         })
     })
 
-    document.querySelector(".btnLoginPage").addEventListener("click", renderLogin)
+    // Register user when called to action
     document.querySelector("#regButton").addEventListener("click", async e => {
 
         const username = document.querySelector("#registerUsername").value;
@@ -96,8 +98,10 @@ function renderRegister(){
             let resource = await response.json();
 
             if(!response.ok) {
+                // If unsuccessfull registration, inform user of error creating an account
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
+                // If successfull registration, save user credentials in local storage and render introduction page
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
                 window.localStorage.setItem("loggedIn", "true");   
@@ -106,13 +110,16 @@ function renderRegister(){
             }
     
         }catch(error){
-            alert(`Something went wrong, ${error.message}`);
+            alert(`Något gick fel, ${error.message}`);
         }
 
-    })
+    });
 
+    // Render login if user already has an account
+    document.querySelector(".btnLoginPage").addEventListener("click", renderLogin)
 }
 
+// Function to render login page
 function renderLogin(){
 
     main.innerHTML = `
@@ -143,8 +150,9 @@ function renderLogin(){
     <p class="userInfo"></p>
     <button>Login</button>
     <p class="btnRegPage">Har du inget konto? <span>Registrera dig</span></button>
-    `
-    document.querySelector(".btnRegPage").addEventListener("click", renderRegister)
+    `;
+
+    // Login user when called to action
     document.querySelector("button").addEventListener("click", async e => {
 
         const username = document.querySelector("#loginUsername").value;
@@ -166,8 +174,10 @@ function renderLogin(){
             let resource = await response.json();
 
             if(!response.ok) {
+                // If unsuccessfull user authorization, inform user of error
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
+                // If successfull user authorization, save user credentials in local storage and render game map
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
                 window.localStorage.setItem("loggedIn", "true");   
@@ -176,8 +186,11 @@ function renderLogin(){
             }
     
         }catch(error){
-            alert(`Something went wrong, ${error.message}`);
+            alert(`Något gick fel, ${error.message}`);
         }
-
     })
+
+    // Render registration page if user does not have an account already
+    document.querySelector(".btnRegPage").addEventListener("click", renderRegister);
+
 }

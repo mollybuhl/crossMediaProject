@@ -23,7 +23,7 @@
             if($user["id"] == $userID){
                 $userFound = true;
                 if($user["password"] != $userPassword){
-                    $message = ["message" => "You didn't provide the right details to successfully request this information."];
+                    $message = ["message" => "Fel lösenord"];
                     sendJSON($message, 400);
                 }
             }

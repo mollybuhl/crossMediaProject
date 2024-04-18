@@ -1,19 +1,11 @@
-/*
-    To Do: 
-    - Mark surrent player on leaderboard if they have finished
-    - Display first player in the middle, bigger
-    - Display player nr
 
-*/
-
-// Function to render the leaderboard and display all finished players game time
-async function renderLeaderboard(){
-
+// Function to render character board
+function renderCharracterboard(){
     main.classList.remove("mainMap");
+
     main.innerHTML = `
-    <h2>Topplista</h2>
-    <div class="leaders"></div>
-    <div class="scoreboard"></div>
+    <h1>Charracters!</h1>
+    <div class="charracters"></div>
 
     <div class="navbar">
         <div class="charracterChart">
@@ -49,72 +41,7 @@ async function renderLeaderboard(){
     </div>
     `;
 
-    // Fetch all users information
-    let userID = Number(window.localStorage.getItem("userId")); 
-    let userPassword = window.localStorage.getItem("userPassword");
-    let usersData;
-
-    try{
-        let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getAllUsers`);
-        let response = await fetch(request);
-        let resource = await response.json();
-
-        usersData = resource;
-        console.log(usersData);
-    }catch(error){
-        alert(`Kan inte hämta spelarnas data, ${error.message}`);
-    }
-
-    // Sort all players acording to finishing time
-    usersData.sort((a, b) => {
-        // Convert finishing time strings to Date objects for comparison
-        let timeA = new Date('1970-01-01T' + a['finishing-time']);
-        let timeB = new Date('1970-01-01T' + b['finishing-time']);
-        return timeA - timeB;
-    });
-
-    let topThree = usersData.slice(0, 3);
-    let restOfPlayers = usersData.slice(3);
-
-    // Display the three leading players at the top
-    let leaders = document.querySelector(".leaders");
-    topThree.forEach((player, index) => {
-        let palcement = index + 1;
-
-        let playerDiv = document.createElement("div");
-        playerDiv.innerHTML = `
-        <p class="leaderNumber">${palcement}</p>
-        <div class="playerProfilePic"></div>
-        <p>${player.username}</p>
-        <p class="secondaryText">${player.finishingTime}</p>
-        `;
-
-        leaders.appendChild(playerDiv);
-        playerDiv.querySelector(".playerProfilePic").classList.add(`${player.profilePic}`)
-
-    });
-
-    // Display the rest of all finished players
-    let scoreboard = document.querySelector(".scoreboard");
-    let placement = 4;
-    restOfPlayers.forEach(player => {
-
-        let playerDiv = document.createElement("div");
-        playerDiv.innerHTML = `
-        <p class="leaderNumber">${placement}</p>
-        <div>
-            <div class="playerProfilePic"></div>
-            <p>${player.username}</p>
-        </div>
-        <p class="secondaryText">${player.finishingTime}</p>
-        `;
-
-        scoreboard.appendChild(playerDiv);
-        playerDiv.querySelector(".playerProfilePic").classList.add(`${player.profilePic}`)
-        placement++;
-    })
-
-    // Navbar
     main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
     main.querySelector(".map").addEventListener("click", renderMap);
+
 }

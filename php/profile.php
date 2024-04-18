@@ -36,7 +36,7 @@ function changeProfilePic($requestData, $users){
             $users[$i]["profilePic"] = $profilePic;
 
             putInUsersJSON($users);
-            $message = ["message" => "Your password was successfully changed"];
+            $message = ["message" => "Din profilbild har ändrats"];
             sendJSON($message);
         }
     }
@@ -59,7 +59,7 @@ function changePassword($requestData, $users){
             $users[$i]["password"] = $newPassword;
 
             putInUsersJSON($users);
-            $message = ["message" => "Your password was successfully changed"];
+            $message = ["message" => "Ditt lösenord har uppdaterats"];
             sendJSON($message);
         }
     }
@@ -81,11 +81,9 @@ function deleteAccount($requestData, $users){
             array_splice($users, $i, 1);
 
             putInUsersJSON($users);
-            $message = ["message" => "Your account was successfully deleted"];
+            $message = ["message" => "Ditt konto har raderats"];
             sendJSON($message);
         }
     }
 }
-
-
 ?>
