@@ -10,10 +10,6 @@ function renderIntroductionpage(){
     let audio = new Audio("../media/testMusic.mp3");
 
     main.querySelector(".btnNextPage").addEventListener("click", e =>{
-        // Set start timer
-        let startTime = new Date().toString();
-        window.localStorage.setItem("startTime", startTime);  
-
         renderMap();
     });
 
@@ -28,6 +24,8 @@ function renderIntroductionpage(){
         }
     })
 }
+
+
 
 async function renderMap(){
 
@@ -222,6 +220,7 @@ async function renderMap(){
         }
     });
 
+  
     //Navbar
     main.querySelector(".leaderboard").addEventListener("click", e => {
         renderLeaderboard();
@@ -234,8 +233,7 @@ async function renderMap(){
         renderProfilepage();
     })
 
-    //Update timer
-    let timerInterval = setInterval(updateTimer, 1000);
+    
 }
 
 //Function to render controll questions before player get the information from a charracter
@@ -326,61 +324,6 @@ function renderControlQuestion(charracter){
 
 }
 
-// Function to update timer
-async function updateTimer() {
-    const currentTime = new Date();
-    let startTime = new Date(localStorage.getItem("startTime"));
-    
-    const elapsedTime = currentTime - startTime;
-    
-    const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-    const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
-
-    let formattedTime;
-    if(hours > 0){
-        formattedTime = padZero(hours) + ":" + padZero(minutes) + ":" + padZero(seconds);
-    }else{
-        formattedTime = padZero(minutes) + ":" + padZero(seconds);
-    }
-    
-    if(document.querySelector(".timer")){
-        const timerElement = document.querySelector(".timer");
-        timerElement.textContent = formattedTime;
-    }
-    
-    function padZero(num) {
-        return num < 10 ? "0" + num : num;
-    }
-
-    //Update time saved for user
-    let userID = Number(window.localStorage.getItem("userId")); 
-    let userPassword = window.localStorage.getItem("userPassword");
-
-    let requestOptions = {
-        method: "POST",
-        headers: {"Content-type": "application/json; charset=UTF-8"},
-        body: JSON.stringify({
-            userId: userID,
-            password: userPassword,
-            time: formattedTime,
-            action: "updateTime",
-        })
-    };
-
-    try{
-        let request = new Request("php/api.php", requestOptions);
-        const response = await fetch(request);
-        let resource = await response.json();
-
-        if(!response.ok) {
-            console.log("Tiden uppdaterades ej");                    
-        }
-
-    }catch(error){
-        alert(`Something went wrong, ${error.message}`);
-    }
-}
 
 // Function to render charracter page based on the carracter that was clicked
 function renderCharracterPage(charracter){
