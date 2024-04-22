@@ -226,7 +226,7 @@ async function renderMap(){
                             locationDescription = "Dörren till Casionot";
                             break;
                         case "hatter":
-                            selectedCharracter = "Hattmakarn";
+                            selectedCharracter = "Hattmakaren";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
@@ -387,7 +387,7 @@ function renderControlQuestion(charracter){
             question = "Ange den kombinationen av bokstäver och siffror som står på fågelholkarna nära entren till restaurangen. (Ange minsta siffran först)";
             answer = ["s11", "s12"];
             break;
-        case "Hattmakarn":
+        case "Hattmakaren":
             typeOfQuestion = "number";
             question = "Ange vad det kostar för Hattmakaren att äta sin favoritmat hos Slottsträdgårdens Kafé. Hans beställer alltid: Svart te, Oliver, 2 Chokladbollar, Glass.";
             answer = 207;
@@ -606,147 +606,3 @@ function renderControlQuestion(charracter){
 }
 
 
-// Function to render charracter page based on the carracter that was clicked
-function renderCharracterPage(charracter){
-    console.log(charracter);
-
-    let charracterText;
-    let characterMovie;
-    let characterTraits;
-    let characterAttribute;
-    //Define carracter text based on charracter selected
-    // PLACEHOLDER INFORMATION
-    switch (charracter) {
-        case "Kapten Krok":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Peter Pan";
-            characterTraits= "Stolt, listig, och besatt av Peter Pan";
-            characterAttribute = "Lila Sjörövarhatt, röd kappa, och en krok till hand";
-            break;
-        case "Cruella de Vil":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "De 101 dalmatinerna";
-            characterTraits= "Extravagant, empatilös, hänsynslös och skoningslös";
-            characterAttribute = "Vit pälsjacka och cigarettmunstycke";
-            break;
-        case "Musse":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Disneys fronfigur";
-            characterTraits= "Positiv, intelligent, modig";
-            characterAttribute = "Vita handskar, röda byxor och gula skor";
-            break;
-        case "Ursulla":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Lilla sjöjungfrun";
-            characterTraits= "Manipulativ, bedräglig, själviskt";
-            characterAttribute = "Svart lila klänning, blå lila hud, och ett snäckskal till halsband";
-            break;
-        case "Hades":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Hercules";
-            characterTraits= "Självsäker, Hämndlysten, Härskare";
-            characterAttribute = "Stor, lång och mörkklädd, Brinnande hår, och dödens gud";    
-            break;
-        case "Darla":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Hitta nemo";
-            characterTraits= "Obekymrad, bortskämd, och ovarsam";
-            characterAttribute = "Tandställning, lila tröja med text “rock n roll, girl";
-            break;
-        case "Törnrosa":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Törnrosa";
-            characterTraits= "Ödmjuk, optimistisk, och romantisk";
-            characterAttribute = "Rosa/Blå klänning, Blond/ljushårig prinsessa, Tiara eller diadem på huvudet";
-            break;
-        case "Snövit":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Snövit och de sju dvärgarna";
-            characterTraits= "Godtrogen, oskyldig, vänlig, god";
-            characterAttribute = "Blå och guldig klänning och sjunger och kvittrar ofta"
-            break;
-        case "Hattmakaren":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Alice i Underlandet";
-            characterTraits= "Galen, excentrisk, lekfull";
-            characterAttribute = "Hatt, Kaffepanna, färgglad";
-            break;
-        case "Prins John":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Robin Hood";
-            characterTraits= "Girig, snål, arrogant, feg, manipulativ";
-            characterAttribute = "Röd kunglig kappa och krona"
-            break;
-        case "Hjärter Dam":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Alice i underlandet";
-            characterTraits= "Temperamentsfull, oberäknelig, och masochist.";
-            characterAttribute = "Krona, röd och svart klänning, och rosor."
-            break;
-        case "Head Chef":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
-            characterMovie = "Ratatouille";
-            characterTraits= "Hård, oförsonlig, förakt, och stolt";
-            characterAttribute = "Liten man, elakt flin, kockkläder, och svart hår"
-            break;
-    }
-
-    main.classList.remove("mainMap");
-    main.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
-    <mask id="mask0_248_1065" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-        <rect width="24" height="24" fill="#D9D9D9"/>
-    </mask>
-    <g mask="url(#mask0_248_1065)">
-        <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
-    </g>
-    </svg>
-    <div class="characterTopWrapper">
-        <div class="charracterImage"></div>
-        <div>
-            <h2>${charracter}</h2>
-            <button class="btnPlayAudio"></button>
-        </div>
-    </div>
-    <button class="notSuspect">Ej Misstänkt</button>
-    <button class="suspect">Misstänkt</button>
-    <div class="characterShortDescription">
-        <div class="characterMovie">
-            <div class="icon"></div>
-            <p>${characterMovie}</p>
-        </div>
-        <div class="charactrTraits">
-            <div class="icon"></div>
-            <p>${characterTraits}</p>
-        </div>
-        <div class="characterAttribute">
-            <div class="icon"></div>
-            <p>${characterAttribute}</p>
-        </div>
-    </div>
-    <p>${charracterText}</p>
-    `;
-
-    main.querySelector(".guessMurderer").addEventListener("click", e => {
-        let confirmPopup = document.createElement("div");
-        confirmPopup.classList.add("popupBackground");
-        confirmPopup.innerHTML = `
-        <div class="confirmPopup">
-            <p>Är du säker på att ${charracter} är mördaren?</p>
-            <div>
-                <button class="btnContinuePlaying">Fortsätt spela</button>
-                <button class="btnGuidedMurderer">Ja</button>
-            </div>
-        </div>
-        `;
-
-        main.appendChild(confirmPopup);
-
-        main.querySelector(".btnContinuePlaying").addEventListener("click", e => {
-            confirmPopup.remove();
-        })
-        main.querySelector(".btnGuidedMurderer").addEventListener("click", e => {
-            console.log("guessing murderer");
-        })
-    })
-}

@@ -1,0 +1,14 @@
+.boardOfCharracters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4vh;
+    padding-top: var(--padding);
+}
+
+.boardOfCharracters > div{
+    background-image: url(../media/cruella.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}

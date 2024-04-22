@@ -1,0 +1,18 @@
+
+.characterTopWrapper{
+    
+}
+
+.characterTopWrapper > .charracterImage{
+
+}
+
+.characterShortDescription > div{
+    display: flex;
+    align-items: center;
+    gap: 4vh;
+}
+
+.characterMovie > .icon{
+   
+}

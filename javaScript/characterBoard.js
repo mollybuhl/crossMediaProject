@@ -4,8 +4,20 @@ function renderCharracterboard(){
     main.classList.remove("mainMap");
 
     main.innerHTML = `
-    <h1>Charracters!</h1>
-    <div class="charracters"></div>
+    <div class="boardOfCharracters">
+        <div class="musse"></div>
+        <div class="ursulla"></div>
+        <div class="cruellaDeVil"></div>
+        <div class="hades"></div>
+        <div class="darla"></div>
+        <div class="captenHook"></div>
+        <div class="snowWhite"></div>
+        <div class="sleepingBeauty"></div>
+        <div class="hatter"></div>
+        <div class="princeJohn"></div>
+        <div class="queenOfHearts"></div>
+        <div class="headChef"></div>
+    </div>
 
     <div class="navbar">
         <div class="charracterChart">
@@ -41,6 +53,10 @@ function renderCharracterboard(){
     </div>
     `;
 
+    // Check for suspect and not suspect marked by user
+    
+
+    // Navbar
     main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
     main.querySelector(".map").addEventListener("click", renderMap);
 
