@@ -3,7 +3,7 @@
 function renderRegister(){
 
     main.innerHTML = `
-    <h1>Registrera ditt konto</h1>
+    <h2>Registrera ditt konto</h2>
     <div class="input-field">
         <div class="input-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
@@ -46,7 +46,7 @@ function renderRegister(){
             <div class="ariel"></div>
             <div class="belle"></div>
             <div class="rapunzel"></div>
-            <div class="pluto"></div>
+            <div class="remi"></div>
             <div class="edna"></div>
         </div>
     </div>
@@ -123,7 +123,7 @@ function renderRegister(){
 function renderLogin(){
 
     main.innerHTML = `
-    <h1>Login</h1>
+    <h2>Login</h2>
     <div class="input-field" id="loginField">
     <div class="input-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">

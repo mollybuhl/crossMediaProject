@@ -68,8 +68,8 @@ async function renderLeaderboard(){
     // Sort all players acording to finishing time
     usersData.sort((a, b) => {
         // Convert finishing time strings to Date objects for comparison
-        let timeA = new Date('1970-01-01T' + a['finishing-time']);
-        let timeB = new Date('1970-01-01T' + b['finishing-time']);
+        let timeA = new Date('1970-01-01T' + a['finishingTime']);
+        let timeB = new Date('1970-01-01T' + b['finishingTime']);
         return timeA - timeB;
     });
 

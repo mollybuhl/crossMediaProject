@@ -11,7 +11,7 @@
         "id": 2,
         "username": "anna",
         "password": "sanna",
-        "profilePic": "pluto",
+        "profilePic": "remi",
         "time": 0,
         "finishingTime": "01:06:52"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "username": "molly",
         "password": "molly",
-        "profilePic": "pluto",
+        "profilePic": "mulan",
         "time": "02:06:52",
         "finishingTime": "02:06:52"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "username": "Mejra",
         "password": "try",
-        "profilePic": "edna",
+        "profilePic": "belle",
         "time": 0,
         "finishingTime": "02:15:52"
     },
@@ -51,8 +51,16 @@
         "id": 7,
         "username": "Pelle",
         "password": "try",
-        "profilePic": "edna",
+        "profilePic": "ariel",
         "time": 0,
         "finishingTime": "01:36:52"
+    },
+    {
+        "id": 8,
+        "username": "kamma",
+        "password": "kamma",
+        "profilePic": "remi",
+        "time": 0,
+        "finishingTime": "01:39:52"
     }
 ]

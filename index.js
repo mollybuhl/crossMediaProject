@@ -13,7 +13,9 @@ if(localStorage.getItem("loggedIn") === "true"){
 
 function renderStartpage(){
     main.innerHTML = `
-    <h1>Happily Never After</h1>
+    <h1 id="happily">Happily</h1>
+    <h1 id="never"><span>N</span>ever</h1>
+    <h1 id="after">After</h1>
     <button class="btnNewGame">Nytt spel</button>
     <button class="btnResumeGame">Fortsätt spela</button>
     `;
@@ -24,7 +26,7 @@ function renderStartpage(){
 
 function renderInstructionpage(){
     main.innerHTML = `
-    <h1>Hur man spelar</h1>
+    <h2>Hur man spelar</h2>
     <ul>
         <li>Lyssna på storyn</li>
         <li>Prata med misstänkta och vitnen</li>
