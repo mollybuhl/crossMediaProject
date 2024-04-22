@@ -67,11 +67,47 @@ async function renderMap(){
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin musse">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin mickeyMouse">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin ursulla">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin princeJohn">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hades">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin belle">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin snowWhite">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin sleepingBeauty">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin darla">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin queenOfHearts">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hatter">
+        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin headChef">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -146,22 +182,67 @@ async function renderMap(){
                 for (let i = 0; i < classList.length; i++) {
                     switch (classList[i]) {
                         case "hoock":
-                            selectedCharracter = "Hoock";
+                            selectedCharracter = "Kapten Krok";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
                         case "cruella":
-                            selectedCharracter = "Cruella";
+                            selectedCharracter = "Cruella de Vill";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "musse":
+                        case "mickeyMouse":
                             selectedCharracter = "Musse";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "hades":
+                            selectedCharracter = "Hades";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "darla":
+                            selectedCharracter = "Darla";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "belle":
+                            selectedCharracter = "Belle";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "sleepingBeauty":
+                            selectedCharracter = "Törnrosa";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "snowWhite":
+                            selectedCharracter = "Snövit";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "headChef":
+                            selectedCharracter = "Head Chef";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "hatter":
+                            selectedCharracter = "Hattmakarn";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "queenOfHearts":
+                            selectedCharracter = "Hjärter Dam";
+                            coordinates = "380 240 300";
+                            locationDescription = "Dörren till Casionot";
+                            break;
+                        case "princeJohn":
+                            selectedCharracter = "Prince John";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
@@ -194,7 +275,24 @@ async function renderMap(){
                 `;
 
                 main.appendChild(popUp);
-                popUp.querySelector(".charracterImage").classList.add(`${selectedCharracter}`);
+
+                // Format selected character name
+                function formatCharacter(selectedCharracter){
+                    let formattedCharacter = selectedCharracter.trim().toLowerCase();
+                    let words = formattedCharacter.split(' ');
+
+                    for (let i = 0; i < words.length; i++) {
+                        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+                    }
+
+                    formattedCharacter = words.join('');
+
+                    formattedCharacter = formattedCharacter.charAt(0).toLowerCase() + formattedCharacter.slice(1);
+
+                    return formattedCharacter;
+                };
+                let formattedCharacter = formatCharacter(selectedCharracter);
+                popUp.querySelector(".charracterImage").classList.add(`${formattedCharacter}`);
     
 
                 //Display controll question when clicking "talk to charracter"

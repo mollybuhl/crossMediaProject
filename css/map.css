@@ -1,6 +1,6 @@
 
 .mainMap{
-    background-image: url(../media/preliminaryBackground.jpg);
+    background-image: url(../media/preliminaryBackground.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,24 +25,69 @@
     fill: red;
 }
 
-.hoock{
+.pin.hoock{
     top: 50vh;
     right: 50vw;
 }
 
-.cruella{
+.pin.cruella{
     top: 30vh;
     right: 10vw;
 }
 
-.princeJohn{
+.pin.princeJohn{
     top: 30vh;
     right: 70vw;
 }
 
-.ursulla{
+.pin.ursulla{
     top: 70vh;
     right: 50vw;
+}
+
+.pin.mickeyMouse{
+    top: 40vh;
+    right: 50vw;
+}
+
+.pin.hades{
+    top: 60vh;
+    right: 60vw;
+}
+
+.pin.belle{
+    top: 20vh;
+    right: 35vw;
+}
+
+.pin.snowWithe{
+    top: 60vh;
+    right: 70vw;
+}
+
+.pin.sleepingBeauty{
+    top: 34vh;
+    right: 52vw;
+}
+
+.pin.darla{
+    top: 45vh;
+    right: 45vw;
+}
+
+.pin.queenOfHearts{
+    top: 72vh;
+    right: 81vw;
+}
+
+.pin.hatter{
+    top: 72vh;
+    right: 21vw;
+}
+
+.pin.headChef{
+    top: 24vh;
+    right: 71vw;
 }
 
 .popUp{
@@ -84,8 +129,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
 
 .popupBackground{
     height: 100%;
