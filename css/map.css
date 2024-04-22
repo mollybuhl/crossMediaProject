@@ -177,3 +177,24 @@
     align-items: center;
     gap: 2vw;
 }
+
+
+/*Control question*/
+
+.inputWrapper{
+    display: flex;
+}
+
+.inputWrapper input.number{
+
+}
+.inputWrapper input.numbers{
+
+}
+.inputWrapper input.word{
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

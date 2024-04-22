@@ -46,7 +46,7 @@
         foreach($users as $user){
             if($user["id"] == $userID){
                 $loggedInUser = $user;
-                $loggedInUserLimitedAcces = ["id" => $user["id"], "username" => $user["username"], "time" => $user["time"],"profilePic" => $user["profilePic"]];
+                $loggedInUserLimitedAcces = ["id" => $user["id"], "username" => $user["username"], "time" => $user["time"],"profilePic" => $user["profilePic"], "unlockedCharacters" => $user["unlockedCharacters"]];
             }
         }
 

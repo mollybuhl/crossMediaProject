@@ -40,6 +40,7 @@ async function renderMap(){
     let userID = Number(window.localStorage.getItem("userId")); 
     let userPassword = window.localStorage.getItem("userPassword");
     let profilePic;
+    let unlockedCharacters;
 
     try{
         let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
@@ -47,6 +48,8 @@ async function renderMap(){
         let resource = await response.json();
 
         profilePic = resource.profilePic;
+        unlockedCharacters = resource.unlockedCharacters;
+        console.log(unlockedCharacters);
     }catch(error){
         alert(`Kan inte hämta spelarens data, ${error.message}`);
     }
@@ -80,10 +83,6 @@ async function renderMap(){
     </svg>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hades">
-        <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
-    </svg>
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin belle">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -211,11 +210,6 @@ async function renderMap(){
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "belle":
-                            selectedCharracter = "Belle";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
-                            break;
                         case "sleepingBeauty":
                             selectedCharracter = "Törnrosa";
                             coordinates = "380 240 300";
@@ -298,13 +292,14 @@ async function renderMap(){
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e =>{
                     
-                    //Check if controll question has already been answered 
-
-                    //If controll question has not been answered before
-                    renderControlQuestion(selectedCharracter);
-
-                    //If controll question has already been answered before
-
+                    //Check if controll question has already been answered
+                    // If it has - render character page
+                    // If it has not - render control question page 
+                    if(unlockedCharacters.includes(selectedCharracter)){
+                        renderCharracterPage(selectedCharracter);
+                    }else{
+                        renderControlQuestion(selectedCharracter);
+                    }
                 })
             }
         })    
@@ -346,78 +341,262 @@ function renderControlQuestion(charracter){
     let question;
     let answer;
 
-    // PLACEHOLDER INFORMATION
     switch (charracter) {
-        case "Hoock":
+        case "Kapten Krok":
             typeOfQuestion = "word";
-            question = "Vilket namn har det mystiska djuret med en sydvästlig riktning? (pegasus)";
+            question = "Vilket namn har det mystiska djuret som befinner sig uppe på statyn?";
             answer = "pegasus";
             break;
-        case "Cruella":
-            typeOfQuestion = "crossword";
-            question = ["bro","bänk","soptunna"]
-            answer = "blå";
+        case "Cruella de Vill":
+            typeOfQuestion = "word";
+            question = "Vilket instrument som syns på toppen av lusthuset?";
+            answer = "trumpet";
             break;
         case "Musse":
             typeOfQuestion = "number";
-            question = "Hur många x kan du se här inne på gården? (9)";
-            answer = "9";
+            question = "Hur många bollar jonglerar “Gycklaren” med?";
+            answer = 5;
             break;
         case "Ursulla":
-            typeOfQuestion = "number";
-            question = "Hur många broar och bänkar kan du se? titta noga.";
+            typeOfQuestion = "numbers";
+            question = "Hur många broar och bänkar kan du se? Titta noga.";
             answer = [3,8];
+            break;
+        case "Hades":
+            typeOfQuestion = "time";
+            question = "Ange vilken tid detta område stängs";
+            answer = "21:00";
+            break;
+        case "Darla":
+            typeOfQuestion = "word";
+            question = "Vilken färg syftar jag på? Bland många hytter där jag står, sticker jag ut som ett litet får. Bland många röda smälter jag in, längst med vägen tätt intill.";
+            answer = "blå";
+            break;
+        case "Törnrosa":
+            typeOfQuestion = "number";
+            question = "Där slottet står högt och slut, tittar Disney prinsessorna ofta ut. Med ramar av trä och genomskinligt glas, finns jag under varje tak. Hur många av mig finner du på väderkvarnen?";
+            answer = 18;
             break;
         case "Snövit":
             typeOfQuestion = "number";
             question = "Hur många hjortar ser du?";
             answer = 17;
             break;
-        case "Chef Skinner":
-            typeOfQuestion = "number";
-            question = "Ange kombinationen av (bokstav+siffror) som står på fågelholkarna nära entren till restaurangen (ange minsta siffran först) (S11, S12)";
-            answer = ["S11", "S12"];
+        case "Head Chef":
+            typeOfQuestion = "numbers";
+            question = "Ange den kombinationen av bokstäver och siffror som står på fågelholkarna nära entren till restaurangen. (Ange minsta siffran först)";
+            answer = ["s11", "s12"];
             break;
-        case "Darla":
+        case "Hattmakarn":
+            typeOfQuestion = "number";
+            question = "Ange vad det kostar för Hattmakaren att äta sin favoritmat hos Slottsträdgårdens Kafé. Hans beställer alltid: Svart te, Oliver, 2 Chokladbollar, Glass.";
+            answer = 207;
+            break;
+        case "Hjärter Dam":
             typeOfQuestion = "word";
-            question = "Ange vilken färg jag syftar på? Bland många hytter där jag står, sticker jag ut som ett litet får. Bland många röda smälter jag in, längst med vägen tätt intill.";
-            answer = "Blå";
+            question = "På toppen av casinot finner du något som Prins John och Hjärter Dam har gemensamt.";
+            answer = "krona";
             break;
-        case "Törnrosa":
+        case "Prince John":
             typeOfQuestion = "number";
-            question = "Spelaren ska lista fram ordet fönster och sedan ange antalet fönster på väderkvarnen. (18,2)";
-            answer = 18;
+            question = "Räkna flaggstängerna och gå 8 röda steg moturs och sedan ett steg medurs";
+            answer = 13;
             break;
     }
+
+    main.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+        <mask id="mask0_219_109" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_219_109)">
+            <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
+        </g>
+    </svg>
+    <h2>${question}</h2>
+    <div class="inputWrapper"></div>
+    <button class="btnUnlock">Lås upp</button>
+    `; 
+
+    main.querySelector(".btnBack").addEventListener("click", renderMap);
+    let inputWrapper = main.querySelector(".inputWrapper");
 
     if(typeOfQuestion === "number"){
+        inputWrapper.classList.add("number");
 
-        main.innerHTML = `
-        <h2>${question}</h2>
-        <input type="number">Svar</input>
-        <button class="btnUnlock">Lås upp</button>
-        `;
-    }else if(typeOfQuestion === "word"){
-        main.innerHTML = `
-        <h2>${question}</h2>
-        <input>Svar</input>
-        <button class="btnUnlock">Lås upp</button>
-        `;
-    }else if(typeOfQuestion === "crossword"){
-        main.innerHTML = `
-        <h2>${question}</h2>
+        let numDigits = answer.toString().length
+
+        if(numDigits === 1){
+            inputWrapper.innerHTML = `
+            <input type="number" class="input1"></input>
+            `;
+        }else if(numDigits === 2){
+            inputWrapper.innerHTML = `
+            <input type="number" class="input1"></input>
+            <input type="number" class="input2"></input>
+            `;
+        }else if(numDigits === 3){
+            inputWrapper.innerHTML = `
+            <input type="number" class="input1"></input>
+            <input type="number" class="input2"></input>
+            <input type="number" class="input3"></input>
+            `;
+        }
         
-        <button class="btnUnlock">Lås upp</button>
-        `;
+        
+    }else if(typeOfQuestion === "numbers"){
+        inputWrapper.classList.add("numbers");
+
+        let num1 = answer[0];
+        let num2 = answer[1];
+
+        let numDigits1 = num1.toString().length;
+        //let numDigits2 = num2.toString().length;
+
+        if(numDigits1 === 1){
+            inputWrapper.innerHTML = `
+            <div class="inputBox num1Input">
+                <input type="number" class="num1Input1" maxlength="1"></input>
+            </div>
+            <div class="inputBox num2Input">
+                <input type="number" class="num2Input1" maxlength="1"></input>
+            </div>
+            `;
+        }else if(numDigits1 === 2){
+            inputWrapper.innerHTML = `
+            <div class="inputBox num1Input" >
+                <input type="number" class="num1Input1" maxlength="1"></input>
+                <input type="number" class="num1Input2" maxlength="1"></input>
+            </div>
+            <div class="inputBox num2Input">
+                <input type="number" class="num2Input1" maxlength="1"></input>
+                <input type="number" class="num2Input2" maxlength="1"></input>
+            </div>
+            `;
+        }else if(numDigits1 === 3){
+            inputWrapper.innerHTML = `
+            <div class="inputBox num1Input">
+                <input type="number" class="num1Input1" maxlength="1"></input>
+                <input type="number" class="num1Input2" maxlength="1"></input>
+                <input type="number" class="num1Input3" maxlength="1"></input>
+            </div>
+            <div class="inputBox num2Input">
+                <input type="number" class="num2Input1" maxlength="1"></input>
+                <input type="number" class="num2Input2" maxlength="1"></input>
+                <input type="number" class="num2Input3" maxlength="1"></input>
+            </div>
+            `;
+        }
+
+    }else if(typeOfQuestion === "word"){
+
+        inputWrapper.classList.add("word");
+
+        if(Array.isArray(answer)){
+            inputWrapper.innerHTML = `
+            <input class="input1"></input>
+            <input class="input2"></input>
+            `;
+        }else{
+            inputWrapper.innerHTML = `
+            <input class="input1"></input>
+            `;
+        }
+    }else if(typeOfQuestion === "time"){
+        inputWrapper.innerHTML = `
+            <input class="input1"></input>
+            <input class="input1"></input>
+            <p>:</p>
+            <input class="input1"></input>
+            <input class="input1"></input>
+            `;
     }
    
-                
-    let input = main.querySelector("input");
+    main.querySelector(".btnUnlock").addEventListener("click", async e =>{
 
-    main.querySelector(".btnUnlock").addEventListener("click", e =>{
-        let userAnswer = input.value;
-        console.log(userAnswer, answer);
-        if(userAnswer === answer){
+        let correctAnswer = false;
+
+        if(typeOfQuestion === "word"){
+            let userAnswer = main.querySelector(".input1").value;
+
+            if(userAnswer === answer){
+                correctAnswer = true;
+            }
+        }else if(typeOfQuestion === "number"){
+
+            let inputFields = document.querySelectorAll("input");
+            let userInput = '';
+            inputFields.forEach(input => {
+                userInput += input.value;
+            });
+
+            let userNumber = parseInt(userInput);
+
+            if(userNumber === answer){
+                correctAnswer = true;
+            }
+            
+        }else if(typeOfQuestion === "numbers"){
+            // First input
+            let inputFieldsNum1 = document.querySelectorAll(".num1Input > input");
+
+            let userInput1 = '';
+            inputFieldsNum1.forEach(input => {
+                userInput1 += input.value;
+            });
+
+            let userNumber1 = parseInt(userInput1);
+
+            if(userNumber1 === answer){
+                // Second number
+                let inputFieldsNum2 = document.querySelectorAll(".num1Input > input");
+
+                let userInput2 = '';
+                inputFieldsNum2.forEach(input => {
+                    userInput1 += input.value;
+                });
+
+                let userNumber2 = parseInt(userInput1);
+
+                if(userNumber2 === answer){
+                    correctAnswer = true;
+                }
+            }
+        }
+       
+        
+        if(correctAnswer){
+            // Save character as unlocked for user
+            let userID = Number(window.localStorage.getItem("userId")); 
+            let userPassword = window.localStorage.getItem("userPassword");
+
+            let requestOptions = {
+                method: "POST",
+                headers: {"Content-type": "application/json; charset=UTF-8"},
+                body: JSON.stringify({
+                    userId: userID,
+                    password: userPassword,
+                    action: "unlockCharacter",
+                    character: charracter
+                })
+            };
+
+            try{
+                let request = new Request("php/api.php", requestOptions);
+                const response = await fetch(request);
+                let resource = await response.json();
+    
+                if(!response.ok) {
+                    console.log(resource);                    
+                } else {
+                    console.log(resource.message);  
+                }
+        
+            }catch(error){
+                alert(`Något gick fel, ${error.message}`);
+            }
+
+            // Display character page
             renderCharracterPage(charracter)
         }else{
             console.log("Wrong answer");

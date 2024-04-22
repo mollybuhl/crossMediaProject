@@ -62,5 +62,18 @@
         "profilePic": "remi",
         "time": 0,
         "finishingTime": "01:39:52"
+    },
+    {
+        "id": 9,
+        "username": "mollytest",
+        "password": "mollytest",
+        "profilePic": "edna",
+        "time": 0,
+        "unlockedCharacters": [
+            "Hattmakarn",
+            "Sn\u00f6vit"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

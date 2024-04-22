@@ -6,6 +6,7 @@
     require_once "register.php";
     require_once "profile.php";
     require_once "timer.php";
+    require_once "characters.php";
 
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     if($requestMethod === "GET"){
@@ -53,5 +54,7 @@
 
             getAllUsersTime($users);            
             break;
+        case "unlockCharacter":
+            unlockCharacter($requestData, $users);
     }
 ?>

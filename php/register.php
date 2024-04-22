@@ -53,7 +53,10 @@
             "username" => $username,
             "password" => $password,
             "profilePic" => $profilePic,
-            "time" => 0
+            "time" => 0,
+            "unlockedCharacters" => [],
+            "suspectCharacters" => [],
+            "notSuspectCharacters" => []
         ];
         
         $users[] = $newUser;
