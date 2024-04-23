@@ -1,0 +1,8 @@
+.instructionContainer {
+    display: flex;
+}
+
+.headerInstruction {
+    display: flex;
+    flex-direction: column;
+}
