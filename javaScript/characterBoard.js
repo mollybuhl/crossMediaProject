@@ -1,6 +1,6 @@
 
-// Function to render character board
-function renderCharracterboard(){
+// Function to render character board and dislay marked suspects
+async function renderCharracterboard(){
     main.classList.remove("mainMap");
 
     main.innerHTML = `
@@ -54,6 +54,40 @@ function renderCharracterboard(){
     `;
 
     // Check for suspect and not suspect marked by user
+    let userID = Number(window.localStorage.getItem("userId")); 
+    let userPassword = window.localStorage.getItem("userPassword");
+
+    let suspectCharacters;
+    let notSuspectCharacters;
+
+    try{
+        let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
+        let response = await fetch(request);
+        let resource = await response.json();
+
+        suspectCharacters = resource.suspectCharacters;
+        notSuspectCharacters = resource.notSuspectCharacters;
+    }catch(error){
+        alert(`Kan inte hämta spelarens data, ${error.message}`);
+    }
+
+    // Mark all not suspect characters as not suspect
+    notSuspectCharacters.forEach(character => {
+        let characterDiv = main.querySelector(`.boardOfCharracters > .${character}`);
+        characterDiv.classList.add("notSuspect");
+    });
+
+    // Mark all suspect characters as suspect
+    suspectCharacters.forEach(character => {
+        let characterDiv = main.querySelector(`.boardOfCharracters > .${character}`);
+        characterDiv.classList.add("suspect");
+
+        let suspectBanner = document.createElement("div");
+        suspectBanner.innerHTML = `<p>Misstänkt</p>`;
+        characterDiv.appendChild(suspectBanner);
+    })
+
+    
     
 
     // Navbar

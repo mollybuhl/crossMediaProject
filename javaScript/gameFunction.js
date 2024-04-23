@@ -43,7 +43,7 @@ async function renderMap(){
     let unlockedCharacters;
 
     try{
-        let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
+        let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();
 
