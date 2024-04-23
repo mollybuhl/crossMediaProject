@@ -73,11 +73,11 @@
             "Hattmakarn",
             "Sn\u00f6vit",
             "Hattmakaren",
-            "Cruella de Vill"
+            "Cruella de Vill",
+            "Cruella de Vil"
         ],
         "suspectCharacters": [
-            "hades",
-            "darla"
+            "hades"
         ],
         "notSuspectCharacters": [
             "cruellaDeVil"

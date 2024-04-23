@@ -1,16 +1,20 @@
 
 .characterTopWrapper{
-    
+    display: flex;
 }
 
 .characterTopWrapper > .charracterImage{
-
+    position: static;
 }
 
 .characterShortDescription > div{
     display: flex;
     align-items: center;
     gap: 4vh;
+}
+
+.buttons{
+    display: flex;
 }
 
 .characterMovie > .icon{

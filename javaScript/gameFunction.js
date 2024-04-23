@@ -185,7 +185,7 @@ async function renderMap(){
                             locationDescription = "Dörren till Casionot";
                             break;
                         case "cruellaDeVil":
-                            selectedCharracter = "Cruella de Vill";
+                            selectedCharracter = "Cruella de Vil";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
@@ -346,7 +346,7 @@ function renderControlQuestion(charracter){
             question = "Vilket namn har det mystiska djuret som befinner sig uppe på statyn?";
             answer = "pegasus";
             break;
-        case "Cruella de Vill":
+        case "Cruella de Vil":
             typeOfQuestion = "word";
             question = "Vilket instrument som syns på toppen av lusthuset?";
             answer = "trumpet";
