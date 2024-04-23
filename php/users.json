@@ -85,5 +85,15 @@
             "cruellaDeVil",
             "t\u00f6rnrosa"
         ]
+    },
+    {
+        "id": 10,
+        "username": "testat",
+        "password": "testat",
+        "profilePic": "remi",
+        "time": 0,
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
