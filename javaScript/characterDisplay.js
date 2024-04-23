@@ -84,6 +84,21 @@ function renderCharracterPage(charracter){
             break;
     }
 
+    // Get charracter class name
+    let words = charracter.split(' ');
+    
+    // Convert the first word to lowercase
+    let characterClass = words[0].toLowerCase();
+    
+    // For the remaining words, capitalize the first letter and concatenate
+    for (let i = 1; i < words.length; i++) {
+        let word = words[i];
+        // Capitalize the first letter of the word and concatenate it
+        characterClass  += word.charAt(0).toUpperCase() + word.slice(1);
+    }
+
+    console.log(characterClass);
+
     main.classList.remove("mainMap");
     main.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
@@ -95,10 +110,14 @@ function renderCharracterPage(charracter){
     </g>
     </svg>
     <div class="characterTopWrapper">
-        <div class="charracterImage"></div>
+        <div class="charracterImage ${characterClass}"></div>
         <div>
             <h2>${charracter}</h2>
-            <button class="btnPlayAudio"></button>
+            <button class="btnPlayAudio">
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                <path d="M18.4345 53.6805H6.68586C5.07042 53.6805 3.6875 53.1053 2.53711 51.955C1.38672 50.8046 0.811523 49.4216 0.811523 47.8062V27.246C0.811523 23.5746 1.5091 20.1356 2.90426 16.9292C4.29941 13.7228 6.18409 10.9325 8.5583 8.5583C10.9325 6.18409 13.7228 4.29941 16.9292 2.90426C20.1356 1.5091 23.5746 0.811523 27.246 0.811523C30.9175 0.811523 34.3564 1.5091 37.5628 2.90426C40.7692 4.29941 43.5595 6.18409 45.9338 8.5583C48.308 10.9325 50.1926 13.7228 51.5878 16.9292C52.983 20.1356 53.6805 23.5746 53.6805 27.246V47.8062C53.6805 49.4216 53.1053 50.8046 51.955 51.955C50.8046 53.1053 49.4216 53.6805 47.8062 53.6805H36.0575V30.1832H47.8062V27.246C47.8062 21.5186 45.8114 16.66 41.8217 12.6703C37.8321 8.68068 32.9735 6.68586 27.246 6.68586C21.5186 6.68586 16.66 8.68068 12.6703 12.6703C8.68068 16.66 6.68586 21.5186 6.68586 27.246V30.1832H18.4345V53.6805ZM12.5602 36.0575H6.68586V47.8062H12.5602V36.0575ZM41.9319 36.0575V47.8062H47.8062V36.0575H41.9319Z" fill="black"/>
+            </svg>
+            </button>
         </div>
     </div>
     <div class="buttons">
@@ -107,7 +126,14 @@ function renderCharracterPage(charracter){
     </div>
     <div class="characterShortDescription">
         <div class="characterMovie">
-            <div class="icon"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <mask id="mask0_259_1236" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
+                    <rect width="34" height="34" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_259_1236)">
+                    <path d="M13.458 21.9583L23.3747 15.5833L13.458 9.20833V21.9583ZM11.333 29.75V26.9167H5.66634C4.88717 26.9167 4.22016 26.6392 3.6653 26.0844C3.11044 25.5295 2.83301 24.8625 2.83301 24.0833V7.08333C2.83301 6.30417 3.11044 5.63715 3.6653 5.08229C4.22016 4.52743 4.88717 4.25 5.66634 4.25H28.333C29.1122 4.25 29.7792 4.52743 30.3341 5.08229C30.8889 5.63715 31.1663 6.30417 31.1663 7.08333V24.0833C31.1663 24.8625 30.8889 25.5295 30.3341 26.0844C29.7792 26.6392 29.1122 26.9167 28.333 26.9167H22.6663V29.75H11.333Z" fill="white"/>
+                </g>
+            </svg>
             <p>${characterMovie}</p>
         </div>
         <div class="charactrTraits">
@@ -133,18 +159,72 @@ function renderCharracterPage(charracter){
 
     main.querySelector(".btnBack").addEventListener("click", renderMap);
 
+    let userID = Number(window.localStorage.getItem("userId")); 
+    let userPassword = window.localStorage.getItem("userPassword");
+
     // Mark as not suspect
-    main.querySelector(".notSuspect").addEventListener("click", e => {
+    main.querySelector(".notSuspect").addEventListener("click", async e => {
+
         // Save character as not suspect
+        let requestOptions = {
+            method: "POST",
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+            body: JSON.stringify({
+                userId: userID,
+                password: userPassword,
+                action: "updateSuspect",
+                notSuspectCharacter: characterClass 
+            })
+        };
+
+        try{
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if(!response.ok) {
+                console.log("Suspect not saved");                    
+            } else {
+                console.log("suspect added");  
+            }
+    
+        }catch(error){
+            alert(`Något gick fel, ${error.message}`);
+        }
 
         // Render character board
         renderCharracterboard();
     });
 
     // Mark as suspect
-    main.querySelector(".suspect").addEventListener("click", e => {
+    main.querySelector(".suspect").addEventListener("click", async e => {
 
         // Save character as suspect
+        let requestOptions = {
+            method: "POST",
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+            body: JSON.stringify({
+                userId: userID,
+                password: userPassword,
+                action: "updateSuspect",
+                suspectCharacter: characterClass
+            })
+        };
+
+        try{
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if(!response.ok) {
+                console.log("Suspect not saved");                    
+            } else {
+                console.log("suspect added");  
+            }
+
+        }catch(error){
+            alert(`Något gick fel, ${error.message}`);
+        }
 
         // Render character board
         renderCharracterboard();

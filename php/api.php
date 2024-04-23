@@ -6,7 +6,7 @@
     require_once "register.php";
     require_once "profile.php";
     require_once "timer.php";
-    require_once "characters.php";
+    require_once "handleCharacterState.php";
 
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     if($requestMethod === "GET"){
@@ -56,5 +56,9 @@
             break;
         case "unlockCharacter":
             unlockCharacter($requestData, $users);
+            break;
+        case "updateSuspect":
+            updateSuspect($requestData, $users);
+            break;
     }
 ?>

@@ -72,9 +72,18 @@
         "unlockedCharacters": [
             "Hattmakarn",
             "Sn\u00f6vit",
-            "Hattmakaren"
+            "Hattmakaren",
+            "Cruella de Vil",
+            "Kapten Krok",
+            "T\u00f6rnrosa"
         ],
-        "suspectCharacters": [],
-        "notSuspectCharacters": []
+        "suspectCharacters": [
+            "hades",
+            "kaptenKrok"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil",
+            "t\u00f6rnrosa"
+        ]
     }
 ]

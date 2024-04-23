@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 4vh;
+    column-gap: 2vh;
     padding-top: var(--padding);
 }
 
@@ -11,4 +12,29 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 15vh;
+}
+
+.boardOfCharracters > .cruellaDeVil.notSuspect{
+    background-image: url(../media/cruellaHidden.png);
+}
+
+.suspect{
+    display: flex;
+    align-items: end;
+}
+
+.suspect > div{
+    background-color: var(--yellow);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suspect > div > p{
+    color: var(--black);
+    font-size: 12px;
 }

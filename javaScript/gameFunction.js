@@ -1,9 +1,8 @@
 /*
     To Do:
     - Replace audiofile with correct file
-    - Replace placeholder character information line 145, 251, 336
-    - Control questions
 */
+
 // Function to render introduction page when player enters the game for the first time
 function renderIntroductionpage(){
     main.innerHTML = `
@@ -43,7 +42,7 @@ async function renderMap(){
     let unlockedCharacters;
 
     try{
-        let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
+        let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();
 
@@ -62,15 +61,15 @@ async function renderMap(){
         <p class="timer"></p>
     </div>
    
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hoock">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin kaptenKrok">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
     
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin cruella">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin cruellaDeVil">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin mickeyMouse">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin musse">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -78,7 +77,7 @@ async function renderMap(){
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin princeJohn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin prinsJohn">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -86,11 +85,11 @@ async function renderMap(){
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin snowWhite">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin snövit">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin sleepingBeauty">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin törnrosa">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -98,11 +97,11 @@ async function renderMap(){
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin queenOfHearts">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hjärterdam">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hatter">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hattmakaren">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -180,17 +179,17 @@ async function renderMap(){
                 //Find selected charracter - PLACEHOLDER CHARACTERS
                 for (let i = 0; i < classList.length; i++) {
                     switch (classList[i]) {
-                        case "hoock":
+                        case "kaptenKrok":
                             selectedCharracter = "Kapten Krok";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "cruella":
-                            selectedCharracter = "Cruella de Vill";
+                        case "cruellaDeVil":
+                            selectedCharracter = "Cruella de Vil";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "mickeyMouse":
+                        case "musse":
                             selectedCharracter = "Musse";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
@@ -210,12 +209,12 @@ async function renderMap(){
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "sleepingBeauty":
+                        case "törnrosa":
                             selectedCharracter = "Törnrosa";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "snowWhite":
+                        case "snövit":
                             selectedCharracter = "Snövit";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
@@ -225,17 +224,17 @@ async function renderMap(){
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "hatter":
+                        case "hattmakaren":
                             selectedCharracter = "Hattmakaren";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "queenOfHearts":
+                        case "hjärterdam":
                             selectedCharracter = "Hjärter Dam";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "princeJohn":
+                        case "prinsJohn":
                             selectedCharracter = "Prince John";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
@@ -347,7 +346,7 @@ function renderControlQuestion(charracter){
             question = "Vilket namn har det mystiska djuret som befinner sig uppe på statyn?";
             answer = "pegasus";
             break;
-        case "Cruella de Vill":
+        case "Cruella de Vil":
             typeOfQuestion = "word";
             question = "Vilket instrument som syns på toppen av lusthuset?";
             answer = "trumpet";
