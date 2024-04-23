@@ -8,8 +8,7 @@ let main = document.querySelector("main");
 if (localStorage.getItem("loggedIn") === "true") {
     renderMap();
 } else {
-    // renderStartpage();
-    renderInstructionpage()
+    renderStartpage();
 }
 
 function renderStartpage() {
