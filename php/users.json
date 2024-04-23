@@ -73,14 +73,17 @@
             "Hattmakarn",
             "Sn\u00f6vit",
             "Hattmakaren",
-            "Cruella de Vill",
-            "Cruella de Vil"
+            "Cruella de Vil",
+            "Kapten Krok",
+            "T\u00f6rnrosa"
         ],
         "suspectCharacters": [
-            "hades"
+            "hades",
+            "kaptenKrok"
         ],
         "notSuspectCharacters": [
-            "cruellaDeVil"
+            "cruellaDeVil",
+            "t\u00f6rnrosa"
         ]
     }
 ]
