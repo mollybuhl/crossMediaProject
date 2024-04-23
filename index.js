@@ -13,11 +13,17 @@ if (localStorage.getItem("loggedIn") === "true") {
 
 function renderStartpage() {
     main.innerHTML = `
-    <h1 id="happily">Happily</h1>
-    <h1 id="never"><span>N</span>ever</h1>
-    <h1 id="after">After</h1>
-    <button class="btnNewGame">Nytt spel</button>
-    <button class="btnResumeGame">Fortsätt spela</button>
+    <section id="startPageContainer">
+        <div id="startPageHeader">
+            <h1 id="happily">Happily</h1>
+            <h1 id="never"><span>N</span>ever</h1>
+            <h1 id="after">After</h1>
+        </div>
+        <div id="startPageBtns">
+            <button class="btnNewGame">Skapa konto</button>
+            <button class="btnResumeGame">Logga in</button>
+        </div>
+    </section>
     `;
 
     main.querySelector(".btnNewGame").addEventListener("click", renderRegister)
