@@ -72,9 +72,15 @@
         "unlockedCharacters": [
             "Hattmakarn",
             "Sn\u00f6vit",
-            "Hattmakaren"
+            "Hattmakaren",
+            "Cruella de Vill"
         ],
-        "suspectCharacters": ["hades", "darla"],
-        "notSuspectCharacters": ["cruellaDeVil"]
+        "suspectCharacters": [
+            "hades",
+            "darla"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil"
+        ]
     }
 ]

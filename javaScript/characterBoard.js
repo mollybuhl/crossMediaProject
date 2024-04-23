@@ -89,7 +89,10 @@ async function renderCharracterboard(){
         characterDiv.appendChild(suspectBanner);
     })
 
+    // Clicking on character
+
     
+    // Guessing murderer
     
 
     // Navbar

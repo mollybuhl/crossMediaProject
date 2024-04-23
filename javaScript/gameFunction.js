@@ -1,9 +1,8 @@
 /*
     To Do:
     - Replace audiofile with correct file
-    - Replace placeholder character information line 145, 251, 336
-    - Control questions
 */
+
 // Function to render introduction page when player enters the game for the first time
 function renderIntroductionpage(){
     main.innerHTML = `
@@ -62,11 +61,11 @@ async function renderMap(){
         <p class="timer"></p>
     </div>
    
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hoock">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin hook">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
     
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin cruella">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin cruellaDeVil">
         <path d="M32 16.125C32 23.4652 22.25 36.5332 17.975 41.925C16.95 43.21 15.05 43.21 14.025 41.925C9.75 36.5332 0 23.4652 0 16.125C0 7.22266 7.16667 0 16 0C24.8333 0 32 7.22266 32 16.125Z" fill="black"/>
     </svg>
 
@@ -180,12 +179,12 @@ async function renderMap(){
                 //Find selected charracter - PLACEHOLDER CHARACTERS
                 for (let i = 0; i < classList.length; i++) {
                     switch (classList[i]) {
-                        case "hoock":
+                        case "hook":
                             selectedCharracter = "Kapten Krok";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
-                        case "cruella":
+                        case "cruellaDeVil":
                             selectedCharracter = "Cruella de Vill";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
