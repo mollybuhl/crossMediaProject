@@ -1,58 +1,60 @@
+.loginRegisterHeader {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: var(--white);
+}
 
-.input-field{
+.loginRegSubHeader {
+    margin-bottom: 0;
+    font-size: var(--paragraphFontSize);
+}
+
+#inputZone {
+    padding-bottom: 8vh;
+}
+
+.input-field {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
-    padding-bottom: 4vh;
+    gap: 1vh;
+    padding-bottom: 30vh;
 }
-.input-container{
+
+.input-container {
     position: relative;
     display: inline-block;
 }
 
-.input-container input{
-    padding-left: 15vw;
+.userInfo {
+    margin: 0;
+    text-align: center;
+    color: var(--red);
+    position: relative;
+    bottom: 1vh;
+    font-size: var(--paragraphFontSize);
 }
 
-.input-container svg {
-    position: absolute;
-    top: 50%;
-    left: 5vw; 
-    transform: translateY(-50%);
-    fill: #BCBCBC; /* Apply desired fill color to the SVG */
-}
-
-label{
-    position: absolute;
-    left: 15vw;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
-}
-
-input:focus ~ label{
-    top: 1vh;
-    font-size: 12px;
-}
-
-
-
-p.btnLoginPage, p.btnRegPage{
+p.btnLoginPage,
+p.btnRegPage {
     text-align: center;
     cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-p.btnLoginPage > span, p.btnRegPage > span{
+p.btnLoginPage>span,
+p.btnRegPage>span {
     font-weight: bold;
+    text-decoration: underline;
 }
 
-.selectProfilePic{
+.selectProfilePic {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.selectProfilePic > div{
+.selectProfilePic>div {
     height: 6vh;
     width: 6vh;
     border-radius: 50%;
@@ -61,27 +63,31 @@ p.btnLoginPage > span, p.btnRegPage > span{
     background-size: cover;
 }
 
-.selectProfilePic > div.selected{
+.selectProfilePic>div.selected {
     border: 2px solid blue;
 }
 
 /*CHANGE TO CORRECT CLASSES AND PICTURES*/
-.mulan{
+.mulan {
     background-image: url(../media/mulan.jpeg);
 }
-.ariel{
+
+.ariel {
     background-image: url(../media/ariel.jpeg);
 }
-.belle{
+
+.belle {
     background-image: url(../media/belle.jpeg);
 }
-.remi{
+
+.remi {
     background-image: url(../media/remi.webp);
 }
-.edna{
+
+.edna {
     background-image: url(../media/edna.jpg);
 }
-.rapunzel{
+
+.rapunzel {
     background-image: url(../media/rapunzel.jpeg);
 }
-

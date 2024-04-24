@@ -17,7 +17,7 @@
     --mainHeading: 28px;
     --subHeading: 24px;
     --mainHeading: 20px;
-    --paragraphFontSize: 16px;
+    --paragraphFontSize: 14px;
     --buttonFontSize: 16px;
 
     /*Other*/
@@ -120,11 +120,12 @@ button {
 
 
 input {
-    height: 4.7vh;
-    width: 80%;
-    border-radius: 30px;
-    border: 1px solid black;
+    height: 5.2vh;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid transparent;
     font-size: var(--paragraphFontSize);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .btnPlayAudio {
