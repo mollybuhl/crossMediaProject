@@ -95,5 +95,43 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 11,
+        "username": "elsa",
+        "password": "elsa",
+        "profilePic": "ariel",
+        "time": 0,
+        "unlockedCharacters": [
+            "Cruella de Vil",
+            "Prince John",
+            "Prins John",
+            "T\u00f6rnrosa",
+            "Musse",
+            "Darla",
+            "Kapten Krok",
+            "Sn\u00f6vit",
+            "Hj\u00e4rter Dam",
+            "Hattmakaren",
+            "Ursulla",
+            "Head Chef",
+            "Hades"
+        ],
+        "suspectCharacters": [
+            "prinsJohn",
+            "t\u00f6rnrosa",
+            "musse",
+            "darla",
+            "kaptenKrok",
+            "sn\u00f6vit",
+            "hj\u00e4rterDam",
+            "hattmakaren",
+            "ursulla",
+            "headChef",
+            "hades"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil"
+        ]
     }
 ]

@@ -235,7 +235,7 @@ async function renderMap(){
                             locationDescription = "Dörren till Casionot";
                             break;
                         case "prinsJohn":
-                            selectedCharracter = "Prince John";
+                            selectedCharracter = "Prins John";
                             coordinates = "380 240 300";
                             locationDescription = "Dörren till Casionot";
                             break;
@@ -364,7 +364,7 @@ function renderControlQuestion(charracter){
         case "Hades":
             typeOfQuestion = "time";
             question = "Ange vilken tid detta område stängs";
-            answer = "21:00";
+            answer = 2100;
             break;
         case "Darla":
             typeOfQuestion = "word";
@@ -396,7 +396,7 @@ function renderControlQuestion(charracter){
             question = "På toppen av casinot finner du något som Prins John och Hjärter Dam har gemensamt.";
             answer = "krona";
             break;
-        case "Prince John":
+        case "Prins John":
             typeOfQuestion = "number";
             question = "Räkna flaggstängerna och gå 8 röda steg moturs och sedan ett steg medurs";
             answer = 13;
@@ -446,41 +446,26 @@ function renderControlQuestion(charracter){
     }else if(typeOfQuestion === "numbers"){
         inputWrapper.classList.add("numbers");
 
-        let num1 = answer[0];
-        let num2 = answer[1];
-
-        let numDigits1 = num1.toString().length;
-        //let numDigits2 = num2.toString().length;
-
-        if(numDigits1 === 1){
+        if(charracter === "Ursulla"){
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
+                <label>Broar</label>
                 <input type="number" class="num1Input1" maxlength="1"></input>
             </div>
             <div class="inputBox num2Input">
+                <label>Bänkar</label>
                 <input type="number" class="num2Input1" maxlength="1"></input>
             </div>
             `;
-        }else if(numDigits1 === 2){
-            inputWrapper.innerHTML = `
-            <div class="inputBox num1Input" >
-                <input type="number" class="num1Input1" maxlength="1"></input>
-                <input type="number" class="num1Input2" maxlength="1"></input>
-            </div>
-            <div class="inputBox num2Input">
-                <input type="number" class="num2Input1" maxlength="1"></input>
-                <input type="number" class="num2Input2" maxlength="1"></input>
-            </div>
-            `;
-        }else if(numDigits1 === 3){
+        }else if(charracter === "Head Chef"){
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
-                <input type="number" class="num1Input1" maxlength="1"></input>
+                <input type="text" class="num1Input1" maxlength="1"></input>
                 <input type="number" class="num1Input2" maxlength="1"></input>
                 <input type="number" class="num1Input3" maxlength="1"></input>
             </div>
             <div class="inputBox num2Input">
-                <input type="number" class="num2Input1" maxlength="1"></input>
+                <input type="text" class="num2Input1" maxlength="1"></input>
                 <input type="number" class="num2Input2" maxlength="1"></input>
                 <input type="number" class="num2Input3" maxlength="1"></input>
             </div>
@@ -504,10 +489,10 @@ function renderControlQuestion(charracter){
     }else if(typeOfQuestion === "time"){
         inputWrapper.innerHTML = `
             <input class="input1"></input>
-            <input class="input1"></input>
+            <input class="input2"></input>
             <p>:</p>
-            <input class="input1"></input>
-            <input class="input1"></input>
+            <input class="input3"></input>
+            <input class="input4"></input>
             `;
     }
    
@@ -536,34 +521,46 @@ function renderControlQuestion(charracter){
             }
             
         }else if(typeOfQuestion === "numbers"){
-            // First input
-            let inputFieldsNum1 = document.querySelectorAll(".num1Input > input");
 
-            let userInput1 = '';
-            inputFieldsNum1.forEach(input => {
-                userInput1 += input.value;
-            });
+            if(charracter === "Ursulla"){
+                let inputFieldNum1 = parseFloat(document.querySelector(".num1Input > input").value);
+                let inputFieldNum2 = parseFloat(document.querySelector(".num2Input > input").value);
 
-            let userNumber1 = parseInt(userInput1);
+                if(inputFieldNum1 === answer[0] && inputFieldNum2 === answer[1]){
+                    correctAnswer = true;
+                }
 
-            if(userNumber1 === answer){
-                // Second number
-                let inputFieldsNum2 = document.querySelectorAll(".num1Input > input");
-
-                let userInput2 = '';
-                inputFieldsNum2.forEach(input => {
-                    userInput1 += input.value;
+            }else if(charracter === "Head Chef"){
+                let inputValues1 = [];
+                document.querySelectorAll('.num1Input > input').forEach(input => {
+                    inputValues1.push(input.value);
                 });
+                inputValues1 = inputValues1.join("");
 
-                let userNumber2 = parseInt(userInput1);
+                let inputValues2 = [];
+                document.querySelectorAll('.num2Input > input').forEach(input => {
+                    inputValues2.push(input.value);
+                });
+                inputValues2 = inputValues2.join("");
 
-                if(userNumber2 === answer){
+                if(inputValues1 === answer[0] && inputValues2 === answer[1]){
                     correctAnswer = true;
                 }
             }
+        }else if(typeOfQuestion === "time"){
+            let inputFields = document.querySelectorAll("input");
+            let userInput = '';
+            inputFields.forEach(input => {
+                userInput += input.value;
+            });
+
+            let userNumber = parseInt(userInput);
+
+            if(userNumber === answer){
+                correctAnswer = true;
+            }
         }
        
-        
         if(correctAnswer){
             // Save character as unlocked for user
             let userID = Number(window.localStorage.getItem("userId")); 
