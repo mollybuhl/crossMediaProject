@@ -1,6 +1,6 @@
 /*
     To Do: 
-    - Mark surrent player on leaderboard if they have finished
+    - Mark current player on leaderboard if they have finished
     - Display first player in the middle, bigger
     - Display player nr
 
@@ -60,21 +60,23 @@ async function renderLeaderboard(){
         let resource = await response.json();
 
         usersData = resource;
-        console.log(usersData);
     }catch(error){
         alert(`Kan inte hämta spelarnas data, ${error.message}`);
     }
 
     // Sort all players acording to finishing time
-    usersData.sort((a, b) => {
+    let finishedUsers = usersData.filter(user => user['finishingTime'] !== "Not finished");
+    finishedUsers.sort((a, b) => {
         // Convert finishing time strings to Date objects for comparison
         let timeA = new Date('1970-01-01T' + a['finishingTime']);
         let timeB = new Date('1970-01-01T' + b['finishingTime']);
         return timeA - timeB;
     });
 
-    let topThree = usersData.slice(0, 3);
-    let restOfPlayers = usersData.slice(3);
+    console.log(finishedUsers);
+
+    let topThree = finishedUsers.slice(0, 3);
+    let restOfPlayers = finishedUsers.slice(3);
 
     // Display the three leading players at the top
     let leaders = document.querySelector(".leaders");

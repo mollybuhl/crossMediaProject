@@ -1,137 +1,80 @@
 [
     {
         "id": 1,
-        "username": "test",
-        "password": "test1",
+        "username": "hej",
+        "password": "hej",
         "profilePic": "edna",
         "time": 0,
-        "finishingTime": "02:56:52"
-    },
-    {
-        "id": 2,
-        "username": "anna",
-        "password": "sanna",
-        "profilePic": "remi",
-        "time": 0,
-        "finishingTime": "01:06:52"
-    },
-    {
-        "id": 3,
-        "username": "molly",
-        "password": "molly",
-        "profilePic": "mulan",
-        "time": "02:06:52",
-        "finishingTime": "02:06:52"
-    },
-    {
-        "id": 4,
-        "username": "Saga",
-        "password": "try",
-        "profilePic": "rapunzel",
-        "time": 0,
-        "finishingTime": "03:06:52"
-    },
-    {
-        "id": 5,
-        "username": "Mejra",
-        "password": "try",
-        "profilePic": "belle",
-        "time": 0,
-        "finishingTime": "02:15:52"
-    },
-    {
-        "id": 6,
-        "username": "Ellis",
-        "password": "try",
-        "profilePic": "edna",
-        "time": 0,
-        "finishingTime": "01:26:52"
-    },
-    {
-        "id": 7,
-        "username": "Pelle",
-        "password": "try",
-        "profilePic": "ariel",
-        "time": 0,
-        "finishingTime": "01:36:52"
-    },
-    {
-        "id": 8,
-        "username": "kamma",
-        "password": "kamma",
-        "profilePic": "remi",
-        "time": 0,
-        "finishingTime": "01:39:52"
-    },
-    {
-        "id": 9,
-        "username": "mollytest",
-        "password": "mollytest",
-        "profilePic": "edna",
-        "time": 0,
-        "unlockedCharacters": [
-            "Hattmakarn",
-            "Sn\u00f6vit",
-            "Hattmakaren",
-            "Cruella de Vil",
-            "Kapten Krok",
-            "T\u00f6rnrosa"
-        ],
-        "suspectCharacters": [
-            "hades",
-            "kaptenKrok"
-        ],
-        "notSuspectCharacters": [
-            "cruellaDeVil",
-            "t\u00f6rnrosa"
-        ]
-    },
-    {
-        "id": 10,
-        "username": "testat",
-        "password": "testat",
-        "profilePic": "remi",
-        "time": 0,
+        "finishingTime": "Not finished",
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
     },
     {
-        "id": 11,
-        "username": "elsa",
-        "password": "elsa",
-        "profilePic": "ariel",
+        "id": 2,
+        "username": "maja",
+        "password": "hej",
+        "profilePic": "edna",
         "time": 0,
-        "unlockedCharacters": [
-            "Cruella de Vil",
-            "Prince John",
-            "Prins John",
-            "T\u00f6rnrosa",
-            "Musse",
-            "Darla",
-            "Kapten Krok",
-            "Sn\u00f6vit",
-            "Hj\u00e4rter Dam",
-            "Hattmakaren",
-            "Ursulla",
-            "Head Chef",
-            "Hades"
-        ],
-        "suspectCharacters": [
-            "prinsJohn",
-            "t\u00f6rnrosa",
-            "musse",
-            "darla",
-            "kaptenKrok",
-            "sn\u00f6vit",
-            "hj\u00e4rterDam",
-            "hattmakaren",
-            "ursulla",
-            "headChef",
-            "hades"
-        ],
-        "notSuspectCharacters": [
-            "cruellaDeVil"
-        ]
+        "finishingTime": "01:05:07",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 3,
+        "username": "hero",
+        "password": "hej",
+        "profilePic": "edna",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 4,
+        "username": "mejra",
+        "password": "hej",
+        "profilePic": "edna",
+        "time": 0,
+        "finishingTime": "02:05:07",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 5,
+        "username": "kajsa",
+        "password": "hej",
+        "profilePic": "remi",
+        "time": 0,
+        "finishingTime": "01:55:07",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 6,
+        "username": "Sara",
+        "password": "hej",
+        "profilePic": "edna",
+        "time": 0,
+        "finishingTime": "00:55:07",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 7,
+        "username": "molly",
+        "password": "hej",
+        "profilePic": "edna",
+        "time": 0,
+        "finishingTime": "02:35:07",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
+
 ]
