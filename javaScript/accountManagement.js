@@ -1,19 +1,24 @@
 
 // Function to render registration page
-function renderRegister(){
+function renderRegister() {
 
-    main.innerHTML = `
-    <h2>Registrera ditt konto</h2>
-    <div class="input-field">
-        <label for="registerUsername">Användarnamn</label>
-        <input type="text" id="registerUsername">
-        
-        <label for="registerUsername">Lösenord</label>         
-        <input type="password" id="registerPassword">
+    main.innerHTML = `    
+    <h2 class="loginRegisterHeader">Registrera ditt konto</h2>
+    <div id="inputZone" class="input-field">
+        <div class="input-container">
+            <p class="loginRegSubHeader">Användarnamn</p>
+            <input type="text" id="registerUsername">
+        </div>
+        <div class="input-container">
+            <p class="loginRegSubHeader">Lösenord</p>
+            <input type="password" id="registerPassword">
+        </div>
+        <div class="input-container">
+            <p class="loginRegSubHeader">Bekräfta lösenord</p>
+            <input type="password" id="confirmPassword">
+        </div>
 
-        <label for="registerUsername">Bekräfta lösenord</label>
-        <input type="password" id="confirmPassword">
-
+        <p class="loginRegSubHeader">Välj profilbild</p>
         <div class="selectProfilePic">
             <div class="mulan"></div>
             <div class="ariel"></div>
@@ -27,19 +32,20 @@ function renderRegister(){
     <p class="userInfo"></p>
     <button id="regButton">Registrera</button>
     <p class="btnLoginPage">Har du redan ett konto? <span> Logga in</span></p>
-    `;
+
+`;
 
     // Selecting profile picture
     let selectedProfilePic = "none";
     document.querySelectorAll(".selectProfilePic > div").forEach(div => {
         div.addEventListener("click", e => {
-            if(!div.classList.contains("selected")){
+            if (!div.classList.contains("selected")) {
                 document.querySelectorAll(".selectProfilePic > div.selected").forEach(selectedDiv => {
                     selectedDiv.classList.remove("selected");
                 });
                 selectedProfilePic = div.classList[0];
                 div.classList.add("selected");
-            }else{
+            } else {
                 selectedProfilePic = "none";
                 div.classList.remove("selected");
             }
@@ -55,7 +61,7 @@ function renderRegister(){
 
         let requestOptions = {
             method: "POST",
-            headers: {"Content-type": "application/json; charset=UTF-8"},
+            headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 username: username,
                 password: password,
@@ -65,27 +71,25 @@ function renderRegister(){
             })
         };
 
-        try{
+        try {
             let request = new Request("php/api.php", requestOptions);
             const response = await fetch(request);
             let resource = await response.json();
 
-            if(!response.ok) {
+            if (!response.ok) {
                 // If unsuccessfull registration, inform user of error creating an account
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
                 // If successfull registration, save user credentials in local storage and render introduction page
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
-                window.localStorage.setItem("loggedIn", "true");   
- 
+                window.localStorage.setItem("loggedIn", "true");
+
                 renderInstructionpage();
             }
-    
-        }catch(error){
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
+
+        } catch (error) {
+            alert(`Något gick fel, ${error.message}`);
         }
 
     });
@@ -95,19 +99,22 @@ function renderRegister(){
 }
 
 // Function to render login page
-function renderLogin(){
+function renderLogin() {
 
     main.innerHTML = `
-    <h2>Login</h2>
+    <h2 class="loginRegisterHeader">Login</h2>
     <div class="input-field" id="loginField">
-        <label for="loginUsername">Användarnamn</label>
-        <input type="text" id="loginUsername">
-    
-        <label for="loginPassword">Lösenord</label>
-        <input type="password" id="loginPassword">
+        <p class="loginRegSubHeader">Användarnamn</p>
+        <div class="input-container">
+            <input type="text" id="loginUsername">
+        </div>
+        <p class="loginRegSubHeader">Lösenord</p>
+        <div class="input-container">
+            <input type="password" id="loginPassword">
+        </div>
     </div>
     <p class="userInfo"></p>
-    <button>Login</button>
+    <button>Logga in</button>
     <p class="btnRegPage">Har du inget konto? <span>Registrera dig</span></button>
     `;
 
@@ -119,7 +126,7 @@ function renderLogin(){
 
         let requestOptions = {
             method: "POST",
-            headers: {"Content-type": "application/json; charset=UTF-8"},
+            headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 username: username,
                 password: password,
@@ -127,27 +134,25 @@ function renderLogin(){
             })
         };
 
-        try{
+        try {
             let request = new Request("php/api.php", requestOptions);
             const response = await fetch(request);
             let resource = await response.json();
 
-            if(!response.ok) {
+            if (!response.ok) {
                 // If unsuccessfull user authorization, inform user of error
                 main.querySelector(".userInfo").textContent = resource.message;
             } else {
                 // If successfull user authorization, save user credentials in local storage and render game map
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
-                window.localStorage.setItem("loggedIn", "true");   
- 
+                window.localStorage.setItem("loggedIn", "true");
+
                 renderMap();
             }
-    
-        }catch(error){
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
+
+        } catch (error) {
+            alert(`Något gick fel, ${error.message}`);
         }
     })
 
