@@ -4,38 +4,16 @@
     flex-direction: column;
     gap: 2vh;
     padding-bottom: 4vh;
-}
-.input-container{
-    position: relative;
-    display: inline-block;
+    color: var(--white);
 }
 
-.input-container input{
-    padding-left: 15vw;
+.input-field > input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--seeThrough);
+    color: var(--white);
 }
-
-.input-container svg {
-    position: absolute;
-    top: 50%;
-    left: 5vw; 
-    transform: translateY(-50%);
-    fill: #BCBCBC; /* Apply desired fill color to the SVG */
-}
-
-label{
-    position: absolute;
-    left: 15vw;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
-}
-
-input:focus ~ label{
-    top: 1vh;
-    font-size: 12px;
-}
-
-
 
 p.btnLoginPage, p.btnRegPage{
     text-align: center;
