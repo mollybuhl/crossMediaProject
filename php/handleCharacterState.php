@@ -77,8 +77,4 @@ function unlockCharacter($requestData, $users){
 
 }
 
-function checkForUnlockedCharacter($requestData, $users){
-
-}
-
 ?>

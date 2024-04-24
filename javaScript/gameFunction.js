@@ -46,11 +46,18 @@ async function renderMap(){
         let response = await fetch(request);
         let resource = await response.json();
 
-        profilePic = resource.profilePic;
-        unlockedCharacters = resource.unlockedCharacters;
-        console.log(unlockedCharacters);
+        if(!response.ok){
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }else{
+            profilePic = resource.profilePic;
+            unlockedCharacters = resource.unlockedCharacters;
+        }
     }catch(error){
-        alert(`Kan inte hämta spelarens data, ${error.message}`);
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
     }
 
     //Map structure
@@ -583,22 +590,64 @@ function renderControlQuestion(charracter){
                 let resource = await response.json();
     
                 if(!response.ok) {
-                    console.log(resource);                    
+                    let message = "Något gick fel, försök igen senare";
+                    informUser(message);
+                    return;                   
                 } else {
-                    console.log(resource.message);  
+                    // Display character page
+                    renderCharracterPage(charracter) 
                 }
         
             }catch(error){
-                alert(`Något gick fel, ${error.message}`);
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
             }
 
-            // Display character page
-            renderCharracterPage(charracter)
+            
         }else{
-            console.log("Wrong answer");
+            // Inform user of wrong answer
+            let popupBackground = document.createElement("div");
+            popupBackground.classList.add("wrongAnswerPopup");
+            popupBackground.innerHTML = `
+            <div>
+                <h2>Fel Svar</h2>
+                <p>Se till att du är på rätt plats och gör ett nytt försök</p>
+                <button>OK</button>
+            </div>
+            `;
+            main.appendChild(popupBackground);
+
+            popupBackground.querySelector("button").addEventListener("click", e =>{
+                popupBackground.remove();
+            })
         }
     })
 
+}
+
+
+function informUser(message){
+
+    let popupBackground = document.createElement("div");
+    popupBackground.classList.add("popupDarkBackground");
+    popupBackground.innerHTML = `
+    <div>
+        <h2>Hoppsan!</h2>
+        <p>${message}</p>
+        <button>OK</button>
+    </div>
+    `;
+
+    main.appendChild(popupBackground);
+
+    popupBackground.querySelector("button").addEventListener("click", e => {
+        window.localStorage.setItem("loggedIn", "false");
+        window.localStorage.removeItem("userId");
+        window.localStorage.removeItem("password");
+
+        renderStartpage();
+    })
 }
 
 

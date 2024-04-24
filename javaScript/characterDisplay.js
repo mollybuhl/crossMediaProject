@@ -1,7 +1,6 @@
 
 // Function to render charracter page based on the carracter that was clicked
 function renderCharracterPage(charracter){
-    console.log(charracter);
 
     let charracterText;
     let characterMovie;
@@ -183,17 +182,20 @@ function renderCharracterPage(charracter){
             let resource = await response.json();
 
             if(!response.ok) {
-                console.log("Suspect not saved");                    
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;                    
             } else {
-                console.log("suspect added");  
+                // Render character board
+                renderCharracterboard();
             }
     
         }catch(error){
-            alert(`Något gick fel, ${error.message}`);
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
         }
 
-        // Render character board
-        renderCharracterboard();
     });
 
     // Mark as suspect
@@ -217,16 +219,19 @@ function renderCharracterPage(charracter){
             let resource = await response.json();
 
             if(!response.ok) {
-                console.log("Suspect not saved");                    
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;              
             } else {
-                console.log("suspect added");  
+                 // Render character board
+                renderCharracterboard();  
             }
 
         }catch(error){
-            alert(`Något gick fel, ${error.message}`);
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
         }
 
-        // Render character board
-        renderCharracterboard();
     });
 }

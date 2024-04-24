@@ -20,7 +20,9 @@ async function renderProfilepage(){
         profilePic = resource.profilePic;
         username = resource.username;
     }catch(error){
-        alert(`Something went wrong, ${error.message}`);
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
     }
 
     // Structure of main
@@ -105,7 +107,9 @@ async function renderProfilepage(){
                     }
             
                 }catch(error){
-                    alert(`Något gick fel, ${error.message}`);
+                    let message = "Något gick fel, försök igen senare";
+                    informUser(message);
+                    return;
                 }
             }
         })
@@ -149,7 +153,9 @@ async function renderProfilepage(){
             }
     
         }catch(error){
-            alert(`Något gick fel, ${error.message}`);
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
         }
     })
 
@@ -189,7 +195,9 @@ async function renderProfilepage(){
             }
     
         }catch(error){
-            alert(`Något gick fel, ${error.message}`);
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
         }
     });
 

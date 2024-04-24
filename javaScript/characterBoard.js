@@ -67,10 +67,18 @@ async function renderCharracterboard(){
         let response = await fetch(request);
         let resource = await response.json();
 
-        suspectCharacters = resource.suspectCharacters;
-        notSuspectCharacters = resource.notSuspectCharacters;
+        if(!response.ok){
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }else{
+            suspectCharacters = resource.suspectCharacters;
+            notSuspectCharacters = resource.notSuspectCharacters;
+        }
     }catch(error){
-        alert(`Kan inte hämta spelarens data, ${error.message}`);
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
     }
 
     // Mark all not suspect characters as not suspect

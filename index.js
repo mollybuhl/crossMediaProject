@@ -1,8 +1,4 @@
-/*
-    To Do:
-    - Handle alert in case of error (clear localstorage and render home page)
 
-*/
 let main = document.querySelector("main");
 
 if (localStorage.getItem("loggedIn") === "true") {

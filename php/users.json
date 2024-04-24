@@ -75,6 +75,20 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 8,
+        "username": "myy",
+        "password": "myy",
+        "profilePic": "remi",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Hattmakaren"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [
+            "hattmakaren"
+        ]
     }
-
 ]

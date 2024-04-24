@@ -194,3 +194,47 @@
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+
+.wrongAnswerPopup{
+    height: 100%;
+    width: 100%;
+    background-color: #00000091;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrongAnswerPopup > div{
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 90%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrongAnswerPopup > div > h2{
+    color: var(--black);
+    margin-bottom: 0;
+}
+
+.wrongAnswerPopup > div > p{
+    margin-top: 0;
+    color: var(--black);
+    text-align: center;
+}
+
+.wrongAnswerPopup > div > button{
+    border: none;
+    width: 85%;
+}
+
+.wrongAnswerPopup > div > button:active{
+    background-color: var(--headerYellow);
+}

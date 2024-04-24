@@ -59,9 +59,17 @@ async function renderLeaderboard(){
         let response = await fetch(request);
         let resource = await response.json();
 
-        usersData = resource;
+        if(!response.ok){
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }else{
+            usersData = resource;
+        }
     }catch(error){
-        alert(`Kan inte hämta spelarnas data, ${error.message}`);
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
     }
 
     // Sort all players acording to finishing time
@@ -72,8 +80,6 @@ async function renderLeaderboard(){
         let timeB = new Date('1970-01-01T' + b['finishingTime']);
         return timeA - timeB;
     });
-
-    console.log(finishedUsers);
 
     let topThree = finishedUsers.slice(0, 3);
     let restOfPlayers = finishedUsers.slice(3);
