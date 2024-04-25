@@ -130,6 +130,10 @@ input {
     color: var(--white);
 }
 
+input:focus {
+    outline: none;
+}
+
 .btnPlayAudio {
     width: 13vw;
     height: 6vh;
