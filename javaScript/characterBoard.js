@@ -1,6 +1,6 @@
 
 // Function to render character board and dislay marked suspects
-async function renderCharracterboard(){
+async function renderCharracterboard() {
     main.classList.remove("mainMap");
 
     main.innerHTML = `
@@ -56,26 +56,26 @@ async function renderCharracterboard(){
     `;
 
     // Check for suspect and not suspect marked by user
-    let userID = Number(window.localStorage.getItem("userId")); 
+    let userID = Number(window.localStorage.getItem("userId"));
     let userPassword = window.localStorage.getItem("userPassword");
 
     let suspectCharacters;
     let notSuspectCharacters;
 
-    try{
+    try {
         let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();
 
-        if(!response.ok){
+        if (!response.ok) {
             let message = "Något gick fel, försök igen senare";
             informUser(message);
             return;
-        }else{
+        } else {
             suspectCharacters = resource.suspectCharacters;
             notSuspectCharacters = resource.notSuspectCharacters;
         }
-    }catch(error){
+    } catch (error) {
         let message = "Något gick fel, försök igen senare";
         informUser(message);
         return;
@@ -101,7 +101,7 @@ async function renderCharracterboard(){
 
 
     // Guessing murderer
-    
+
 
     // Navbar
     main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);

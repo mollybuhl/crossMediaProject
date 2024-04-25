@@ -127,6 +127,12 @@ input {
     border: 1px solid transparent;
     font-size: var(--paragraphFontSize);
     background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 10px;
+    color: var(--white);
+}
+
+input:focus {
+    outline: none;
 }
 
 
@@ -150,7 +156,7 @@ main {
 }
 
 /*Error popup*/
-.popupDarkBackground{
+.popupDarkBackground {
     height: 100%;
     width: 100%;
     background: url(../media/background.png);
@@ -161,7 +167,7 @@ main {
 
 }
 
-.popupDarkBackground > div{
+.popupDarkBackground>div {
     background-color: var(--white);
     border-radius: 20px;
     height: 25vh;
@@ -172,21 +178,21 @@ main {
     align-items: center;
 }
 
-.popupDarkBackground > div > h2{
+.popupDarkBackground>div>h2 {
     margin-bottom: 0;
     color: var(--black);
 }
 
-.popupDarkBackground > div > p{
+.popupDarkBackground>div>p {
     margin-top: 0;
     color: var(--black);
 }
 
-.popupDarkBackground > div > button{
+.popupDarkBackground>div>button {
     border: none;
     width: 85%;
 }
 
-.popupDarkBackground > div > button:active{
+.popupDarkBackground>div>button:active {
     background-color: var(--headerYellow);
 }

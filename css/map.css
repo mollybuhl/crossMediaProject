@@ -1,6 +1,5 @@
-
-.mainMap{
-    background-image: url(../media/preliminaryBackground.jpg); 
+.mainMap {
+    background-image: url(../media/preliminaryBackground.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +8,7 @@
     padding: 0;
 }
 
-.topbar{
+.topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,75 +16,80 @@
     color: var(--black);
 }
 
-.pin{
+.pin {
     position: absolute;
 }
 
-.pin.selected path{
+.pin.selected path {
     fill: red;
 }
 
-.pin.kaptenKrok{
+.pin.hoock {
     top: 50vh;
     right: 50vw;
 }
 
-.pin.cruellaDeVil{
+.pin.cruella {
     top: 30vh;
     right: 10vw;
 }
 
-.pin.prinsJohn{
+.pin.princeJohn {
     top: 30vh;
     right: 70vw;
 }
 
-.pin.ursulla{
+.pin.ursulla {
     top: 70vh;
     right: 50vw;
 }
 
-.pin.musse{
+.pin.mickeyMouse {
     top: 40vh;
     right: 50vw;
 }
 
-.pin.hades{
+.pin.hades {
     top: 60vh;
     right: 60vw;
 }
 
-.pin.snövit{
+.pin.belle {
+    top: 20vh;
+    right: 35vw;
+}
+
+.pin.snowWithe {
     top: 60vh;
     right: 70vw;
 }
 
-.pin.törnrosa{
+.pin.sleepingBeauty {
     top: 34vh;
     right: 52vw;
 }
 
-.pin.darla{
+.pin.darla {
     top: 45vh;
     right: 45vw;
 }
 
-.pin.hjärterdam{
+.pin.queenOfHearts {
     top: 72vh;
     right: 81vw;
 }
 
-.pin.hattmakaren{
+.pin.hatter {
     top: 72vh;
     right: 21vw;
 }
 
-.pin.headChef{
+.pin.headChef {
     top: 24vh;
     right: 71vw;
 }
 
-.popUp{
+.popUp {
     background-color: #ffffffbf;
     border-radius: 30px 30px 0 0;
     bottom: 0;
@@ -93,17 +97,18 @@
     width: 100%;
 }
 
-.popUp > div{
+.popUp>div {
     display: flex;
 }
 
-.navbar{
+.navbar {
     position: fixed;
-    background-color: white;
-    width: 90%;
+    background-color: rgba(0, 15, 34, 0.7);
+    border: 0.5px solid rgba(206, 206, 206, 0.13);
+    width: 82%;
     bottom: 2vh;
-    height: 8vh;
-    border-radius: 30px;
+    height: 7vh;
+    border-radius: var(--borderRadius);
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -112,11 +117,11 @@
     z-index: 2;
 }
 
-.navbar.hidden{
+.navbar.hidden {
     display: none;
 }
 
-.btnProfile{
+.btnProfile {
     width: 7vh;
     height: 7vh;
     border: none;
@@ -126,7 +131,7 @@
     border-radius: 50%;
 }
 
-.popupBackground{
+.popupBackground {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -135,7 +140,7 @@
     background-color: #000000b2;
 }
 
-.confirmPopup{
+.confirmPopup {
     background-color: white;
     border-radius: 30px;
     text-align: center;
@@ -147,11 +152,11 @@
     transform: translate(-50%, -50%);
 }
 
-.confirmPopup > div{
+.confirmPopup>div {
     display: flex;
 }
 
-.charracterImage{
+.charracterImage {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -161,14 +166,15 @@
     top: -80px;
 }
 
-.charracterInfo{
+.charracterInfo {
     padding-left: 45vw;
 }
-.Cruella{
+
+.Cruella {
     background-image: url(../media/cruella.png);
 }
 
-.coordinates{
+.coordinates {
     display: flex;
     align-items: center;
     gap: 2vw;
@@ -177,26 +183,22 @@
 
 /*Control question*/
 
-.inputWrapper{
+.inputWrapper {
     display: flex;
 }
 
-.inputWrapper input.number{
+.inputWrapper input.number {}
 
-}
-.inputWrapper input.numbers{
+.inputWrapper input.numbers {}
 
-}
-.inputWrapper input.word{
-
-}
+.inputWrapper input.word {}
 
 input[type=number] {
     -moz-appearance: textfield;
 }
 
 
-.wrongAnswerPopup{
+.wrongAnswerPopup {
     height: 100%;
     width: 100%;
     background-color: #00000091;
@@ -208,7 +210,7 @@ input[type=number] {
     align-items: center;
 }
 
-.wrongAnswerPopup > div{
+.wrongAnswerPopup>div {
     background-color: var(--white);
     border-radius: 20px;
     width: 90%;
@@ -219,22 +221,22 @@ input[type=number] {
     align-items: center;
 }
 
-.wrongAnswerPopup > div > h2{
+.wrongAnswerPopup>div>h2 {
     color: var(--black);
     margin-bottom: 0;
 }
 
-.wrongAnswerPopup > div > p{
+.wrongAnswerPopup>div>p {
     margin-top: 0;
     color: var(--black);
     text-align: center;
 }
 
-.wrongAnswerPopup > div > button{
+.wrongAnswerPopup>div>button {
     border: none;
     width: 85%;
 }
 
-.wrongAnswerPopup > div > button:active{
+.wrongAnswerPopup>div>button:active {
     background-color: var(--headerYellow);
 }
