@@ -188,63 +188,63 @@ async function renderMap() {
                     switch (classList[i]) {
                         case "kaptenKrok":
                             selectedCharracter = "Kapten Krok";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.601263, 12.987155";
+                            locationDescription = "tbc";
                             break;
                         case "cruellaDeVil":
                             selectedCharracter = "Cruella de Vil";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.600699, 12.985931";
+                            locationDescription = "tbc";
                             break;
                         case "musse":
                             selectedCharracter = "Musse";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.604947, 12.987441";
+                            locationDescription = "Malmö slott";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.603390, 12.988230";
+                            locationDescription = "Togepi´s lookout";
                             break;
                         case "hades":
                             selectedCharracter = "Hades";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.602061, 12.995165";
+                            locationDescription = "Gamla kyrkogården";
                             break;
                         case "darla":
                             selectedCharracter = "Darla";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.604963, 12.983702";
+                            locationDescription = "Fiskehoddorna";
                             break;
                         case "törnrosa":
                             selectedCharracter = "Törnrosa";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.603258, 12.985958";
+                            locationDescription = "Slottsmöllan";
                             break;
                         case "snövit":
                             selectedCharracter = "Snövit";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.604472, 12.992745";
+                            locationDescription = "Diana - Naturens väktare";
                             break;
                         case "headChef":
                             selectedCharracter = "Head Chef";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.602030, 12.985432";
+                            locationDescription = "Mat och Vin Slottsparken";
                             break;
                         case "hattmakaren":
                             selectedCharracter = "Hattmakaren";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.603609, 12.989457";
+                            locationDescription = "Slottsträdgårdens Kafé";
                             break;
                         case "hjärterdam":
                             selectedCharracter = "Hjärter Dam";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.603090, 12.991780";
+                            locationDescription = "Bakom Casinot";
                             break;
                         case "prinsJohn":
                             selectedCharracter = "Prins John";
-                            coordinates = "380 240 300";
-                            locationDescription = "Dörren till Casionot";
+                            coordinates = "55.602586, 12.992805";
+                            locationDescription = "Framför Casionot";
                             break;
                     }
                 }
