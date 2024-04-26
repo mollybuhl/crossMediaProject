@@ -19,8 +19,6 @@ async function renderCharracterboard() {
         <div class="headChef"></div>
     </div>
 
-    <button>Giss Mördaren</button>
-
     <div class="navbar">
     <div class="charracterChart">
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -97,14 +95,62 @@ async function renderCharracterboard() {
         characterDiv.appendChild(suspectBanner);
     })
 
-    // Clicking on character
+    // Ask to guess murderer when clicking on character
+    main.querySelectorAll(".boardOfCharracters > div").forEach(div => {
+        div.addEventListener("click", e => {
+
+            let character = div.classList[0];
+
+            let popup = document.createElement("div");
+            popup.classList.add("gueddMurderPopup");
+            popup.innerHTML = `
+            <p>Är du säker på att du vill gissa på</p>
+            <h3>${character}</h3>
+            <button>JA</button>
+            `;
+    
+            main.appendChild(popup);
+
+            popup.querySelector("button").addEventListener("click", e => {
+                 
+                if(character === "Musse"){
+
+                    // stop timer and display story
+                    renderStorySolution();
+                }else{
+
+                    // Inform incorrect guess
+                    renderIncorrectGuess(character);
+                }
+            })
+        })
+    })
+    
+    
 
 
-    // Guessing murderer
 
 
     // Navbar
     main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
     main.querySelector(".map").addEventListener("click", renderMap);
+
+}
+
+function renderIncorrectGuess(character){
+    main.innerHTML = `
+    <h2>${character}</h2>
+    <p>är</p>
+    <h2>inte mördaren</h2>
+    <p>Vill du fortsätta spela spelet eller avsluta spelet och lyssna på vad som faktiskt hänt?</p>
+    <button class="keepPlaying">Fortsätt spela</button>
+    <button class="listenToStory">Lyssna på lösningen</button>
+    `;
+
+    main.querySelector(".keepPlaying").addEventListener("click", renderMap);
+    main.querySelector(".listenToStory").addEventListener("click", renderStorySolution);
+}
+
+function renderStorySolution(){
 
 }
