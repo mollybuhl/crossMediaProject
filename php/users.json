@@ -90,5 +90,43 @@
         "notSuspectCharacters": [
             "hattmakaren"
         ]
+    },
+    {
+        "id": 9,
+        "username": "molly1",
+        "password": "molly1",
+        "profilePic": "edna",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Darla",
+            "Cruella de Vil",
+            "Head Chef",
+            "Prins John",
+            "T\u00f6rnrosa",
+            "Musse",
+            "Kapten Krok",
+            "Sn\u00f6vit",
+            "Hades",
+            "Hj\u00e4rter Dam",
+            "Ursulla",
+            "Hattmakaren"
+        ],
+        "suspectCharacters": [
+            "darla",
+            "prinsJohn",
+            "t\u00f6rnrosa",
+            "musse",
+            "kaptenKrok",
+            "sn\u00f6vit",
+            "hades",
+            "hj\u00e4rterDam",
+            "ursulla",
+            "hattmakaren",
+            "headChef"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil"
+        ]
     }
 ]
