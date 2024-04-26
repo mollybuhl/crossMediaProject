@@ -59,10 +59,17 @@ async function renderLeaderboard() {
         let response = await fetch(request);
         let resource = await response.json();
 
-        usersData = resource;
-        console.log(usersData);
+        if(!response.ok){
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }else{
+            usersData = resource;
+        }
     } catch (error) {
-        alert(`Kan inte hämta spelarnas data, ${error.message}`);
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
     }
 
     // Sort all players acording to finishing time
