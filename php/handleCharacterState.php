@@ -18,7 +18,10 @@ function updateSuspect($requestData, $users){
             
             if(isset($requestData["suspectCharacter"])){
                 $suspectedCharacter = $requestData["suspectCharacter"];
-                $users[$i]["suspectCharacters"][] = $suspectedCharacter;
+
+                if(!in_array($suspectedCharacter, $users[$i]["suspectCharacters"])){
+                    $users[$i]["suspectCharacters"][] = $suspectedCharacter;
+                }
 
                 if (in_array($suspectedCharacter, $users[$i]["notSuspectCharacters"])) {
 
@@ -30,7 +33,10 @@ function updateSuspect($requestData, $users){
 
             }else if(isset($requestData["notSuspectCharacter"])){
                 $notSuspectedCharacter = $requestData["notSuspectCharacter"];
-                $users[$i]["notSuspectCharacters"][] = $notSuspectedCharacter;
+
+                if(!in_array($notSuspectedCharacter, $users[$i]["notSuspectCharacters"])){
+                    $users[$i]["notSuspectCharacters"][] = $notSuspectedCharacter;
+                }
 
                 if (in_array($notSuspectedCharacter, $users[$i]["suspectCharacters"])) {
 

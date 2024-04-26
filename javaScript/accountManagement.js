@@ -89,9 +89,7 @@ function renderRegister() {
             }
 
         } catch (error) {
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
+           console.log(error);
         }
 
     });
@@ -154,9 +152,7 @@ function renderLogin() {
             }
 
         } catch (error) {
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
+           console.log(error);
         }
     })
 
