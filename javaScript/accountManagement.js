@@ -89,7 +89,7 @@ function renderRegister() {
             }
 
         } catch (error) {
-           console.log(error);
+            main.querySelector(".userInfo").textContent = error;
         }
 
     });
@@ -152,7 +152,7 @@ function renderLogin() {
             }
 
         } catch (error) {
-           console.log(error);
+            main.querySelector(".userInfo").textContent = error;
         }
     })
 
