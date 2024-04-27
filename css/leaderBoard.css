@@ -73,6 +73,19 @@
     align-items: center;
 }
 
+.scoreboard>div>p:nth-child(2) {
+    padding-right: 15vh;
+}
+
+.scoreboard>div>p:nth-child(3) {
+    padding-right: 1.2vh;
+}
+
+.scoreboard>div>p {
+    padding-top: 2.2vh;
+}
+
+
 #rankingContainer {
     display: flex;
     flex-direction: column;
