@@ -48,7 +48,8 @@ h2 {
     margin-top: 0;
     font-family: lakkiReddy;
     font-size: var(--subHeading);
-    color: var(--headerYellow);
+    color: var(--white);
+    text-align: center;
 }
 
 

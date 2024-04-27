@@ -11,7 +11,7 @@
 }
 
 #inputZone {
-    padding-bottom: 8vh;
+    padding-bottom: 10vh;
 }
 
 .input-field {
@@ -27,6 +27,7 @@
 }
 
 .userInfo {
+    height: 5vh;
     margin: 0;
     text-align: center;
     color: var(--red);

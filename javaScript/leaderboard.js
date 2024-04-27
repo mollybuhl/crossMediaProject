@@ -11,7 +11,7 @@ async function renderLeaderboard() {
 
     main.classList.remove("mainMap");
     main.innerHTML = `
-    <h2>Topplista</h2>
+    <h2 id="leaderBoardHeader">Topplista</h2>
     <div class="leaders"></div>
     <div class="scoreboard"></div>
 
@@ -102,11 +102,11 @@ async function renderLeaderboard() {
 
         let playerDiv = document.createElement("div");
         playerDiv.innerHTML = `
+        <div id="rankingContainer">
         <p class="leaderNumber">${placement}</p>
-        <div>
             <div class="playerProfilePic"></div>
-            <p>${player.username}</p>
         </div>
+        <p>${player.username}</p>
         <p class="secondaryText">${player.finishingTime}</p>
         `;
 
