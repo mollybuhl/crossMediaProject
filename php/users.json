@@ -128,5 +128,16 @@
         "notSuspectCharacters": [
             "cruellaDeVil"
         ]
+    },
+    {
+        "id": 10,
+        "username": "elin",
+        "password": "elin",
+        "profilePic": "rapunzel",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
