@@ -351,6 +351,7 @@ async function renderMap() {
 function renderControlQuestion(charracter) {
 
     main.classList.remove("mainMap");
+    main.classList.add("controlQuestion");
 
     let typeOfQuestion;
     let question;
@@ -443,19 +444,67 @@ function renderControlQuestion(charracter) {
 
         if (numDigits === 1) {
             inputWrapper.innerHTML = `
-            <input type="number" class="input1"></input>
+            <input type="number" class="input1" maxlength="1"></input>
             `;
         } else if (numDigits === 2) {
             inputWrapper.innerHTML = `
-            <input type="number" class="input1"></input>
-            <input type="number" class="input2"></input>
+            <input type="number" class="input1" maxlength="1"></input>
+            <input type="number" class="input2" maxlength="1"></input>
             `;
+
+            // Only allow one digit per input
+            let input1 = document.querySelector(".input1");
+            let input2 = document.querySelector(".input2");
+
+            input1.addEventListener("input", function() {
+                // Allow only one digit
+                this.value = this.value.replace(/\D/g, '');
+                
+                // Move focus to the second input
+                if (this.value.length === 1) {
+                    input2.focus();
+                }
+            });
+            
+            input2.addEventListener("input", function() {
+                // Allow only one digit
+                this.value = this.value.replace(/\D/g, '');
+            });
+
         } else if (numDigits === 3) {
             inputWrapper.innerHTML = `
-            <input type="number" class="input1"></input>
-            <input type="number" class="input2"></input>
-            <input type="number" class="input3"></input>
+            <input type="number" class="input1" maxlength="1"></input>
+            <input type="number" class="input2" maxlength="1"></input>
+            <input type="number" class="input3" maxlength="1"></input>
             `;
+
+            // Only allow one digit per input
+            let input1 = document.querySelector(".input1");
+            let input2 = document.querySelector(".input2");
+            let input3 = document.querySelector(".input3");
+
+            input1.addEventListener("input", function() {
+                // Allow only one digit
+                this.value = this.value.replace(/\D/g, '');
+                
+                // Move focus to the second input
+                if (this.value.length === 1) {
+                    input2.focus();
+                }
+            });
+            
+            input2.addEventListener("input", function() {
+                // Allow only one digit
+                this.value = this.value.replace(/\D/g, '');
+                if (this.value.length === 1) {
+                    input3.focus();
+                }
+            });
+
+            input3.addEventListener("input", function() {
+                // Allow only one digit
+                this.value = this.value.replace(/\D/g, '');
+            });
         }
 
 
@@ -463,6 +512,8 @@ function renderControlQuestion(charracter) {
         inputWrapper.classList.add("numbers");
 
         if (charracter === "Ursulla") {
+            inputWrapper.classList.add("ursulla");
+
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
                 <label>Broar</label>
@@ -474,6 +525,8 @@ function renderControlQuestion(charracter) {
             </div>
             `;
         } else if (charracter === "Head Chef") {
+            inputWrapper.classList.add("numbers");
+
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
                 <input type="text" class="num1Input1" maxlength="1"></input>
@@ -491,25 +544,69 @@ function renderControlQuestion(charracter) {
     } else if (typeOfQuestion === "word") {
 
         inputWrapper.classList.add("word");
+        inputWrapper.innerHTML = `
+        <input class="input1" id="inputField"></input>
+        <label for="inputField" >Skriv in ditt svar här</label>
+        `;
 
-        if (Array.isArray(answer)) {
-            inputWrapper.innerHTML = `
-            <input class="input1"></input>
-            <input class="input2"></input>
-            `;
-        } else {
-            inputWrapper.innerHTML = `
-            <input class="input1"></input>
-            `;
-        }
+        document.querySelector('.input1').addEventListener('input', function() {
+            let input = this.value.trim(); 
+            let label = main.querySelector('label[for="inputField"]');
+            
+            if (input !== '') {
+                label.style.display = 'none'; 
+            } else {
+                label.style.display = 'block'; 
+            }
+        });
+
     } else if (typeOfQuestion === "time") {
+        inputWrapper.classList.add("time");
+
         inputWrapper.innerHTML = `
             <input class="input1"></input>
             <input class="input2"></input>
             <p>:</p>
             <input class="input3"></input>
             <input class="input4"></input>
-            `;
+        `;
+
+        // Only allow one digit per input
+        let input1 = document.querySelector(".input1");
+        let input2 = document.querySelector(".input2");
+        let input3 = document.querySelector(".input3");
+        let input4 = document.querySelector(".input4");
+
+        input1.addEventListener("input", function() {
+            // Allow only one digit
+            this.value = this.value.replace(/\D/g, '');
+            
+            // Move focus to the second input
+            if (this.value.length === 1) {
+                input2.focus();
+            }
+        });
+        
+        input2.addEventListener("input", function() {
+            // Allow only one digit
+            this.value = this.value.replace(/\D/g, '');
+            if (this.value.length === 1) {
+                input3.focus();
+            }
+        });
+
+        input3.addEventListener("input", function() {
+            // Allow only one digit
+            this.value = this.value.replace(/\D/g, '');
+            if (this.value.length === 1) {
+                input4.focus();
+            }
+        });
+
+        input4.addEventListener("input", function() {
+            // Allow only one digit
+            this.value = this.value.replace(/\D/g, '');
+        });
     }
 
     main.querySelector(".btnUnlock").addEventListener("click", async e => {
