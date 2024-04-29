@@ -17,9 +17,9 @@
     /*Font sizes*/
     --mainHeading: 30px;
     --subHeading: 24px;
-    --mainHeading: 20px;
-    --paragraphFontSize: 16px;
-    --buttonFontSize: 18px;
+    --titleHeading: 20px;
+    --paragraphFontSize: 14px;
+    --buttonFontSize: 16px;
 
     /*Other*/
     --padding: 5vh;
