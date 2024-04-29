@@ -1,6 +1,6 @@
 <?php
 
-    function updateTime($requestData, $users){
+    function startTimer($requestData, $users){
         $userId = $requestData["userId"];
         $password = $requestData["password"];
         checkCredentials($userId, $password, $users);
@@ -12,8 +12,10 @@
 
             if($storedUserId == $userId && $storedPassword == $password) {
                 
-                $time = $requestData["time"];
-                $users[$i]["time"] = $time;
+                
+
+                $startTime = $requestData["startTime"];
+                $users[$i]["startTime"] = $startTime;
 
                 putInUsersJSON($users);
                 $message = ["message" => "Time updated"];
@@ -21,6 +23,8 @@
             }
         }
     }
+
+   
 
 
 ?>

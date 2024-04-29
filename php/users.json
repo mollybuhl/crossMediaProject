@@ -151,6 +151,111 @@
         "profilePic": "remi",
         "time": 0,
         "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 12,
+        "username": "hejho",
+        "password": "hejho",
+        "profilePic": "belle",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 13,
+        "username": "lovisa",
+        "password": "lovisa",
+        "profilePic": "rapunzel",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 14,
+        "username": "eva",
+        "password": "eva",
+        "profilePic": "remi",
+        "time": {
+            "startTime": null
+        },
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 15,
+        "username": "rek",
+        "password": "rek",
+        "profilePic": "rapunzel",
+        "time": {
+            "startTime": "2024-04-29T14:08:39.392Z"
+        },
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 16,
+        "username": "zoe",
+        "password": "zoe",
+        "profilePic": "edna",
+        "time": 1936454,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 17,
+        "username": "joe",
+        "password": "joe",
+        "profilePic": "edna",
+        "startTime": 20291,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 18,
+        "username": "tey",
+        "password": "tey",
+        "profilePic": "remi",
+        "startTime": null,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 19,
+        "username": "maja1",
+        "password": "maja",
+        "profilePic": "belle",
+        "startTime": null,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 20,
+        "username": "jill",
+        "password": "jill",
+        "profilePic": "mulan",
+        "startTime": "2024-04-29T16:03:32.883Z",
+        "finishingTime": "Not finished",
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []

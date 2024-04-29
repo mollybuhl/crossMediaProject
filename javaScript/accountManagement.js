@@ -84,7 +84,6 @@ function renderRegister() {
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
                 window.localStorage.setItem("loggedIn", "true");
-
                 renderInstructionpage();
             }
 
@@ -147,7 +146,7 @@ function renderLogin() {
                 window.localStorage.setItem("userId", `${resource.id}`);
                 window.localStorage.setItem("userPassword", `${resource.password}`);
                 window.localStorage.setItem("loggedIn", "true");
-
+                window.localStorage.setItem("startTime", `${resource.startTime}`)
                 renderMap();
             }
 

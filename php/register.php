@@ -53,7 +53,7 @@
             "username" => $username,
             "password" => $password,
             "profilePic" => $profilePic,
-            "time" => 0,
+            "startTime" => 0,
             "finishingTime" => "Not finished",
             "unlockedCharacters" => [],
             "suspectCharacters" => [],

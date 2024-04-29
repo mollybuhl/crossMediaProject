@@ -4,7 +4,7 @@
 */
 
 // Function to render introduction page when player enters the game for the first time
-function renderIntroductionpage() {
+function renderIntroductionpage(firstTime = true) {
     main.innerHTML = `
     <h2>Det har skett ett mord</h2>
     <button class="btnPlayAudio"></button>
@@ -16,6 +16,10 @@ function renderIntroductionpage() {
     let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
 
     main.querySelector(".btnNextPage").addEventListener("click", e => {
+        
+        if(firstTime){
+            startTimer();
+        }
         renderMap();
     });
 
@@ -325,15 +329,20 @@ async function renderMap() {
         }
     });
 
+    let timeInterval = setInterval(updateTimer, 1000);
+
     //Navbar
     main.querySelector(".leaderboard").addEventListener("click", e => {
+        clearInterval(timeInterval);
         renderLeaderboard();
     });
     main.querySelector(".charracterChart").addEventListener("click", e => {
+        clearInterval(timeInterval);
         renderCharracterboard();
     });
 
     main.querySelector(".btnProfile").addEventListener("click", e => {
+        clearInterval(timeInterval);
         renderProfilepage();
     })
 }
@@ -509,8 +518,9 @@ function renderControlQuestion(charracter) {
 
         if (typeOfQuestion === "word") {
             let userAnswer = main.querySelector(".input1").value;
+            let userAnswerLowercase = userAnswer.toLowerCase();
 
-            if (userAnswer === answer) {
+            if (userAnswer === answer || userAnswerLowercase === answer) {
                 correctAnswer = true;
             }
         } else if (typeOfQuestion === "number") {
@@ -650,4 +660,63 @@ function informUser(message) {
     })
 }
 
+
+function updateTimer(){
+    let startTime = new Date(window.localStorage.getItem("startTime"));
+    let currentTime = new Date();
+
+    let timeDifference = currentTime - startTime;
+
+    let totalSecondsPassed = Math.floor(timeDifference / 1000);
+    let hoursPassed = Math.floor(totalSecondsPassed / 3600);
+    let minutesPassed = Math.floor((totalSecondsPassed % 3600) / 60);
+    let secondsPassed = totalSecondsPassed % 60;
+
+    // Format hours, minutes, and seconds with leading zeros if needed
+    let formattedHours = hoursPassed.toString().padStart(2, '0');
+    let formattedMinutes = minutesPassed.toString().padStart(2, '0');
+    let formattedSeconds = secondsPassed.toString().padStart(2, '0');
+
+    // Display the time passed in the .timer paragraph
+   main.querySelector(".timer").textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+}
+
+async function startTimer(){
+    let currentDate = new Date();
+    window.localStorage.setItem("startTime", currentDate);
+
+    //Save start time
+    let userID = Number(window.localStorage.getItem("userId"));
+    let password = window.localStorage.getItem("userPassword");
+
+    let requestOptions = {
+        method: "POST",
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({
+            password: password,
+            userId: userID,
+            action: "startTimer",
+            startTime: currentDate
+        })
+    };
+
+    try{
+        let request = new Request("php/api.php", requestOptions);
+        const response = await fetch(request);
+        let resource = await response.json();
+
+        if(!response.ok) {
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;                    
+        } else {
+            
+        }
+
+    }catch(error){
+        let message = "Något gick fel, försök igen senare";
+        informUser(message);
+        return;
+    }
+}
 
