@@ -1,12 +1,12 @@
-.boardOfCharracters{
+.boardOfCharracters {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 4vh;
+    row-gap: 5vh;
     column-gap: 2vh;
     padding-top: var(--padding);
 }
 
-.boardOfCharracters > div{
+.boardOfCharracters>div {
     background-image: url(../media/cruella.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -14,16 +14,16 @@
     height: 15vh;
 }
 
-.boardOfCharracters > .cruellaDeVil.notSuspect{
+.boardOfCharracters>.cruellaDeVil.notSuspect {
     background-image: url(../media/cruellaHidden.png);
 }
 
-.suspect{
+.suspect {
     display: flex;
     align-items: end;
 }
 
-.suspect > div{
+.suspect>div {
     background-color: var(--yellow);
     border-radius: 10px 10px 0 0;
     text-align: center;
@@ -34,7 +34,49 @@
     align-items: center;
 }
 
-.suspect > div > p{
+.suspect>div>p {
     color: var(--black);
     font-size: 12px;
+}
+
+.guessMurderPopup {
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5vh 3vh 5vh 3vh;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 12vh;
+    z-index: 4;
+}
+
+.guessMurderPopup>p,
+.guessMurderPopup>h3 {
+    color: var(--blue);
+}
+
+.guessMurderPopup>h3 {
+    font-family: lakkiReddy;
+    font-size: var(--mainHeading);
+}
+
+.guessMurderPopup>button {
+    background-color: var(--red);
+    color: var(--blue);
+    border: none;
+    font-weight: 600;
+}
+
+.guessMurderContainer {
+    background-color: var(--seeThrough);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 3;
 }

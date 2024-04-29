@@ -5,20 +5,20 @@
 */
 :root {
     /*Colors*/
-    --white: #EFEFEF;
+    --white: #DFDFE0;
     --black: #000000;
     --grey: #828FA0;
     --blue: #000F23;
     --headerYellow: #F9CE69;
     --yellow: #FFE19A;
     --red: #E34A4A;
-    --seeThrough: #ffffff05;
+    --seeThrough: rgba(0, 0, 0, 0.7);
 
     /*Font sizes*/
-    --mainHeading: 28px;
+    --mainHeading: 30px;
     --subHeading: 24px;
     --mainHeading: 20px;
-    --paragraphFontSize: 14px;
+    --paragraphFontSize: 16px;
     --buttonFontSize: 16px;
 
     /*Other*/
@@ -52,6 +52,13 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: var(--mainHeading);
+    color: var(--white);
+    margin-top: 1vw;
+    padding-left: 1.8vh;
+    margin-bottom: 0;
+}
 
 p {
     font-size: var(--paragraphFontSize);
