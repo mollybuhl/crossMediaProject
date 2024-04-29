@@ -509,8 +509,9 @@ function renderControlQuestion(charracter) {
 
         if (typeOfQuestion === "word") {
             let userAnswer = main.querySelector(".input1").value;
+            let userAnswerLowercase = userAnswer.toLowerCase();
 
-            if (userAnswer === answer) {
+            if (userAnswer === answer || userAnswerLowercase === answer) {
                 correctAnswer = true;
             }
         } else if (typeOfQuestion === "number") {

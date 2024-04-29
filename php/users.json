@@ -147,7 +147,9 @@
         "profilePic": "remi",
         "time": 0,
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
     }
