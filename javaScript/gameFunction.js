@@ -16,7 +16,6 @@ function renderIntroductionpage(firstTime = true) {
     let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
 
     main.querySelector(".btnNextPage").addEventListener("click", e => {
-        
         if(firstTime){
             startTimer();
         }
@@ -301,6 +300,7 @@ async function renderMap() {
 
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e => {
+                    clearInterval(timeInterval);
 
                     //Check if controll question has already been answered
                     // If it has - render character page

@@ -252,7 +252,9 @@
         "profilePic": "mulan",
         "startTime": "2024-04-29T16:03:32.883Z",
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "Hj\u00e4rter Dam"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
     }

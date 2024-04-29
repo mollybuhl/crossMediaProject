@@ -1,6 +1,13 @@
 
 .characterTopWrapper{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.characterTopWrapper > h2{
+    color: var(--headerYellow);
 }
 
 .characterTopWrapper > .charracterImage{
@@ -15,8 +22,47 @@
 
 .buttons{
     display: flex;
+    gap: 1vh;
 }
 
-.characterMovie > .icon{
-   
+.buttons > button{
+    border-radius: 40px;
+    border: 1px solid #FFE19A50;
+    background-color: transparent;
+    color: #FFE19A50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > button:hover, .buttons > button:active{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.playBtnBackground{
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    height: 7vh;
+}
+
+.btnPlayAudio{
+    position: absolute;
+    top: -4vh;
+}
+.btnPlayAudio.hidden{
+    display: none;
+}
+.btnPauseAudio{
+    position: absolute;
+    top: -4vh;
+}
+.btnPauseAudio.hidden{
+    display: none;
 }
