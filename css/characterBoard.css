@@ -1,7 +1,7 @@
 .boardOfCharracters {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 4vh;
+    row-gap: 5vh;
     column-gap: 2vh;
     padding-top: var(--padding);
 }
