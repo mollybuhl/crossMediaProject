@@ -6,8 +6,12 @@
         "profilePic": "edna",
         "time": 0,
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
-        "suspectCharacters": [],
+        "unlockedCharacters": [
+            "Hades"
+        ],
+        "suspectCharacters": [
+            "hades"
+        ],
         "notSuspectCharacters": []
     },
     {

@@ -102,22 +102,31 @@ async function renderCharracterboard() {
             let character = div.classList[0];
 
             let popup = document.createElement("div");
-            popup.classList.add("gueddMurderPopup");
+            popup.classList.add("guessMurderContainer");
             popup.innerHTML = `
-            <p>Är du säker på att du vill gissa på</p>
-            <h3>${character}</h3>
-            <button>JA</button>
+                <div class="guessMurderPopup">
+                    <p>Är du säker på att du vill gissa på</p>
+                    <h3>${character}?</h3>
+                    <button>JA</button>
+                <div>
+
             `;
-    
+
             main.appendChild(popup);
 
+            document.querySelector(".guessMurderContainer").addEventListener("click", event => {
+                if (event.target.classList.contains("guessMurderContainer")) {
+                    renderCharracterboard();
+                }
+            });
+
             popup.querySelector("button").addEventListener("click", e => {
-                 
-                if(character === "Musse"){
+
+                if (character === "Musse") {
 
                     // stop timer and display story
                     renderStorySolution();
-                }else{
+                } else {
 
                     // Inform incorrect guess
                     renderIncorrectGuess(character);
@@ -125,8 +134,8 @@ async function renderCharracterboard() {
             })
         })
     })
-    
-    
+
+
 
 
 
@@ -137,7 +146,7 @@ async function renderCharracterboard() {
 
 }
 
-function renderIncorrectGuess(character){
+function renderIncorrectGuess(character) {
     main.innerHTML = `
     <h2>${character}</h2>
     <p>är</p>
@@ -151,6 +160,6 @@ function renderIncorrectGuess(character){
     main.querySelector(".listenToStory").addEventListener("click", renderStorySolution);
 }
 
-function renderStorySolution(){
+function renderStorySolution() {
 
 }
