@@ -259,5 +259,16 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 21,
+        "username": "test2",
+        "password": "hej",
+        "profilePic": "ariel",
+        "startTime": "2024-04-29T17:59:25.540Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

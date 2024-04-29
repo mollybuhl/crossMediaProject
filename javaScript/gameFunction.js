@@ -16,8 +16,8 @@ function renderIntroductionpage(firstTime = true) {
     let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
 
     main.querySelector(".btnNextPage").addEventListener("click", e => {
-        
-        if(firstTime){
+
+        if (firstTime) {
             startTimer();
         }
         renderMap();
@@ -206,7 +206,7 @@ async function renderMap() {
                             locationDescription = "Malmö slott";
                             break;
                         case "ursulla":
-                            selectedCharracter = "Ursulla";
+                            selectedCharracter = "Ursula";
                             coordinates = "55.603390, 12.988230";
                             locationDescription = "Togepi´s lookout";
                             break;
@@ -275,7 +275,7 @@ async function renderMap() {
                             <p>${locationDescription}</p>
                         </div>
                     </div>
-                    <button class="btnTalkToCharracter">Prata med ${selectedCharracter}</button>
+                    <button class="btnTalkToCharracter">Lyssna</button>
                 `;
 
                 main.appendChild(popUp);
@@ -661,7 +661,7 @@ function informUser(message) {
 }
 
 
-function updateTimer(){
+function updateTimer() {
     let startTime = new Date(window.localStorage.getItem("startTime"));
     let currentTime = new Date();
 
@@ -678,10 +678,10 @@ function updateTimer(){
     let formattedSeconds = secondsPassed.toString().padStart(2, '0');
 
     // Display the time passed in the .timer paragraph
-   main.querySelector(".timer").textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+    main.querySelector(".timer").textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 }
 
-async function startTimer(){
+async function startTimer() {
     let currentDate = new Date();
     window.localStorage.setItem("startTime", currentDate);
 
@@ -700,20 +700,20 @@ async function startTimer(){
         })
     };
 
-    try{
+    try {
         let request = new Request("php/api.php", requestOptions);
         const response = await fetch(request);
         let resource = await response.json();
 
-        if(!response.ok) {
+        if (!response.ok) {
             let message = "Något gick fel, försök igen senare";
             informUser(message);
-            return;                    
+            return;
         } else {
-            
+
         }
 
-    }catch(error){
+    } catch (error) {
         let message = "Något gick fel, försök igen senare";
         informUser(message);
         return;

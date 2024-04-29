@@ -19,7 +19,7 @@
     --subHeading: 24px;
     --mainHeading: 20px;
     --paragraphFontSize: 16px;
-    --buttonFontSize: 16px;
+    --buttonFontSize: 18px;
 
     /*Other*/
     --padding: 5vh;
@@ -54,6 +54,7 @@ h2 {
 
 h3 {
     font-size: var(--mainHeading);
+    font-family: lakkiReddy;
     color: var(--white);
     margin-top: 1vw;
     padding-left: 1.8vh;
@@ -125,6 +126,7 @@ button {
     cursor: pointer;
     font-size: var(--buttonFontSize);
     font-family: openSans;
+    font-weight: 500;
 }
 
 
