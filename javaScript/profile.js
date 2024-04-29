@@ -203,11 +203,14 @@ async function renderProfilepage(){
 
     // Logout
     main.querySelector(".btnLogout").addEventListener("click", e => {
+
         window.localStorage.setItem("loggedIn", "false");
         window.localStorage.removeItem("userId");
         window.localStorage.removeItem("password");
+        window.localStorage.removeItem("startTime");
 
         renderStartpage();
-    })
+    });
 
 }
+

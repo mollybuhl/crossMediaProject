@@ -44,8 +44,8 @@
         case "profile":
             profile($requestData, $users);
             break;
-        case "updateTime":
-            updateTime($requestData, $users);
+        case "startTimer":
+            startTimer($requestData, $users);
             break;
         case "getAllUsers":
             $userID = $requestData["userID"];
