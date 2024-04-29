@@ -1,9 +1,10 @@
 .mainMap {
-    background-image: url(../media/testakvalitet-2.svg);
+    background-image: url(../media/litemerkarta.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+    background-size: 150%;
     position: relative;
     padding: 0;
 }

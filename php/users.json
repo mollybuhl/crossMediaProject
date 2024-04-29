@@ -139,5 +139,16 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 11,
+        "username": "mollybolly",
+        "password": "mollybolly",
+        "profilePic": "remi",
+        "time": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
