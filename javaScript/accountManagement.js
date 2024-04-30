@@ -20,10 +20,10 @@ function renderRegister() {
 
         <p class="loginRegSubHeader">Välj profilbild</p>
         <div class="selectProfilePic">
-            <div class="mulan"></div>
-            <div class="ariel"></div>
-            <div class="belle"></div>
-            <div class="rapunzel"></div>
+            <div class="mater"></div>
+            <div class="joy"></div>
+            <div class="baymax"></div>
+            <div class="pascal"></div>
             <div class="remi"></div>
             <div class="edna"></div>
         </div>

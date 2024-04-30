@@ -289,5 +289,16 @@
         ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 23,
+        "username": "mimi",
+        "password": "mimi",
+        "profilePic": "edna",
+        "startTime": "2024-04-30T09:49:57.920Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

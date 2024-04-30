@@ -70,16 +70,16 @@ p.btnRegPage>span {
 }
 
 /*CHANGE TO CORRECT CLASSES AND PICTURES*/
-.mulan {
-    background-image: url(../media/mulan.jpeg);
+.mater {
+    background-image: url(../media/mater.png);
 }
 
-.ariel {
-    background-image: url(../media/ariel.jpeg);
+.joy {
+    background-image: url(../media/joy.jpg);
 }
 
-.belle {
-    background-image: url(../media/belle.jpeg);
+.baymax {
+    background-image: url(../media/beymax.avif);
 }
 
 .remi {
@@ -90,6 +90,6 @@ p.btnRegPage>span {
     background-image: url(../media/edna.jpg);
 }
 
-.rapunzel {
-    background-image: url(../media/rapunzel.jpeg);
+.pascal {
+    background-image: url(../media/pascal.png);
 }

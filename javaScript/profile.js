@@ -33,10 +33,10 @@ async function renderProfilepage(){
         <div class="profilePic"></div>
     </div>
     <div class="selectProfilePic">
-        <div class="mulan"></div>
-        <div class="ariel"></div>
-        <div class="belle"></div>
-        <div class="rapunzel"></div>
+        <div class="mater"></div>
+        <div class="joy"></div>
+        <div class="baymax"></div>
+        <div class="pascal"></div>
         <div class="remi"></div>
         <div class="edna"></div>
     </div>
@@ -66,7 +66,7 @@ async function renderProfilepage(){
     main.querySelector(`.selectProfilePic > .${profilePic}`).classList.add("selected");
 
     // Change profile picture
-    let charracters = ["mulan", "ariel", "belle", "rapunzel", "remi", "edna"];
+    let charracters = ["mater", "joy", "baymax", "pascal", "remi", "edna"];
 
     main.querySelectorAll(".selectProfilePic > div").forEach(pic => {
         pic.addEventListener("click", async e => {
