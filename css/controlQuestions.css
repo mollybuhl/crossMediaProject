@@ -9,6 +9,12 @@
     font-size: var(--mainHeading);
 }
 
+.controlQuestion > p{
+    text-align: center;
+    margin-bottom: 4vh;
+    margin-top: -5vh;
+}
+
 .inputWrapper.word{ 
     display: flex;
     flex-direction: column;
@@ -60,6 +66,59 @@
     background: transparent;
     border: 1px solid #73737350;
     text-align: center;
+}
+
+.inputWrapper.ursula{
+    text-align: center;
+}
+
+.inputWrapper.ursula div > input{
+    background-color: transparent;
+    border: 1px solid #73737350;
+    height: 15vh;
+    width: 75%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.inputWrapper.ursula > div > label{
+    color: var(--white);
+    font-family: lakkiReddy;
+    font-size: var(--subHeading);
+}
+
+.inputWrapper.headChef{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+main.headChef > h2{
+    margin-bottom: 0;
+    margin-top: 6vh;
+}
+
+main.headChef > p{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.inputWrapper.headChef > div{
+    display: flex;
+    gap: 1vh;
+}
+
+.inputWrapper.headChef > label{
+    color: var(--white);
+    font-family: lakkiReddy;
+    font-size: var(--subHeading);
+}
+.inputWrapper.headChef > div > input{
+    background: transparent;
+    border: 1px solid white;
+    height: 15vh;
+    text-align: center;
+    font-size: 50px;
 }
 
 .btnUnlock{

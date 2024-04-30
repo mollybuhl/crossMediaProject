@@ -356,6 +356,7 @@ function renderControlQuestion(charracter) {
     let typeOfQuestion;
     let question;
     let answer;
+    let underQuestion;
 
     switch (charracter) {
         case "Kapten Krok":
@@ -373,7 +374,7 @@ function renderControlQuestion(charracter) {
             question = "Hur många bollar jonglerar “Gycklaren” med?";
             answer = 5;
             break;
-        case "Ursulla":
+        case "Ursula":
             typeOfQuestion = "numbers";
             question = "Hur många broar och bänkar kan du se? Titta noga.";
             answer = [3, 8];
@@ -385,12 +386,14 @@ function renderControlQuestion(charracter) {
             break;
         case "Darla":
             typeOfQuestion = "word";
-            question = "Vilken färg syftar jag på? Bland många hytter där jag står, sticker jag ut som ett litet får. Bland många röda smälter jag in, längst med vägen tätt intill.";
+            question = "Vilken färg syftar jag på?";
+            underQuestion = "Bland många hytter där jag står, sticker jag ut som ett litet får. Bland många röda smälter jag in, längst med vägen tätt intill.";
             answer = "blå";
             break;
         case "Törnrosa":
             typeOfQuestion = "number";
-            question = "Där slottet står högt och slut, tittar Disney prinsessorna ofta ut. Med ramar av trä och genomskinligt glas, finns jag under varje tak. Hur många av mig finner du på väderkvarnen?";
+            question = "Ange ett nummer";
+            underQuestion = "Där slottet står högt och slut, tittar Disney prinsessorna ofta ut. Med ramar av trä och genomskinligt glas, finns jag under varje tak. Hur många av mig finner du på väderkvarnen?";
             answer = 18;
             break;
         case "Snövit":
@@ -400,12 +403,14 @@ function renderControlQuestion(charracter) {
             break;
         case "Head Chef":
             typeOfQuestion = "numbers";
-            question = "Ange den kombinationen av bokstäver och siffror som står på fågelholkarna nära entren till restaurangen. (Ange minsta siffran först)";
+            question = "Ange kombinationen";
+            underQuestion = "Ange kombinationen av bokstäver och siffror som står på fågelholkarna nära entren till restaurangen (Ange minsta siffran först)."
             answer = ["s11", "s12"];
             break;
         case "Hattmakaren":
             typeOfQuestion = "number";
-            question = "Ange vad det kostar för Hattmakaren att äta sin favoritmat hos Slottsträdgårdens Kafé. Hans beställer alltid: Svart te, Oliver, 2 Chokladbollar, Glass.";
+            question = "Ange priset";
+            underQuestion = "Hattmakaren beställer alltid samma sak på Slottsträdgårdens Kafé. Hans beställer en kopp svart te, oliver, två Chokladbollar och en glass. Ange priset för beställningen."
             answer = 207;
             break;
         case "Hjärter Dam":
@@ -415,8 +420,9 @@ function renderControlQuestion(charracter) {
             break;
         case "Prins John":
             typeOfQuestion = "number";
-            question = "Räkna flaggstängerna och gå 8 röda steg moturs och sedan ett steg medurs";
-            answer = 13;
+            question = "Ange ett nummer";
+            underQuestion = "Räkna flaggstängerna framför kasinot. På rouletten, börja på siffran 26 och gå lika många steg som flagstänger moturs"
+            answer = 29;
             break;
     }
 
@@ -430,6 +436,7 @@ function renderControlQuestion(charracter) {
         </g>
     </svg>
     <h2>${question}</h2>
+    ${underQuestion ? `<p>${underQuestion}</p>` : ''}
     <div class="inputWrapper"></div>
     <button class="btnUnlock">Lås upp</button>
     `;
@@ -511,28 +518,32 @@ function renderControlQuestion(charracter) {
     } else if (typeOfQuestion === "numbers") {
         inputWrapper.classList.add("numbers");
 
-        if (charracter === "Ursulla") {
-            inputWrapper.classList.add("ursulla");
+        if (charracter === "Ursula") {
+            inputWrapper.classList.add("ursula");
 
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
-                <label>Broar</label>
+                <label>Broar:</label>
                 <input type="number" class="num1Input1" maxlength="1"></input>
             </div>
             <div class="inputBox num2Input">
-                <label>Bänkar</label>
+                <label>Bänkar:</label>
                 <input type="number" class="num2Input1" maxlength="1"></input>
             </div>
             `;
         } else if (charracter === "Head Chef") {
             inputWrapper.classList.add("numbers");
+            inputWrapper.classList.add("headChef");
+            main.classList.add("headChef");
 
             inputWrapper.innerHTML = `
+            <label>Kombination 1</label>
             <div class="inputBox num1Input">
                 <input type="text" class="num1Input1" maxlength="1"></input>
                 <input type="number" class="num1Input2" maxlength="1"></input>
                 <input type="number" class="num1Input3" maxlength="1"></input>
             </div>
+            <label>Kombination 2</label>
             <div class="inputBox num2Input">
                 <input type="text" class="num2Input1" maxlength="1"></input>
                 <input type="number" class="num2Input2" maxlength="1"></input>
