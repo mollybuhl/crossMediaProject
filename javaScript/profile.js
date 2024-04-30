@@ -1,7 +1,3 @@
-/*
-    To Do:
-    - Include feedback message to user in UI
-*/
 
 // Function to render player profile page with account settings
 async function renderProfilepage(){
@@ -28,6 +24,14 @@ async function renderProfilepage(){
     // Structure of main
     main.classList.remove("mainMap");
     main.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+        <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_183_79)">
+            <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
+        </g>
+    </svg>
     <div class="profileInfoWrapper">
         <h2>${username}</h2>
         <div class="profilePic"></div>
@@ -60,6 +64,9 @@ async function renderProfilepage(){
     </div>
     <button class="btnDeleteAccount">Radera konto</button>
     `;
+
+    // Render map on back button
+    main.querySelector(".btnBack").addEventListener("click", renderMap);
 
     // Set correct profile picture
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
