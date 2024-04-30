@@ -53,6 +53,7 @@ p.btnRegPage>span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1vw;
 }
 
 .selectProfilePic>div {
@@ -64,8 +65,8 @@ p.btnRegPage>span {
     background-size: cover;
 }
 
-.selectProfilePic>div.selected {
-    border: 2px solid blue;
+#inputZone > .selectProfilePic>div.selected {
+    border: 2px solid var(--white);
 }
 
 /*CHANGE TO CORRECT CLASSES AND PICTURES*/

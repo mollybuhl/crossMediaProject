@@ -415,7 +415,7 @@ function renderControlQuestion(charracter) {
             break;
         case "Hjärter Dam":
             typeOfQuestion = "word";
-            question = "På toppen av casinot finner du något som Prins John och Hjärter Dam har gemensamt.";
+            question = "Vad finner du på toppen av casinot som Prins John och Hjärter Dam har gemensamt?";
             answer = "krona";
             break;
         case "Prins John":

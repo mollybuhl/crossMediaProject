@@ -1,7 +1,6 @@
 /*
     TO DO:
     - Change background to image (is currently set to color)
-    - Check all Icons same vibe
 */
 :root {
     /*Colors*/
@@ -103,6 +102,12 @@ p.secondaryText {
     color: var(--yellow);
 }
 
+.btnNewGame:hover, .btnNewGame:active{
+    border: .5px solid var(--headerYellow);
+    color: var(--headerYellow);
+    background-color: transparent;
+}
+
 #startPageHeader {
     display: flex;
     flex-direction: column;
@@ -114,7 +119,10 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: openSans;
-    background-color: var(--blue);
+    background-image: url(../media/Background.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 button {
@@ -127,6 +135,11 @@ button {
     font-size: var(--buttonFontSize);
     font-family: openSans;
     font-weight: 500;
+    border: 0.5px solid var(--yellow);
+}
+
+button:hover, button:active{
+    background-color: var(--headerYellow);
 }
 
 
@@ -144,16 +157,6 @@ input {
 input:focus {
     outline: none;
 }
-
-
-/*.btnPlayAudio{
-    width: 13vw;
-    height: 6vh;
-    background-image: url(../media/playIcon.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}*/
 
 .btnPauseAudio {
     background-image: url(../media/pauseIcon.svg);

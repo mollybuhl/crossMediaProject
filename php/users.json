@@ -276,5 +276,18 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 22,
+        "username": "hejh\u00e5",
+        "password": "hejh\u00e5",
+        "profilePic": "mulan",
+        "startTime": "2024-04-30T08:58:32.586Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
