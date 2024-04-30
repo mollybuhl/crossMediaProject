@@ -308,9 +308,27 @@
         "profilePic": "pascal",
         "startTime": "2024-04-30T11:21:34.899Z",
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
-        "suspectCharacters": [],
-        "notSuspectCharacters": []
+        "unlockedCharacters": [
+            "Cruella de Vil",
+            "Hades",
+            "Sn\u00f6vit",
+            "Hj\u00e4rter Dam",
+            "Hattmakaren",
+            "Musse",
+            "T\u00f6rnrosa",
+            "Head Chef",
+            "Darla",
+            "Kapten Krok"
+        ],
+        "suspectCharacters": [
+            "cruellaDeVil",
+            "kaptenKrok"
+        ],
+        "notSuspectCharacters": [
+            "hades",
+            "hattmakaren",
+            "darla"
+        ]
     },
     {
         "id": 25,
@@ -319,7 +337,10 @@
         "profilePic": "mater",
         "startTime": "2024-04-30T11:23:26.821Z",
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "Cruella de Vil",
+            "Kapten Krok"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
     }

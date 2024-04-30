@@ -35,6 +35,11 @@
     align-items: center;
 }
 
+.buttons > button.selected{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
 .buttons > button:hover, .buttons > button:active{
     background-color: var(--yellow);
     color: var(--black);
