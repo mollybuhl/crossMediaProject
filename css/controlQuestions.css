@@ -93,15 +93,8 @@
     gap: 2vh;
 }
 
-main.headChef > h2{
-    margin-bottom: 0;
-    margin-top: 6vh;
-}
 
-main.headChef > p{
-    text-align: center;
-    margin-bottom: 4vh;
-}
+
 
 .inputWrapper.headChef > div{
     display: flex;

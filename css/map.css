@@ -15,8 +15,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--padding);
+    padding: 3vh;
     color: var(--black);
+}
+
+.topbar > div{
+    display: flex;
+    gap: 2vh;
+}
+
+.topbar > div > p{
+    font-family: lakkiReddy;
+    font-size: var(--titleHeading);
+}
+
+.infoIcon{
+    background-image: url(../media/aboutIcon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 4vh;
+    width: 4vh;
 }
 
 .pin {

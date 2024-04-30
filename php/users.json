@@ -300,5 +300,27 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 24,
+        "username": "sam",
+        "password": "sam",
+        "profilePic": "pascal",
+        "startTime": "2024-04-30T11:21:34.899Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 25,
+        "username": "testigen",
+        "password": "hej",
+        "profilePic": "mater",
+        "startTime": "2024-04-30T11:23:26.821Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

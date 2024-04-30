@@ -26,7 +26,7 @@ function renderStartpage() {
     main.querySelector(".btnResumeGame").addEventListener("click", renderLogin)
 }
 
-function renderInstructionpage() {
+function renderInstructionpage(firstTime = true) {
     main.innerHTML = `
     <h2 class="instructionHeader">Hur man spelar</h2>
     <div class="instructionContainer">
@@ -93,7 +93,9 @@ function renderInstructionpage() {
     <button id="btnStartPlaying">Start</button>
     `;
 
-    main.querySelector("#btnStartPlaying").addEventListener("click", renderIntroductionpage)
+    main.querySelector("#btnStartPlaying").addEventListener("click", e=>{
+        renderIntroductionpage(firstTime)
+    })
 }
 
 

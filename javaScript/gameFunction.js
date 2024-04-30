@@ -64,11 +64,15 @@ async function renderMap() {
     }
 
     //Map structure
+    main.classList.remove("controlQuestion");
     main.classList.add("mainMap");
     main.innerHTML = `
     <div class="topbar">
-        <button class="btnProfile"></button>
-        <p class="timer"></p>
+        <div>
+            <button class="btnProfile"></button>
+            <p class="timer"></p>
+        </div>
+        <div class="infoIcon"></div>
     </div>
    
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="43" viewBox="0 0 32 43" fill="none" class="pin kaptenKrok">
@@ -331,6 +335,12 @@ async function renderMap() {
 
     let timeInterval = setInterval(updateTimer, 1000);
 
+    // Render instruction when clicking top info button
+    main.querySelector(".infoIcon").addEventListener("click", e=> {
+        clearInterval(timeInterval);
+        renderInstructionpage(false)
+    })
+
     //Navbar
     main.querySelector(".leaderboard").addEventListener("click", e => {
         clearInterval(timeInterval);
@@ -534,7 +544,6 @@ function renderControlQuestion(charracter) {
         } else if (charracter === "Head Chef") {
             inputWrapper.classList.add("numbers");
             inputWrapper.classList.add("headChef");
-            main.classList.add("headChef");
 
             inputWrapper.innerHTML = `
             <label>Kombination 1</label>
