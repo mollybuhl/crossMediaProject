@@ -1,6 +1,6 @@
 
 // Function to render charracter page based on the carracter that was clicked
-async function renderCharracterPage(charracter){
+async function renderCharracterPage(charracter) {
 
     let charracterText;
     let characterMovie;
@@ -13,84 +13,84 @@ async function renderCharracterPage(charracter){
         case "Kapten Krok":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Peter Pan";
-            characterTraits= "Stolt, listig, och besatt av Peter Pan";
+            characterTraits = "Stolt, listig, och besatt av Peter Pan";
             characterAttribute = "Lila Sjörövarhatt, röd kappa, och en krok till hand";
             className = "kaptenKrok";
             break;
         case "Cruella de Vil":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "De 101 dalmatinerna";
-            characterTraits= "Extravagant, empatilös, hänsynslös och skoningslös";
+            characterTraits = "Extravagant, empatilös, hänsynslös och skoningslös";
             characterAttribute = "Vit pälsjacka och cigarettmunstycke";
             className = "cruellaDeVil";
             break;
         case "Musse":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Disneys fronfigur";
-            characterTraits= "Positiv, intelligent, modig";
+            characterTraits = "Positiv, intelligent, modig";
             characterAttribute = "Vita handskar, röda byxor och gula skor";
             className = "musse";
             break;
         case "Ursulla":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Lilla sjöjungfrun";
-            characterTraits= "Manipulativ, bedräglig, själviskt";
+            characterTraits = "Manipulativ, bedräglig, själviskt";
             characterAttribute = "Svart lila klänning, blå lila hud, och ett snäckskal till halsband";
             className = "ursulla";
             break;
         case "Hades":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Hercules";
-            characterTraits= "Självsäker, Hämndlysten, Härskare";
-            characterAttribute = "Stor, lång och mörkklädd, Brinnande hår, och dödens gud";    
+            characterTraits = "Självsäker, Hämndlysten, Härskare";
+            characterAttribute = "Stor, lång och mörkklädd, Brinnande hår, och dödens gud";
             className = "hades";
             break;
         case "Darla":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Hitta nemo";
-            characterTraits= "Obekymrad, bortskämd, och ovarsam";
+            characterTraits = "Obekymrad, bortskämd, och ovarsam";
             characterAttribute = "Tandställning, lila tröja med text “rock n roll, girl";
             className = "darla";
             break;
         case "Törnrosa":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Törnrosa";
-            characterTraits= "Ödmjuk, optimistisk, och romantisk";
+            characterTraits = "Ödmjuk, optimistisk, och romantisk";
             characterAttribute = "Rosa/Blå klänning, Blond/ljushårig prinsessa, Tiara eller diadem på huvudet";
             className = "törnrosa";
             break;
         case "Snövit":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Snövit och de sju dvärgarna";
-            characterTraits= "Godtrogen, oskyldig, vänlig, god";
+            characterTraits = "Godtrogen, oskyldig, vänlig, god";
             characterAttribute = "Blå och guldig klänning och sjunger och kvittrar ofta"
             className = "snövit";
             break;
         case "Hattmakaren":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Alice i Underlandet";
-            characterTraits= "Galen, excentrisk, lekfull";
+            characterTraits = "Galen, excentrisk, lekfull";
             characterAttribute = "Hatt, Kaffepanna, färgglad";
             className = "hattmakaren";
             break;
         case "Prins John":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Robin Hood";
-            characterTraits= "Girig, snål, arrogant, feg, manipulativ";
+            characterTraits = "Girig, snål, arrogant, feg, manipulativ";
             characterAttribute = "Röd kunglig kappa och krona"
             className = "prinsJohn";
             break;
         case "Hjärter Dam":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Alice i underlandet";
-            characterTraits= "Temperamentsfull, oberäknelig, och masochist.";
+            characterTraits = "Temperamentsfull, oberäknelig, och masochist.";
             characterAttribute = "Krona, röd och svart klänning, och rosor."
             className = "hjärterDam";
             break;
         case "Head Chef":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Ratatouille";
-            characterTraits= "Hård, oförsonlig, förakt, och stolt";
+            characterTraits = "Hård, oförsonlig, förakt, och stolt";
             characterAttribute = "Liten man, elakt flin, kockkläder, och svart hår"
             className = "headChef";
             break;
@@ -98,15 +98,15 @@ async function renderCharracterPage(charracter){
 
     // Get charracter class name
     let words = charracter.split(' ');
-    
+
     // Convert the first word to lowercase
     let characterClass = words[0].toLowerCase();
-    
+
     // For the remaining words, capitalize the first letter and concatenate
     for (let i = 1; i < words.length; i++) {
         let word = words[i];
         // Capitalize the first letter of the word and concatenate it
-        characterClass  += word.charAt(0).toUpperCase() + word.slice(1);
+        characterClass += word.charAt(0).toUpperCase() + word.slice(1);
     }
 
     main.classList.remove("controlQuestion");
@@ -139,9 +139,14 @@ async function renderCharracterPage(charracter){
             <p>${characterMovie}</p>
         </div>
         <div class="charactrTraits">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12.0003 12.0001C10.442 12.0001 9.10796 11.4452 7.99824 10.3355C6.88852 9.22578 6.33366 7.89175 6.33366 6.33341C6.33366 4.77508 6.88852 3.44105 7.99824 2.33133C9.10796 1.22161 10.442 0.666748 12.0003 0.666748C13.5587 0.666748 14.8927 1.22161 16.0024 2.33133C17.1121 3.44105 17.667 4.77508 17.667 6.33341C17.667 7.89175 17.1121 9.22578 16.0024 10.3355C14.8927 11.4452 13.5587 12.0001 12.0003 12.0001ZM0.666992 23.3334V19.3667C0.666992 18.564 0.873589 17.8261 1.28678 17.1532C1.69998 16.4803 2.24894 15.9667 2.93366 15.6126C4.39755 14.8806 5.88505 14.3317 7.39616 13.9657C8.90727 13.5997 10.442 13.4167 12.0003 13.4167C13.5587 13.4167 15.0934 13.5997 16.6045 13.9657C18.1156 14.3317 19.6031 14.8806 21.067 15.6126C21.7517 15.9667 22.3007 16.4803 22.7139 17.1532C23.1271 17.8261 23.3337 18.564 23.3337 19.3667V23.3334H0.666992Z" fill="white"/>
-            </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <mask id="mask0_385_82" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
+        <rect width="33.2609" height="34" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_385_82)">
+        <path d="M16.63 15.5C15.1504 15.5 13.8837 14.9125 12.8301 13.7375C11.7764 12.5625 11.2496 11.15 11.2496 9.5C11.2496 7.85 11.7764 6.4375 12.8301 5.2625C13.8837 4.0875 15.1504 3.5 16.63 3.5C18.1096 3.5 19.3763 4.0875 20.4299 5.2625C21.4836 6.4375 22.0104 7.85 22.0104 9.5C22.0104 11.15 21.4836 12.5625 20.4299 13.7375C19.3763 14.9125 18.1096 15.5 16.63 15.5ZM5.86914 27.5V23.3C5.86914 22.45 6.0653 21.6687 6.45763 20.9562C6.84995 20.2437 7.37118 19.7 8.02131 19.325C9.41126 18.55 10.8236 17.9688 12.2584 17.5812C13.6932 17.1937 15.1504 17 16.63 17C18.1096 17 19.5668 17.1937 21.0016 17.5812C22.4364 17.9688 23.8488 18.55 25.2387 19.325C25.8888 19.7 26.4101 20.2437 26.8024 20.9562C27.1947 21.6687 27.3909 22.45 27.3909 23.3V27.5H5.86914Z" fill="white"/>
+        </g>
+        </svg>
             <p>${characterTraits}</p>
         </div>
         <div class="characterAttribute">
@@ -162,7 +167,7 @@ async function renderCharracterPage(charracter){
         <button class="suspect">Misstänkt</button>
     </div>
 
-    <p>${charracterText}</p>
+    <p class="readableText">${charracterText}</p>
     <div class="playBtnBackground">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
@@ -183,7 +188,7 @@ async function renderCharracterPage(charracter){
 
     main.querySelector(".btnBack").addEventListener("click", renderMap);
 
-    let userID = Number(window.localStorage.getItem("userId")); 
+    let userID = Number(window.localStorage.getItem("userId"));
     let userPassword = window.localStorage.getItem("userPassword");
 
     // Get info of already suspect or not suspect
@@ -201,18 +206,18 @@ async function renderCharracterPage(charracter){
             let notSuspectCharacters = resource.notSuspectCharacters;
 
             suspectCharacters.forEach(arrayCharacter => {
-                if(arrayCharacter === className){
-                    main.querySelector(".suspect").classList.add("selected");  
+                if (arrayCharacter === className) {
+                    main.querySelector(".suspect").classList.add("selected");
                 }
             })
 
             notSuspectCharacters.forEach(arrayCharacter => {
-                if(arrayCharacter === className){
+                if (arrayCharacter === className) {
                     main.querySelector(".notSuspect").classList.add("selected");
                 }
             })
         }
-    }catch (error) {
+    } catch (error) {
         let message = "Något gick fel, försök igen senare";
         informUser(message);
         return;
@@ -222,36 +227,36 @@ async function renderCharracterPage(charracter){
     main.querySelector(".notSuspect").addEventListener("click", async e => {
 
         let element = main.querySelector(".notSuspect");
-        if (element.classList.contains("selected")){
+        if (element.classList.contains("selected")) {
             element.classList.remove("selected");
-        }else{
+        } else {
             // Save character as not suspect
             let requestOptions = {
                 method: "POST",
-                headers: {"Content-type": "application/json; charset=UTF-8"},
+                headers: { "Content-type": "application/json; charset=UTF-8" },
                 body: JSON.stringify({
                     userId: userID,
                     password: userPassword,
                     action: "updateSuspect",
-                    notSuspectCharacter: characterClass 
+                    notSuspectCharacter: characterClass
                 })
             };
 
-            try{
+            try {
                 let request = new Request("php/api.php", requestOptions);
                 const response = await fetch(request);
                 let resource = await response.json();
 
-                if(!response.ok) {
+                if (!response.ok) {
                     let message = "Något gick fel, försök igen senare";
                     informUser(message);
-                    return;                    
+                    return;
                 } else {
                     // Render character board
                     renderCharracterboard();
                 }
 
-            }catch(error){
+            } catch (error) {
                 let message = "Något gick fel, försök igen senare";
                 informUser(message);
                 return;
@@ -264,13 +269,13 @@ async function renderCharracterPage(charracter){
     main.querySelector(".suspect").addEventListener("click", async e => {
 
         let element = main.querySelector(".suspect");
-        if (element.classList.contains("selected")){
+        if (element.classList.contains("selected")) {
             element.classList.remove("selected");
-        }else{
+        } else {
             // Save character as suspect
             let requestOptions = {
                 method: "POST",
-                headers: {"Content-type": "application/json; charset=UTF-8"},
+                headers: { "Content-type": "application/json; charset=UTF-8" },
                 body: JSON.stringify({
                     userId: userID,
                     password: userPassword,
@@ -279,21 +284,21 @@ async function renderCharracterPage(charracter){
                 })
             };
 
-            try{
+            try {
                 let request = new Request("php/api.php", requestOptions);
                 const response = await fetch(request);
                 let resource = await response.json();
 
-                if(!response.ok) {
+                if (!response.ok) {
                     let message = "Något gick fel, försök igen senare";
                     informUser(message);
-                    return;              
+                    return;
                 } else {
                     // Render character board
-                    renderCharracterboard();  
+                    renderCharracterboard();
                 }
 
-            }catch(error){
+            } catch (error) {
                 let message = "Något gick fel, försök igen senare";
                 informUser(message);
                 return;
@@ -302,55 +307,55 @@ async function renderCharracterPage(charracter){
     });
 
     let audio;
-    switch(characterClass){
+    switch (characterClass) {
         case "kaptenKrok":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "cruellaDeVil":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "musse":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "ursulla":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "hades":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "darla":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "törnrosa":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "snövit":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "headChef":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "hattmakaren":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "hjärterDam":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
         case "prinsJohn":
             audio = new Audio("../media/testMusic.mp3"); //placeholder audio
-        break;
+            break;
     }
 
-    main.querySelector(".btnPlayAudio").addEventListener("click", e =>{
+    main.querySelector(".btnPlayAudio").addEventListener("click", e => {
         main.querySelector(".btnPlayAudio").classList.add("hidden");
         main.querySelector(".btnPauseAudio").classList.remove("hidden");
         audio.play();
-    
+
     })
 
     main.querySelector(".btnPauseAudio").addEventListener("click", e => {
         main.querySelector(".btnPlayAudio").classList.remove("hidden");
-            main.querySelector(".btnPauseAudio").classList.add("hidden");
-            audio.pause()
+        main.querySelector(".btnPauseAudio").classList.add("hidden");
+        audio.pause()
     })
 }

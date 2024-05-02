@@ -66,6 +66,16 @@ p {
 
 }
 
+.readableText {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+    letter-spacing: 0.48px;
+}
+
+
+
 p.secondaryText {
     color: var(--grey);
 }
@@ -125,6 +135,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-color: var(--blue);
 }
 
 button {

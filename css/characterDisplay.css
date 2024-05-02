@@ -1,31 +1,42 @@
-
-.characterTopWrapper{
+.characterTopWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.characterTopWrapper > h2{
+.characterTopWrapper>h2 {
     color: var(--headerYellow);
 }
 
-.characterTopWrapper > .charracterImage{
+.characterTopWrapper>.charracterImage {
     position: static;
 }
 
-.characterShortDescription > div{
+.characterShortDescription>div {
     display: flex;
     align-items: center;
-    gap: 4vh;
-}
-
-.buttons{
-    display: flex;
     gap: 1vh;
 }
 
-.buttons > button{
+.characterShortDescription p {
+    margin: 1vh;
+}
+
+.characterShortDescription svg {
+    width: 33.261px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.buttons>button {
     border-radius: 40px;
     border: 1px solid #FFE19A50;
     background-color: transparent;
@@ -33,19 +44,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
 }
 
-.buttons > button.selected{
+.buttons>button.selected {
     background-color: var(--yellow);
     color: var(--black);
 }
 
-.buttons > button:hover, .buttons > button:active{
+.buttons>button:hover,
+.buttons>button:active {
     background-color: var(--yellow);
     color: var(--black);
 }
 
-.playBtnBackground{
+.playBtnBackground {
     background-color: var(--blue);
     display: flex;
     justify-content: center;
@@ -57,17 +70,20 @@
     height: 7vh;
 }
 
-.btnPlayAudio{
+.btnPlayAudio {
     position: absolute;
     top: -4vh;
 }
-.btnPlayAudio.hidden{
+
+.btnPlayAudio.hidden {
     display: none;
 }
-.btnPauseAudio{
+
+.btnPauseAudio {
     position: absolute;
     top: -4vh;
 }
-.btnPauseAudio.hidden{
+
+.btnPauseAudio.hidden {
     display: none;
 }

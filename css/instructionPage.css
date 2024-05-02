@@ -57,14 +57,6 @@
     right: 10vw;
 }
 
-.infoBackground>p {
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    /* 187.5% */
-    letter-spacing: 0.48px;
-}
-
 .btnNextPage {
     position: fixed;
     top: 90vh;
