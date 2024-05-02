@@ -17,7 +17,7 @@
     --mainHeading: 30px;
     --subHeading: 24px;
     --titleHeading: 20px;
-    --paragraphFontSize: 14px;
+    --paragraphFontSize: 16px;
     --buttonFontSize: 16px;
 
     /*Other*/
@@ -63,7 +63,12 @@ h3 {
 p {
     font-size: var(--paragraphFontSize);
     color: var(--white);
+}
 
+label {
+    font-size: var(--paragraphFontSize);
+    font-family: openSans;
+    color: var(--white);
 }
 
 .readableText {

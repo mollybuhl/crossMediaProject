@@ -1,5 +1,4 @@
-
-.profileInfoWrapper{
+.profileInfoWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +6,7 @@
     padding-bottom: 4vh;
 }
 
-.profilePic{
+.profilePic {
     height: 20vh;
     width: 20vh;
     background-position: center;
@@ -16,6 +15,17 @@
     border-radius: 50%;
 }
 
-.selectProfilePic > div.selected{
+.selectProfilePic>div.selected {
     border: 1px solid black;
+}
+
+body>main:nth-child(1)>h2:nth-child(2) {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.input-field>p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    padding-bottom: 10vh;
 }

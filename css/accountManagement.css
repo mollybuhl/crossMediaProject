@@ -5,7 +5,7 @@
     color: var(--white);
 }
 
-.loginRegSubHeader {
+.subHeader {
     margin-bottom: 0;
     font-size: var(--paragraphFontSize);
 }
@@ -65,7 +65,7 @@ p.btnRegPage>span {
     background-size: cover;
 }
 
-#inputZone > .selectProfilePic>div.selected {
+#inputZone>.selectProfilePic>div.selected {
     border: 2px solid var(--white);
 }
 

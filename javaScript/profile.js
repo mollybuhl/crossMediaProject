@@ -1,21 +1,21 @@
 
 // Function to render player profile page with account settings
-async function renderProfilepage(){
+async function renderProfilepage() {
 
     //Get player info
-    let userID = Number(window.localStorage.getItem("userId")); 
+    let userID = Number(window.localStorage.getItem("userId"));
     let userPassword = window.localStorage.getItem("userPassword");
     let username;
     let profilePic;
 
-    try{
+    try {
         let request = new Request(`php/api.php?action=feed&userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
         let response = await fetch(request);
         let resource = await response.json();
 
         profilePic = resource.profilePic;
         username = resource.username;
-    }catch(error){
+    } catch (error) {
         let message = "Något gick fel, försök igen senare";
         informUser(message);
         return;
@@ -45,28 +45,80 @@ async function renderProfilepage(){
         <div class="edna"></div>
     </div>
 
-    <p>Ändra lösenord</p>
-    <div class="input-container">
-            <input type="password" id="password">
-            <label for="password">Nuvarande lösenord</label>
-    </div>
-    <div class="input-container">
-            <input type="password" id="newPassword">
-            <label for="confirmPassword">Nytt lösenord</label>
-    </div>
-    <button class="btnChangePassword">Byta lösenord</button>
-
+    <p id="changePassword">Ändra lösenord</p>
     <p class="btnLogout">Logga ut</p>
-    <p>Radera konto</p>
-    <div class="input-container">
-            <input type="password" id="passwordForDelete">
-            <label for="passwordForDelete">Ange lösenord</label>
-    </div>
-    <button class="btnDeleteAccount">Radera konto</button>
+    <p id="deleteAccount">Radera konto</p>
+
     `;
 
     // Render map on back button
     main.querySelector(".btnBack").addEventListener("click", renderMap);
+
+    // Logout
+    main.querySelector(".btnLogout").addEventListener("click", e => {
+
+        window.localStorage.setItem("loggedIn", "false");
+        window.localStorage.removeItem("userId");
+        window.localStorage.removeItem("password");
+        window.localStorage.removeItem("startTime");
+
+        renderStartpage();
+    });
+
+    // Render change password view
+    main.querySelector("#changePassword").addEventListener("click", event => {
+        main.classList.remove("mainMap");
+        main.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+        <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_183_79)">
+            <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
+        </g>
+    </svg>
+    
+    <h2>Ändra ditt lösenord</h2>
+    <div class="input-field">
+    <div class="input-container">
+        <label for="password">Nuvarande lösenord</label>
+        <input type="password" id="password">
+    </div>
+    <div class="input-container">
+        <label for="confirmPassword">Nytt lösenord</label>
+        <input type="password" id="newPassword">
+    </div>
+    </div>
+    <button class="btnChangePassword">Byta lösenord</button>`
+
+        main.querySelector(".btnBack").addEventListener("click", renderProfilepage);
+    });
+
+
+    main.querySelector("#deleteAccount").addEventListener("click", event => {
+        main.classList.remove("mainMap");
+        main.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+        <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_183_79)">
+            <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
+        </g>
+    </svg>
+    
+    <h2>Radera konto</h2>
+    <div class="input-field">
+    <div class="input-container">
+        <label for="passwordForDelete">Ange lösenord</label>
+        <input type="password" id="passwordForDelete">
+    </div>
+    <p>Skriv in ditt lösenord för att kunna radera
+    ditt nuvarande konto</p>
+    </div>
+    <button class="btnDeleteAccount">Radera konto</button>`
+
+        main.querySelector(".btnBack").addEventListener("click", renderProfilepage);
+    });
+
 
     // Set correct profile picture
     document.querySelector(".profilePic").classList.add(`${profilePic}`);
@@ -77,7 +129,7 @@ async function renderProfilepage(){
 
     main.querySelectorAll(".selectProfilePic > div").forEach(pic => {
         pic.addEventListener("click", async e => {
-            if(!pic.classList.contains("selected")){
+            if (!pic.classList.contains("selected")) {
                 document.querySelectorAll(".selectProfilePic > div.selected").forEach(selectedDiv => {
                     selectedDiv.classList.remove("selected");
                 });
@@ -91,7 +143,7 @@ async function renderProfilepage(){
                 //Save changes of profile pic
                 let requestOptions = {
                     method: "POST",
-                    headers: {"Content-type": "application/json; charset=UTF-8"},
+                    headers: { "Content-type": "application/json; charset=UTF-8" },
                     body: JSON.stringify({
                         userId: userID,
                         username: username,
@@ -102,18 +154,18 @@ async function renderProfilepage(){
                     })
                 };
 
-                try{
+                try {
                     let request = new Request("php/api.php", requestOptions);
                     const response = await fetch(request);
                     let resource = await response.json();
-        
-                    if(!response.ok) {
-                        console.log("Din profilbild har inte ändrats");                    
+
+                    if (!response.ok) {
+                        console.log("Din profilbild har inte ändrats");
                     } else {
-                        console.log(resource.message);  
+                        console.log(resource.message);
                     }
-            
-                }catch(error){
+
+                } catch (error) {
                     let message = "Något gick fel, försök igen senare";
                     informUser(message);
                     return;
@@ -124,13 +176,13 @@ async function renderProfilepage(){
 
     // Change password
     main.querySelector(".btnChangePassword").addEventListener("click", async e => {
-        
+
         const password = document.querySelector("#password").value;
         const newPassword = document.querySelector("#newPassword").value;
-        
+
         let requestOptions = {
             method: "POST",
-            headers: {"Content-type": "application/json; charset=UTF-8"},
+            headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 userId: userID,
                 username: username,
@@ -141,25 +193,25 @@ async function renderProfilepage(){
             })
         };
 
-        try{
+        try {
             let request = new Request("php/api.php", requestOptions);
             const response = await fetch(request);
             let resource = await response.json();
 
-            if(!response.ok) {
-                console.log("Ditt lösenord har inte uppdaterats");                    
+            if (!response.ok) {
+                console.log("Ditt lösenord har inte uppdaterats");
             } else {
-                console.log(resource.message); 
+                console.log(resource.message);
 
                 // Clear input 
                 document.querySelector("#password").value = "";
-                document.querySelector("#newPassword").value = ""; 
+                document.querySelector("#newPassword").value = "";
 
                 // Update password saved in local storage
                 window.localStorage.setItem("userPassword", `${newPassword}`);
             }
-    
-        }catch(error){
+
+        } catch (error) {
             let message = "Något gick fel, försök igen senare";
             informUser(message);
             return;
@@ -173,7 +225,7 @@ async function renderProfilepage(){
 
         let requestOptions = {
             method: "POST",
-            headers: {"Content-type": "application/json; charset=UTF-8"},
+            headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 userId: userID,
                 username: username,
@@ -181,15 +233,15 @@ async function renderProfilepage(){
                 action: "profile",
                 profileSetting: "deleteAccount"
             })
-        }; 
-        
-        try{
+        };
+
+        try {
             let request = new Request("php/api.php", requestOptions);
             const response = await fetch(request);
             let resource = await response.json();
 
-            if(!response.ok) {
-                console.log("Ditt konto har inte raderats");                    
+            if (!response.ok) {
+                console.log("Ditt konto har inte raderats");
             } else {
                 console.log(resource.message);
 
@@ -200,24 +252,15 @@ async function renderProfilepage(){
 
                 renderStartpage();
             }
-    
-        }catch(error){
+
+        } catch (error) {
             let message = "Något gick fel, försök igen senare";
             informUser(message);
             return;
         }
     });
 
-    // Logout
-    main.querySelector(".btnLogout").addEventListener("click", e => {
 
-        window.localStorage.setItem("loggedIn", "false");
-        window.localStorage.removeItem("userId");
-        window.localStorage.removeItem("password");
-        window.localStorage.removeItem("startTime");
-
-        renderStartpage();
-    });
 
 }
 

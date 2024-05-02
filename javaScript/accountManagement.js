@@ -6,19 +6,19 @@ function renderRegister() {
     <h2 class="loginRegisterHeader">Registrera ditt konto</h2>
     <div id="inputZone" class="input-field">
         <div class="input-container">
-            <p class="loginRegSubHeader">Användarnamn</p>
+            <label for="username">Användarnamn</label>
             <input type="text" id="registerUsername">
         </div>
         <div class="input-container">
-            <p class="loginRegSubHeader">Lösenord</p>
+            <label for="password">Lösenord</label>
             <input type="password" id="registerPassword">
         </div>
         <div class="input-container">
-            <p class="loginRegSubHeader">Bekräfta lösenord</p>
+            <label for="confirm Password">Bekräfta lösenord</label>
             <input type="password" id="confirmPassword">
         </div>
 
-        <p class="loginRegSubHeader">Välj profilbild</p>
+        <p class="subHeader">Välj profilbild</p>
         <div class="selectProfilePic">
             <div class="mater"></div>
             <div class="joy"></div>
@@ -103,12 +103,12 @@ function renderLogin() {
     main.innerHTML = `
     <h2 class="loginRegisterHeader">Login</h2>
     <div class="input-field" id="loginField">
-        <p class="loginRegSubHeader">Användarnamn</p>
         <div class="input-container">
+            <label for="username">Användarnamn</label>
             <input type="text" id="loginUsername">
         </div>
-        <p class="loginRegSubHeader">Lösenord</p>
         <div class="input-container">
+        <label for="password">Lösenord</label>
             <input type="password" id="loginPassword">
         </div>
     </div>
