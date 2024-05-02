@@ -40,15 +40,22 @@
 
 .pin {
     position: absolute;
+    height: 4.5vh;
 }
 
 .pin.selected path {
-    fill: red;
+    fill: var(--red);
+}
+
+.pin.selected {
+    height: 5.5vh;
+
 }
 
 .pin.kaptenKrok {
     top: 60vh;
     right: 15vw;
+
 }
 
 .pin.cruellaDeVil {
@@ -141,8 +148,8 @@
 }
 
 .btnProfile {
-    width: 7vh;
-    height: 7vh;
+    width: 6vh;
+    height: 6vh;
     border: none;
     background-position: center;
     background-repeat: no-repeat;
