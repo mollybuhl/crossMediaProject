@@ -28,6 +28,7 @@ function renderStartpage() {
 
 function renderInstructionpage(firstTime = true) {
     main.innerHTML = `
+    <section class="infoBackground">
     <h2 class="instructionHeader">Hur man spelar</h2>
     <div class="instructionContainer">
     <section>
@@ -91,9 +92,10 @@ function renderInstructionpage(firstTime = true) {
     </section>
 </div>
     <button id="btnStartPlaying">Start</button>
+    </section>
     `;
 
-    main.querySelector("#btnStartPlaying").addEventListener("click", e=>{
+    main.querySelector("#btnStartPlaying").addEventListener("click", e => {
         renderIntroductionpage(firstTime)
     })
 }

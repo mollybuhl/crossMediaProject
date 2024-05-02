@@ -6,17 +6,19 @@
 // Function to render introduction page when player enters the game for the first time
 function renderIntroductionpage(firstTime = true) {
     main.innerHTML = `
+    <section class="infoBackground">
     <h2>Det har skett ett mord</h2>
     <button class="btnPlayAudio"></button>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.  
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. </p>
     <button class="btnNextPage">Nästa</button>
+    </section>
     `;
 
     let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
 
     main.querySelector(".btnNextPage").addEventListener("click", e => {
-        if(firstTime){
+        if (firstTime) {
             startTimer();
         }
         renderMap();
@@ -336,7 +338,7 @@ async function renderMap() {
     let timeInterval = setInterval(updateTimer, 1000);
 
     // Render instruction when clicking top info button
-    main.querySelector(".infoIcon").addEventListener("click", e=> {
+    main.querySelector(".infoIcon").addEventListener("click", e => {
         clearInterval(timeInterval);
         renderInstructionpage(false)
     })
@@ -473,17 +475,17 @@ function renderControlQuestion(charracter) {
             let input1 = document.querySelector(".input1");
             let input2 = document.querySelector(".input2");
 
-            input1.addEventListener("input", function() {
+            input1.addEventListener("input", function () {
                 // Allow only one digit
                 this.value = this.value.replace(/\D/g, '');
-                
+
                 // Move focus to the second input
                 if (this.value.length === 1) {
                     input2.focus();
                 }
             });
-            
-            input2.addEventListener("input", function() {
+
+            input2.addEventListener("input", function () {
                 // Allow only one digit
                 this.value = this.value.replace(/\D/g, '');
             });
@@ -500,17 +502,17 @@ function renderControlQuestion(charracter) {
             let input2 = document.querySelector(".input2");
             let input3 = document.querySelector(".input3");
 
-            input1.addEventListener("input", function() {
+            input1.addEventListener("input", function () {
                 // Allow only one digit
                 this.value = this.value.replace(/\D/g, '');
-                
+
                 // Move focus to the second input
                 if (this.value.length === 1) {
                     input2.focus();
                 }
             });
-            
-            input2.addEventListener("input", function() {
+
+            input2.addEventListener("input", function () {
                 // Allow only one digit
                 this.value = this.value.replace(/\D/g, '');
                 if (this.value.length === 1) {
@@ -518,7 +520,7 @@ function renderControlQuestion(charracter) {
                 }
             });
 
-            input3.addEventListener("input", function() {
+            input3.addEventListener("input", function () {
                 // Allow only one digit
                 this.value = this.value.replace(/\D/g, '');
             });
@@ -569,14 +571,14 @@ function renderControlQuestion(charracter) {
         <label for="inputField" >Skriv in ditt svar här</label>
         `;
 
-        document.querySelector('.input1').addEventListener('input', function() {
-            let input = this.value.trim(); 
+        document.querySelector('.input1').addEventListener('input', function () {
+            let input = this.value.trim();
             let label = main.querySelector('label[for="inputField"]');
-            
+
             if (input !== '') {
-                label.style.display = 'none'; 
+                label.style.display = 'none';
             } else {
-                label.style.display = 'block'; 
+                label.style.display = 'block';
             }
         });
 
@@ -597,17 +599,17 @@ function renderControlQuestion(charracter) {
         let input3 = document.querySelector(".input3");
         let input4 = document.querySelector(".input4");
 
-        input1.addEventListener("input", function() {
+        input1.addEventListener("input", function () {
             // Allow only one digit
             this.value = this.value.replace(/\D/g, '');
-            
+
             // Move focus to the second input
             if (this.value.length === 1) {
                 input2.focus();
             }
         });
-        
-        input2.addEventListener("input", function() {
+
+        input2.addEventListener("input", function () {
             // Allow only one digit
             this.value = this.value.replace(/\D/g, '');
             if (this.value.length === 1) {
@@ -615,7 +617,7 @@ function renderControlQuestion(charracter) {
             }
         });
 
-        input3.addEventListener("input", function() {
+        input3.addEventListener("input", function () {
             // Allow only one digit
             this.value = this.value.replace(/\D/g, '');
             if (this.value.length === 1) {
@@ -623,7 +625,7 @@ function renderControlQuestion(charracter) {
             }
         });
 
-        input4.addEventListener("input", function() {
+        input4.addEventListener("input", function () {
             // Allow only one digit
             this.value = this.value.replace(/\D/g, '');
         });

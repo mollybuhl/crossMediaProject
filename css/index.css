@@ -52,7 +52,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--mainHeading);
+    font-size: var(--subHeading);
     font-family: lakkiReddy;
     color: var(--white);
     margin-top: 1vw;
@@ -102,7 +102,8 @@ p.secondaryText {
     color: var(--yellow);
 }
 
-.btnNewGame:hover, .btnNewGame:active{
+.btnNewGame:hover,
+.btnNewGame:active {
     border: .5px solid var(--headerYellow);
     color: var(--headerYellow);
     background-color: transparent;
@@ -138,7 +139,8 @@ button {
     border: 0.5px solid var(--yellow);
 }
 
-button:hover, button:active{
+button:hover,
+button:active {
     background-color: var(--headerYellow);
 }
 

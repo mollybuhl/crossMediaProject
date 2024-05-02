@@ -343,5 +343,29 @@
         ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 26,
+        "username": "elinsauer",
+        "password": "elin",
+        "profilePic": "mater",
+        "startTime": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    },
+    {
+        "id": 27,
+        "username": "sauer",
+        "password": "sauer",
+        "profilePic": "baymax",
+        "startTime": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
