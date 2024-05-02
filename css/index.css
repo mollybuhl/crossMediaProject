@@ -63,6 +63,7 @@ h3 {
 p {
     font-size: var(--paragraphFontSize);
     color: var(--white);
+
 }
 
 p.secondaryText {

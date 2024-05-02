@@ -19,17 +19,17 @@
     color: var(--black);
 }
 
-.topbar > div{
+.topbar>div {
     display: flex;
     gap: 2vh;
 }
 
-.topbar > div > p{
+.topbar>div>p {
     font-family: lakkiReddy;
     font-size: var(--titleHeading);
 }
 
-.infoIcon{
+.infoIcon {
     background-image: url(../media/aboutIcon.svg);
     background-position: center;
     background-repeat: no-repeat;
