@@ -30,10 +30,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
+    /*padding-left: var(--padding);
+    padding-right: var(--padding);*/
     box-sizing: border-box;
-    width: 100vw;
+    /*width: 100vw;*/
     height: 100vh;
 }
 

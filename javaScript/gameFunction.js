@@ -6,7 +6,7 @@
 // Function to render introduction page when player enters the game for the first time
 function renderIntroductionpage(firstTime = true) {
     main.innerHTML = `
-    <section class="infoBackground" style="height: 160vh;">
+    <section class="infoBackground">
         <header>
             <div class="charracterImage"></div>
             <h2>Det har skett <br> ett mord!</h2>
