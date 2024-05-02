@@ -29,3 +29,16 @@ body>main:nth-child(1)>h2:nth-child(2) {
     font-size: 14px;
     padding-bottom: 10vh;
 }
+
+#editProfile {
+    padding-top: 8vh;
+}
+
+.profileInfoWrapper>h2:nth-child(1) {
+    padding-top: 5vh;
+}
+
+hr {
+    border: none;
+    border-top: 0.1px solid rgba(255, 255, 255, 0.5);
+}

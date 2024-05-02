@@ -45,10 +45,12 @@ async function renderProfilepage() {
         <div class="edna"></div>
     </div>
 
-    <p id="changePassword">Ändra lösenord</p>
-    <p class="btnLogout">Logga ut</p>
-    <p id="deleteAccount">Radera konto</p>
-
+    <div id="editProfile">
+        <p id="changePassword">Ändra lösenord</p>
+        <p class="btnLogout">Logga ut</p>
+        <hr>
+        <p id="deleteAccount">Radera konto</p>
+    </div>
     `;
 
     // Render map on back button
