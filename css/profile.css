@@ -42,3 +42,17 @@ hr {
     border: none;
     border-top: 0.1px solid rgba(255, 255, 255, 0.5);
 }
+
+.btnChangePassword, .btnDeleteAccount{
+    width: 80%;
+    position: fixed;
+    bottom: 10vh;
+}
+
+.userFeedback.bad, .input-field > p:nth-child(2).bad{
+    color: var(--red);
+}
+
+.userFeedback.good{
+    color: #06a706;
+}

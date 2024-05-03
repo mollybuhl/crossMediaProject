@@ -367,5 +367,16 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 28,
+        "username": "lovis",
+        "password": "lovis2",
+        "profilePic": "edna",
+        "startTime": "2024-05-03T09:11:37.602Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

@@ -70,55 +70,144 @@ async function renderProfilepage() {
     // Render change password view
     main.querySelector("#changePassword").addEventListener("click", event => {
         main.classList.remove("mainMap");
-        main.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
-        <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-            <rect width="24" height="24" fill="#D9D9D9"/>
-        </mask>
-        <g mask="url(#mask0_183_79)">
-            <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
-        </g>
-    </svg>
+        main.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+            <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_183_79)">
+                <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
+            </g>
+        </svg>
     
-    <h2>Ändra ditt lösenord</h2>
-    <div class="input-field">
-    <div class="input-container">
-        <label for="password">Nuvarande lösenord</label>
-        <input type="password" id="password">
-    </div>
-    <div class="input-container">
-        <label for="confirmPassword">Nytt lösenord</label>
-        <input type="password" id="newPassword">
-    </div>
-    </div>
-    <button class="btnChangePassword">Byta lösenord</button>`
+        <h2>Ändra ditt lösenord</h2>
+        <div class="input-field">
+            <div class="input-container">
+                <label for="password">Nuvarande lösenord</label>
+                <input type="password" id="password">
+            </div>
+            <div class="input-container">
+                <label for="confirmPassword">Nytt lösenord</label>
+                <input type="password" id="newPassword">
+            </div>
+            <p class="userFeedback"></p>
+        </div>
+        <button class="btnChangePassword">Byta lösenord</button>`;
 
         main.querySelector(".btnBack").addEventListener("click", renderProfilepage);
+
+        // Call to change password
+        main.querySelector(".btnChangePassword").addEventListener("click", async e => {
+
+            const password = document.querySelector("#password").value;
+            const newPassword = document.querySelector("#newPassword").value;
+
+            let requestOptions = {
+                method: "POST",
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+                body: JSON.stringify({
+                    userId: userID,
+                    username: username,
+                    password: password,
+                    newPassword: newPassword,
+                    action: "profile",
+                    profileSetting: "changePassword"
+                })
+            };
+
+            try {
+                let request = new Request("php/api.php", requestOptions);
+                const response = await fetch(request);
+                let resource = await response.json();
+
+                if (!response.ok) {
+                    main.querySelector(".userFeedback").classList.add("bad");
+                    main.querySelector(".userFeedback").textContent = resource.message;
+                } else {
+                    main.querySelector(".userFeedback").classList.add("good");
+                    main.querySelector(".userFeedback").textContent = resource.message;
+                    // Clear input 
+                    document.querySelector("#password").value = "";
+                    document.querySelector("#newPassword").value = "";
+
+                    // Update password saved in local storage
+                    window.localStorage.setItem("userPassword", `${newPassword}`);
+                }
+
+            } catch (error) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            }
+        })
     });
 
-
+    // Render delete account view
     main.querySelector("#deleteAccount").addEventListener("click", event => {
         main.classList.remove("mainMap");
-        main.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
+        main.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
         <mask id="mask0_183_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
             <rect width="24" height="24" fill="#D9D9D9"/>
         </mask>
         <g mask="url(#mask0_183_79)">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
         </g>
-    </svg>
-    
-    <h2>Radera konto</h2>
-    <div class="input-field">
-    <div class="input-container">
-        <label for="passwordForDelete">Ange lösenord</label>
-        <input type="password" id="passwordForDelete">
-    </div>
-    <p>Skriv in ditt lösenord för att kunna radera
-    ditt nuvarande konto</p>
-    </div>
-    <button class="btnDeleteAccount">Radera konto</button>`
+        </svg>
+        
+        <h2>Radera konto</h2>
+        <div class="input-field">
+            <div class="input-container">
+                <label for="passwordForDelete">Ange lösenord</label>
+                <input type="password" id="passwordForDelete">
+            </div>
+            <p class="userFeedback">Skriv in ditt lösenord för att kunna radera ditt nuvarande konto</p>
+        </div>
+        <button class="btnDeleteAccount">Radera konto</button>`;
 
         main.querySelector(".btnBack").addEventListener("click", renderProfilepage);
+
+        // Delete account when call to action
+        main.querySelector(".btnDeleteAccount").addEventListener("click", async e => {
+
+            const password = document.querySelector("#passwordForDelete").value;
+
+            let requestOptions = {
+                method: "POST",
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+                body: JSON.stringify({
+                    userId: userID,
+                    username: username,
+                    password: password,
+                    action: "profile",
+                    profileSetting: "deleteAccount"
+                })
+            };
+
+            try {
+                let request = new Request("php/api.php", requestOptions);
+                const response = await fetch(request);
+                let resource = await response.json();
+
+                if (!response.ok) {
+                    main.querySelector(".userFeedback").classList.add("bad");
+                    main.querySelector(".userFeedback").textContent = resource.message;
+                } else {
+
+                    // Logout user and render start page
+                    window.localStorage.setItem("loggedIn", "false");
+                    window.localStorage.removeItem("userId");
+                    window.localStorage.removeItem("password");
+
+                    renderStartpage();
+                }
+
+            } catch (error) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            }
+        });
     });
 
 
@@ -175,94 +264,5 @@ async function renderProfilepage() {
             }
         })
     })
-
-    // Change password
-    main.querySelector(".btnChangePassword").addEventListener("click", async e => {
-
-        const password = document.querySelector("#password").value;
-        const newPassword = document.querySelector("#newPassword").value;
-
-        let requestOptions = {
-            method: "POST",
-            headers: { "Content-type": "application/json; charset=UTF-8" },
-            body: JSON.stringify({
-                userId: userID,
-                username: username,
-                password: password,
-                newPassword: newPassword,
-                action: "profile",
-                profileSetting: "changePassword"
-            })
-        };
-
-        try {
-            let request = new Request("php/api.php", requestOptions);
-            const response = await fetch(request);
-            let resource = await response.json();
-
-            if (!response.ok) {
-                console.log("Ditt lösenord har inte uppdaterats");
-            } else {
-                console.log(resource.message);
-
-                // Clear input 
-                document.querySelector("#password").value = "";
-                document.querySelector("#newPassword").value = "";
-
-                // Update password saved in local storage
-                window.localStorage.setItem("userPassword", `${newPassword}`);
-            }
-
-        } catch (error) {
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
-        }
-    })
-
-    // Delete account
-    main.querySelector(".btnDeleteAccount").addEventListener("click", async e => {
-
-        const password = document.querySelector("#passwordForDelete").value;
-
-        let requestOptions = {
-            method: "POST",
-            headers: { "Content-type": "application/json; charset=UTF-8" },
-            body: JSON.stringify({
-                userId: userID,
-                username: username,
-                password: password,
-                action: "profile",
-                profileSetting: "deleteAccount"
-            })
-        };
-
-        try {
-            let request = new Request("php/api.php", requestOptions);
-            const response = await fetch(request);
-            let resource = await response.json();
-
-            if (!response.ok) {
-                console.log("Ditt konto har inte raderats");
-            } else {
-                console.log(resource.message);
-
-                // Logout user and render start page
-                window.localStorage.setItem("loggedIn", "false");
-                window.localStorage.removeItem("userId");
-                window.localStorage.removeItem("password");
-
-                renderStartpage();
-            }
-
-        } catch (error) {
-            let message = "Något gick fel, försök igen senare";
-            informUser(message);
-            return;
-        }
-    });
-
-
-
 }
 
