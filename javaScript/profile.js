@@ -170,43 +170,64 @@ async function renderProfilepage() {
         // Delete account when call to action
         main.querySelector(".btnDeleteAccount").addEventListener("click", async e => {
 
-            const password = document.querySelector("#passwordForDelete").value;
+            // Ask to confirm delete account
+            let popupBackground = document.createElement("div");
+            popupBackground.classList.add("confirmActionPopupBackground");
+            popupBackground.innerHTML = `
+            <div>
+                <h2>Är du säker på att du vill radera ditt konto?</h2>
+                    <button class="yes">Ja</button>
+            </div>
+            `;
+            main.appendChild(popupBackground);
 
-            let requestOptions = {
-                method: "POST",
-                headers: { "Content-type": "application/json; charset=UTF-8" },
-                body: JSON.stringify({
-                    userId: userID,
-                    username: username,
-                    password: password,
-                    action: "profile",
-                    profileSetting: "deleteAccount"
-                })
-            };
-
-            try {
-                let request = new Request("php/api.php", requestOptions);
-                const response = await fetch(request);
-                let resource = await response.json();
-
-                if (!response.ok) {
-                    main.querySelector(".userFeedback").classList.add("bad");
-                    main.querySelector(".userFeedback").textContent = resource.message;
-                } else {
-
-                    // Logout user and render start page
-                    window.localStorage.setItem("loggedIn", "false");
-                    window.localStorage.removeItem("userId");
-                    window.localStorage.removeItem("password");
-
-                    renderStartpage();
+            popupBackground.addEventListener("click", e => {
+                // Check if the clicked element is not within the .innerbox
+                if (!e.target.closest('.innerbox')) {
+                    popupBackground.remove(); // Remove the popupBackground
                 }
+            });
 
-            } catch (error) {
-                let message = "Något gick fel, försök igen senare";
-                informUser(message);
-                return;
-            }
+            popupBackground.querySelector(".yes").addEventListener("click", async e => {
+                popupBackground.remove();
+                const password = document.querySelector("#passwordForDelete").value;
+
+                let requestOptions = {
+                    method: "POST",
+                    headers: { "Content-type": "application/json; charset=UTF-8" },
+                    body: JSON.stringify({
+                        userId: userID,
+                        username: username,
+                        password: password,
+                        action: "profile",
+                        profileSetting: "deleteAccount"
+                    })
+                };
+    
+                try {
+                    let request = new Request("php/api.php", requestOptions);
+                    const response = await fetch(request);
+                    let resource = await response.json();
+    
+                    if (!response.ok) {
+                        main.querySelector(".userFeedback").classList.add("bad");
+                        main.querySelector(".userFeedback").textContent = resource.message;
+                    } else {
+    
+                        // Logout user and render start page
+                        window.localStorage.setItem("loggedIn", "false");
+                        window.localStorage.removeItem("userId");
+                        window.localStorage.removeItem("password");
+    
+                        renderStartpage();
+                    }
+    
+                } catch (error) {
+                    let message = "Något gick fel, försök igen senare";
+                    informUser(message);
+                    return;
+                }
+            })
         });
     });
 
