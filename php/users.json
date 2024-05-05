@@ -38,5 +38,18 @@
             "skinner"
         ],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 4,
+        "username": "maja",
+        "password": "maja",
+        "profilePic": "mater",
+        "startTime": "2024-05-05T18:40:59.023Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Skinner"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]

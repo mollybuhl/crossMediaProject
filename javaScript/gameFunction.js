@@ -693,13 +693,21 @@ function renderControlQuestion(charracter) {
             } else if (charracter === "Skinner") {
                 let inputValues1 = [];
                 document.querySelectorAll('.num1Input > input').forEach(input => {
-                    inputValues1.push(input.value);
+                    let value = input.value;
+                    if (typeof value === 'string') {
+                        value = value.toLowerCase();
+                    }
+                    inputValues1.push(value);
                 });
                 inputValues1 = inputValues1.join("");
 
                 let inputValues2 = [];
                 document.querySelectorAll('.num2Input > input').forEach(input => {
-                    inputValues2.push(input.value);
+                    let value = input.value;
+                    if (typeof value === 'string') {
+                        value = value.toLowerCase();
+                    }
+                    inputValues2.push(value);
                 });
                 inputValues2 = inputValues2.join("");
 

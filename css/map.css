@@ -265,7 +265,8 @@ input[type=number] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: .5vh;
+    padding: 3vh;
+    box-sizing: border-box;
 }
 
 .wrongAnswerPopup>div>h2 {
