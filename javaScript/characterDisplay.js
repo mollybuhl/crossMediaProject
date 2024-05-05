@@ -87,7 +87,7 @@ async function renderCharracterPage(charracter) {
             characterAttribute = "Krona, röd och svart klänning, och rosor."
             className = "hjärterDam";
             break;
-        case "Head Chef":
+        case "Skinner":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             characterMovie = "Ratatouille";
             characterTraits = "Hård, oförsonlig, förakt, och stolt";

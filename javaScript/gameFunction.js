@@ -254,7 +254,7 @@ async function renderMap() {
                             locationDescription = "Diana - Naturens väktare";
                             break;
                         case "headChef":
-                            selectedCharracter = "Head Chef";
+                            selectedCharracter = "Skinner";
                             coordinates = "55.602030, 12.985432";
                             locationDescription = "Mat och Vin Slottsparken";
                             break;
@@ -431,7 +431,7 @@ function renderControlQuestion(charracter) {
             question = "Hur många hjortar ser du?";
             answer = 17;
             break;
-        case "Head Chef":
+        case "Skinner":
             typeOfQuestion = "numbers";
             question = "Ange kombinationen";
             underQuestion = "Ange kombinationen av bokstäver och siffror som står på fågelholkarna nära entren till restaurangen (Ange minsta siffran först)."
@@ -562,7 +562,7 @@ function renderControlQuestion(charracter) {
                 <input type="number" class="num2Input1" maxlength="1"></input>
             </div>
             `;
-        } else if (charracter === "Head Chef") {
+        } else if (charracter === "Skinner") {
             inputWrapper.classList.add("numbers");
             inputWrapper.classList.add("headChef");
             main.querySelector("h2").classList.add("headChef");
@@ -660,8 +660,9 @@ function renderControlQuestion(charracter) {
         if (typeOfQuestion === "word") {
             let userAnswer = main.querySelector(".input1").value;
             let userAnswerLowercase = userAnswer.toLowerCase();
+            let userAnswerNoSpace = main.querySelector(".input1").value.trim();
 
-            if (userAnswer === answer || userAnswerLowercase === answer) {
+            if (userAnswer === answer || userAnswerLowercase === answer || userAnswerNoSpace === answer) {
                 correctAnswer = true;
             }
         } else if (typeOfQuestion === "number") {
@@ -689,7 +690,7 @@ function renderControlQuestion(charracter) {
                     correctAnswer = true;
                 }
 
-            } else if (charracter === "Head Chef") {
+            } else if (charracter === "Skinner") {
                 let inputValues1 = [];
                 document.querySelectorAll('.num1Input > input').forEach(input => {
                     inputValues1.push(input.value);

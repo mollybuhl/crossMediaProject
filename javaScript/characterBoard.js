@@ -16,7 +16,7 @@ async function renderCharracterboard() {
         <div class="hattmakaren"></div>
         <div class="prinsJohn"></div>
         <div class="hjärterDam"></div>
-        <div class="headChef"></div>
+        <div class="skinner"></div>
     </div>
 
     <div class="navbar">

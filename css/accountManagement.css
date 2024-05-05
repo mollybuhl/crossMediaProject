@@ -54,15 +54,17 @@ p.btnRegPage>span {
     justify-content: space-between;
     align-items: center;
     gap: 1vw;
+    height: 6vh;
 }
 
 .selectProfilePic>div {
-    height: 6vh;
-    width: 6vh;
+    height: 5vh;
+    width: 5vh;
     border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
 }
 
 #inputZone>.selectProfilePic>div.selected {
