@@ -229,16 +229,20 @@
     display: flex;
 }
 
-.inputWrapper input.number {}
+.inputWrapper.singleDigit{
+    justify-content: center;
+    align-items: center;
+}
 
-.inputWrapper input.numbers {}
-
-.inputWrapper input.word {}
+.inputWrapper.singleDigit > input.input1{
+    width: 25vw;
+    flex-basis: unset;
+    flex-grow: unset;
+}
 
 input[type=number] {
     -moz-appearance: textfield;
 }
-
 
 .wrongAnswerPopup {
     height: 100%;

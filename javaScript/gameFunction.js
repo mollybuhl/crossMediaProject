@@ -229,7 +229,7 @@ async function renderMap() {
                             locationDescription = "Malmö slott";
                             break;
                         case "ursulla":
-                            selectedCharracter = "Ursula";
+                            selectedCharracter = "Ursulla";
                             coordinates = "55.603390, 12.988230";
                             locationDescription = "Togepi´s lookout";
                             break;
@@ -404,7 +404,7 @@ function renderControlQuestion(charracter) {
             question = "Hur många bollar jonglerar “Gycklaren” med?";
             answer = 5;
             break;
-        case "Ursula":
+        case "Ursulla":
             typeOfQuestion = "numbers";
             question = "Hur många broar och bänkar kan du se? Titta noga.";
             answer = [3, 8];
@@ -440,7 +440,7 @@ function renderControlQuestion(charracter) {
         case "Hattmakaren":
             typeOfQuestion = "number";
             question = "Ange priset";
-            underQuestion = "Hattmakaren beställer alltid samma sak på Slottsträdgårdens Kafé. Hans beställer en kopp svart te, oliver, två Chokladbollar och en glass. Ange priset för beställningen."
+            underQuestion = "Hattmakaren beställer alltid samma sak på Slottsträdgårdens Kafé. Han beställer en kopp svart te, oliver, två Chokladbollar och en glass. Ange priset för hela beställningen."
             answer = 207;
             break;
         case "Hjärter Dam":
@@ -451,7 +451,7 @@ function renderControlQuestion(charracter) {
         case "Prins John":
             typeOfQuestion = "number";
             question = "Ange ett nummer";
-            underQuestion = "Räkna flaggstängerna framför kasinot. På rouletten, börja på siffran 26 och gå lika många steg som flagstänger moturs"
+            underQuestion = "Räkna flaggstängerna framför kasinot. På rouletten, börja på siffran 26 och gå lika många steg som flagstänger moturs."
             answer = 29;
             break;
     }
@@ -480,6 +480,7 @@ function renderControlQuestion(charracter) {
         let numDigits = answer.toString().length
 
         if (numDigits === 1) {
+            inputWrapper.classList.add("singleDigit");
             inputWrapper.innerHTML = `
             <input type="number" class="input1" maxlength="1"></input>
             `;
@@ -548,8 +549,8 @@ function renderControlQuestion(charracter) {
     } else if (typeOfQuestion === "numbers") {
         inputWrapper.classList.add("numbers");
 
-        if (charracter === "Ursula") {
-            inputWrapper.classList.add("ursula");
+        if (charracter === "Ursulla") {
+            inputWrapper.classList.add("ursulla");
 
             inputWrapper.innerHTML = `
             <div class="inputBox num1Input">
@@ -564,13 +565,14 @@ function renderControlQuestion(charracter) {
         } else if (charracter === "Head Chef") {
             inputWrapper.classList.add("numbers");
             inputWrapper.classList.add("headChef");
+            main.querySelector("h2").classList.add("headChef");
 
             inputWrapper.innerHTML = `
             <label>Kombination 1</label>
             <div class="inputBox num1Input">
-                <input type="text" class="num1Input1" maxlength="1"></input>
-                <input type="number" class="num1Input2" maxlength="1"></input>
-                <input type="number" class="num1Input3" maxlength="1"></input>
+                <input type="text" class="num1Input1 num1Input1_1" maxlength="1"></input>
+                <input type="number" class="num1Input2 num1Input2_1" maxlength="1"></input>
+                <input type="number" class="num1Input3 num1Input3_1" maxlength="1"></input>
             </div>
             <label>Kombination 2</label>
             <div class="inputBox num2Input">
@@ -579,6 +581,8 @@ function renderControlQuestion(charracter) {
                 <input type="number" class="num2Input3" maxlength="1"></input>
             </div>
             `;
+
+          
         }
 
     } else if (typeOfQuestion === "word") {
@@ -677,6 +681,7 @@ function renderControlQuestion(charracter) {
         } else if (typeOfQuestion === "numbers") {
 
             if (charracter === "Ursulla") {
+                console.log("here");
                 let inputFieldNum1 = parseFloat(document.querySelector(".num1Input > input").value);
                 let inputFieldNum2 = parseFloat(document.querySelector(".num2Input > input").value);
 

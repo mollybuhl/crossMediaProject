@@ -378,5 +378,42 @@
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 29,
+        "username": "ann",
+        "password": "ann",
+        "profilePic": "pascal",
+        "startTime": "2024-05-05T07:04:13.894Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Musse",
+            "T\u00f6rnrosa",
+            "Ursulla",
+            "Hattmakaren",
+            "Hj\u00e4rter Dam",
+            "Prins John",
+            "Sn\u00f6vit",
+            "Hades",
+            "Kapten Krok",
+            "Cruella de Vil",
+            "Head Chef",
+            "Darla"
+        ],
+        "suspectCharacters": [
+            "musse",
+            "t\u00f6rnrosa",
+            "ursulla",
+            "hattmakaren",
+            "hj\u00e4rterDam",
+            "prinsJohn",
+            "sn\u00f6vit",
+            "hades",
+            "kaptenKrok",
+            "cruellaDeVil",
+            "headChef",
+            "darla"
+        ],
+        "notSuspectCharacters": []
     }
 ]

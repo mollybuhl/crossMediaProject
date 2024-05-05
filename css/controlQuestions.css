@@ -68,11 +68,11 @@
     text-align: center;
 }
 
-.inputWrapper.ursula{
+.inputWrapper.ursulla{
     text-align: center;
 }
 
-.inputWrapper.ursula div > input{
+.inputWrapper.ursulla div > input{
     background-color: transparent;
     border: 1px solid #73737350;
     height: 15vh;
@@ -81,7 +81,7 @@
     text-align: center;
 }
 
-.inputWrapper.ursula > div > label{
+.inputWrapper.ursulla > div > label{
     color: var(--white);
     font-family: lakkiReddy;
     font-size: var(--subHeading);
@@ -112,6 +112,12 @@
     height: 15vh;
     text-align: center;
     font-size: 50px;
+}
+
+body > main.controlQuestion > h2.headChef{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 5vh;
 }
 
 .btnUnlock{
