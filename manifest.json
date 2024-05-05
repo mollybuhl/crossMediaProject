@@ -1,0 +1,13 @@
+{
+    "name": "HappilyNeverAfter",
+    "short_name": "HNA",
+    "start_url:": "http://www.maumt.se/wdu/ht22/students/designstudio/g7/crossMediaProject/index.html",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "Media/logo.png",
+            "sizes": "212x212",
+            "type": "imge/png"
+        }   
+    ]
+}

@@ -1,3 +1,13 @@
 [
-    
+    {
+        "id": 1,
+        "username": "celli",
+        "password": "celli",
+        "profilePic": "baymax",
+        "startTime": "2024-05-05T16:26:18.931Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
+    }
 ]
