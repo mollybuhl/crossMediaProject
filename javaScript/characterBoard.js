@@ -124,7 +124,6 @@ async function renderCharracterboard() {
 
                 if (character === "musse") {
 
-                    console.log("Musse!");
                     // stop timer and display story
                     renderStorySolution(true);
                 } else {
