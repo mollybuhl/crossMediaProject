@@ -80,3 +80,37 @@
     left: 50%;
     z-index: 3;
 }
+
+/*Murder guess page*/
+
+.titleMurderWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25vh;
+}
+
+.murderGuess > .bottomWrapper{
+    position: fixed;
+    bottom: 5vh;
+    width: 80%;
+}
+
+h2.yellow{
+    color: var(--yellow);
+    font-size: 40px;
+    margin-bottom: 0;
+}
+h2.red{
+    color: var(--red);
+    font-size: 40px;
+}
+
+.murderGuess h3{
+    font-size: 34px;
+}
+
+.murderGuess button{
+    height: 50px;
+}

@@ -38,9 +38,9 @@
 
 .buttons>button {
     border-radius: 40px;
-    border: 1px solid #FFE19A50;
+    border: 1px solid var(--yellow);
     background-color: transparent;
-    color: #FFE19A50;
+    color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;

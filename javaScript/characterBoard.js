@@ -124,8 +124,9 @@ async function renderCharracterboard() {
 
                 if (character === "Musse") {
 
+                    console.log("Musse!");
                     // stop timer and display story
-                    renderStorySolution();
+                    renderStorySolution(true);
                 } else {
 
                     // Inform incorrect guess
@@ -135,11 +136,6 @@ async function renderCharracterboard() {
         })
     })
 
-
-
-
-
-
     // Navbar
     main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
     main.querySelector(".map").addEventListener("click", renderMap);
@@ -147,19 +143,26 @@ async function renderCharracterboard() {
 }
 
 function renderIncorrectGuess(character) {
+    main.classList.add("murderGuess");
     main.innerHTML = `
-    <h2>${character}</h2>
-    <p>är</p>
-    <h2>inte mördaren</h2>
-    <p>Vill du fortsätta spela spelet eller avsluta spelet och lyssna på vad som faktiskt hänt?</p>
-    <button class="keepPlaying">Fortsätt spela</button>
-    <button class="listenToStory">Lyssna på lösningen</button>
+    <div class="titleMurderWrapper">
+        <h2 class="yellow">${character}</h2>
+        <h3>är</h3>
+        <h2 class="red">inte mördaren</h2>
+    </div>
+    <div class="bottomWrapper">
+        <p>Vill du fortsätta spela spelet eller avsluta spelet och lyssna på vad som faktiskt hänt?</p>
+        <div class="buttons">
+            <button class="keepPlaying">Fortsätt spela</button>
+            <button class="listenToStory">Lösningen</button>
+        </div>
+    </div>
     `;
 
     main.querySelector(".keepPlaying").addEventListener("click", renderMap);
     main.querySelector(".listenToStory").addEventListener("click", renderStorySolution);
 }
 
-function renderStorySolution() {
+function renderStorySolution(correctAnswer = false) {
 
 }
