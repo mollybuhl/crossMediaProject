@@ -47,6 +47,9 @@
         case "startTimer":
             startTimer($requestData, $users);
             break;
+        case "finishTimer":
+            finishTimer($requestData, $users);
+            break;
         case "getAllUsers":
             $userID = $requestData["userID"];
             $userPassword = $requestData["userPassword"];

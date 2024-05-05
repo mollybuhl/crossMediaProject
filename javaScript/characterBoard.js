@@ -122,7 +122,7 @@ async function renderCharracterboard() {
 
             popup.querySelector("button").addEventListener("click", e => {
 
-                if (character === "Musse") {
+                if (character === "musse") {
 
                     console.log("Musse!");
                     // stop timer and display story
@@ -163,6 +163,79 @@ function renderIncorrectGuess(character) {
     main.querySelector(".listenToStory").addEventListener("click", renderStorySolution);
 }
 
-function renderStorySolution(correctAnswer = false) {
+async function renderStorySolution(correctAnswer = false) {
 
+    //Save finishing time if player guessed correctly
+    if(correctAnswer){
+
+        // Fetch player info
+        let userID = Number(window.localStorage.getItem("userId"));
+        let userPassword = window.localStorage.getItem("userPassword");
+        let startTime;
+
+        try {
+            let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
+            let response = await fetch(request);
+            let resource = await response.json();
+
+            if (!response.ok) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            } else {
+                startTime = resource.startTime;
+            }
+        } catch (error) {
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }
+
+        let startDate = new Date(startTime);
+        let currentDate = new Date();
+        const timeDifference = currentDate - startDate;
+
+        // Convert milliseconds to hours, minutes, and seconds
+        const totalSeconds = Math.floor(timeDifference / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        // Save finishing time for user
+        let requestOptions = {
+            method: "POST",
+            headers: { "Content-type": "application/json; charset=UTF-8" },
+            body: JSON.stringify({
+                userId: userID,
+                password: userPassword,
+                finishingTime: formattedTime,
+                action: "finishTimer"
+            })
+        };
+
+        try {
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if (!response.ok) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            } else {
+               
+            }
+
+        } catch (error) {
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }
+    }
+
+    main.innerHTML = `
+    <h2>Musse är mördaren!</h2>
+    `;
 }
