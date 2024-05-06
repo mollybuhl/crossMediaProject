@@ -6,7 +6,7 @@ async function renderCharracterboard() {
     main.innerHTML = `
     <div class="boardOfCharracters">
         <div class="musse character">
-            <img src="media/mussee.png" alt="musse">
+            <img src="media/musse.png" alt="musse">
         </div>
         <div class="ursulla character">
             <img src="media/ursulla.png" alt="ursulla">
@@ -21,7 +21,7 @@ async function renderCharracterboard() {
             <img src="media/darla.png" alt="darla">
         </div>
         <div class="kaptenKrok character">
-            <img src="media/kaptenkrok.png" alt="kaptenkrok">
+            <img src="media/kaptenKrok.png" alt="kaptenkrok">
         </div>
         <div class="snövit character">
             <img src="media/snövit.png" alt="snövit">
@@ -33,7 +33,7 @@ async function renderCharracterboard() {
             <img src="media/hattmakaren.png" alt="hattmakaren">
         </div>
         <div class="prinsJohn character">
-            <img src="media/prinsjohn.png" alt="prinsjohn">
+            <img src="media/prinsJohn.png" alt="prinsjohn">
         </div>
         <div class="hjärterDam character">
             <img src="media/hjärterdam.png" alt="hjärterdam">

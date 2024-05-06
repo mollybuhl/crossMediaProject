@@ -318,7 +318,7 @@ async function renderMap() {
                     return formattedCharacter;
                 };
                 let formattedCharacter = formatCharacter(selectedCharracter);
-
+                console.log(formattedCharacter);
 
                 let popUp = document.createElement("div");
                 popUp.classList.add("popUp");
