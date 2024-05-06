@@ -7,33 +7,16 @@
 function renderIntroductionpage(firstTime = true) {
     main.innerHTML = `
     <section class="infoBackground">
-        <header>
-            <div class="charracterImage"></div>
-            <h2>Det har skett <br> ett mord!</h2>
-            <div class="playBtnInfo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
-            <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
-            <path d="M44.2295 32.7816C45.5628 33.5514 45.5628 35.4759 44.2295 36.2457L31.1562 43.7936C29.8228 44.5634 28.1562 43.6011 28.1562 42.0615L28.1562 26.9658C28.1562 25.4262 29.8228 24.4639 31.1562 25.2337L44.2295 32.7816Z" fill="#001937"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPauseAudio hidden">
-            <circle cx="35.1191" cy="35.1191" r="34.1191" fill="#000E1E" stroke="#D9D9D9" stroke-width="2"/>
-            <mask id="mask0_385_154" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="21" width="29" height="29">
-                <rect x="21" y="21" width="29" height="29" fill="#D9D9D9"/>
-            </mask>
-            <g mask="url(#mask0_385_154)">
-                <path d="M37.9167 43.9584V27.0417H42.75V43.9584H37.9167ZM28.25 43.9584V27.0417H33.0833V43.9584H28.25Z" fill="#D9D9D9"/>
-            </g>
-        </svg>
-    </div>
-        </header>
-        <p class="readableText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.  
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. </p>
+        <h2>Det har skett ett mord!</h2>
+        <p> I många år har du besökt nöjesparken i Slottsparken. Festivalen förekommer vart 5:e år och i år, 2024, är det äntligen dags igen.</p>
+        <p>Du är väldigt förväntansfull på grund av att det inte är vilken festival som helst utan den här baserad på dina favoritfigurer från Disney-filmerna, Walt Disney's egna universum. Till skillnad från de tecknade filmerna är det en festival där varje karaktär har sitt eget stånd. Detta har varit ett mysigt evenemang som pågått i flera år och attraherar stora som små.</p>
+        <p>Dagen innan öppningsdagen läser du på nyheterna: “Walt Disney har blivit mördad inne på Malmö slott, festivalen är inställd” Du kan inte fatta vad som hänt. Varför skulle Walt bli mördad just dagen innan öppningsdagen och vad händer egentligen inne på festivalområdet? Du tar tag i denna mystiska händelse och vill ta reda på sanningen. Vad hände egentligen?!</p>
+        <p class="readableText"><span>Skynda dig till Musse som befinner sig på Malmö slott! </span></p>
         <button class="btnNextPage">Nästa</button>
     </section>
     `;
 
-    let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+    //let audio = new Audio("../media/testMusic.mp3"); //placeholder audio
 
     main.querySelector(".btnNextPage").addEventListener("click", e => {
         if (firstTime) {
@@ -43,7 +26,7 @@ function renderIntroductionpage(firstTime = true) {
     });
 
     // Play and Pause music
-    main.querySelector(".btnPlayAudio").addEventListener("click", e => {
+    /*main.querySelector(".btnPlayAudio").addEventListener("click", e => {
 
         if (main.querySelector(".btnPlayAudio").classList.contains("btnPauseAudio")) {
             main.querySelector(".btnPlayAudio").classList.remove("btnPauseAudio");
@@ -52,7 +35,7 @@ function renderIntroductionpage(firstTime = true) {
             main.querySelector(".btnPlayAudio").classList.add("btnPauseAudio");
             audio.play();
         }
-    })
+    })*/
 }
 
 // Function to render the map and main view of the game

@@ -14,14 +14,16 @@
 }
 
 .instructionHeader {
-    padding-top: 12vh;
+    padding-top: 5vh;
     display: flex;
     justify-content: center;
     font-size: 28px;
 }
 
 #btnStartPlaying {
-    margin-top: 4vh;
+    position: fixed;
+    width: 80%;
+    bottom: 10vh;
 }
 
 .infoBackground {
@@ -30,24 +32,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /*padding-left: var(--padding);
-    padding-right: var(--padding);*/
     box-sizing: border-box;
-    /*width: 100vw;*/
     height: 100vh;
 }
 
-.infoBackground header {
-    display: flex;
-    padding-top: 8vh;
-    padding-bottom: 3vh;
-}
 
-.infoBackground>header>h2 {
-    text-align: left;
-    padding-left: 12vh;
+.infoBackground > .instructionHeader{
     color: var(--yellow);
     font-size: 28px;
+    margin-bottom: 4vh;
+}
+
+.infoBackground > h2{
+    color: var(--yellow);
+    font-size: 28px;
+    padding-top: 5vh;
+    margin-bottom: 0;
 }
 
 .infoBackground .btnPlayAudio {
@@ -63,4 +63,8 @@
     transform: translate(-50%, -50%);
     left: 50%;
     width: 82%;
+}
+
+.infoBackground > .readableText{
+    padding-bottom: 15vh;
 }

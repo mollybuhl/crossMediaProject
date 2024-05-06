@@ -46,10 +46,10 @@ async function renderCharracterPage(charracter) {
             className = "musse";
             break;
         case "Ursulla":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Blubb Blubb, efter middagen på slottet så var jag i min bassäng på slottet hela natten.";
+            charracterAction = "Jag var först på mötet som tog en väldans tid, sedan ville den störiga <span>Törnrosa</span> ta med oss på en runda i parken … Det finns inget annat att göra här på den här bedrövliga platsen. Hon släpade runt oss på nån tjejträff men när <span>Cruella</span> stack så tänkte jag att jag sticker också snart. Senare så var jag på middagen som <span>Walt</span> bjöd på, vi drack en massa berusande elixir <span>jag, Walt</span> och <span>Cruella</span>, mest jag och <span>Cruella</span> hehehe det var ju gratis. Varför var jag inte på festen? pfft… med töntarna… det tänker jag inte slösa tid på.";
+            charracterSaw = "Jag såg en <span>kort silhouette</span> springande i korridoren utanför mig. Nu i efterhand så kan jag koppla att <span>Walts</span> rum ligger bara tre dörrar ifrån min! Detta skedde sent på natten, men det var bara en reflektion och jag visste inte vad det innebar förrän vi hade denna diskussion.";
+            charracterConnectionToWalt = "Han har ändå haft en god konversation. Men jag skulle väl säga att jag blev besviken när jag inte fick Prins Erik. Jag har varit med om så mycket och tycker ändå att jag också kunde få ett lyckligt slut som Ariel?";
             characterMovie = "Lilla sjöjungfrun";
             characterTraits = "Manipulativ, bedräglig, själviskt";
             characterAttribute = "Svart lila klänning, blå lila hud, och ett snäckskal till halsband";
@@ -66,20 +66,20 @@ async function renderCharracterPage(charracter) {
             className = "hades";
             break;
         case "Darla":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Efter middagen på slottet blev jag hemkörd av <span>Walts</span> personal.";
+            charracterAction = "Blööö … var på det tråkiga mötet på morgonen.. fattade ingenting men det var över efter några timmar. Jag fick inte hänga med till lunchen med <span>Chef Skinner</span> så jag satt utanför slottet och letade efter några fiskar i vattnet som går runt slottet. Det fanns inga… <span>Cruella</span> gick förbi mig och frågade om jag ville hänga med på en liten sväng runt parken så jag hängde med. När vi kom tillbaka så visade Walt runt mig i slottet innan middagen. <span>Walts</span> middag var sååå god! Men det blev sent och <span>Walt</span> fixade så att en bil kom och körde hem mig till mina föräldrar för att jag skulle ha extra mycket energi när nöjesfältet öppnar imorgon!";
+            charracterSaw = "Inga fiskar 🙁 WÄÄÄHHH";
+            charracterConnectionToWalt = "Jag ser Walt lite som en cool pappa.";
             characterMovie = "Hitta nemo";
             characterTraits = "Obekymrad, bortskämd, och ovarsam";
             characterAttribute = "Tandställning, lila tröja med text “rock n roll, girl";
             className = "darla";
             break;
         case "Törnrosa":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Jag var på festen hos <span>Hattmakaren</span> och sedan tog jag mig hem lite tidigare för att jag hade planerat en frukost tillsammans med <span>Walt</span>.";
+            charracterAction = "Jag var på mötet tillsammans med alla andra, mötet var långt men det var kul att träffa alla igen! Jag blev inbjuden till <span>Hattmakarens</span> fest senare på kvällen så jag passade på att träffa de som inte skulle dit. <span>Hattmakaren</span> sa att det kommer bli riktigt roligt och att flera från mötet skulle komma. Jag passade därför på att träffa <span>Cruella, Darla ,Ursula</span> och <span>Hjärter Dam</span> för att de berättade att de inte kunde komma på festen och att de skulle äta middag med <span>Walt</span> istället. Jag var sugen på en rolig fest så jag skippade middagen som <span>Walt</span> bjöd oss på. Efter några timmar gick jag tillbaka för att träffa på snövit och göra oss iordning till <span>Hattmakarens</span> fest. Jag kom till <span>Hattmakaren</span> runt 18:00 eller något och gick dit tillsammans med <span>Musse, Törnrosa, Snövit</span> och <span>Hades</span> för vi alla bor på slottet. Utanför Hattmakaren stötte vi på <span>Kapten Krok</span> som kom från ett annat håll. Efter några timmar så gick jag tillbaka ensam för jag hade planerat min frukost med <span>Walt</span> på morgonen. <span>Walt</span> dök aldrig upp och det var då jag gick till hans rum och fann honom på golvet.";
+            charracterSaw = "Såg ingenting på kvällen eller natten eftersom hon la sig tidigt. Men hittade <span>Walt</span> i hans rum på morgonen och kallade på hjälp. Spillror av porslin och vätska utspritt på det blöta golvet. Jag slog larm och gjorde hjärt- och lungräddning tills polis och ambulans kom. Personalen hann inte i tid men de kunde utesluta att WALT hade blivit förgiftad!";
+            charracterConnectionToWalt = "Positiv inställning mot <span>Walt</span>, hon gillar att <span>Walt</span> förvandlade henne till en prinsessa där hon fick leva lyckligt i alla sina dagar.";
             characterMovie = "Törnrosa";
             characterTraits = "Ödmjuk, optimistisk, och romantisk";
             characterAttribute = "Rosa/Blå klänning, Blond/ljushårig prinsessa, Tiara eller diadem på huvudet";
@@ -96,10 +96,10 @@ async function renderCharracterPage(charracter) {
             className = "snövit";
             break;
         case "Hattmakaren":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Jag arrangerade en fest hos mig där några kom och festade hela natten. På natten var det bara jag och <span>Skinner</span> kvar som hjälpte mig att städa, han stack hem när vi var klara och jag somnade strax efter.";
+            charracterAction = "Jag var på morgonmötet tillsammans med alla andra. Jag ville göra någonting unikt och annorlunda till skillnad från andra nöjesfält vi genomfört, så jag bestämde mig för att bjuda in allihopa till en fest hemma hos mig. Några kunde och andra inte men det handlar om människorna, inte mängden personer! Efter mötet åt jag lunch hos <span>Chef Skinner</span> med <span>Kapten Krok och Skinner</span> han själv. Vi satt där en stund och sedan hjälpte de mig att handla grejer inför festen. Så vi tog en runda till Gustav Adolfs torg och köpte muggar, pynt och “berusande elixir”. Därefter begav jag mig hem för att preppa huset med pynt och liknande. Gästerna började komma runt 18:00 om jag minns rätt, och vi festade tills himlen såg svart. När alla begav sig hem så la jag mig och somnade på minuten. <span>Chef Skinner</span> var snäll nog och <span>hjälpte</span> mig att <span>städa</span> och sedan begav han sig hem.";
+            charracterSaw = "Jag såg inget särskilt, för jag var här hela kvällen och gick aldrig tillbaka till slottet innan jag fick höra om nyheterna på morgonen. Om jag såg något annorlunda? Njaa inte riktigt, vet bara att <span>Törnrosa</span> stack hem tidigare än de andra som bor på slottet, hon kanske bara var trött eller något, hon gillar ju att sova hehe.";
+            charracterConnectionToWalt = "Blandad åsikt om Walt, gillar att han gjorde honom till en stor ikon och världskänd men att han projiceras som en “galen” person är något han egentligen inte föredrar.";
             characterMovie = "Alice i Underlandet";
             characterTraits = "Galen, excentrisk, lekfull";
             characterAttribute = "Hatt, Kaffepanna, färgglad";
