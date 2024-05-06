@@ -1,10 +1,3 @@
-/*
-    To Do: 
-    - Mark current player on leaderboard if they have finished
-    - Display first player in the middle, bigger
-    - Display player nr
-
-*/
 
 // Function to render the leaderboard and display all finished players game time
 async function renderLeaderboard() {
@@ -72,8 +65,11 @@ async function renderLeaderboard() {
         return;
     }
 
+    // Sort out players with correct guess
+    let correctGuessedUsers = usersData.filter(user => user['correctGuess'] === true);
+
     // Sort all players acording to finishing time
-    let finishedUsers = usersData.filter(user => user['finishingTime'] !== "Not finished");
+    let finishedUsers = correctGuessedUsers.filter(user => user['finishingTime'] !== "Not finished");
     finishedUsers.sort((a, b) => {
         // Convert finishing time strings to Date objects for comparison
         let timeA = new Date('1970-01-01T' + a['finishingTime']);
