@@ -18,7 +18,9 @@
         "profilePic": "baymax",
         "startTime": "2024-05-06T14:06:47.185Z",
         "finishingTime": "00:00:27",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "Kapten Krok"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true

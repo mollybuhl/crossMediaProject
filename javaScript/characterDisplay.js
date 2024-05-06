@@ -7,14 +7,24 @@ async function renderCharracterPage(charracter) {
     let characterTraits;
     let characterAttribute;
     let className;
+    let charracterTimeAndPlace;
+    let charracterAction;
+    let charracterSaw;
+    let charracterConnectionToWalt;
+    let charracterHint;
 
     //Define carracter text based on charracter selected
     switch (charracter) {
         case "Kapten Krok":
             charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace = "HA HA, Jag var och hade sällskap på mitt skepp den natten. Detta får du hålla hemligt -  men jag gjorde sällskap med <span>Hjärter Dam</span> den kvällen. Så jag vet inte vad som hände i slottet.";
+            charracterAction = "Jag var på det förbaskade tråkiga morgonmötet, jag hängde sedan med till <span>Chef Skinners</span> restaurang tillsammans med <span>Hattmakaren</span> och <span>Skinner</span>. Efter den utsökta maten som Chef Skinner gjorde åt oss, sedan hjälpte vi <span>Hattmakaren</span> att förbereda inför kvällens fest! Vi tog en runda in till Systembolaget och köpte det berusande elixiret. Fattar du att man endast kan köpa elixir från EN BUTIK?!?!?! vilket skit land HA HA HA! Men jaa fan va vi ska festa. Efter festen mötte jag upp <span>Hjärter Dam</span> vid slottet och avslutade natten på skeppet.";
+            charracterSaw = "Menar du på festen? hmm såg att alla hade roligt och att jag tömde några flaskor elixir hehehe. Jag märkte att det blev lite tunt på folk inne hos <span>Hattmakaren</span>, jag såg att <span>Musse</span> och <span>Chef Skinner</span> försvinna en stund under kvällen.";
+            charracterConnectionToWalt = " Men jag är ändå glad att jag fick den rollen jag fick och att jag blev jag. Jag önskade dock att jag fick min hämnd på den förbannade Peter Pan.";
+            charracterHint = "<span>Musse</span> och <span>Chef Skinner</span> försvinna en stund under festen.";
             characterMovie = "Peter Pan";
-            characterTraits = "Stolt, listig, och besatt av Peter Pan";
-            characterAttribute = "Lila Sjörövarhatt, röd kappa, och en krok till hand";
+            characterTraits = "Stolt, listig, besatt av Peter Pan";
+            characterAttribute = "Lila Sjörövarhatt, röd kappa, en krok till hand";
             className = "kaptenKrok";
             break;
         case "Cruella de Vil":
@@ -167,7 +177,17 @@ async function renderCharracterPage(charracter) {
         <button class="suspect">Misstänkt</button>
     </div>
 
-    <p class="readableText">${charracterText}</p>
+    <h3>Tid och Plats</h3>
+    <p>${charracterTimeAndPlace}</p>
+    <h3>Gjorde</h3>
+    <p>${charracterAction}</p>
+    <h3>Såg</h3>
+    <p>${charracterSaw}</p>
+    <h3>Koppling till Walt</h3>
+    <p>${charracterConnectionToWalt}</p>
+    <h3>Spekulationer om någon misstänkt</h3>
+    <p>${charracterHint}</p>
+
     <div class="playBtnBackground">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
