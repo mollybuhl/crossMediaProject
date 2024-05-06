@@ -118,3 +118,7 @@ h2.red {
     display: flex;
     flex-direction: column;
 }
+
+.character img {
+    width: 11vh;
+}

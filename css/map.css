@@ -222,6 +222,10 @@
     margin: 0;
 }
 
+.charracterImage img {
+    width: 14vh;
+}
+
 
 
 /*Control question*/
