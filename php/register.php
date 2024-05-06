@@ -57,7 +57,8 @@
             "finishingTime" => "Not finished",
             "unlockedCharacters" => [],
             "suspectCharacters" => [],
-            "notSuspectCharacters" => []
+            "notSuspectCharacters" => [],
+            "correctGuess" => false
         ];
         
         $users[] = $newUser;

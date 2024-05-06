@@ -276,12 +276,12 @@ async function renderMap() {
                         case "kaptenKrok":
                             selectedCharracter = "Kapten Krok";
                             coordinates = "55.601263, 12.987155";
-                            locationDescription = "tbc";
+                            locationDescription = "Linnéplatsen";
                             break;
                         case "cruellaDeVil":
                             selectedCharracter = "Cruella de Vil";
                             coordinates = "55.600699, 12.985931";
-                            locationDescription = "tbc";
+                            locationDescription = "Lusthuset Linnéplatsen";
                             break;
                         case "musse":
                             selectedCharracter = "Musse";
