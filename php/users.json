@@ -5,10 +5,22 @@
         "password": "molly",
         "profilePic": "pascal",
         "startTime": "2024-05-06T13:37:47.762Z",
-        "finishingTime": "00:05:40",
+        "finishingTime": "00:23:24",
         "unlockedCharacters": [],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
-        "correctGuess": false
+        "correctGuess": true
+    },
+    {
+        "id": 2,
+        "username": "hej",
+        "password": "hej",
+        "profilePic": "baymax",
+        "startTime": "2024-05-06T14:06:47.185Z",
+        "finishingTime": "00:00:27",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
     }
 ]

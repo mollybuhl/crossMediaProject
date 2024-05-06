@@ -46,7 +46,7 @@
         foreach($users as $user){
             if($user["id"] == $userID){
                 $loggedInUser = $user;
-                $loggedInUserLimitedAcces = ["id" => $user["id"], "username" => $user["username"], "startTime" => $user["startTime"],"profilePic" => $user["profilePic"], "unlockedCharacters" => $user["unlockedCharacters"], "suspectCharacters" => $user["suspectCharacters"], "notSuspectCharacters" => $user["notSuspectCharacters"]];
+                $loggedInUserLimitedAcces = ["id" => $user["id"], "username" => $user["username"], "startTime" => $user["startTime"],"profilePic" => $user["profilePic"], "unlockedCharacters" => $user["unlockedCharacters"], "suspectCharacters" => $user["suspectCharacters"], "notSuspectCharacters" => $user["notSuspectCharacters"], "correctGuess" => $user["correctGuess"]];
             }
         }
 
@@ -58,7 +58,7 @@
 
         foreach($users as $userIndex => $user){
             if(!in_array($user["id"], $usersTime)){
-                $usersTime[] = ["id" => $user["id"], "username" => $user["username"],"profilePic" => $user["profilePic"], "finishingTime" => $user["finishingTime"]];
+                $usersTime[] = ["id" => $user["id"], "username" => $user["username"],"profilePic" => $user["profilePic"], "finishingTime" => $user["finishingTime"], "correctGuess" => $user["correctGuess"]];
             }
         } 
         
