@@ -6,14 +6,16 @@ async function renderCharracterboard() {
     main.innerHTML = `
     <div class="boardOfCharracters">
         <div class="musse character"></div>
-        <div class="ursulla character"></div>
+        <div class="ursulla character">
+        <img src="media/ursula.svg" alt="ursula"></div>
         <div class="cruellaDeVil character">
         <img src="media/cruellaDeVil.svg" alt="cruellaDeVil">
         </div>
         <div class="hades character"></div>
         <div class="darla character"></div>
         <div class="kaptenKrok character"></div>
-        <div class="snövit character"></div>
+        <div class="snövit character">
+        <img src="media/snövit.png" alt="snövit"></div>
         <div class="törnrosa character"></div>
         <div class="hattmakaren character"></div>
         <div class="prinsJohn character"></div>
