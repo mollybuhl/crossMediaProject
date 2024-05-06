@@ -237,6 +237,10 @@ async function renderStorySolution(correctAnswer = false) {
     }
 
     main.innerHTML = `
-    <h2>Musse är mördaren!</h2>
+    <h2>Grattis!</h2>
+    <h3>Du hittade mördaren</h3>
+    <div></div>
+    <h2>Musse Pigg</h2>
+    <button>Lyssna</button>
     `;
 }
