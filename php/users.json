@@ -1,3 +1,14 @@
 [
-   
+    {
+        "id": 1,
+        "username": "molly",
+        "password": "molly",
+        "profilePic": "pascal",
+        "startTime": "2024-05-06T13:37:47.762Z",
+        "finishingTime": "00:05:40",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    }
 ]
