@@ -305,6 +305,8 @@ async function renderMap() {
                 // Format selected character name
                 function formatCharacter(selectedCharracter) {
                     let formattedCharacter = selectedCharracter.trim().toLowerCase();
+                    // Replace ä with a and ö with o
+                    formattedCharacter = formattedCharacter.replace(/ä/g, 'a').replace(/ö/g, 'o');
                     let words = formattedCharacter.split(' ');
 
                     for (let i = 0; i < words.length; i++) {

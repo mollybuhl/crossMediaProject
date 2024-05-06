@@ -24,10 +24,10 @@ async function renderCharracterboard() {
             <img src="media/kaptenKrok.png" alt="kaptenkrok">
         </div>
         <div class="snövit character">
-            <img src="media/snövit.png" alt="snövit">
+            <img src="media/snovit.png" alt="snövit">
         </div>
         <div class="törnrosa character">
-            <img src="media/törnrosa.png" alt="törnrosa">
+            <img src="media/tornrosa.png" alt="törnrosa">
         </div>
         <div class="hattmakaren character">
             <img src="media/hattmakaren.png" alt="hattmakaren">
@@ -35,8 +35,8 @@ async function renderCharracterboard() {
         <div class="prinsJohn character">
             <img src="media/prinsJohn.png" alt="prinsjohn">
         </div>
-        <div class="hjärterDam character">
-            <img src="media/hjärterdam.png" alt="hjärterdam">
+        <div class="hjrterDam character">
+            <img src="media/hjarterdam.png" alt="hjärterdam">
         </div>
         <div class="skinner character">
         <img src="media/skinner.png" alt="headchef">
