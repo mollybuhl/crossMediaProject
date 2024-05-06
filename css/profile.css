@@ -19,7 +19,7 @@
     border: 1px solid black;
 }
 
-body>main:nth-child(1)>h2:nth-child(2) {
+.profileHeader {
     padding-top: 10vh;
     padding-bottom: 5vh;
 }
@@ -32,6 +32,8 @@ body>main:nth-child(1)>h2:nth-child(2) {
 
 #editProfile {
     padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .profileInfoWrapper>h2:nth-child(1) {
@@ -39,26 +41,31 @@ body>main:nth-child(1)>h2:nth-child(2) {
 }
 
 hr {
+    margin: 0;
+    height: 2vh;
     border: none;
     border-top: 0.1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 2vh;
 }
 
-.btnChangePassword, .btnDeleteAccount{
+.btnChangePassword,
+.btnDeleteAccount {
     width: 80%;
     position: fixed;
     bottom: 10vh;
 }
 
-.userFeedback.bad, .input-field > p:nth-child(2).bad{
+.userFeedback.bad,
+.input-field>p:nth-child(2).bad {
     color: var(--red);
 }
 
-.userFeedback.good{
+.userFeedback.good {
     color: #06a706;
 }
 
 /*Confirm delete account popup*/
-.confirmActionPopupBackground > div{
+.confirmActionPopupBackground>div {
     background-color: white;
     border-radius: 30px;
     text-align: center;
@@ -70,11 +77,20 @@ hr {
     transform: translate(-50%, -50%);
 }
 
-.confirmActionPopupBackground > div > h2{
+.confirmActionPopupBackground>div>h2 {
     color: var(--black);
 }
 
-.confirmActionPopupBackground > div > div > button{
+.confirmActionPopupBackground>div>div>button {
     background-color: var(--yellow);
     color: var(--black);
+}
+
+.editSection {
+    display: flex;
+    align-items: center;
+}
+
+.edit {
+    padding-left: 2vh;
 }

@@ -342,7 +342,7 @@ async function renderMap() {
                 popUp.innerHTML = `
                     <div>
                         <div class="charracterImage">
-                        <img src="media/cruellaDeVil.svg" alt="cruellaDeVil">
+                        <img src="media/snövit.png" alt="snövit">
                         </div>
                         <div class="charracterInfo">
                             <h3>${selectedCharracter}</h3>

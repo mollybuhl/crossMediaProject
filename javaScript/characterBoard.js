@@ -5,20 +5,42 @@ async function renderCharracterboard() {
 
     main.innerHTML = `
     <div class="boardOfCharracters">
-        <div class="musse character"></div>
-        <div class="ursulla character"></div>
-        <div class="cruellaDeVil character">
-        <img src="media/cruellaDeVil.svg" alt="cruellaDeVil">
+        <div class="musse character">
+            <img src="media/mussee.png" alt="musse">
         </div>
-        <div class="hades character"></div>
-        <div class="darla character"></div>
-        <div class="kaptenKrok character"></div>
-        <div class="snövit character"></div>
-        <div class="törnrosa character"></div>
-        <div class="hattmakaren character"></div>
-        <div class="prinsJohn character"></div>
-        <div class="hjärterDam character"></div>
-        <div class="skinner character"></div>
+        <div class="ursulla character">
+            <img src="media/ursula.png" alt="ursula">
+        </div>
+        <div class="cruellaDeVil character">
+            <img src="media/cruella.png" alt="cruellaDeVil">
+        </div>
+        <div class="hades character">
+            <img src="media/hades.png" alt="hades">
+        </div>
+        <div class="darla character">
+            <img src="media/darla.png" alt="darla">
+        </div>
+        <div class="kaptenKrok character">
+            <img src="media/kaptenkrok.png" alt="kaptenkrok">
+        </div>
+        <div class="snövit character">
+            <img src="media/snövit.png" alt="snövit">
+        </div>
+        <div class="törnrosa character">
+            <img src="media/törnrosa.png" alt="törnrosa">
+        </div>
+        <div class="hattmakaren character">
+            <img src="media/hattmakaren.png" alt="hattmakaren">
+        </div>
+        <div class="prinsJohn character">
+            <img src="media/prinsjohn.png" alt="prinsjohn">
+        </div>
+        <div class="hjärterDam character">
+            <img src="media/hjärterdam.png" alt="hjärterdam">
+        </div>
+        <div class="skinner character">
+        <img src="media/headchef.png" alt="headchef">
+        </div>
     </div>
 
     <div class="navbar">
