@@ -13,12 +13,16 @@
     {
         "id": 2,
         "username": "elsa",
-        "password": "elsa",
+        "password": "elin",
         "profilePic": "mater",
         "startTime": "2024-05-05T16:33:23.261Z",
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
-        "suspectCharacters": [],
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
+        "suspectCharacters": [
+            "cruellaDeVil"
+        ],
         "notSuspectCharacters": []
     },
     {

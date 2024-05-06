@@ -5,18 +5,20 @@ async function renderCharracterboard() {
 
     main.innerHTML = `
     <div class="boardOfCharracters">
-        <div class="musse"></div>
-        <div class="ursulla"></div>
-        <div class="cruellaDeVil"></div>
-        <div class="hades"></div>
-        <div class="darla"></div>
-        <div class="kaptenKrok"></div>
-        <div class="snövit"></div>
-        <div class="törnrosa"></div>
-        <div class="hattmakaren"></div>
-        <div class="prinsJohn"></div>
-        <div class="hjärterDam"></div>
-        <div class="skinner"></div>
+        <div class="musse character"></div>
+        <div class="ursulla character"></div>
+        <div class="cruellaDeVil character">
+        <img src="media/cruellaDeVil.svg" alt="cruellaDeVil">
+        </div>
+        <div class="hades character"></div>
+        <div class="darla character"></div>
+        <div class="kaptenKrok character"></div>
+        <div class="snövit character"></div>
+        <div class="törnrosa character"></div>
+        <div class="hattmakaren character"></div>
+        <div class="prinsJohn character"></div>
+        <div class="hjärterDam character"></div>
+        <div class="skinner character"></div>
     </div>
 
     <div class="navbar">
@@ -165,7 +167,7 @@ function renderIncorrectGuess(character) {
 async function renderStorySolution(correctAnswer = false) {
 
     //Save finishing time if player guessed correctly
-    if(correctAnswer){
+    if (correctAnswer) {
 
         // Fetch player info
         let userID = Number(window.localStorage.getItem("userId"));
@@ -224,7 +226,7 @@ async function renderStorySolution(correctAnswer = false) {
                 informUser(message);
                 return;
             } else {
-               
+
             }
 
         } catch (error) {

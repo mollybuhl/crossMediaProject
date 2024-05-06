@@ -27,6 +27,8 @@ function renderStartpage() {
 }
 
 function renderInstructionpage(firstTime = true) {
+
+    main.classList.remove("mainMap");
     main.innerHTML = `
     <section class="infoBackground">
     <h2 class="instructionHeader">Hur man spelar</h2>

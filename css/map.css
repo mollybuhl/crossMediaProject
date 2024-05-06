@@ -157,7 +157,8 @@
     border-radius: 50%;
 }
 
-.popupBackground, .confirmActionPopupBackground {
+.popupBackground,
+.confirmActionPopupBackground {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -186,10 +187,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 20vh;
-    width: 20vh;
+    height: 15vh;
+    width: 15vh;
     position: absolute;
-    top: -80px;
+    top: -44px;
 }
 
 .charracterInfo {
@@ -229,12 +230,12 @@
     display: flex;
 }
 
-.inputWrapper.singleDigit{
+.inputWrapper.singleDigit {
     justify-content: center;
     align-items: center;
 }
 
-.inputWrapper.singleDigit > input.input1{
+.inputWrapper.singleDigit>input.input1 {
     width: 25vw;
     flex-basis: unset;
     flex-grow: unset;

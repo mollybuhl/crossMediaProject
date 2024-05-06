@@ -7,11 +7,9 @@
 }
 
 .boardOfCharracters>div {
-    background-image: url(../media/cruella.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 15vh;
 }
 
 .boardOfCharracters>.cruellaDeVil.notSuspect {
@@ -83,7 +81,7 @@
 
 /*Murder guess page*/
 
-.titleMurderWrapper{
+.titleMurderWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,26 +89,32 @@
     padding-top: 25vh;
 }
 
-.murderGuess > .bottomWrapper{
+.murderGuess>.bottomWrapper {
     position: fixed;
     bottom: 5vh;
     width: 80%;
 }
 
-h2.yellow{
+h2.yellow {
     color: var(--yellow);
     font-size: 40px;
     margin-bottom: 0;
 }
-h2.red{
+
+h2.red {
     color: var(--red);
     font-size: 40px;
 }
 
-.murderGuess h3{
+.murderGuess h3 {
     font-size: 34px;
 }
 
-.murderGuess button{
+.murderGuess button {
     height: 50px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
 }
