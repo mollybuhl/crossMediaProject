@@ -87,9 +87,9 @@ async function renderCharracterPage(charracter) {
             break;
         case "Snövit":
             charracterTimeAndPlace = "Självaste mordnatten så var jag i slottet men jag sov en av flyglarna. Jag var i slottet från typ 00.00 och vaknade cirka 09.00 för att väckas av den hemska nyheten.";
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterAction = "Jadu, jag var ju på mötet på morgonen den 18:e som alla andra var på… Jaha, du vet inte vad det handlade om? Jo, det var så att under dagen innan <span>Walt</span> dog så utspelade sig det det viktigaste mötet för oss karaktärer. Vi fick veta vilka som fick delta och inte i nöjesfältet detta år. Stämningen var ändå bra. Jag fick en plats vilket jag är oerhört tacksam för hihi. Vissa var väl upprörda och andra väldigt glada, men inget jag reagerade på. Det var många som lämnade redan direkt efter mötet för att det inte var någon mening att stanna kvar.  Men under den hemska natten så sov jag. Efter mötet så gick jag på lunch med <span>Hades</span>, <span>Prins John</span>, <span>Walt</span> och <span>Musse</span> som <span>Walt</span> bjöd på. Jag träffade sen <span>Törnrosa</span> för att göra oss redo inför festen. Han ville göra något roligt för att lära känna varandra efter uttagningen. <span>Hattmakaren</span> menade att det var inte ofta man får lära känna <span>skurkarna</span> som är med i <span>Walts</span> värld. <span>Jag</span> och <span>Törnrosa</span> var som sagt med på Hattmakarens fest och det var trevligt. Men jag kände efter ett tag att det var dags att röra sig hem och då var klockan cirka 23.30, och jag gick och la mig så fort jag kom hem till slottet.";
+            charracterSaw = "Nja, när jag på festen uppfattade jag <span>två personer som bråka</span>. Men jag vet inte vilka det var… Jag hörde att en <span>röst</span> var <span>pipig</span> och<span> en annan</span> var <span>mörkare</span>, men inget mer… Det var det som var konstigt antar jag.";
+            charracterConnectionToWalt = "Jag har en viss koppling till Walt, jag var en av hans första historier och jag fick den äran att överleva det förfärliga som den elaka drottningen utsatte mig för.";
             characterMovie = "Snövit och de sju dvärgarna";
             characterTraits = "Godtrogen, oskyldig, vänlig, god";
             characterAttribute = "Blå och guldig klänning och sjunger och kvittrar ofta"
@@ -106,30 +106,30 @@ async function renderCharracterPage(charracter) {
             className = "hattmakaren";
             break;
         case "Prins John":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Vid mord tillfället var jag och sov i slottet.";
+            charracterAction = "Jag var på mötet, sen gick jag och surade på mitt rum och sov. Några timmar senare så var det plötsligt ingen som var med på slottet… Jag gick runt och alla hade gått utan att bjuda mig. Jag blev först arg och kände mig utanför men det förtjänar ändå inte min tid. Jag fattar inte HUR KAN DE VÄLJA ATT GÅ UTAN MIG?!?!?! Hur många gånger hade jag inte försökt att skaffa vänner och så vill jag ändå inte vara med mig? Jag vet ju att jag är den bästa på denna jord? Så varför vill ingen hänga med mig? Det är deras förlust, jag har försökt.";
+            charracterSaw = "Såg? Nej, jag såg inget. Men jag var vaken någon timme där runt 03:00 tiden för jag trodde jag hörde något. Men det var bara Sir Väs som hade ramlat ur sin vagga.";
+            charracterConnectionToWalt = "Han var en jävel. Han gjorde så att Robin Hood tog alla MINA pengar utan att ens fråga mig först. Disney har alltid varit problematisk i alla våra karaktärers historier då Walt har det stora mandatet, och kan alltid göra om våra historier som han så behagar.";
             characterMovie = "Robin Hood";
             characterTraits = "Girig, snål, arrogant, feg, manipulativ";
             characterAttribute = "Röd kunglig kappa och krona"
             className = "prinsJohn";
             break;
         case "Hjärter Dam":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "JAG?!?! Vad jag gjorde!! URSÄKTA VILKEN FRÄCKHET. Jag var inte på plats i slottet den natten. Om du undrar så jag sov på annan plats under tiden som allt utspelade sig och hade ingen inblick i vad som hände på slottet den natten.“Ahha man få verkligen inte ha något privat nuförtiden";
+            charracterAction = "Jag var med på den fördärvade mötet. Jag blev förstås vald till detta års nöjesfält, men det var många luspudlar som gjorde upplevelsen till ett fjasko. Personalen som skulle hålla i mötet var klädda i vitt när jag bestämt hade påpekat att jag inte ville vara med om det inte var klädd utifrån min klädkod. Jag sa att jag skulle gör mig av med deras huvuden men så ville inte <span>Walt</span>. Han sa att det skulle vara 'en fristad för alla som kom till nöjesparken'. Fy vad trist, men vad ska man säga till den mäktigaste mannen i denna värld? Så jag fick tiga, det var det värsta jag fått utstå i mitt liv. Men, för att återgå till din fråga. Jag var i alla fall med på mötet, och efter det så tog jag mig hem i min droska och mina undersåtar.  Där befann jag mig tills det var dags för den årliga middagen. Tanken var först att alla karaktärer i Disneyvärlden var inbjudna för att ha något att säga till om angående varje persons berättelse. Det är inte varje dag som man får tillfälle att diskutera med Walt, men det var inte så många som ville delta (som det brukar bli). Därmed så blev det den vanliga skaran av skurkar som deltog. Jag var med <span>Walt</span> och de andra hedervärda kvinnorna av samfundet, 'De kvinnliga skurkarna av Disney'. <span>Walt</span> var givetvis deltagande i middagen, det är ju bara en gång om året. Mötet ger oss kvinnliga skurkar ett utrymme för att tala om det som vi inte annars kan. Det är som en gruppterapi där vi får feedback och nya avtal sluts om huruvida vi som skurkar skall vara kvar i Disney eller ej. Det var ett mer diskutions-artat i år men det gick ändå som planerat. Efter middagen så gick vi skilda vägar hem till vardera person. Jag var väldigt förvånad när en av mina vakter kom dagen efter och berättade nyheten om Walts död.";
+            charracterSaw = "Eftersom jag var på annan plats vid tillfället så kunde jag omöjligt sett något. Men det var flera konstiga samtal som jag överhörde under dagen. Alla hade små konstiga saker när de förde sig men jag kan inte sätta fingret på det. Som jag sa tidigare hade jag överhört saker. Det var att <span>Törnrosa</span> imorse sa att det var ett hemsk sätt att dö på och att det var svårt att tro att någon kunde dödat honom med gift? Jag tror att du kan få mer information hos <span>Törnrosa</span>.";
+            charracterConnectionToWalt = "Min koppling till <span>Walt</span> är som den alltid varit, en hat kärlek. Jag fick mitt palats men jag fick inte döda Alice när jag väl hade chansen vilket alltid har stört mig. Men annars så har jag inga dåliga saker att säga om honom.";
             characterMovie = "Alice i underlandet";
             characterTraits = "Temperamentsfull, oberäknelig, och masochist.";
             characterAttribute = "Krona, röd och svart klänning, och rosor."
             className = "hjärterDam";
             break;
         case "Skinner":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Var på festen hos <span>hattmakaren</span>, hjälpte honom att städa och sedan gick jag hem själv på kvällen. ";
+            charracterAction = "Såklart jag var på mötet, aaallåååå. <span>Walt</span> älskar min mat, vem gör inte hehehe. “Va vad jag gjorde efter mötet? <span>Hattmakaren</span> fråga om jag ville komma till festen ikväll och om jag kunde hjälpa honom att handla grejer inför det, såklart, och ville äta på mina restaurang så jag tog med honom och <span>Kapten Krok</span> till “le restaurant” (restaurangen (franska))  och sedan gick vi in till stan för att handla muggar och det bästa och finaste röda berusande elixiret som de smakade på min restaurang. Efter vi handlade gick jag hem och förberedde mig inför festen. Jag kom dit lite tidigare för att hjälpa <span>Hattmakaren</span> att sätta upp pynt, maten och elixiret och en stund senare kom alla gäster och vi hade den bästa 'fété' (fest på franska). Alla älskade min mat, såklart och vinet … ola la ma chérie, det var en hektisk kväll med dans, sång och skrik.";
+            charracterSaw = " Vad jag såg? hahaha jag såg till så att alla smakade min mat hehehe! Ah, du menar om jag sett någonting angående <span>Walt</span>? nej nej nej jag har inte sett honom sen morgonmötet.";
+            charracterConnectionToWalt = "Brukar äta middag med <span>Walt</span> när han är i Frankrike eller i Malmö. Men jag gillar inte att <span>Walt</span> lät Råttan Remy vara huvudkaraktären istället för min spektakulära restaurang.";
             characterMovie = "Ratatouille";
             characterTraits = "Hård, oförsonlig, förakt, och stolt";
             characterAttribute = "Liten man, elakt flin, kockkläder, och svart hår"
