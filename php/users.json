@@ -51,5 +51,16 @@
         ],
         "suspectCharacters": [],
         "notSuspectCharacters": []
+    },
+    {
+        "id": 5,
+        "username": "hej",
+        "password": "hej",
+        "profilePic": "joy",
+        "startTime": "2024-05-06T11:09:07.993Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": []
     }
 ]
