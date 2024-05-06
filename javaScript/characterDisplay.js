@@ -16,89 +16,120 @@ async function renderCharracterPage(charracter) {
     //Define carracter text based on charracter selected
     switch (charracter) {
         case "Kapten Krok":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
             charracterTimeAndPlace = "HA HA, Jag var och hade sällskap på mitt skepp den natten. Detta får du hålla hemligt -  men jag gjorde sällskap med <span>Hjärter Dam</span> den kvällen. Så jag vet inte vad som hände i slottet.";
             charracterAction = "Jag var på det förbaskade tråkiga morgonmötet, jag hängde sedan med till <span>Chef Skinners</span> restaurang tillsammans med <span>Hattmakaren</span> och <span>Skinner</span>. Efter den utsökta maten som Chef Skinner gjorde åt oss, sedan hjälpte vi <span>Hattmakaren</span> att förbereda inför kvällens fest! Vi tog en runda in till Systembolaget och köpte det berusande elixiret. Fattar du att man endast kan köpa elixir från EN BUTIK?!?!?! vilket skit land HA HA HA! Men jaa fan va vi ska festa. Efter festen mötte jag upp <span>Hjärter Dam</span> vid slottet och avslutade natten på skeppet.";
             charracterSaw = "Menar du på festen? hmm såg att alla hade roligt och att jag tömde några flaskor elixir hehehe. Jag märkte att det blev lite tunt på folk inne hos <span>Hattmakaren</span>, jag såg att <span>Musse</span> och <span>Chef Skinner</span> försvinna en stund under kvällen.";
             charracterConnectionToWalt = " Men jag är ändå glad att jag fick den rollen jag fick och att jag blev jag. Jag önskade dock att jag fick min hämnd på den förbannade Peter Pan.";
-            charracterHint = "<span>Musse</span> och <span>Chef Skinner</span> försvinna en stund under festen.";
             characterMovie = "Peter Pan";
             characterTraits = "Stolt, listig, besatt av Peter Pan";
             characterAttribute = "Lila Sjörövarhatt, röd kappa, en krok till hand";
             className = "kaptenKrok";
             break;
         case "Cruella de Vil":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace = "Träff med tjejgänget efter mötet, sedan på middag med <span>Walt</span> och några andra på slottet.  Hade svårt att sova så jag var uppe sent och stirrade ut genom fönstrete och såg <span>Kapten Krok</span> och <span>Hjärter Dam</span> lämna slottet.";
+            charracterAction = "Ja, jag tog mig till det förbaskade mötet som jag tycker Walt satte onödigt tidigt… MEN MEN.. efter det blev övertalades jag av tjejgruppen att ses innan middagen som Walt bjöd in oss på. Vad jag och tjejerna gjorde? nej, men vi bara gick runt i parken och utforskade Malmö. Jag visste inte att de kunde babbla på så där mycket så jag sa “vi ses senare på middagen” och drog tillbaka till slottet jag passade på att röka nu när den störiga <span>lilla flickan</span> inte konstant tjata och drog i mig. Jag vilade i mitt rum tills middagen där jag återigen träffade tjejgänget och <span>Walt</span>. Maten var ok, har ätit bättre.  När jag såg <span>Hjärter Dam</span> vid middagsbordet kunde jag inte släppa tanken på vad hon berättade tidigare vid lunchtid, att <span>hon</span> och <span>Kapten Krok</span> skulle träffas på natten!";
+            charracterSaw = "<span>Hjärter Dam</span> och <sapn>Kapten Krok</span> gjorde sällskap till kroks skepp den natten.";
+            charracterConnectionToWalt = "Känt <span>Walt</span> i många år men hatar att han gör så många karaktärer som djur … SPECIELLT NEMO och vad det dumma lejonet nu heter, man kan ju inte göra en rock av den dumma lilla fisken..";
             characterMovie = "De 101 dalmatinerna";
             characterTraits = "Extravagant, empatilös, hänsynslös och skoningslös";
             characterAttribute = "Vit pälsjacka och cigarettmunstycke";
             className = "cruellaDeVil";
             break;
         case "Musse":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace = "Jag var på <span>hattmakarens</span> fest på kvällen till mordet för att sedan somna i slottet under natten. Jag befann mig i slottet under natten när <span>Walt</span> dog. Jag uppfattade inget speciellt och när jag fick informationen om Walts död så gick mitt hjärta itu.";
+            charracterAction = "Jag var på mötet precis som alla andra, gick på lunchen som <span>Walt</span> bjöd in till och sen gick jag och handlade med <span>Hades</span>. Mot kvällen, mötte jag sedan upp <span>Snövit, Hades</span> och <span>Törnrosa</span> och på slottet och var hos <span>Hattmakaren</span> resten av kvällen.";
+            charracterSaw = "Såg massor av personal på morgondagen rusande mot Walts våning. Jag sprang upp i min morgonrock och befann mig i stor chock och panik.  Jag sprang emot hans rum och såg bara massa sjukvårdspersonal och poliser runt om på hela våningsplanet. Jag kände mig så hjälplös. Så förkrossad. Jag trodde aldrig att något sådant skulle kunna hända.";
+            charracterConnectionToWalt = "Bästa vän.".
             characterMovie = "Disneys fronfigur";
             characterTraits = "Positiv, intelligent, modig";
             characterAttribute = "Vita handskar, röda byxor och gula skor";
             className = "musse";
             break;
         case "Ursulla":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Lilla sjöjungfrun";
             characterTraits = "Manipulativ, bedräglig, själviskt";
             characterAttribute = "Svart lila klänning, blå lila hud, och ett snäckskal till halsband";
             className = "ursulla";
             break;
         case "Hades":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Hercules";
             characterTraits = "Självsäker, Hämndlysten, Härskare";
             characterAttribute = "Stor, lång och mörkklädd, Brinnande hår, och dödens gud";
             className = "hades";
             break;
         case "Darla":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Hitta nemo";
             characterTraits = "Obekymrad, bortskämd, och ovarsam";
             characterAttribute = "Tandställning, lila tröja med text “rock n roll, girl";
             className = "darla";
             break;
         case "Törnrosa":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Törnrosa";
             characterTraits = "Ödmjuk, optimistisk, och romantisk";
             characterAttribute = "Rosa/Blå klänning, Blond/ljushårig prinsessa, Tiara eller diadem på huvudet";
             className = "törnrosa";
             break;
         case "Snövit":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace = "Självaste mordnatten så var jag i slottet men jag sov en av flyglarna. Jag var i slottet från typ 00.00 och vaknade cirka 09.00 för att väckas av den hemska nyheten.";
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Snövit och de sju dvärgarna";
             characterTraits = "Godtrogen, oskyldig, vänlig, god";
             characterAttribute = "Blå och guldig klänning och sjunger och kvittrar ofta"
             className = "snövit";
             break;
         case "Hattmakaren":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Alice i Underlandet";
             characterTraits = "Galen, excentrisk, lekfull";
             characterAttribute = "Hatt, Kaffepanna, färgglad";
             className = "hattmakaren";
             break;
         case "Prins John":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Robin Hood";
             characterTraits = "Girig, snål, arrogant, feg, manipulativ";
             characterAttribute = "Röd kunglig kappa och krona"
             className = "prinsJohn";
             break;
         case "Hjärter Dam":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Alice i underlandet";
             characterTraits = "Temperamentsfull, oberäknelig, och masochist.";
             characterAttribute = "Krona, röd och svart klänning, och rosor."
             className = "hjärterDam";
             break;
         case "Skinner":
-            charracterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est. Vitae tortor condimentum lacinia quis vel eros donec. Tristique et egestas quis ipsum. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Curabitur vitae nunc sed velit dignissim sodales ut. Risus nullam eget felis eget nunc lobortis mattis aliquam. Venenatis a condimentum vitae sapien pellentesque. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. ";
+            charracterTimeAndPlace =
+            charracterAction =
+            charracterSaw =
+            charracterConnectionToWalt =
             characterMovie = "Ratatouille";
             characterTraits = "Hård, oförsonlig, förakt, och stolt";
             characterAttribute = "Liten man, elakt flin, kockkläder, och svart hår"
