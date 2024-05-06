@@ -38,7 +38,9 @@ async function renderCharracterboard() {
         <div class="hjärterDam character">
             <img src="media/hjärterdam.png" alt="hjärterdam">
         </div>
-        <div class="skinner character"></div>
+        <div class="skinner character">
+        <img src="media/headchef.png" alt="headchef">
+        </div>
     </div>
 
     <div class="navbar">
