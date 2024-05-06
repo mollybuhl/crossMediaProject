@@ -208,16 +208,14 @@ async function renderCharracterPage(charracter) {
         <button class="suspect">Misstänkt</button>
     </div>
 
-    <h3>Tid och Plats</h3>
+    <h4>Tid och Plats</h4>
     <p>${charracterTimeAndPlace}</p>
-    <h3>Gjorde</h3>
+    <h4>Gjorde</h4>
     <p>${charracterAction}</p>
-    <h3>Såg</h3>
+    <h4>Såg</h4>
     <p>${charracterSaw}</p>
-    <h3>Koppling till Walt</h3>
-    <p>${charracterConnectionToWalt}</p>
-    <h3>Spekulationer om någon misstänkt</h3>
-    <p>${charracterHint}</p>
+    <h4>Koppling till Walt</h4>
+    <p class="bottomInfo">${charracterConnectionToWalt}</p>
 
     <div class="playBtnBackground">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">

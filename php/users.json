@@ -32,7 +32,9 @@
         "profilePic": "edna",
         "startTime": "2024-05-06T16:01:24.925Z",
         "finishingTime": "Not finished",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "Cruella de Vil"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": false

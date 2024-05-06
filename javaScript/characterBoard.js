@@ -9,10 +9,10 @@ async function renderCharracterboard() {
             <img src="media/mussee.png" alt="musse">
         </div>
         <div class="ursulla character">
-            <img src="media/ursula.png" alt="ursula">
+            <img src="media/ursulla.png" alt="ursulla">
         </div>
         <div class="cruellaDeVil character">
-            <img src="media/cruella.png" alt="cruellaDeVil">
+            <img src="media/cruellaDeVil.png" alt="cruellaDeVil">
         </div>
         <div class="hades character">
             <img src="media/hades.png" alt="hades">
@@ -39,7 +39,7 @@ async function renderCharracterboard() {
             <img src="media/hjärterdam.png" alt="hjärterdam">
         </div>
         <div class="skinner character">
-        <img src="media/headchef.png" alt="headchef">
+        <img src="media/skinner.png" alt="headchef">
         </div>
     </div>
 
