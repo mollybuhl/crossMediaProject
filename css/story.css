@@ -1,3 +1,16 @@
 .story > p > span{
     font-weight: bold;
 }
+
+.story > h2{
+    padding-top: 5vh;
+    margin-bottom: -2vh;
+}
+
+/*.story > p.lastParagraph{
+    padding-bottom: 15vh;
+}*/
+
+.story > button{
+    margin-bottom: 15vh;
+}

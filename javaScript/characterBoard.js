@@ -183,7 +183,9 @@ function renderIncorrectGuess(character) {
     `;
 
     main.querySelector(".keepPlaying").addEventListener("click", renderMap);
-    main.querySelector(".listenToStory").addEventListener("click", renderStorySolution);
+    main.querySelector(".listenToStory").addEventListener("click", e => {
+        renderStorySolution();
+    });
 }
 
 async function renderStorySolution(correctAnswer = false) {
@@ -257,32 +259,37 @@ async function renderStorySolution(correctAnswer = false) {
             return;
         }
 
+        main.classList.remove("murderGuess");
+        main.classList.add("murderReveal");
         main.innerHTML = `
-        <h2>Grattis!</h2>
+        <h2 class="yellow">Grattis!</h2>
         <h3>Du hittade mördaren</h3>
-        <div></div>
-        <h2>Musse Pigg</h2>
-        <button>Lyssna</button>
+        <div class="musseImage"></div>
+        <h2 class="red">Musse Pigg</h2>
+        <button class="btnListenToStory">Lyssna</button>
         `;
 
+    }else{
+        main.classList.remove("murderGuess");
+        main.classList.add("murderReveal");
+        main.innerHTML = `
+        <h2 class="yellow">Mördaren</h2>
+        <h3>är</h3>
+        <div class="musseImage"></div>
+        <h2 class="red">Musse Pigg</h2>
+        <button class="btnListenToStory">Lyssna på Lösningen</button>
+        `;
     }
-
-    main.innerHTML = `
-    <h2>Musse Pigg</h2>
-    <h2>är</h2>
-    <h2>Mördaren</h2>
-    <div></div>
-    <button>Lyssna</button>
-    `;
 
     main.querySelector("button").addEventListener("click", renderStory); 
       
 }
 
 function renderStory(){
+    main.classList.remove("murderReveal");
     main.classList.add("story");
     main.innerHTML = `
-    <h3>Detta har hänt</h3>
+    <h2 class="yellow">Detta har hänt</h2>
 
     <p>Walt Disney har under en längre tid suttit och funderat över vilka karaktärer som skall vara inkluderade i årets nöjesfält. Den 18 maj skall han hålla en presentation om vilka karaktärer som skall delta och han känner stor vånda för uppdraget. Han väljer ut de som han anser passa bäst för de olika platserna och kommer fram till ett dussin karaktärer som som skulle passa. Mötet äger rum och var och en av karaktärerna ropas upp en efter en. När listan är slut så utbrister ett sorl av glädje och förtvivlan. <span>Musse</span> stiger fram och tilltalar <span>Walt</span>. Varför finns inte jag med på listan? Jag var den som fick dig att bli den du är idag? Vad får jag, ingenting? <span>Walt</span> svarar, denna gång så finns det inte plats för dig, du har inget att säga till om i denna fråga. <span>Musse</span> ser svart i blicken och säger: Detta skall du få sota för. Han klampar ut ur rummet och stänger dörren med ett smäll. 
     </p>
@@ -296,9 +303,11 @@ function renderStory(){
 
     <p>När solen gick upp över slottet den 19 maj hittades Walt Disney död på golvet i sitt eget rum. Slottet är i oro och förvirring och Disney karaktärerna sörjer Walts död.</p>
 
-    <p>Du använde ledtrådarna som förde dig till rätt person, Musse Pigg. Du ringer till polisen och uppger all information som du har samlat in. Polisen är lite fundersamma över alla bevis du har samlat in, men de tackar för din insats och skall kolla närmare på ärendet. En dag senare så står det i Disney Bladet att mördaren hittats och att det är en anonym detektiv som har löst mordet och att Musse Pigg nu är bakom lås och bom. 
+    <p class="lastParagraph">Du använde ledtrådarna som förde dig till rätt person, Musse Pigg. Du ringer till polisen och uppger all information som du har samlat in. Polisen är lite fundersamma över alla bevis du har samlat in, men de tackar för din insats och skall kolla närmare på ärendet. En dag senare så står det i Disney Bladet att mördaren hittats och att det är en anonym detektiv som har löst mordet och att Musse Pigg nu är bakom lås och bom. 
     Grattis! Du har nu äran att leva lyckligt i alla dina dagar.
     </p>
+
+    <button>Leaderboard</button>
 
     <div class="playBtnBackground">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
@@ -317,4 +326,6 @@ function renderStory(){
         </svg>
     </div>
     `;
+
+    main.querySelector("button").addEventListener("click", renderLeaderboard);
 }

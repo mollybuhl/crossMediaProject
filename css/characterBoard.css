@@ -122,3 +122,37 @@ h2.red {
 .character img {
     width: 11vh;
 }
+
+.musseImage{
+    height: 25vh;
+    width: 25vh;
+    background-image: url(../media/mussee.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.murderReveal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.murderReveal > h2{
+    margin-top: 10vh;
+}
+
+.murderReveal > h3{
+    margin-top: -1vh;
+    margin-bottom: 3vh;
+}
+
+.murderReveal > h2.red{
+    margin-top: 3vh;
+}
+
+.btnListenToStory{
+    position: fixed;
+    bottom: 10vh;
+    width: 80%;
+}
