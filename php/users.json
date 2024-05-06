@@ -1,3 +1,14 @@
 [
-    
+    {
+        "id": 1,
+        "username": "hej",
+        "password": "hej",
+        "profilePic": "pascal",
+        "startTime": "2024-05-06T13:11:08.612Z",
+        "finishingTime": "00:00:12",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    }
 ]
