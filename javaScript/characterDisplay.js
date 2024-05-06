@@ -56,10 +56,10 @@ async function renderCharracterPage(charracter) {
             className = "ursulla";
             break;
         case "Hades":
-            charracterTimeAndPlace =
-            charracterAction =
-            charracterSaw =
-            charracterConnectionToWalt =
+            charracterTimeAndPlace = "Ja, som många andra var jag också på <span>Hattmakarens</span> fest. Jag tillsammans med <span>Snövit</span> och <span>Musse</span> gick tillbaka till slottet på natten och därefter träffade jag ingen mer, vi alla gick åt skilda vägar inne på slottet och jag la mig.";
+            charracterAction = "Ja, jag var på det tråkiga morgonmötet, efter det så stannade jag på slottet tillsammans med <span>Musse, Walt, Prins John</span> och <span>Snövit</span>. Walt bjöd alla på mat men vissa ville sticka till andra ställen men det orkade inte jag. Vi satt där i flera timmar och sen drog jag till mitt rum och lämnade inte rummet ALLS förrän jag mötte upp de övriga som skulle till festen som <span>Hattmakaren</span> bjöd in mig på. <span>Jag, Musse, Törnrosa</span> och <span>Snövit</span> bestämde oss för att vi alla drar tillsammans till festen. Vi skulle träffas 17:45 nere på slottet men Törnrosa kom såklart sent och hade någon dålig ursäkt, hon försov sig säkert. Man skulle vilja tro att efter man har sovit i 100 år att man faktiskt vill göra något med dagen men men…  Vi kom fram vid 18:00 tror jag och <span>Hattmakaren</span> hade skaffat otroliga mängder berusande elixir så jag köttade på hela natten!  Och oj jävlar vad herr <span>Krok</span> kan dricka… Måste varit vilt på hans skepp hehehe.";
+            charracterSaw = "Hmm… sett någonting? Det jag har såg var att vi som var på festen hällde i oss elixir. Mitt minne är ganska blurrigt men jag minns att jag drog tillbaka till slottet på natten med <span>Musse</span> och <span>Snövit</span>.";
+            charracterConnectionToWalt = "WALT? Den gamla gubben, HAH han förtjänade det efter vad han gjorde mot mig i Herkules …";
             characterMovie = "Hercules";
             characterTraits = "Självsäker, Hämndlysten, Härskare";
             characterAttribute = "Stor, lång och mörkklädd, Brinnande hår, och dödens gud";
