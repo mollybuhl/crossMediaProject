@@ -49,5 +49,41 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 4,
+        "username": "laxen",
+        "password": "laxen",
+        "profilePic": "baymax",
+        "startTime": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 5,
+        "username": "hallon",
+        "password": "hallon",
+        "profilePic": "remi",
+        "startTime": 0,
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 6,
+        "username": "bl\u00e5b\u00e4r",
+        "password": "bl\u00e5b\u00e4r",
+        "profilePic": "joy",
+        "startTime": "2024-05-07T21:00:46.364Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
     }
 ]

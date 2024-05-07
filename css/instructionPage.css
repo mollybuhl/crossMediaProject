@@ -36,16 +36,16 @@
 }
 
 
-.infoBackground > .instructionHeader{
+.infoBackground>.instructionHeader {
     color: var(--yellow);
     font-size: 28px;
     margin-bottom: 4vh;
 }
 
-.infoBackground > h2{
+.infoBackground>h2 {
     color: var(--yellow);
     font-size: 28px;
-    padding-top: 5vh;
+    padding-top: 9vh;
     margin-bottom: 0;
 }
 
@@ -64,6 +64,6 @@
     width: 82%;
 }
 
-.infoBackground > .readableText{
+.infoBackground>.readableText {
     padding-bottom: 15vh;
 }

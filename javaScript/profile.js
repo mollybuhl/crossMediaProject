@@ -204,9 +204,9 @@ async function renderProfilepage() {
             let popupBackground = document.createElement("div");
             popupBackground.classList.add("confirmActionPopupBackground");
             popupBackground.innerHTML = `
-            <div>
-                <h2>Är du säker på att du vill radera ditt konto?</h2>
-                    <button class="yes">Ja</button>
+            <div class="deletePopup">
+                <p>Är du säker på att du vill radera ditt konto?</p>
+                <button class="yes">Ja</button>
             </div>
             `;
             main.appendChild(popupBackground);
