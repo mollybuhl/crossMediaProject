@@ -11,6 +11,52 @@
 
 .characterTopWrapper>.charracterImage {
     position: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: -1vh;
+    height: 24vh;
+}
+
+.charracterImage.cruellaDeVil{
+    background-image: url(../media/cruellaDeVil.png);
+}
+.charracterImage.kaptenKrok{
+    background-image: url(../media/kaptenKrok.png);
+    margin-bottom: 0;
+}
+.charracterImage.snövit{
+    background-image: url(../media/snovit.png);
+}
+.charracterImage.prinsJohn{
+    background-image: url(../media/prinsJohn.png);
+    margin-bottom: -2vh;
+}
+.charracterImage.hjärterDam{
+    background-image: url(../media/hjarterDam.png);
+}
+.charracterImage.hattmakaren{
+    background-image: url(../media/hattmakaren.png);
+}
+.charracterImage.hades{
+    background-image: url(../media/hades.png);
+}
+.charracterImage.törnrosa{
+    background-image: url(../media/tornrosa.png);
+}
+.charracterImage.darla{
+    background-image: url(../media/darla.png);
+    margin-bottom: -3vh;
+}
+.charracterImage.musse{
+    background-image: url(../media/musse.png);
+}
+.charracterImage.skinner{
+    background-image: url(../media/skinner.png);
+    margin-bottom: 1vh;
+}
+.charracterImage.ursulla{
+    background-image: url(../media/ursulla.png);
 }
 
 .characterShortDescription>div {
@@ -86,4 +132,8 @@
 
 .btnPauseAudio.hidden {
     display: none;
+}
+
+.bottomInfo{
+    padding-bottom: 15vh;
 }

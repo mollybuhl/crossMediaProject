@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    padding-bottom: 5vh;
 }
 
 .headerInstruction {
@@ -21,9 +22,7 @@
 }
 
 #btnStartPlaying {
-    position: fixed;
-    width: 80%;
-    bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 .infoBackground {
