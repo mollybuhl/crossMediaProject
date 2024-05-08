@@ -19,6 +19,10 @@
     width: 9vh;
 }
 
+.boardOfCharracters > div.notSuspect > img{
+    filter: brightness(30%);
+}
+
 
 
 

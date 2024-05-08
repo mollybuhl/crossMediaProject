@@ -60,10 +60,15 @@
         "unlockedCharacters": [
             "Cruella de Vil",
             "Darla",
-            "Kapten Krok"
+            "Kapten Krok",
+            "Musse"
         ],
         "suspectCharacters": [],
-        "notSuspectCharacters": [],
+        "notSuspectCharacters": [
+            "musse",
+            "cruellaDeVil",
+            "kaptenKrok"
+        ],
         "correctGuess": false
     }
 ]
