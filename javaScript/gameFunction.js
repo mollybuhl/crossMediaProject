@@ -203,6 +203,40 @@ async function renderMap() {
     </div>
     `;
 
+    // Add already visitied class to unlocked charracters pin
+    main.querySelectorAll(".pin").forEach(pin => {
+
+        let pinCharacter = pin.classList[1];
+        let matchedCharacter = unlockedCharacters.find(character => {
+            let formatted = formatCharacter(character);
+            return formatted === pinCharacter;
+        });
+        
+        if (matchedCharacter) {
+            // If a matching character is found, you can use it here
+            pin.classList.add("unlocked");
+        } 
+
+        // Format selected character name
+        function formatCharacter(selectedCharracter) {
+            let formattedCharacter = selectedCharracter.trim().toLowerCase();
+            // Replace ä with a and ö with o
+            formattedCharacter = formattedCharacter.replace(/ä/g, 'a').replace(/ö/g, 'o');
+            let words = formattedCharacter.split(' ');
+
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+
+            formattedCharacter = words.join('');
+
+            formattedCharacter = formattedCharacter.charAt(0).toLowerCase() + formattedCharacter.slice(1);
+
+            return formattedCharacter;
+        };
+    })
+    
+
     // Add correct profile pic
     document.querySelector(".btnProfile").classList.add(`${profilePic}`)
 

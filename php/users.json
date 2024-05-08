@@ -49,5 +49,21 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 4,
+        "username": "sara",
+        "password": "sara",
+        "profilePic": "baymax",
+        "startTime": "2024-05-08T11:59:24.610Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Cruella de Vil",
+            "Darla",
+            "Kapten Krok"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
     }
 ]
