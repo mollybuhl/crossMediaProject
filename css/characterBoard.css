@@ -10,11 +10,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 15vh;
+    justify-content: end;
+    align-items: center;
 }
 
-.boardOfCharracters>.cruellaDeVil.notSuspect {
-    background-image: url(../media/cruellaHidden.png);
+.boardOfCharracters > div.skinner > img{
+    width: 9vh;
 }
+
+
+
+
 
 .suspect {
     display: flex;
