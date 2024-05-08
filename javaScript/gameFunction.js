@@ -21,7 +21,7 @@ function renderIntroductionpage(firstTime = true) {
 
 }
 
-// Function to render the map and main view of the game
+// Function to render the map and main view of the game, as well as handle action on map
 async function renderMap() {
 
     //Get player info
@@ -29,6 +29,7 @@ async function renderMap() {
     let userPassword = window.localStorage.getItem("userPassword");
     let profilePic;
     let unlockedCharacters;
+    let finishingTime;
 
     try {
         let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
@@ -42,6 +43,7 @@ async function renderMap() {
         } else {
             profilePic = resource.profilePic;
             unlockedCharacters = resource.unlockedCharacters;
+            finishingTime = resource.finishingTime;
         }
     } catch (error) {
         let message = "Något gick fel, försök igen senare";
@@ -49,6 +51,7 @@ async function renderMap() {
         return;
     }
 
+    console.log(finishingTime);
     //Map structure
     main.classList.remove("controlQuestion");
     main.classList.add("mainMap");
@@ -416,7 +419,13 @@ async function renderMap() {
         }
     });
 
-    let timeInterval = setInterval(updateTimer, 1000);
+    let timeInterval;
+
+    if(finishingTime === "Not finished"){
+        timeInterval = setInterval(updateTimer, 1000);
+    }else{
+        main.querySelector(".timer").textContent = `${finishingTime}`;
+    }
 
     // Render instruction when clicking top info button
     main.querySelector(".infoIcon").addEventListener("click", e => {

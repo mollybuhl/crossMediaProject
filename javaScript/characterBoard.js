@@ -189,6 +189,7 @@ function renderIncorrectGuess(character) {
     });
 }
 
+// Function to display and handle correct or incorrect guess of who is the murderer
 async function renderStorySolution(correctAnswer = false) {
 
     //Save finishing time if player guessed correctly
@@ -267,7 +268,7 @@ async function renderStorySolution(correctAnswer = false) {
         <h3>Du hittade mördaren</h3>
         <div class="musseImage"></div>
         <h2 class="red">Musse Pigg</h2>
-        <button class="btnListenToStory">Lyssna</button>
+        <button class="btnListenToStory">Lyssna på vad som hände</button>
         `;
 
     }else{
@@ -278,7 +279,7 @@ async function renderStorySolution(correctAnswer = false) {
         <h3>är</h3>
         <div class="musseImage"></div>
         <h2 class="red">Musse Pigg</h2>
-        <button class="btnListenToStory">Lyssna på Lösningen</button>
+        <button class="btnListenToStory">Lyssna på vad som hände</button>
         `;
     }
 
