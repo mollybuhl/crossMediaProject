@@ -115,7 +115,7 @@ async function renderMap() {
     </g>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin snövit">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin snovit">
     <mask id="mask0_524_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
     <rect width="40" height="40" fill="#D9D9D9"/>
     </mask>
@@ -124,7 +124,7 @@ async function renderMap() {
     </g>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin törnrosa">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin tornrosa">
     <mask id="mask0_524_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
     <rect width="40" height="40" fill="#D9D9D9"/>
     </mask>
@@ -142,7 +142,7 @@ async function renderMap() {
     </g>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin hjärterdam">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin hjarterDam">
     <mask id="mask0_524_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
     <rect width="40" height="40" fill="#D9D9D9"/>
     </mask>
@@ -303,12 +303,12 @@ async function renderMap() {
                             coordinates = "55.604963, 12.983702";
                             locationDescription = "Fiskehoddorna";
                             break;
-                        case "törnrosa":
+                        case "tornrosa":
                             selectedCharracter = "Törnrosa";
                             coordinates = "55.603258, 12.985958";
                             locationDescription = "Slottsmöllan";
                             break;
-                        case "snövit":
+                        case "snovit":
                             selectedCharracter = "Snövit";
                             coordinates = "55.604472, 12.992745";
                             locationDescription = "Diana - Naturens väktare";
@@ -323,7 +323,7 @@ async function renderMap() {
                             coordinates = "55.603609, 12.989457";
                             locationDescription = "Slottsträdgårdens Kafé";
                             break;
-                        case "hjärterdam":
+                        case "hjarterDam":
                             selectedCharracter = "Hjärter Dam";
                             coordinates = "55.603090, 12.991780";
                             locationDescription = "Bakom Casinot";
@@ -354,7 +354,6 @@ async function renderMap() {
                     return formattedCharacter;
                 };
                 let formattedCharacter = formatCharacter(selectedCharracter);
-                console.log(formattedCharacter);
 
                 let popUp = document.createElement("div");
                 popUp.classList.add("popUp");
@@ -746,7 +745,6 @@ function renderControlQuestion(charracter) {
         } else if (typeOfQuestion === "numbers") {
 
             if (charracter === "Ursulla") {
-                console.log("here");
                 let inputFieldNum1 = parseFloat(document.querySelector(".num1Input > input").value);
                 let inputFieldNum2 = parseFloat(document.querySelector(".num2Input > input").value);
 

@@ -72,20 +72,15 @@
             "T\u00f6rnrosa"
         ],
         "suspectCharacters": [
-            "skinner",
             "darla",
             "musse",
             "ursulla",
             "hattmakaren",
-            "hjarterDam",
             "prinsJohn",
-            "snovit",
             "hades",
             "kaptenKrok"
         ],
-        "notSuspectCharacters": [
-            "tornrosa"
-        ],
+        "notSuspectCharacters": [],
         "correctGuess": false
     }
 ]

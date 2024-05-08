@@ -81,7 +81,7 @@ async function renderCharracterPage(charracter) {
             characterMovie = "Törnrosa";
             characterTraits = "Ödmjuk, optimistisk, och romantisk";
             characterAttribute = "Rosa/Blå klänning, Blond/ljushårig prinsessa, Tiara eller diadem på huvudet";
-            className = "törnrosa";
+            className = "tornrosa";
             break;
         case "Snövit":
             charracterTimeAndPlace = "Självaste mordnatten så var jag i slottet men jag sov en av flyglarna. Jag var i slottet från typ 00.00 och vaknade cirka 09.00 för att väckas av den hemska nyheten.";
@@ -91,7 +91,7 @@ async function renderCharracterPage(charracter) {
             characterMovie = "Snövit och de sju dvärgarna";
             characterTraits = "Godtrogen, oskyldig, vänlig, god";
             characterAttribute = "Blå och guldig klänning och sjunger och kvittrar ofta"
-            className = "snövit";
+            className = "snovit";
             break;
         case "Hattmakaren":
             charracterTimeAndPlace = "Jag arrangerade en fest hos mig där några kom och festade hela natten. På natten var det bara jag och <span>Skinner</span> kvar som hjälpte mig att städa, han stack hem när vi var klara och jag somnade strax efter.";
@@ -121,7 +121,7 @@ async function renderCharracterPage(charracter) {
             characterMovie = "Alice i underlandet";
             characterTraits = "Temperamentsfull, oberäknelig, och masochist.";
             characterAttribute = "Krona, röd och svart klänning, och rosor."
-            className = "hjärterDam";
+            className = "hjarterDam";
             break;
         case "Skinner":
             charracterTimeAndPlace = "Var på festen hos <span>hattmakaren</span>, hjälpte honom att städa och sedan gick jag hem själv på kvällen. ";
@@ -131,7 +131,7 @@ async function renderCharracterPage(charracter) {
             characterMovie = "Ratatouille";
             characterTraits = "Hård, oförsonlig, förakt, och stolt";
             characterAttribute = "Liten man, elakt flin, kockkläder, och svart hår"
-            className = "headChef";
+            className = "skinner";
             break;
     }
 
