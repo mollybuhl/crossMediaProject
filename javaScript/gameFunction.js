@@ -160,7 +160,7 @@ async function renderMap() {
     </g>
     </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin headChef">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin skinner">
     <mask id="mask0_524_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
     <rect width="40" height="40" fill="#D9D9D9"/>
     </mask>
@@ -313,7 +313,7 @@ async function renderMap() {
                             coordinates = "55.604472, 12.992745";
                             locationDescription = "Diana - Naturens väktare";
                             break;
-                        case "headChef":
+                        case "skinner":
                             selectedCharracter = "Skinner";
                             coordinates = "55.602030, 12.985432";
                             locationDescription = "Mat och Vin Slottsparken";

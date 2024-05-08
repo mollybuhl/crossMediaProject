@@ -2,7 +2,6 @@
 // Function to render charracter page based on the carracter that was clicked
 async function renderCharracterPage(charracter) {
 
-    let charracterText;
     let characterMovie;
     let characterTraits;
     let characterAttribute;
@@ -11,7 +10,6 @@ async function renderCharracterPage(charracter) {
     let charracterAction;
     let charracterSaw;
     let charracterConnectionToWalt;
-    let charracterHint;
 
     //Define carracter text based on charracter selected
     switch (charracter) {
@@ -68,7 +66,7 @@ async function renderCharracterPage(charracter) {
         case "Darla":
             charracterTimeAndPlace = "Efter middagen på slottet blev jag hemkörd av <span>Walts</span> personal.";
             charracterAction = "Blööö … var på det tråkiga mötet på morgonen.. fattade ingenting men det var över efter några timmar. Jag fick inte hänga med till lunchen med <span>Chef Skinner</span> så jag satt utanför slottet och letade efter några fiskar i vattnet som går runt slottet. Det fanns inga… <span>Cruella</span> gick förbi mig och frågade om jag ville hänga med på en liten sväng runt parken så jag hängde med. När vi kom tillbaka så visade Walt runt mig i slottet innan middagen. <span>Walts</span> middag var sååå god! Men det blev sent och <span>Walt</span> fixade så att en bil kom och körde hem mig till mina föräldrar för att jag skulle ha extra mycket energi när nöjesfältet öppnar imorgon!";
-            charracterSaw = "Inga fiskar 🙁 WÄÄÄHHH";
+            charracterSaw = "Inga fiskar, WÄÄÄHHH";
             charracterConnectionToWalt = "Jag ser Walt lite som en cool pappa.";
             characterMovie = "Hitta nemo";
             characterTraits = "Obekymrad, bortskämd, och ovarsam";
@@ -235,6 +233,7 @@ async function renderCharracterPage(charracter) {
     </div>
     `;
 
+    // Go back to map on back button
     main.querySelector(".btnBack").addEventListener("click", renderMap);
 
     let userID = Number(window.localStorage.getItem("userId"));
@@ -254,12 +253,14 @@ async function renderCharracterPage(charracter) {
             let suspectCharacters = resource.suspectCharacters;
             let notSuspectCharacters = resource.notSuspectCharacters;
 
+            // If character is already suspect, mark this
             suspectCharacters.forEach(arrayCharacter => {
                 if (arrayCharacter === className) {
                     main.querySelector(".suspect").classList.add("selected");
                 }
             })
 
+            // If character is already marked as not a suspect, mark this
             notSuspectCharacters.forEach(arrayCharacter => {
                 if (arrayCharacter === className) {
                     main.querySelector(".notSuspect").classList.add("selected");
@@ -272,12 +273,46 @@ async function renderCharracterPage(charracter) {
         return;
     }
 
-    // Mark as not suspect
+    // Mark as not suspect on click
     main.querySelector(".notSuspect").addEventListener("click", async e => {
 
+        if (characterClass.includes('ä') || characterClass.includes('ö')) {
+            characterClass = characterClass.replace(/ä/g, 'a').replace(/ö/g, 'o');
+        }
+
+        // If character already is marked as not selected, remove this, otherwise add this to user data
         let element = main.querySelector(".notSuspect");
         if (element.classList.contains("selected")) {
             element.classList.remove("selected");
+
+            let requestOptions = {
+                method: "POST",
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+                body: JSON.stringify({
+                    userId: userID,
+                    password: userPassword,
+                    action: "updateSuspect",
+                    removeNotSuspectCharacter: characterClass
+                })
+            };
+
+            try {
+                let request = new Request("php/api.php", requestOptions);
+                const response = await fetch(request);
+                let resource = await response.json();
+
+                if (!response.ok) {
+                    let message = "Något gick fel, försök igen senare";
+                    informUser(message);
+                    return;
+                } 
+
+            } catch (error) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            };
+
         } else {
             // Save character as not suspect
             let requestOptions = {
@@ -317,9 +352,43 @@ async function renderCharracterPage(charracter) {
     // Mark as suspect
     main.querySelector(".suspect").addEventListener("click", async e => {
 
+        if (characterClass.includes('ä') || characterClass.includes('ö')) {
+            characterClass = characterClass.replace(/ä/g, 'a').replace(/ö/g, 'o');
+        }
+
+        // If character already is marked as selected, remove this, otherwise add this to user data
         let element = main.querySelector(".suspect");
         if (element.classList.contains("selected")) {
             element.classList.remove("selected");
+
+            let requestOptions = {
+                method: "POST",
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+                body: JSON.stringify({
+                    userId: userID,
+                    password: userPassword,
+                    action: "updateSuspect",
+                    removeSuspectCharacter: characterClass
+                })
+            };
+
+            try {
+                let request = new Request("php/api.php", requestOptions);
+                const response = await fetch(request);
+                let resource = await response.json();
+
+                if (!response.ok) {
+                    let message = "Något gick fel, försök igen senare";
+                    informUser(message);
+                    return;
+                } 
+
+            } catch (error) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            };
+
         } else {
             // Save character as suspect
             let requestOptions = {

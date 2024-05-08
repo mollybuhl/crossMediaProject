@@ -23,10 +23,10 @@ async function renderCharracterboard() {
         <div class="kaptenKrok character">
             <img src="media/kaptenKrok.png" alt="kaptenkrok">
         </div>
-        <div class="snövit character">
+        <div class="snovit character">
             <img src="media/snovit.png" alt="snövit">
         </div>
-        <div class="törnrosa character">
+        <div class="tornrosa character">
             <img src="media/tornrosa.png" alt="törnrosa">
         </div>
         <div class="hattmakaren character">
@@ -35,7 +35,7 @@ async function renderCharracterboard() {
         <div class="prinsJohn character">
             <img src="media/prinsJohn.png" alt="prinsjohn">
         </div>
-        <div class="hjrterDam character">
+        <div class="hjarterDam character">
             <img src="media/hjarterDam.png" alt="hjärterdam">
         </div>
         <div class="skinner character">
@@ -106,6 +106,7 @@ async function renderCharracterboard() {
     // Mark all not suspect characters as not suspect
     notSuspectCharacters.forEach(character => {
         let characterDiv = main.querySelector(`.boardOfCharracters > .${character}`);
+        console.log(characterDiv);
         characterDiv.classList.add("notSuspect");
     });
 

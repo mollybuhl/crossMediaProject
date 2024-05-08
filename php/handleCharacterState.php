@@ -28,6 +28,7 @@ function updateSuspect($requestData, $users){
                     $index = array_search($suspectedCharacter, $users[$i]["notSuspectCharacters"]);
                     if ($index !== false) {
                         unset($users[$i]["notSuspectCharacters"][$index]);
+                        $users[$i]["notSuspectCharacters"] = array_values($users[$i]["notSuspectCharacters"]);
                     } 
                 } 
 
@@ -43,14 +44,35 @@ function updateSuspect($requestData, $users){
                     $index = array_search($notSuspectedCharacter, $users[$i]["suspectCharacters"]);
                     if ($index !== false) {
                         unset($users[$i]["suspectCharacters"][$index]);
+                        $users[$i]["suspectCharacters"] = array_values($users[$i]["suspectCharacters"]);
                     } 
+                } 
+            }else if(isset($requestData["removeNotSuspectCharacter"])){
+                $character =  $requestData["removeNotSuspectCharacter"];
+
+                if (in_array($character, $users[$i]["notSuspectCharacters"])) {
+
+                    $index = array_search($character, $users[$i]["notSuspectCharacters"]);
+                    if ($index !== false) {
+                        unset($users[$i]["notSuspectCharacters"][$index]);
+                        $users[$i]["notSuspectCharacters"] = array_values($users[$i]["notSuspectCharacters"]);
+                    } 
+                } 
+
+            }else if(isset($requestData["removeSuspectCharacter"])){
+                $character =  $requestData["removeSuspectCharacter"];
+
+                $index = array_search($character, $users[$i]["suspectCharacters"]);
+                if ($index !== false) {
+                    unset($users[$i]["suspectCharacters"][$index]);
+                    $users[$i]["suspectCharacters"] = array_values($users[$i]["suspectCharacters"]);
                 } 
             }
 
             
 
             putInUsersJSON($users);
-            $message = ["message" => "Character added to suspect list"];
+            $message = ["message" => "Character suspicion updated"];
             sendJSON($message);
         }
     }

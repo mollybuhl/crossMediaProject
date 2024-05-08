@@ -61,13 +61,30 @@
             "Cruella de Vil",
             "Darla",
             "Kapten Krok",
-            "Musse"
+            "Musse",
+            "Ursulla",
+            "Hj\u00e4rter Dam",
+            "Hades",
+            "Sn\u00f6vit",
+            "Prins John",
+            "Hattmakaren",
+            "Skinner",
+            "T\u00f6rnrosa"
         ],
-        "suspectCharacters": [],
-        "notSuspectCharacters": [
+        "suspectCharacters": [
+            "skinner",
+            "darla",
             "musse",
-            "cruellaDeVil",
+            "ursulla",
+            "hattmakaren",
+            "hjarterDam",
+            "prinsJohn",
+            "snovit",
+            "hades",
             "kaptenKrok"
+        ],
+        "notSuspectCharacters": [
+            "tornrosa"
         ],
         "correctGuess": false
     }
