@@ -65,10 +65,8 @@ async function renderLeaderboard() {
         return;
     }
 
-    console.log(usersData);
     // Sort out players with correct guess
     let correctGuessedUsers = usersData.filter(user => user['correctGuess'] == true);
-    console.log(correctGuessedUsers);
 
     // Sort all players acording to finishing time
     let finishedUsers = correctGuessedUsers.filter(user => user['finishingTime'] !== "Not finished");

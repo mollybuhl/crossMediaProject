@@ -94,5 +94,41 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 6,
+        "username": "troll",
+        "password": "troll",
+        "profilePic": "remi",
+        "startTime": "2024-05-08T18:46:56.742Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 7,
+        "username": "fel",
+        "password": "fel",
+        "profilePic": "joy",
+        "startTime": "2024-05-08T19:09:36.937Z",
+        "finishingTime": "Spel Avslutat",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 8,
+        "username": "ratt",
+        "password": "ratt",
+        "profilePic": "remi",
+        "startTime": "2024-05-08T19:11:19.092Z",
+        "finishingTime": "00:00:03",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
     }
 ]

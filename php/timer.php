@@ -39,8 +39,12 @@
                 
 
                 $finishingTime = $requestData["finishingTime"];
-                $users[$i]["finishingTime"] = $finishingTime;
-                $users[$i]["correctGuess"] = true;
+                if($finishingTime === "Spel Avslutat"){
+                    $users[$i]["finishingTime"] = $finishingTime;
+                }else{
+                    $users[$i]["finishingTime"] = $finishingTime;
+                    $users[$i]["correctGuess"] = true;
+                }
 
                 putInUsersJSON($users);
                 $message = ["message" => "Time updated"];

@@ -272,6 +272,42 @@ async function renderStorySolution(correctAnswer = false) {
         `;
 
     }else{
+
+        // Fetch player info
+        let userID = Number(window.localStorage.getItem("userId"));
+        let userPassword = window.localStorage.getItem("userPassword");
+
+        // Register game ended for user
+        let requestOptions = {
+            method: "POST",
+            headers: { "Content-type": "application/json; charset=UTF-8" },
+            body: JSON.stringify({
+                userId: userID,
+                password: userPassword,
+                finishingTime: "Spel Avslutat",
+                action: "finishTimer"
+            })
+        };
+
+        try {
+            let request = new Request("php/api.php", requestOptions);
+            const response = await fetch(request);
+            let resource = await response.json();
+
+            if (!response.ok) {
+                let message = "Något gick fel, försök igen senare";
+                informUser(message);
+                return;
+            } else {
+
+            }
+
+        } catch (error) {
+            let message = "Något gick fel, försök igen senare";
+            informUser(message);
+            return;
+        }
+
         main.classList.remove("murderGuess");
         main.classList.add("murderReveal");
         main.innerHTML = `
