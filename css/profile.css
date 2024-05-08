@@ -61,7 +61,7 @@ hr {
 }
 
 .userFeedback.good {
-    color: #06a706;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /*Confirm delete account popup*/
@@ -93,4 +93,8 @@ hr {
 
 .edit {
     padding-left: 2vh;
+}
+
+.deletePopup p {
+    color: var(--blue);
 }
