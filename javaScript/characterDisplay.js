@@ -429,7 +429,6 @@ async function renderCharracterPage(charracter) {
         }
     });
 
-    console.log(characterClass);
     let audio;
     switch (characterClass) {
         case "kaptenKrok":

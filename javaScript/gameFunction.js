@@ -273,7 +273,7 @@ async function renderMap() {
                 let coordinates;
                 let locationDescription;
 
-                //Find selected charracter - PLACEHOLDER CHARACTERS
+                //Find selected charracter
                 for (let i = 0; i < classList.length; i++) {
                     switch (classList[i]) {
                         case "kaptenKrok":
@@ -363,7 +363,7 @@ async function renderMap() {
 
                 popUp.innerHTML = `
                     <div>
-                    <img src="media/${formattedCharacter}.png" alt="${selectedCharracter}" class="headshot">
+                    <img src="media/${formattedCharacter}.png" alt="${selectedCharracter}" class="headshot ${formattedCharacter}">
                         <div class="charracterInfo">
                             <h3>${selectedCharracter}</h3>
                             <div class="coordinates">
