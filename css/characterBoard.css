@@ -1,9 +1,14 @@
+
+h2.characterBoard{
+    color: var(--yellow);
+    margin-bottom: 0;
+    margin-top: 3vh;
+}
 .boardOfCharracters {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5vh;
     column-gap: 2vh;
-    padding-top: var(--padding);
 }
 
 .boardOfCharracters>div {
@@ -58,6 +63,12 @@
     text-align: center;
     margin-bottom: 12vh;
     z-index: 4;
+}
+
+.guessMurderPopup > svg{
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
 }
 
 .guessMurderPopup>p,
