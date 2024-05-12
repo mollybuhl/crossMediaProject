@@ -126,7 +126,20 @@
         "profilePic": "remi",
         "startTime": "2024-05-08T19:11:19.092Z",
         "finishingTime": "00:00:03",
-        "unlockedCharacters": [],
+        "unlockedCharacters": [
+            "T\u00f6rnrosa",
+            "Hades",
+            "Sn\u00f6vit",
+            "Prins John",
+            "Hj\u00e4rter Dam",
+            "Hattmakaren",
+            "Ursulla",
+            "Musse",
+            "Skinner",
+            "Kapten Krok",
+            "Cruella de Vil",
+            "Darla"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true

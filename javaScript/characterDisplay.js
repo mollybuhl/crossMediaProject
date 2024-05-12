@@ -234,7 +234,12 @@ async function renderCharracterPage(charracter) {
     `;
 
     // Go back to map on back button
-    main.querySelector(".btnBack").addEventListener("click", renderMap);
+    main.querySelector(".btnBack").addEventListener("click", e => {
+        if (!audio.paused) {
+            audio.pause();
+        }
+        renderMap();
+    });
 
     let userID = Number(window.localStorage.getItem("userId"));
     let userPassword = window.localStorage.getItem("userPassword");
@@ -424,43 +429,44 @@ async function renderCharracterPage(charracter) {
         }
     });
 
+    console.log(characterClass);
     let audio;
     switch (characterClass) {
         case "kaptenKrok":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_Kapten_Krok.mp3");
             break;
         case "cruellaDeVil":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_CRUELLA.mp3"); 
             break;
         case "musse":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_MUSSE.mp3");
             break;
         case "ursulla":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_URSULLA.mp3"); 
             break;
         case "hades":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_HADES.mp3");
             break;
         case "darla":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_DARLA.mp3");
             break;
         case "törnrosa":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_TÖRNROSA.mp3");
             break;
         case "snövit":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_SNÖVIT.mp3");
             break;
-        case "headChef":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+        case "skinner":
+            audio = new Audio("../media/RÖST_CHEF_SKINNER.mp3");
             break;
         case "hattmakaren":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_HATTMAKAREN.mp3");
             break;
         case "hjärterDam":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_HJÄRTER_DAM.mp3");
             break;
         case "prinsJohn":
-            audio = new Audio("../media/testMusic.mp3"); //placeholder audio
+            audio = new Audio("../media/RÖST_PRINS_JOHN.mp3");
             break;
     }
 

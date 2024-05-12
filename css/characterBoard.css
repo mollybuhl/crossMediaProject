@@ -143,10 +143,10 @@ h2.red {
     width: 11vh;
 }
 
-.musseImage{
+.musseImageMurderer{
     height: 25vh;
     width: 25vh;
-    background-image: url(../media/musse.png);
+    background-image: url(../media/musseMurderer.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

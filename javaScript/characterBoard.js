@@ -274,7 +274,7 @@ async function renderStorySolution(correctAnswer = false) {
         main.innerHTML = `
         <h2 class="yellow">Grattis!</h2>
         <h3>Du hittade mördaren</h3>
-        <div class="musseImage"></div>
+        <div class="musseImageMurderer"></div>
         <h2 class="red">Musse Pigg</h2>
         <button class="btnListenToStory">Lyssna på vad som hände</button>
         `;
@@ -321,7 +321,7 @@ async function renderStorySolution(correctAnswer = false) {
         main.innerHTML = `
         <h2 class="yellow">Mördaren</h2>
         <h3>är</h3>
-        <div class="musseImage"></div>
+        <div class="musseImageMurderer"></div>
         <h2 class="red">Musse Pigg</h2>
         <button class="btnListenToStory">Lyssna på vad som hände</button>
         `;
