@@ -232,3 +232,48 @@ main {
 .popupDarkBackground>div>button:active {
     background-color: var(--headerYellow);
 }
+
+
+/*Download Instructions*/
+
+h2.downloadInstructions{
+    color: var(--headerYellow);
+    padding-top: 5vh;
+}
+
+p.downloadInstructions{
+    padding-bottom: 3vh;
+}
+
+ul.downloadInstructions > li{
+    color: var(--white);
+    padding-bottom: 2vh;
+}
+
+ul.downloadInstructions{
+    list-style-type: none;
+    padding-bottom: 30vh;
+    padding-left: 2vh;
+}
+
+h3.downloadInstructions{
+    display: flex;
+}
+
+.safari{
+    background-image: url(../media/safari.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 3vh;
+    width: 3vh;
+}
+
+.chrome{
+    background-image: url(../media/chrome.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 3vh;
+    width: 3vh;
+}

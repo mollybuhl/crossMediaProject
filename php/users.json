@@ -13,5 +13,17 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 2,
+        "username": "test",
+        "password": "test",
+        "profilePic": "pascal",
+        "startTime": "2024-05-13T13:40:33.455Z",
+        "finishingTime": "00:00:03",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
     }
 ]

@@ -9,8 +9,13 @@
     display: flex;
 }
 
+.headerInstruction h3{
+    font-size: var(--titleHeading);
+}
+
 .instructionContainer p {
     margin-top: 0;
+    margin-bottom: 0;
     padding-left: 6vh;
 }
 
@@ -39,7 +44,7 @@
 .infoBackground>.instructionHeader {
     color: var(--yellow);
     font-size: 28px;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
 }
 
 .infoBackground>h2 {
