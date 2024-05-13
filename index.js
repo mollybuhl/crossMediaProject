@@ -3,14 +3,14 @@ let main = document.querySelector("main");
 
 if (localStorage.getItem("loggedIn") === "true") {
     renderMap();
-} else if(localStorage.getItem("visited") != "true"){
+} else if (localStorage.getItem("visited") != "true") {
     renderDownloadInstructions();
     window.localStorage.setItem("visited", "true");
-}else{
+} else {
     renderStartpage();
 }
 
-function renderDownloadInstructions(){
+function renderDownloadInstructions() {
     main.innerHTML = `
     <h2 class="downloadInstructions">Innan du börjar spela</h2>
     <p class="downloadInstructions">För att din spel-upplevelse ska bli så bra som möjligt behöver du ladda ner hemsidan som en app. Följ instruktionerna nedan:</p>
@@ -98,7 +98,7 @@ function renderInstructionpage(firstTime = true) {
             <path d="M15.042 26.1248L26.1253 18.9998L15.042 11.8748V26.1248ZM19.0003 34.8332C16.81 34.8332 14.7517 34.4175 12.8253 33.5863C10.8989 32.755 9.22324 31.6269 7.79824 30.2019C6.37324 28.7769 5.24512 27.1012 4.41387 25.1748C3.58262 23.2484 3.16699 21.1901 3.16699 18.9998C3.16699 16.8096 3.58262 14.7512 4.41387 12.8248C5.24512 10.8984 6.37324 9.22275 7.79824 7.79775C9.22324 6.37275 10.8989 5.24463 12.8253 4.41338C14.7517 3.58213 16.81 3.1665 19.0003 3.1665C21.1906 3.1665 23.2489 3.58213 25.1753 4.41338C27.1017 5.24463 28.7774 6.37275 30.2024 7.79775C31.6274 9.22275 32.7555 10.8984 33.5868 12.8248C34.418 14.7512 34.8337 16.8096 34.8337 18.9998C34.8337 21.1901 34.418 23.2484 33.5868 25.1748C32.7555 27.1012 31.6274 28.7769 30.2024 30.2019C28.7774 31.6269 27.1017 32.755 25.1753 33.5863C23.2489 34.4175 21.1906 34.8332 19.0003 34.8332Z" fill="white"/>
             </g>
             </svg>
-            <h3>Lyssna på karraktärerna</h3>
+            <h3>Lyssna på karaktärerna</h3>
         </div>
         <p>Gå runt och prata med de som varit på platsen. Du kan både lyssna och läsa.</p>
     </section>
