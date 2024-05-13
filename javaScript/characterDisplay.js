@@ -37,8 +37,8 @@ async function renderCharracterPage(charracter) {
             charracterTimeAndPlace = "Jag var på <span>hattmakarens</span> fest på kvällen till mordet för att sedan somna i slottet under natten. Jag befann mig i slottet under natten när <span>Walt</span> dog. Jag uppfattade inget speciellt och när jag fick informationen om Walts död så gick mitt hjärta itu.";
             charracterAction = "Jag var på mötet precis som alla andra, gick på lunchen som <span>Walt</span> bjöd in till och sen gick jag och handlade med <span>Hades</span>. Mot kvällen, mötte jag sedan upp <span>Snövit, Hades</span> och <span>Törnrosa</span> och på slottet och var hos <span>Hattmakaren</span> resten av kvällen.";
             charracterSaw = "Såg massor av personal på morgondagen rusande mot Walts våning. Jag sprang upp i min morgonrock och befann mig i stor chock och panik.  Jag sprang emot hans rum och såg bara massa sjukvårdspersonal och poliser runt om på hela våningsplanet. Jag kände mig så hjälplös. Så förkrossad. Jag trodde aldrig att något sådant skulle kunna hända.";
-            charracterConnectionToWalt = "Bästa vän.".
-                characterMovie = "Disneys fronfigur";
+            charracterConnectionToWalt = "Bästa vän"
+            characterMovie = "Disneys frontfigur";
             characterTraits = "Positiv, intelligent, modig";
             characterAttribute = "Vita handskar, röda byxor och gula skor";
             className = "musse";
