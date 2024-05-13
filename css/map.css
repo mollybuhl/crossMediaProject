@@ -7,9 +7,7 @@
     background-size: 150%;
     position: relative;
     padding: 0;
-}
-
-
+    touch-action: pinch-zoom;}
 
 .topbar {
     display: flex;
@@ -128,7 +126,14 @@
     height: 25vh;
     padding: 2vh 3vh 2vh 3vh;
     box-sizing: border-box;
+
+    bottom: -25vh;
+    transition: bottom .5s ease;
 }
+
+.popUp.show {
+    bottom: 0; 
+  }
 
 .popUp>div {
     display: flex;

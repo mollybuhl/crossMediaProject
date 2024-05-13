@@ -388,6 +388,11 @@ async function renderMap() {
 
                 main.appendChild(popUp);
 
+                // Set pop up to transision into place smoothly
+                setTimeout(() => {
+                    popUp.classList.add('show');
+                }, 100);
+
                 
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e => {
