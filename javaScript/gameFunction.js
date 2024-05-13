@@ -51,7 +51,6 @@ async function renderMap() {
         return;
     }
 
-    console.log(finishingTime);
     //Map structure
     main.classList.remove("controlQuestion");
     main.classList.add("mainMap");
