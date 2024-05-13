@@ -32,6 +32,8 @@ function renderDownloadInstructions() {
     </ul>
     <button>Redo att börja spela</button>
     `;
+
+    main.querySelector("button").addEventListener("click", renderStartpage);
 }
 
 function renderStartpage() {
