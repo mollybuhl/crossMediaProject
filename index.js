@@ -3,8 +3,35 @@ let main = document.querySelector("main");
 
 if (localStorage.getItem("loggedIn") === "true") {
     renderMap();
-} else {
+} else if(localStorage.getItem("visited") != "true"){
+    renderDownloadInstructions();
+    window.localStorage.setItem("visited", "true");
+}else{
     renderStartpage();
+}
+
+function renderDownloadInstructions(){
+    main.innerHTML = `
+    <h2 class="downloadInstructions">Innan du börjar spela</h2>
+    <p class="downloadInstructions">För att din spel-upplevelse ska bli så bra som möjligt behöver du ladda ner hemsidan som en app. Följ instruktionerna nedan:</p>
+    <h3 class="downloadInstructions">Safari <div class="safari"></div>/Chrome <div class="chrome"></div></h3>
+    <ul class="downloadInstructions">
+        <li>1. Klicka på <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+        <g clip-path="url(#clip0_606_40)">
+          <path d="M9.35759 0.367188C8.88326 -0.121094 8.11295 -0.121094 7.63862 0.367188L2.78147 5.36719C2.30714 5.85547 2.30714 6.64844 2.78147 7.13672C3.2558 7.625 4.02612 7.625 4.50045 7.13672L7.28571 4.26953V12.5C7.28571 13.1914 7.82835 13.75 8.5 13.75C9.17165 13.75 9.71429 13.1914 9.71429 12.5V4.26953L12.4996 7.13672C12.9739 7.625 13.7442 7.625 14.2185 7.13672C14.6929 6.64844 14.6929 5.85547 14.2185 5.36719L9.36138 0.367188H9.35759ZM2.42857 13.75C2.42857 13.0586 1.88594 12.5 1.21429 12.5C0.542634 12.5 0 13.0586 0 13.75V16.25C0 18.3203 1.6317 20 3.64286 20H13.3571C15.3683 20 17 18.3203 17 16.25V13.75C17 13.0586 16.4574 12.5 15.7857 12.5C15.1141 12.5 14.5714 13.0586 14.5714 13.75V16.25C14.5714 16.9414 14.0288 17.5 13.3571 17.5H3.64286C2.97121 17.5 2.42857 16.9414 2.42857 16.25V13.75Z" fill="#E8E8E8"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_606_40">
+            <rect width="17" height="20" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg> ikonen</li>
+        <li>2. Lägg till på hemskärmen</li>
+        <li>3. Lägg till</li>
+        <li>4. Klicka in på appen via ikonen på hemskärmen</li>
+    </ul>
+    <button>Redo att börja spela</button>
+    `;
 }
 
 function renderStartpage() {
