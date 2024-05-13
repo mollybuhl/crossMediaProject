@@ -56,7 +56,7 @@ h3 {
     margin-bottom: 0;
 }
 
-h4{
+h4 {
     font-family: openSans;
     font-size: var(--paragraphFontSize);
     color: var(--white);
@@ -91,6 +91,8 @@ p.secondaryText {
     font-size: 40px;
     color: var(--yellow);
     margin: 0;
+    position: relative;
+    top: 2vh;
 }
 
 #never {
@@ -106,6 +108,8 @@ p.secondaryText {
 #after {
     font-size: 40px;
     color: var(--red);
+    position: relative;
+    bottom: 3vh;
 }
 
 #startPageBtns {
@@ -131,7 +135,7 @@ p.secondaryText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20vh;
+    padding-top: 25vh;
 }
 
 body {

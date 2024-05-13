@@ -15,11 +15,11 @@
 
         // Check if the given username or password is shorter than 3 characters. If so, send a message with status 400(Bad request).
         if(strlen($username) < 3 or strlen($password) < 3){
-            $message = ["message" => "Användarnamn och lösenord måste minst vara tre karraktärer."];
+            $message = ["message" => "Användarnamn och lösenord måste minst vara minst 3 karaktärer."];
             sendJSON($message, 400); 
         }
-        if(strlen($username) > 10){
-            $message = ["message" => "Användarnamet kan endast ha 10 karraktärer"];
+        if(strlen($username) > 15){
+            $message = ["message" => "Användarnamet kan endast ha 15 karaktärer"];
             sendJSON($message, 400);
         }
         if($password != $confirmPassword){
@@ -34,7 +34,7 @@
         // Check if the given username is already used by another user. If so, send a message with status 409(Conflict).
         foreach($users as $user){
             if($user["username"] == $username){
-                $message = ["message" => "Username is taken. Please try another"];
+                $message = ["message" => "Användarnamnet används redan"];
                 sendJSON($message, 409);
             }
         }

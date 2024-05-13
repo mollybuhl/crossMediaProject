@@ -2,6 +2,8 @@
 // Function to render registration page
 function renderRegister() {
 
+    main.removeAttribute("class");
+
     main.innerHTML = `    
     <h2 class="loginRegisterHeader">Registrera ditt konto</h2>
     <div id="inputZone" class="input-field">
@@ -99,6 +101,8 @@ function renderRegister() {
 
 // Function to render login page
 function renderLogin() {
+
+    main.removeAttribute("class");
 
     main.innerHTML = `
     <h2 class="loginRegisterHeader">Login</h2>
