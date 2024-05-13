@@ -580,7 +580,11 @@ function renderControlQuestion(charracter) {
         // Check if the touch movement exceeds the threshold
         if (Math.abs(deltaX) > minSwipeDistance) {
             // Perform the "go back" action
-            renderMap();
+            main.classList.add("swipe-out");
+            setTimeout(() => {
+                renderMap();
+            }, 2000)
+            
         }
     
         // Reset startX for next touch event

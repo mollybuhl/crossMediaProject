@@ -337,3 +337,17 @@ input[type=number] {
 .wrongAnswerPopup>div>button:active {
     background-color: var(--headerYellow);
 }
+
+
+@keyframes swipeOutToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.swipe-out {
+    animation: swipeOutToLeft 0.5s ease-in-out forwards;
+}
