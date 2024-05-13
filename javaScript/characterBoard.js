@@ -340,6 +340,14 @@ function renderStory() {
     main.classList.remove("murderReveal");
     main.classList.add("story");
     main.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="next">
+        <mask id="mask0_598_168" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect x="24" y="24" width="24" height="24" transform="rotate(-180 24 24)" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_598_168)">
+            <path d="M16.175 11L10.575 5.4L12 4L20 12L12 20L10.575 18.6L16.175 13L4 13L4 11L16.175 11Z" fill="white"/>
+        </g>
+    </svg>
     <h2 class="yellow">Detta har hänt</h2>
 
     <p>Walt Disney har under en längre tid suttit och funderat över vilka karaktärer som skall vara inkluderade i årets nöjesfält. Den 18 maj skall han hålla en presentation om vilka karaktärer som skall delta och han känner stor vånda för uppdraget. Han väljer ut de som han anser passa bäst för de olika platserna och kommer fram till ett dussin karaktärer som som skulle passa. Mötet äger rum och var och en av karaktärerna ropas upp en efter en. När listan är slut så utbrister ett sorl av glädje och förtvivlan. <span>Musse</span> stiger fram och tilltalar <span>Walt</span>. Varför finns inte jag med på listan? Jag var den som fick dig att bli den du är idag? Vad får jag, ingenting? <span>Walt</span> svarar, denna gång så finns det inte plats för dig, du har inget att säga till om i denna fråga. <span>Musse</span> ser svart i blicken och säger: Detta skall du få sota för. Han klampar ut ur rummet och stänger dörren med ett smäll. 
@@ -357,8 +365,6 @@ function renderStory() {
     <p class="lastParagraph">Du använde ledtrådarna som förde dig till rätt person, Musse Pigg. Du ringer till polisen och uppger all information som du har samlat in. Polisen är lite fundersamma över alla bevis du har samlat in, men de tackar för din insats och skall kolla närmare på ärendet. En dag senare så står det i Disney Bladet att mördaren hittats och att det är en anonym detektiv som har löst mordet och att Musse Pigg nu är bakom lås och bom. 
     Grattis! Du har nu äran att leva lyckligt i alla dina dagar.
     </p>
-
-    <button>Leaderboard</button>
 
     <div class="playBtnBackground">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
@@ -378,5 +384,5 @@ function renderStory() {
     </div>
     `;
 
-    main.querySelector("button").addEventListener("click", renderLeaderboard);
+    main.querySelector(".next").addEventListener("click", renderLeaderboard);
 }

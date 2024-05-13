@@ -550,45 +550,6 @@ function renderControlQuestion(charracter) {
     // Back to map on click or swipe back
     main.querySelector(".btnBack").addEventListener("click", renderMap);
 
-    let swipeElement = document.querySelector("main");
-    let startX;
-
-    swipeElement.addEventListener("touchstart", event => {
-        startX = event.touches[0].clientX;
-    })
-
-    swipeElement.addEventListener("touchmove", event => {
-        if (!startX) return; // If startX is not initialized, exit
-
-        // Calculate the distance moved
-        const currentX = event.touches[0].clientX;
-        const deltaX = currentX - startX;
-    })
-
-    swipeElement.addEventListener('touchend', (event) => {
-        if (!startX) return; // If startX is not initialized, exit
-
-        // Calculate the distance moved
-        const currentX = event.changedTouches[0].clientX;
-        const deltaX = currentX - startX;
-
-        // Set a threshold for swipe action
-        const minSwipeDistance = 50; // Adjust as needed
-
-        // Check if the touch movement exceeds the threshold
-        if (Math.abs(deltaX) > minSwipeDistance) {
-            // Perform the "go back" action
-            main.classList.add("swipe-out");
-            setTimeout(() => {
-                renderMap();
-            }, 2000)
-
-        }
-
-        // Reset startX for next touch event
-        startX = null;
-    });
-
 
     let inputWrapper = main.querySelector(".inputWrapper");
 
