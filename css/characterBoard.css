@@ -176,3 +176,17 @@ h2.red {
     bottom: 10vh;
     width: 80%;
 }
+
+.next{
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+}
+
+.story > h2.yellow{
+    font-size: 28px;
+}
+
+.story > .lastParagraph{
+    padding-bottom: 15vh;
+}
