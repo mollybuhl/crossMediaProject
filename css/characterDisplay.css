@@ -7,6 +7,9 @@
 
 .characterTopWrapper>h2 {
     color: var(--headerYellow);
+    margin-bottom: 0;
+    position: relative;
+    top: 2vh;
 }
 
 .characterTopWrapper>.charracterImage {
@@ -18,44 +21,55 @@
     height: 24vh;
 }
 
-.charracterImage.cruellaDeVil{
+.charracterImage.cruellaDeVil {
     background-image: url(../media/cruellaDeVil.png);
 }
-.charracterImage.kaptenKrok{
+
+.charracterImage.kaptenKrok {
     background-image: url(../media/kaptenKrok.png);
     margin-bottom: 0;
 }
-.charracterImage.snövit{
+
+.charracterImage.snövit {
     background-image: url(../media/snovit.png);
 }
-.charracterImage.prinsJohn{
+
+.charracterImage.prinsJohn {
     background-image: url(../media/prinsJohn.png);
     margin-bottom: -2vh;
 }
-.charracterImage.hjärterDam{
+
+.charracterImage.hjärterDam {
     background-image: url(../media/hjarterDam.png);
 }
-.charracterImage.hattmakaren{
+
+.charracterImage.hattmakaren {
     background-image: url(../media/hattmakaren.png);
 }
-.charracterImage.hades{
+
+.charracterImage.hades {
     background-image: url(../media/hades.png);
 }
-.charracterImage.törnrosa{
+
+.charracterImage.törnrosa {
     background-image: url(../media/tornrosa.png);
 }
-.charracterImage.darla{
+
+.charracterImage.darla {
     background-image: url(../media/darla.png);
     margin-bottom: -3vh;
 }
-.charracterImage.musse{
+
+.charracterImage.musse {
     background-image: url(../media/musse.png);
 }
-.charracterImage.skinner{
+
+.charracterImage.skinner {
     background-image: url(../media/skinner.png);
     margin-bottom: 1vh;
 }
-.charracterImage.ursulla{
+
+.charracterImage.ursulla {
     background-image: url(../media/ursulla.png);
 }
 
@@ -84,9 +98,9 @@
 
 .buttons>button {
     border-radius: 40px;
-    border: 1px solid var(--yellow);
+    border: 1px solid rgba(255, 225, 154, 0.5);
     background-color: transparent;
-    color: var(--yellow);
+    color: rgba(255, 225, 154, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,6 +148,6 @@
     display: none;
 }
 
-.bottomInfo{
+.bottomInfo {
     padding-bottom: 15vh;
 }

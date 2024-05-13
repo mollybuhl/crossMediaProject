@@ -131,9 +131,14 @@ async function renderCharracterboard() {
             popup.classList.add("guessMurderContainer");
             popup.innerHTML = `
                 <div class="guessMurderPopup">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path d="M16.8441 3.64768C17.4951 3.01292 17.4951 1.98206 16.8441 1.34729C16.193 0.712524 15.1357 0.712524 14.4847 1.34729L9.00033 6.69963L3.51074 1.35237C2.8597 0.717602 1.80241 0.717602 1.15137 1.35237C0.500326 1.98713 0.500326 3.01799 1.15137 3.65276L6.64095 9.00002L1.15658 14.3524C0.505534 14.9871 0.505534 16.018 1.15658 16.6528C1.80762 17.2875 2.86491 17.2875 3.51595 16.6528L9.00033 11.3004L14.4899 16.6477C15.141 17.2824 16.1982 17.2824 16.8493 16.6477C17.5003 16.0129 17.5003 14.9821 16.8493 14.3473L11.3597 9.00002L16.8441 3.64768Z" fill="#747474"/>
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <mask id="mask0_615_13" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_615_13)">
+                <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
+                </g>
+                </svg>
                     <p>Är du säker på att du vill gissa på</p>
                     <h3>${character}?</h3>
                     <button>JA</button>
@@ -279,7 +284,7 @@ async function renderStorySolution(correctAnswer = false) {
         <button class="btnListenToStory">Lyssna på vad som hände</button>
         `;
 
-    }else{
+    } else {
 
         // Fetch player info
         let userID = Number(window.localStorage.getItem("userId"));
@@ -327,11 +332,11 @@ async function renderStorySolution(correctAnswer = false) {
         `;
     }
 
-    main.querySelector("button").addEventListener("click", renderStory); 
-      
+    main.querySelector("button").addEventListener("click", renderStory);
+
 }
 
-function renderStory(){
+function renderStory() {
     main.classList.remove("murderReveal");
     main.classList.add("story");
     main.innerHTML = `

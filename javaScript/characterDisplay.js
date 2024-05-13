@@ -38,7 +38,7 @@ async function renderCharracterPage(charracter) {
             charracterAction = "Jag var på mötet precis som alla andra, gick på lunchen som <span>Walt</span> bjöd in till och sen gick jag och handlade med <span>Hades</span>. Mot kvällen, mötte jag sedan upp <span>Snövit, Hades</span> och <span>Törnrosa</span> och på slottet och var hos <span>Hattmakaren</span> resten av kvällen.";
             charracterSaw = "Såg massor av personal på morgondagen rusande mot Walts våning. Jag sprang upp i min morgonrock och befann mig i stor chock och panik.  Jag sprang emot hans rum och såg bara massa sjukvårdspersonal och poliser runt om på hela våningsplanet. Jag kände mig så hjälplös. Så förkrossad. Jag trodde aldrig att något sådant skulle kunna hända.";
             charracterConnectionToWalt = "Bästa vän.".
-            characterMovie = "Disneys fronfigur";
+                characterMovie = "Disneys fronfigur";
             characterTraits = "Positiv, intelligent, modig";
             characterAttribute = "Vita handskar, röda byxor och gula skor";
             className = "musse";
@@ -161,8 +161,8 @@ async function renderCharracterPage(charracter) {
     </svg>
 
     <div class="characterTopWrapper">
-        <div class="charracterImage ${characterClass}"></div>
         <h2>${charracter}</h2>
+        <div class="charracterImage ${characterClass}"></div>
     </div>
 
     <div class="characterShortDescription">
@@ -310,7 +310,7 @@ async function renderCharracterPage(charracter) {
                     let message = "Något gick fel, försök igen senare";
                     informUser(message);
                     return;
-                } 
+                }
 
             } catch (error) {
                 let message = "Något gick fel, försök igen senare";
@@ -386,7 +386,7 @@ async function renderCharracterPage(charracter) {
                     let message = "Något gick fel, försök igen senare";
                     informUser(message);
                     return;
-                } 
+                }
 
             } catch (error) {
                 let message = "Något gick fel, försök igen senare";
@@ -435,13 +435,13 @@ async function renderCharracterPage(charracter) {
             audio = new Audio("../media/RÖST_Kapten_Krok.mp3");
             break;
         case "cruellaDeVil":
-            audio = new Audio("../media/RÖST_CRUELLA.mp3"); 
+            audio = new Audio("../media/RÖST_CRUELLA.mp3");
             break;
         case "musse":
             audio = new Audio("../media/RÖST_MUSSE.mp3");
             break;
         case "ursulla":
-            audio = new Audio("../media/RÖST_URSULLA.mp3"); 
+            audio = new Audio("../media/RÖST_URSULLA.mp3");
             break;
         case "hades":
             audio = new Audio("../media/RÖST_HADES.mp3");
