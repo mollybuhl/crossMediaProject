@@ -7,7 +7,8 @@
     background-size: 150%;
     position: relative;
     padding: 0;
-    touch-action: pinch-zoom;}
+    touch-action: pinch-zoom;
+}
 
 .topbar {
     display: flex;
@@ -112,9 +113,9 @@
     right: 41vw;
 }
 
-.pin.unlocked path{
-    fill: #00000039;
-    stroke: var(--black);
+.pin.unlocked path {
+    fill: rgba(28, 27, 31, 0.4);
+    stroke: rgba(0, 0, 0, 0.39);
 }
 
 .popUp {
@@ -132,8 +133,8 @@
 }
 
 .popUp.show {
-    bottom: 0; 
-  }
+    bottom: 0;
+}
 
 .popUp>div {
     display: flex;
@@ -205,52 +206,70 @@
     top: -44px;
 }
 
-.popUp > div{
+.popUp>div {
     margin-bottom: 3vh;
 }
 
-.popUp > div > img {
+.popUp>div>img {
     width: 14vh;
     position: absolute;
-    top: -44px;
+    top: -36px;
     left: 3vh;
 }
 
-.popUp > div > img.skinner{
-    top: -84px;
+.popUp>div>img.skinner {
+    top: -80px;
 }
-.popUp > div > img.snovit{
-    top: -50px;
+
+.popUp>div>img.snovit {
+    top: -43px;
 }
-.popUp > div > img.prinsJohn{
-    top: -34px;
+
+.popUp>div>img.prinsJohn {
+    top: -27px;
 }
-.popUp > div > img.hjarterDam, .popUp > div > img.tornrosa{
-    top: -54px;
+
+.popUp>div>img.hjarterDam,
+.popUp>div>img.tornrosa {
+    top: -49px;
 }
-.popUp > div > img.ursulla, .popUp > div > img.musse, .popUp > div > img.darla{
-    top: -24px;
+
+.popUp>div>img.ursulla,
+.popUp>div>img.musse,
+.popUp>div>img.darla {
+    top: -17px;
 }
-.popUp > div > img.kaptenKrok{
-    top: -68px;
+
+.popUp>div>img.kaptenKrok {
+    top: -61px;
 }
-.popUp > div > img.cruellaDeVil{
-    top: -28px;
+
+.popUp>div>img.cruellaDeVil {
+    top: -21px;
 }
 
 .charracterInfo {
     padding-left: 32vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .charracterInfo h3 {
     color: var(--headerYellow);
     padding-left: 0;
     font-size: 25px;
+    height: 30px;
 }
 
 .charracterInfo p {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+.charracterInfo div {
+    display: flex;
+    gap: 0.5vh;
 }
 
 .Cruella {
@@ -343,6 +362,7 @@ input[type=number] {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }

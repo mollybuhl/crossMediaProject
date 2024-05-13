@@ -1,45 +1,45 @@
-
-.btnBack{
+.btnBack {
     margin-top: 5vh;
 }
 
-.controlQuestion > h2{
+.controlQuestion>h2 {
     margin-top: 10vh;
     margin-bottom: 5vh;
     font-size: var(--mainHeading);
 }
 
-.controlQuestion > p{
+.controlQuestion>p {
     text-align: center;
     margin-bottom: 4vh;
     margin-top: -5vh;
 }
 
-.inputWrapper.word{ 
+.inputWrapper.word {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.inputWrapper.word > label{
+.inputWrapper.word>label {
     color: #FFFFFF30;
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 1vh;
     transform: translateY(-50%)
 }
 
-.inputWrapper.word > input{
+.inputWrapper.word>input {
     background: transparent;
     border-bottom: 1px solid #FFFFFF30;
     border-radius: 0px;
+    font-family: openSans;
 }
 
-.inputWrapper.number{
+.inputWrapper.number {
     gap: 4vh;
 }
 
-.inputWrapper.number > input{
+.inputWrapper.number>input {
     height: 15vh;
     flex-basis: 0;
     flex-grow: 1;
@@ -49,16 +49,16 @@
     text-align: center;
 }
 
-.inputWrapper.time{
+.inputWrapper.time {
     gap: 1vh;
 }
 
-.inputWrapper.time > p{
+.inputWrapper.time>p {
     font-size: 50px;
     margin-top: 3vh;
 }
 
-.inputWrapper.time > input{
+.inputWrapper.time>input {
     height: 15vh;
     flex-basis: 0;
     flex-grow: 1;
@@ -68,11 +68,11 @@
     text-align: center;
 }
 
-.inputWrapper.ursulla{
+.inputWrapper.ursulla {
     text-align: center;
 }
 
-.inputWrapper.ursulla div > input{
+.inputWrapper.ursulla div>input {
     background-color: transparent;
     border: 1px solid #73737350;
     height: 15vh;
@@ -81,29 +81,30 @@
     text-align: center;
 }
 
-.inputWrapper.ursulla > div > label{
+.inputWrapper.ursulla>div>label {
     color: var(--white);
     font-family: lakkiReddy;
     font-size: var(--subHeading);
 }
 
-.inputWrapper.headChef{
+.inputWrapper.headChef {
     display: flex;
     flex-direction: column;
     gap: 2vh;
 }
 
-.inputWrapper.headChef > div{
+.inputWrapper.headChef>div {
     display: flex;
     gap: 1vh;
 }
 
-.inputWrapper.headChef > label{
+.inputWrapper.headChef>label {
     color: var(--white);
     font-family: lakkiReddy;
     font-size: var(--subHeading);
 }
-.inputWrapper.headChef > div > input{
+
+.inputWrapper.headChef>div>input {
     background: transparent;
     border: 1px solid white;
     height: 12vh;
@@ -111,13 +112,13 @@
     font-size: 50px;
 }
 
-body > main.controlQuestion > h2.headChef{
+body>main.controlQuestion>h2.headChef {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 5vh;
 }
 
-.btnUnlock{
+.btnUnlock {
     bottom: 2vh;
     position: absolute;
     width: 90%;
@@ -126,6 +127,7 @@ body > main.controlQuestion > h2.headChef{
     border: none;
 }
 
-.btnUnlock:hover, .btnUnlock:active{
+.btnUnlock:hover,
+.btnUnlock:active {
     background-color: var(--headerYellow);
 }

@@ -215,11 +215,11 @@ async function renderMap() {
             let formatted = formatCharacter(character);
             return formatted === pinCharacter;
         });
-        
+
         if (matchedCharacter) {
             // If a matching character is found, you can use it here
             pin.classList.add("unlocked");
-        } 
+        }
 
         // Format selected character name
         function formatCharacter(selectedCharracter) {
@@ -239,7 +239,7 @@ async function renderMap() {
             return formattedCharacter;
         };
     })
-    
+
 
     // Add correct profile pic
     document.querySelector(".btnProfile").classList.add(`${profilePic}`)
@@ -279,62 +279,62 @@ async function renderMap() {
                     switch (classList[i]) {
                         case "kaptenKrok":
                             selectedCharracter = "Kapten Krok";
-                            coordinates = "55.601263, 12.987155";
+                            coordinates = " 55.601263, 12.987155";
                             locationDescription = "Linnéplatsen";
                             break;
                         case "cruellaDeVil":
                             selectedCharracter = "Cruella de Vil";
-                            coordinates = "55.600699, 12.985931";
+                            coordinates = " 55.600699, 12.985931";
                             locationDescription = "Lusthuset Linnéplatsen";
                             break;
                         case "musse":
                             selectedCharracter = "Musse";
-                            coordinates = "55.604947, 12.987441";
+                            coordinates = " 55.604947, 12.987441";
                             locationDescription = "Malmö slott";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";
-                            coordinates = "55.603390, 12.988230";
+                            coordinates = " 55.603390, 12.988230";
                             locationDescription = "Togepi´s lookout";
                             break;
                         case "hades":
                             selectedCharracter = "Hades";
-                            coordinates = "55.602061, 12.995165";
+                            coordinates = " 55.602061, 12.995165";
                             locationDescription = "Gamla kyrkogården";
                             break;
                         case "darla":
                             selectedCharracter = "Darla";
-                            coordinates = "55.604963, 12.983702";
+                            coordinates = " 55.604963, 12.983702";
                             locationDescription = "Fiskehoddorna";
                             break;
                         case "tornrosa":
                             selectedCharracter = "Törnrosa";
-                            coordinates = "55.603258, 12.985958";
+                            coordinates = " 55.603258, 12.985958";
                             locationDescription = "Slottsmöllan";
                             break;
                         case "snovit":
                             selectedCharracter = "Snövit";
-                            coordinates = "55.604472, 12.992745";
+                            coordinates = " 55.604472, 12.992745";
                             locationDescription = "Diana - Naturens väktare";
                             break;
                         case "skinner":
                             selectedCharracter = "Skinner";
-                            coordinates = "55.602030, 12.985432";
+                            coordinates = " 55.602030, 12.985432";
                             locationDescription = "Mat och Vin Slottsparken";
                             break;
                         case "hattmakaren":
                             selectedCharracter = "Hattmakaren";
-                            coordinates = "55.603609, 12.989457";
+                            coordinates = " 55.603609, 12.989457";
                             locationDescription = "Slottsträdgårdens Kafé";
                             break;
                         case "hjarterDam":
                             selectedCharracter = "Hjärter Dam";
-                            coordinates = "55.603090, 12.991780";
+                            coordinates = " 55.603090, 12.991780";
                             locationDescription = "Bakom Casinot";
                             break;
                         case "prinsJohn":
                             selectedCharracter = "Prins John";
-                            coordinates = "55.602586, 12.992805";
+                            coordinates = " 55.602586, 12.992805";
                             locationDescription = "Framför Casionot";
                             break;
                     }
@@ -367,8 +367,7 @@ async function renderMap() {
                     <img src="media/${formattedCharacter}.png" alt="${selectedCharracter}" class="headshot ${formattedCharacter}">
                         <div class="charracterInfo">
                             <h3>${selectedCharracter}</h3>
-                            <div class="coordinates">
-                                <p>
+                            <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 19 19" fill="none">
                                         <mask id="mask0_159_189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19">
                                             <rect width="18.9998" height="19" fill="#D9D9D9"/>
@@ -377,10 +376,9 @@ async function renderMap() {
                                             <path d="M9.50027 9.50016C9.93568 9.50016 10.3084 9.34513 10.6185 9.03506C10.9286 8.72499 11.0836 8.35225 11.0836 7.91683C11.0836 7.48141 10.9286 7.10867 10.6185 6.7986C10.3084 6.48853 9.93568 6.3335 9.50027 6.3335C9.06486 6.3335 8.69212 6.48853 8.38205 6.7986C8.07198 7.10867 7.91695 7.48141 7.91695 7.91683C7.91695 8.35225 8.07198 8.72499 8.38205 9.03506C8.69212 9.34513 9.06486 9.50016 9.50027 9.50016ZM9.50027 17.4168C7.37598 15.6092 5.78936 13.9302 4.74042 12.3799C3.69147 10.8295 3.16699 9.39461 3.16699 8.07516C3.16699 6.096 3.80362 4.51926 5.07687 3.34495C6.35012 2.17065 7.82459 1.5835 9.50027 1.5835C11.1759 1.5835 12.6504 2.17065 13.9237 3.34495C15.1969 4.51926 15.8335 6.096 15.8335 8.07516C15.8335 9.39461 15.3091 10.8295 14.2601 12.3799C13.2112 13.9302 11.6246 15.6092 9.50027 17.4168Z" fill="#E34A4A"/>
                                         </g>
                                     </svg>
-                                    ${coordinates}
-                                </p>
-                                <p>${locationDescription}</p>
+                                    <p>${coordinates}</p>
                             </div>
+                            <p>${locationDescription}</p>
                         </div>
                     </div>
                     <button class="btnTalkToCharracter">Lyssna</button>
@@ -393,7 +391,7 @@ async function renderMap() {
                     popUp.classList.add('show');
                 }, 100);
 
-                
+
                 //Display controll question when clicking "talk to charracter"
                 document.querySelector(".btnTalkToCharracter").addEventListener("click", e => {
                     clearInterval(timeInterval);
@@ -427,9 +425,9 @@ async function renderMap() {
 
     let timeInterval;
 
-    if(finishingTime === "Not finished"){
+    if (finishingTime === "Not finished") {
         timeInterval = setInterval(updateTimer, 1000);
-    }else{
+    } else {
         main.querySelector(".timer").textContent = `${finishingTime}`;
     }
 
@@ -474,7 +472,7 @@ function renderControlQuestion(charracter) {
             break;
         case "Cruella de Vil":
             typeOfQuestion = "word";
-            question = "Vilket instrument som syns på toppen av lusthuset?";
+            question = "Vilket instrument syns på toppen av lusthuset?";
             answer = "trumpet";
             break;
         case "Musse":
@@ -569,14 +567,14 @@ function renderControlQuestion(charracter) {
 
     swipeElement.addEventListener('touchend', (event) => {
         if (!startX) return; // If startX is not initialized, exit
-    
+
         // Calculate the distance moved
         const currentX = event.changedTouches[0].clientX;
         const deltaX = currentX - startX;
-    
+
         // Set a threshold for swipe action
         const minSwipeDistance = 50; // Adjust as needed
-    
+
         // Check if the touch movement exceeds the threshold
         if (Math.abs(deltaX) > minSwipeDistance) {
             // Perform the "go back" action
@@ -584,9 +582,9 @@ function renderControlQuestion(charracter) {
             setTimeout(() => {
                 renderMap();
             }, 2000)
-            
+
         }
-    
+
         // Reset startX for next touch event
         startX = null;
     });
