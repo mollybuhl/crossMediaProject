@@ -5,10 +5,13 @@
         "password": "molly",
         "profilePic": "pascal",
         "startTime": "2024-05-12T12:37:58.341Z",
-        "finishingTime": "Not finished",
-        "unlockedCharacters": [],
+        "finishingTime": "22:44:04",
+        "unlockedCharacters": [
+            "Prins John",
+            "Ursulla"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
-        "correctGuess": false
+        "correctGuess": true
     }
 ]
