@@ -10,5 +10,105 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": false
+    },
+    {
+        "id": 2,
+        "username": "elinpelin",
+        "password": "pelin",
+        "profilePic": "pascal",
+        "startTime": "2024-05-13T13:24:34.322Z",
+        "finishingTime": "00:00:43",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
+    },
+    {
+        "id": 3,
+        "username": "rauer",
+        "password": "rauer",
+        "profilePic": "baymax",
+        "startTime": "2024-05-13T13:29:59.841Z",
+        "finishingTime": "00:10:35",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
+    },
+    {
+        "id": 4,
+        "username": "pellefelle",
+        "password": "pelle",
+        "profilePic": "pascal",
+        "startTime": "2024-05-13T13:45:48.457Z",
+        "finishingTime": "00:00:26",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
+    },
+    {
+        "id": 5,
+        "username": "theabea",
+        "password": "theabea",
+        "profilePic": "remi",
+        "startTime": "2024-05-13T13:48:47.839Z",
+        "finishingTime": "00:01:40",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
+    },
+    {
+        "id": 6,
+        "username": "loafalk",
+        "password": "loafalk",
+        "profilePic": "joy",
+        "startTime": "2024-05-13T13:50:57.083Z",
+        "finishingTime": "00:00:03",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
+    },
+    {
+        "id": 7,
+        "username": "falken",
+        "password": "falken",
+        "profilePic": "pascal",
+        "startTime": "2024-05-13T14:10:48.639Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Cruella de Vil",
+            "Hj\u00e4rter Dam",
+            "Hades"
+        ],
+        "suspectCharacters": [
+            "hjarterDam"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil",
+            "hades"
+        ],
+        "correctGuess": false
+    },
+    {
+        "id": 8,
+        "username": "lovispovis",
+        "password": "lovispovis",
+        "profilePic": "remi",
+        "startTime": "2024-05-13T14:12:50.290Z",
+        "finishingTime": "00:01:32",
+        "unlockedCharacters": [
+            "Hades",
+            "Cruella de Vil"
+        ],
+        "suspectCharacters": [
+            "hades"
+        ],
+        "notSuspectCharacters": [
+            "cruellaDeVil"
+        ],
+        "correctGuess": true
     }
 ]

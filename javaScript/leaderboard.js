@@ -3,6 +3,7 @@
 async function renderLeaderboard() {
 
     main.classList.remove("mainMap");
+    main.classList.remove("story");
     main.innerHTML = `
     <h2 id="leaderBoardHeader">Topplista</h2>
     <div class="leaders"></div>
@@ -52,11 +53,11 @@ async function renderLeaderboard() {
         let response = await fetch(request);
         let resource = await response.json();
 
-        if(!response.ok){
+        if (!response.ok) {
             let message = "Något gick fel, försök igen senare";
             informUser(message);
             return;
-        }else{
+        } else {
             usersData = resource;
         }
     } catch (error) {

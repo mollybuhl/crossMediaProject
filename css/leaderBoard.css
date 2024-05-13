@@ -74,12 +74,13 @@
 }
 
 .scoreboard>div>p:nth-child(2) {
-    padding-right: 15vh;
-    padding-left: 2vh;
+    position: relative;
+    right: 6vh;
+    width: 50px;
 }
 
 .scoreboard>div>p:nth-child(3) {
-    padding-right: 1.2vh;
+    padding-right: 0.7vh;
 }
 
 .scoreboard>div>p {
