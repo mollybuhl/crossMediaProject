@@ -438,7 +438,7 @@ async function renderCharracterPage(charracter) {
             audio = new Audio("../media/RÖST_CRUELLA.mp3");
             break;
         case "musse":
-            audio = new Audio("../media/RÖST_MUSSE.mp3");
+            audio = new Audio("./media/RÖST_MUSSE.mp3");
             break;
         case "ursulla":
             audio = new Audio("../media/RÖST_URSULLA.mp3");

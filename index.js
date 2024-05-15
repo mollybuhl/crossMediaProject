@@ -30,10 +30,10 @@ function renderDownloadInstructions() {
         <li>3. Lägg till</li>
         <li>4. Klicka in på appen via ikonen på hemskärmen</li>
     </ul>
-    <button>Redo att börja spela</button>
+    <button class="startPlaying">Redo att börja spela</button>
     `;
 
-    main.querySelector("button").addEventListener("click", renderStartpage);
+    main.querySelector(".startPlaying").addEventListener("click", renderStartpage);
 }
 
 function renderStartpage() {
@@ -102,7 +102,7 @@ function renderInstructionpage(firstTime = true) {
             </svg>
             <h3>Lyssna på karaktärerna</h3>
         </div>
-        <p>Gå runt och prata med de som varit på platsen. Du kan både lyssna och läsa.</p>
+        <p>Gå runt och prata med de olika karaktärerna i parken. Du kan både lyssna och läsa.</p>
     </section>
     <section>
         <div class="headerInstruction">
@@ -130,7 +130,7 @@ function renderInstructionpage(firstTime = true) {
             </svg>
             <h3>Hitta mördaren</h3>
         </div>
-        <p>Vem är mördaren? Du har som uppgift att lista ut detta. Kom ihåg att det går på tid!</p>
+        <p>Vem är mördaren? Du har som uppgift att lista ut detta. Kom ihåg att spelet går på tid!</p>
     </section>
 </div>
     <button id="btnStartPlaying">Start</button>

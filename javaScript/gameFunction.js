@@ -6,7 +6,7 @@ function renderIntroductionpage(firstTime = true) {
         <h2>Det har skett ett mord!</h2>
         <p> I många år har du besökt nöjesparken i Slottsparken. Festivalen förekommer vart 5:e år och i år, 2024, är det äntligen dags igen.</p>
         <p>Du är väldigt förväntansfull på grund av att det inte är vilken festival som helst utan den här baserad på dina favoritfigurer från Disney-filmerna, Walt Disney's egna universum. Till skillnad från de tecknade filmerna är det en festival där varje karaktär har sitt eget stånd. Detta har varit ett mysigt evenemang som pågått i flera år och attraherar stora som små.</p>
-        <p>Dagen innan öppningsdagen läser du på nyheterna: “Walt Disney har blivit mördad inne på Malmö slott, festivalen är inställd” Du kan inte fatta vad som hänt. Varför skulle Walt bli mördad just dagen innan öppningsdagen och vad händer egentligen inne på festivalområdet? Du tar tag i denna mystiska händelse och vill ta reda på sanningen. Vad hände egentligen?!</p>
+        <p>Dagen innan öppningsdagen läser du på nyheterna: “Walt Disney har blivit mördad inne på Malmö slott, festivalen är inställd” Du kan inte fatta vad som hänt. Varför skulle Walt bli mördad just dagen innan öppning och vad händer egentligen inne på festivalområdet? Du tar tag i denna mystiska händelse och vill ta reda på sanningen. Vad hände egentligen?!</p>
         <p class="readableText"><span>Skynda dig till Musse som befinner sig på Malmö slott! </span></p>
         <button class="btnNextPage">Nästa</button>
     </section>
