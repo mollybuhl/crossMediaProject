@@ -13,7 +13,7 @@ if (localStorage.getItem("loggedIn") === "true") {
 function renderDownloadInstructions() {
     main.innerHTML = `
     <h2 class="downloadInstructions">Innan du börjar spela</h2>
-    <p class="downloadInstructions">För att din spel-upplevelse ska bli så bra som möjligt behöver du ladda ner hemsidan som en app. Följ instruktionerna nedan:</p>
+    <p class="downloadInstructions">För att din spel-upplevelse ska bli så bra som möjligt är det väldigt viktigt att du laddar ner hemsidan som en app. Gör du inte detta riskerar spelet att inte fungera. Följ instruktionerna nedan:</p>
     <h3 class="downloadInstructions">Safari <div class="safari"></div>/Chrome <div class="chrome"></div></h3>
     <ul class="downloadInstructions">
         <li>1. Klicka på <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
