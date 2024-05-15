@@ -861,7 +861,36 @@ function renderControlQuestion(charracter) {
                 popupBackground.remove();
             })
         }
-    })
+    });
+
+    // Display instructions if first time entering a controll question
+    if(localStorage.getItem("firstControllQuestion") != "true"){
+        window.localStorage.setItem("firstControllQuestion", "true");
+
+        let popup = document.createElement("div");
+        popup.classList.add("feedbackPopupContainer");
+        popup.innerHTML = `
+        <div class="feedbackPopup">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="closePopup">
+                <mask id="mask0_625_106" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_625_106)">
+                    <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
+                </g>
+            </svg>
+            <h3>Kontroll frågor</h3>
+            <p>Innan du kan prata med en karaktär behöver vi bekräfta att du befinner dig på rätt plats genom en kontrollfråga. </p>
+            <p>På kartan kan du se var varje karaktär befinner sig.</p>
+        </div>
+        `;
+
+        main.appendChild(popup);
+
+        main.querySelector(".closePopup").addEventListener("click", e => {
+            popup.remove();
+        })
+    }
 
 }
 

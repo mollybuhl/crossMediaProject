@@ -1,6 +1,6 @@
 
 // Function to render the leaderboard and display all finished players game time
-async function renderLeaderboard() {
+async function renderLeaderboard(feedback = false) {
 
     main.classList.remove("mainMap");
     main.classList.remove("story");
@@ -122,4 +122,36 @@ async function renderLeaderboard() {
     // Navbar
     main.querySelector(".charracterChart").addEventListener("click", renderCharracterboard);
     main.querySelector(".map").addEventListener("click", renderMap);
+
+    // If user comes from guessing the murderer display popup with feedback form
+    if(feedback){
+        let popup = document.createElement("div");
+        popup.classList.add("feedbackPopupContainer");
+        popup.innerHTML = `
+        <div class="feedbackPopup">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="closePopup">
+                <mask id="mask0_625_106" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_625_106)">
+                    <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
+                </g>
+            </svg>
+            <p>Vi hoppas du har haft en trevlig upplevelse!</p>
+            <button class="btnFeedback">Svara på vår enkät</button>
+        </div>
+        `;
+
+        main.appendChild(popup);
+
+        // Open feedback form in another window
+        main.querySelector(".btnFeedback").addEventListener("click", e=>{
+            window.open("https://forms.gle/FPYutWobYzQn5WaR9");
+        });
+
+        // Remove pop up on click
+        main.querySelector(".closePopup").addEventListener("click", e=>{
+            popup.remove();
+        })
+    }
 }

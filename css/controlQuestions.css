@@ -131,3 +131,7 @@ body>main.controlQuestion>h2.headChef {
 .btnUnlock:active {
     background-color: var(--headerYellow);
 }
+
+.feedbackPopup > h3{
+    color: var(--black);
+}

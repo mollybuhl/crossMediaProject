@@ -384,5 +384,7 @@ function renderStory() {
     </div>
     `;
 
-    main.querySelector(".next").addEventListener("click", renderLeaderboard);
+    main.querySelector(".next").addEventListener("click", e => {
+        renderLeaderboard(true);
+    });
 }

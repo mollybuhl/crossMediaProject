@@ -32,12 +32,36 @@
         "password": "hej",
         "profilePic": "edna",
         "startTime": "2024-05-13T18:34:10.297Z",
-        "finishingTime": "00:00:43",
+        "finishingTime": "43:29:34",
         "unlockedCharacters": [
             "Musse"
         ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 4,
+        "username": "hejhopp",
+        "password": "hejhopp",
+        "profilePic": "pascal",
+        "startTime": "2024-05-15T15:21:24.549Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 5,
+        "username": "hejh\u00e5",
+        "password": "hejh\u00e5",
+        "profilePic": "pascal",
+        "startTime": "2024-05-15T15:30:55.810Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
     }
 ]
