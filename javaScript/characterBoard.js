@@ -2,6 +2,7 @@
 // Function to render character board and dislay marked suspects
 async function renderCharracterboard() {
     main.classList.remove("mainMap");
+    main.classList.remove("characterDisplay");
 
     main.innerHTML = `
     <h2 class="characterBoard">Gissa Mördaren</h2>

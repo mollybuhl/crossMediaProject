@@ -1,3 +1,7 @@
+main.characterDisplay{
+    overflow: scroll;
+}
+
 .characterTopWrapper {
     display: flex;
     justify-content: center;

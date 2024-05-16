@@ -53,6 +53,7 @@ async function renderMap() {
 
     //Map structure
     main.classList.remove("controlQuestion");
+    main.classList.remove("characterDisplay");
     main.classList.add("mainMap");
     main.innerHTML = `
     <div class="topbar">

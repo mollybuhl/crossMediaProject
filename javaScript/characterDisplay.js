@@ -150,6 +150,7 @@ async function renderCharracterPage(charracter) {
 
     main.classList.remove("controlQuestion");
     main.classList.remove("mainMap");
+    main.classList.add("characterDisplay");
     main.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btnBack">
         <mask id="mask0_248_1065" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
