@@ -73,9 +73,32 @@
     right: 52vw;
 }
 
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .pin.musse {
     top: 65vh;
     left: 25vw;
+}
+
+.pin.musse.pulse{
+    animation: pulse 1.5s infinite;
+}
+
+.pin.musse.pulse path {
+    fill: var(--red);
 }
 
 .pin.hades {

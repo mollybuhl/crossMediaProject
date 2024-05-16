@@ -83,7 +83,7 @@ async function renderMap() {
     </g>
     </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin musse">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="pin musse">
     <mask id="mask0_524_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
     <rect width="40" height="40" fill="#D9D9D9"/>
     </mask>
@@ -240,6 +240,12 @@ async function renderMap() {
         };
     })
 
+    // Add pulseating animation to musse if user has not already visited
+    if(localStorage.getItem("musseVisited") != "true"){
+        main.querySelector(".pin.musse").classList.add("pulse");
+        window.localStorage.setItem("musseVisited", "true");
+    }
+
 
     // Add correct profile pic
     document.querySelector(".btnProfile").classList.add(`${profilePic}`)
@@ -247,6 +253,8 @@ async function renderMap() {
     //When selecting a pin, display charracter pop up
     main.querySelectorAll(".pin").forEach(pin =>
         pin.addEventListener("click", e => {
+
+            main.querySelector(".pin.musse").classList.remove("pulse");
 
             //Hide navbar
             main.querySelector(".navbar").classList.add("hidden");

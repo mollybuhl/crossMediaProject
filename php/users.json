@@ -75,5 +75,31 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
+    },
+    {
+        "id": 7,
+        "username": "sanna",
+        "password": "sanna",
+        "profilePic": "joy",
+        "startTime": "2024-05-16T13:47:04.560Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 8,
+        "username": "maja",
+        "password": "maja",
+        "profilePic": "pascal",
+        "startTime": "2024-05-16T13:50:39.756Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [
+            "Musse"
+        ],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
     }
 ]
