@@ -246,7 +246,6 @@ async function renderMap() {
         window.localStorage.setItem("musseVisited", "true");
     }
 
-
     // Add correct profile pic
     document.querySelector(".btnProfile").classList.add(`${profilePic}`)
 
@@ -254,6 +253,7 @@ async function renderMap() {
     main.querySelectorAll(".pin").forEach(pin =>
         pin.addEventListener("click", e => {
 
+            // Remove pulsating animation on musse pin if this is rolling
             main.querySelector(".pin.musse").classList.remove("pulse");
 
             //Hide navbar
