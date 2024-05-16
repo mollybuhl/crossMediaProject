@@ -75,7 +75,7 @@ async function renderCharracterboard() {
             </g>
         </svg>
     </div>
-</div>
+    </div>
     `;
 
     // Check for suspect and not suspect marked by user
@@ -84,6 +84,7 @@ async function renderCharracterboard() {
 
     let suspectCharacters;
     let notSuspectCharacters;
+    let finished;
 
     try {
         let request = new Request(`php/api.php?userID=${userID}&userPassword=${userPassword}&action=getUserInfo`);
@@ -97,6 +98,7 @@ async function renderCharracterboard() {
         } else {
             suspectCharacters = resource.suspectCharacters;
             notSuspectCharacters = resource.notSuspectCharacters;
+            finished = resource.finishingTime
         }
     } catch (error) {
         let message = "Något gick fel, försök igen senare";
@@ -125,56 +127,84 @@ async function renderCharracterboard() {
     main.querySelectorAll(".boardOfCharracters > div").forEach(div => {
         div.addEventListener("click", e => {
 
-            let character = div.classList[0];
+            // If game is already finished, inform user and do not let them guess again
+            // Otherwise ask to confirm guess
+            if(finished != "Not finished"){
+                let popup = document.createElement("div");
+                popup.classList.add("guessMurderContainer");
 
-            let popup = document.createElement("div");
-            popup.classList.add("guessMurderContainer");
-            popup.innerHTML = `
+                popup.innerHTML = `
                 <div class="guessMurderPopup">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <mask id="mask0_615_13" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                <rect width="24" height="24" fill="#D9D9D9"/>
-                </mask>
-                <g mask="url(#mask0_615_13)">
-                <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
-                </g>
-                </svg>
-                    <p>Är du säker på att du vill gissa på</p>
-                    <h3>${character}?</h3>
-                    <button>JA</button>
-                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_615_13" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                            <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_615_13)">
+                            <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
+                        </g>
+                    </svg>
+                    <h3>Spelet har avslutats</h3>
+                </div>
+                `;
 
-            `;
-
-            main.appendChild(popup);
-
-            document.querySelector(".guessMurderContainer").addEventListener("click", event => {
-                if (event.target.classList.contains("guessMurderContainer")) {
+                main.appendChild(popup);
+                document.querySelector(".guessMurderPopup > svg").addEventListener("click", e => {
                     renderCharracterboard();
-                }
-            });
+                });
 
-            document.querySelector(".guessMurderPopup > svg").addEventListener("click", e => {
-                renderCharracterboard();
-            })
+            }else{
 
-            popup.querySelector("button").addEventListener("click", e => {
+                let character = div.classList[0];
 
-                if (character === "musse") {
+                let popup = document.createElement("div");
+                popup.classList.add("guessMurderContainer");
+                popup.innerHTML = `
+                    <div class="guessMurderPopup">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_615_13" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_615_13)">
+                    <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#000E1E"/>
+                    </g>
+                    </svg>
+                        <p>Är du säker på att du vill gissa på</p>
+                        <h3>${character}?</h3>
+                        <button>JA</button>
+                    <div>
 
-                    // stop timer and display story
-                    renderStorySolution(true);
-                } else {
+                `;
 
-                    // Inform incorrect guess
-                    renderIncorrectGuess(character);
-                }
-            })
+                main.appendChild(popup);
+
+                document.querySelector(".guessMurderContainer").addEventListener("click", event => {
+                    if (event.target.classList.contains("guessMurderContainer")) {
+                        renderCharracterboard();
+                    }
+                });
+
+                document.querySelector(".guessMurderPopup > svg").addEventListener("click", e => {
+                    renderCharracterboard();
+                })
+
+                popup.querySelector("button").addEventListener("click", e => {
+
+                    if (character === "musse") {
+                        // stop timer and display story
+                        renderStorySolution(true);
+                    } else {
+                        // Inform incorrect guess
+                        renderIncorrectGuess(character);
+                    }
+                })
+            }
+            
         })
     })
 
     // Navbar
-    main.querySelector(".leaderboard").addEventListener("click", renderLeaderboard);
+    main.querySelector(".leaderboard").addEventListener("click", e =>{
+        renderLeaderboard()});
     main.querySelector(".map").addEventListener("click", renderMap);
 
 }

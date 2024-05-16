@@ -63,5 +63,17 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": false
+    },
+    {
+        "id": 6,
+        "username": "absolut",
+        "password": "absolut",
+        "profilePic": "edna",
+        "startTime": "2024-05-16T12:55:11.015Z",
+        "finishingTime": "00:00:39",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": true
     }
 ]
