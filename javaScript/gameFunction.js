@@ -299,7 +299,7 @@ async function renderMap() {
                         case "musse":
                             selectedCharracter = "Musse";
                             coordinates = " 55.604947, 12.987441";
-                            locationDescription = "Malmö slott";
+                            locationDescription = "Malmö slotts innergård";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";
@@ -890,7 +890,7 @@ function renderControlQuestion(charracter) {
             </svg>
             <h3>Kontroll frågor</h3>
             <p>Innan du kan prata med en karaktär behöver vi bekräfta att du befinner dig på rätt plats genom en kontrollfråga. </p>
-            <p>På kartan kan du se var varje karaktär befinner sig.</p>
+            <p>På kartan kan du se och läsa var i Slottsparken varje karaktär befinner sig.</p>
         </div>
         `;
 

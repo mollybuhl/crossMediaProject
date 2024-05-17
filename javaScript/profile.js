@@ -91,7 +91,7 @@ async function renderProfilepage() {
 
         window.localStorage.setItem("loggedIn", "false");
         window.localStorage.removeItem("userId");
-        window.localStorage.removeItem("password");
+        window.localStorage.removeItem("userPassword");
         window.localStorage.removeItem("startTime");
 
         renderStartpage();
@@ -247,7 +247,11 @@ async function renderProfilepage() {
                         // Logout user and render start page
                         window.localStorage.setItem("loggedIn", "false");
                         window.localStorage.removeItem("userId");
-                        window.localStorage.removeItem("password");
+                        window.localStorage.removeItem("userPassword");
+                        window.localStorage.removeItem("firstControllQuestion");
+                        window.localStorage.removeItem("musseVisited");
+                        window.localStorage.removeItem("visited");
+                        window.localStorage.removeItem("startTime");
 
                         renderStartpage();
                     }

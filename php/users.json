@@ -102,5 +102,17 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": false
+    },
+    {
+        "id": 9,
+        "username": "heja",
+        "password": "heja",
+        "profilePic": "pascal",
+        "startTime": "2024-05-17T08:16:01.188Z",
+        "finishingTime": "Not finished",
+        "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
     }
 ]
