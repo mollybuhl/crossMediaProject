@@ -299,7 +299,7 @@ async function renderMap() {
                         case "musse":
                             selectedCharracter = "Musse";
                             coordinates = " 55.604947, 12.987441";
-                            locationDescription = "Malmö slotts innergård";
+                            locationDescription = "Framför Malmöhus slott";
                             break;
                         case "ursulla":
                             selectedCharracter = "Ursulla";

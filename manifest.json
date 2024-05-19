@@ -5,7 +5,7 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "Media/logo.png",
+            "src": "media/gameIcon.png",
             "sizes": "212x212",
             "type": "imge/png"
         }   

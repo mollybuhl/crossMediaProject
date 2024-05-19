@@ -39,19 +39,5 @@
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": true
-    },
-    {
-        "id": 4,
-        "username": "harry",
-        "password": "harry",
-        "profilePic": "baymax",
-        "startTime": "2024-05-19T14:06:40.725Z",
-        "finishingTime": "Not finished",
-        "unlockedCharacters": [
-            "Musse"
-        ],
-        "suspectCharacters": [],
-        "notSuspectCharacters": [],
-        "correctGuess": false
     }
 ]

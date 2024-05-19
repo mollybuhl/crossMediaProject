@@ -381,14 +381,14 @@ function renderStory() {
     </svg>
     <h2 class="yellow">Detta har hänt</h2>
 
-    <p>Walt Disney har under en längre tid suttit och funderat över vilka karaktärer som skall vara inkluderade i årets nöjesfält. Den 18 maj skall han hålla en presentation om vilka karaktärer som skall delta och han känner stor vånda för uppdraget. Han väljer ut de som han anser passa bäst för de olika platserna och kommer fram till ett dussin karaktärer som som skulle passa. Mötet äger rum och var och en av karaktärerna ropas upp en efter en. När listan är slut så utbrister ett sorl av glädje och förtvivlan. <span>Musse</span> stiger fram och tilltalar <span>Walt</span>. Varför finns inte jag med på listan? Jag var den som fick dig att bli den du är idag? Vad får jag, ingenting? <span>Walt</span> svarar, denna gång så finns det inte plats för dig, du har inget att säga till om i denna fråga. <span>Musse</span> ser svart i blicken och säger: Detta skall du få sota för. Han klampar ut ur rummet och stänger dörren med ett smäll. 
+    <p>Walt Disney har under en längre tid suttit och funderat över vilka karaktärer som skall vara inkluderade i årets nöjesfält. Den 18 maj skall han hålla en presentation om vilka karaktärer som skall delta och han känner stor vånda för uppdraget. Han väljer ut de som han anser passa bäst för de olika platserna och kommer fram till ett dussin karaktärer som som skulle passa. Mötet äger rum och var och en av karaktärerna ropas upp en efter en. När listan är slut så utbrister ett sorl av glädje och förtvivlan. <span>Musse</span> stiger fram och talar till<span>Walt</span>. Varför finns inte jag med på listan? Jag var den som fick dig att bli den du är idag? Vad får jag, ingenting? <span>Walt</span> svarar, denna gång så finns det inte plats för dig, du har inget att säga till om i denna fråga. <span>Musse</span> ser svart i blicken och säger: Detta skall du sota för. Han klampar ut ur rummet och stänger dörren med ett smäll. 
     </p>
 
     <p>Walt Disney bebor sig i slottet för att vara med på öppningsdagen och 
-    natten till den 19 maj vaknade <span>Walt</span> med ett ryck. Tanken om vad som hände på mötet och <span>Musses</span> ilska väcker oro i honom. Kanske hade han varit för hård mot sin gamla vän? Tankarna snurrar runt i hans huvud när han plötsligt hör ett svagt skrapande ljud utanför sin dörr. Med hjärtat bultande av både rädsla och förvånad går <span>Walt</span> försiktigt mot dörren och öppnar den på glänt. Utanför står <span>Musse</span>, vars vanligtvis glada ansikte är nu mörkt av vrede och besvikelse. <span>"Walt"</span>, börjar <span>Musse</span>, "jag kan inte låta dig bara skjuta bort mig på det här viset. Jag var med dig från början, jag stöttade dig när ingen annan gjorde det. Jag är en del av ditt arv, av allt du har byggt upp." Walt kände en knut i magen när han såg <span>Musse</span> så upprörd. Han inser att han kanske hade varit för fokuserad på att välja karaktärer som skulle vara populära och glömt bort vänskapen som en gång varit så viktig för honom.
+    natten till den 19 maj då <span>Walt</span> vaknade med ett ryck. Tanken om vad som hände på mötet och <span>Musses</span> ilska väcker oro i honom. Kanske hade han varit för hård mot sin gamla vän? Tankarna snurrar runt i hans huvud när han plötsligt hör ett svagt skrapande ljud utanför sin dörr. Med hjärtat bultande av både rädsla och förvånad går <span>Walt</span> försiktigt mot dörren och öppnar den på glänt. Utanför står <span>Musse</span>, vars vanligtvis glada ansikte är nu mörkt av vrede och besvikelse. <span>"Walt"</span>, börjar <span>Musse</span>, "jag kan inte låta dig bara skjuta bort mig på det här viset. Jag var med dig från början, jag stöttade dig när ingen annan gjorde det. Jag är en del av ditt arv, av allt du har byggt upp." Walt kände en knut i magen när han såg <span>Musse</span> så upprörd. Han inser att han kanske hade varit för fokuserad på att välja karaktärer som skulle vara populära och glömt bort vänskapen som en gång varit så viktig för honom.
     </p>
 
-    <p>"Jag är ledsen, <span>Musse</span>," sa Walt med en sänkt röst. "Du har alltid varit en av de viktigaste karaktärerna i mitt liv men samtidigt så är barnen inte längre lika intresserad av dig längre som de är de andra karaktärerna. Men kom in, låt oss prata." <span>Musse</span> tvekade först men gick sedan in i <span>Walts</span> rum. De båda satte sig ner och för att prata. <span>Musse</span> såg lite förstrött på <span>Walt</span> , men han gav inga tecken på att göra något förhastat. “Ja, det var ett slag i magen", sa <span>Musse</span> med en bitterhet i rösten. “Jag kan inte förstå att du ändå inte vill ha mig med, du har byggt upp hela din karriär runt mig och du vill inte ens ha mig alls”. <span>Walt</span> blev irriterad. “Du måste förstå att detta inte handlar om dig, utan pengarna. Du kan inte gå runt och ta illa upp över en sådan petitess.” <span>Musse</span> log elakt och var obehagligt lugn. “Okej, är det så du vill ha det?" Jag är lite törstig, finns det möjlighet att få dricka te?” <span>Walt</span> reste sig upp och gick till det lilla bordet som var placerat vid dörrens högra sida. Där är ett bord ställt med en tebryggare och lite tepåsar för <span>Walts</span> sömnproblematik och i detta fall skulle det vara trevligt att dela på en kopp för att lugna ner den intensiva känslan som hängde i luften. Det <span>Walt</span> inte märkte var att medan han höll på att förbereda téet så lirkade <span>Musse</span> fram en liten tepåse som han sedan gömde i sin innerficka på den strukna kavaj han bar. “Jag kan fortsätta”, sa <span>Musse</span> menande. "Jag har inte varit så diplomatisk, så det minsta jag kan göra är att hjälpa till med téet". <span>Walt</span> såg på <span>Musse</span>. “Visst, absolut jag föredrar den med vanilj, och då får du ta vad du vill”, sa <span>Walt</span>. <span>Musse</span> bryggde teet och la ned påsarna som han hade i sin innerficka. De satte sig tillrätta i varsin fåtölj och <span>Musse</span> gav <span>Walt</span> den förgiftade koppen. “Skål” sa <span>Musse</span>. “För ännu en bedrift som kommer att sätta ditt namn på kartan ännu en gång”. De höjde kopparna, och kort därefter hördes en tung duns. 
+    <p>"Jag är ledsen, <span>Musse</span>," sa Walt med sänkt röst. "Du har alltid varit en av de viktigaste karaktärerna i mitt liv men samtidigt så är barnen inte längre lika intresserad av dig längre som de är de andra karaktärerna. Men kom in, låt oss prata." <span>Musse</span> tvekade först men gick sedan in i <span>Walts</span> rum. De båda satte sig ner och för att prata. <span>Musse</span> såg lite förstrött på <span>Walt</span> , men han gav inga tecken på att göra något förhastat. “Ja, det var ett slag i magen", sa <span>Musse</span> med en bitterhet i rösten. “Jag kan inte förstå att du ändå inte vill ha mig med, du har byggt upp hela din karriär runt mig och du vill inte ens ha mig alls”. <span>Walt</span> blev irriterad. “Du måste förstå att detta inte handlar om dig, utan pengarna. Du kan inte gå runt och ta illa upp över en sådan petitess.” <span>Musse</span> log elakt och var obehagligt lugn. “Okej, är det så du vill ha det?" Jag är lite törstig, finns det möjlighet att få dricka te?” <span>Walt</span> reste sig upp och gick till det lilla bordet som var placerat vid dörrens högra sida. Där är ett bord ställt med en tebryggare och lite tepåsar för <span>Walts</span> sömnproblematik och i detta fall skulle det vara trevligt att dela på en kopp för att lugna ner den intensiva känslan som hängde i luften. Det <span>Walt</span> inte märkte var att medan han höll på att förbereda téet så lirkade <span>Musse</span> fram en liten tepåse som han sedan gömde i sin innerficka på den strukna kavaj han bar. “Jag kan fortsätta”, sa <span>Musse</span> menande. "Jag har inte varit så diplomatisk, så det minsta jag kan göra är att hjälpa till med téet". <span>Walt</span> såg på <span>Musse</span>. “Visst, absolut jag föredrar den med vanilj, och då får du ta vad du vill”, sa <span>Walt</span>. <span>Musse</span> bryggde teet och la ned påsarna som han hade i sin innerficka. De satte sig tillrätta i varsin fåtölj och <span>Musse</span> gav <span>Walt</span> den förgiftade koppen. “Skål” sa <span>Musse</span>. “För ännu en bedrift som kommer att sätta ditt namn på kartan ännu en gång”. De höjde kopparna, och kort därefter hördes en tung duns. 
     </p>
 
     <p>När solen gick upp över slottet den 19 maj hittades Walt Disney död på golvet i sitt eget rum. Slottet är i oro och förvirring och Disney karaktärerna sörjer Walts död.</p>
@@ -398,13 +398,13 @@ function renderStory() {
     </p>
 
     <div class="playBtnBackground">
-        <input type="range" id="seekBar" value="0">
-        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
+        <progress id="seekBar" value="0" max="100"></progress>
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
             <path d="M44.2295 32.7816C45.5628 33.5514 45.5628 35.4759 44.2295 36.2457L31.1562 43.7936C29.8228 44.5634 28.1562 43.6011 28.1562 42.0615L28.1562 26.9658C28.1562 25.4262 29.8228 24.4639 31.1562 25.2337L44.2295 32.7816Z" fill="#001937"/>
         </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPauseAudio hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 71 71" fill="none" class="btnPauseAudio hidden">
             <circle cx="35.1191" cy="35.1191" r="34.1191" fill="#000E1E" stroke="#D9D9D9" stroke-width="2"/>
             <mask id="mask0_385_154" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="21" width="29" height="29">
                 <rect x="21" y="21" width="29" height="29" fill="#D9D9D9"/>
@@ -445,16 +445,20 @@ function renderStory() {
     //Progressbar
     let seekBar = document.querySelector("#seekBar");
 
-    audio.addEventListener("timeupdate", e=> {
-        let currentTime = audio.currentTime;
-        let duration = audio.duration;
-        let progress = (currentTime/duration)*100;
-        seekBar.value = progress;
-    })
-
-    seekBar.addEventListener("input", e =>{
-        let seekTime = (audio.duration * seekBar.value)/100;
+    seekBar.addEventListener("click", e => {
+        const clickPosition = e.clientX - seekBar.getBoundingClientRect().left;
+        const totalWidth = seekBar.offsetWidth;
+        const seekPercentage = clickPosition / totalWidth;
+        const seekTime = audio.duration * seekPercentage;
         audio.currentTime = seekTime;
-    })
+    });
+    
+    // Update the progress bar while audio is playing
+    audio.addEventListener("timeupdate", e => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+        const progress = (currentTime / duration) * 100;
+        seekBar.value = progress;
+    });
 
 }
