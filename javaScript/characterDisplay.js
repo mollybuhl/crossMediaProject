@@ -218,7 +218,7 @@ async function renderCharracterPage(charracter) {
 
 
     <div class="playBtnBackground">
-        <input type="range" id="seekBar" min="0" max="100" value="0">
+        <progress id="seekBar" value="0" max="100"></progress>
         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
             <path d="M44.2295 32.7816C45.5628 33.5514 45.5628 35.4759 44.2295 36.2457L31.1562 43.7936C29.8228 44.5634 28.1562 43.6011 28.1562 42.0615L28.1562 26.9658C28.1562 25.4262 29.8228 24.4639 31.1562 25.2337L44.2295 32.7816Z" fill="#001937"/>
@@ -496,15 +496,20 @@ async function renderCharracterPage(charracter) {
     //Progressbar
     let seekBar = document.querySelector("#seekBar");
 
-    audio.addEventListener("timeupdate", e=> {
-        let currentTime = audio.currentTime;
-        let duration = audio.duration;
-        let progress = (currentTime/duration)*100;
-        seekBar.value = progress;
-    })
-
-    seekBar.addEventListener("input", e =>{
-        let seekTime = (audio.duration * seekBar.value)/100;
+    seekBar.addEventListener("click", e => {
+        const clickPosition = e.clientX - seekBar.getBoundingClientRect().left;
+        const totalWidth = seekBar.offsetWidth;
+        const seekPercentage = clickPosition / totalWidth;
+        const seekTime = audio.duration * seekPercentage;
         audio.currentTime = seekTime;
-    })
+    });
+    
+    // Update the progress bar while audio is playing
+    audio.addEventListener("timeupdate", e => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+        const progress = (currentTime / duration) * 100;
+        seekBar.value = progress;
+    });
+
 }

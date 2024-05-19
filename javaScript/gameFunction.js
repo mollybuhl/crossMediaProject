@@ -486,8 +486,9 @@ function renderControlQuestion(charracter) {
             break;
         case "Musse":
             typeOfQuestion = "number";
-            question = "Hur många bollar jonglerar “Gycklaren” med?";
-            answer = 5;
+            question = "Ange en siffra";
+            underQuestion = "Vid slottets sida står en vit buss. På bussen finner du en fyrsiffrig kod, en siffra som upprepar sig 4 gånger. Vilken?"
+            answer = 4;
             break;
         case "Ursulla":
             typeOfQuestion = "numbers";
