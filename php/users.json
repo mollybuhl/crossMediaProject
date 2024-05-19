@@ -109,8 +109,24 @@
         "password": "heja",
         "profilePic": "pascal",
         "startTime": "2024-05-17T08:16:01.188Z",
-        "finishingTime": "Not finished",
+        "finishingTime": "Spel Avslutat",
         "unlockedCharacters": [],
+        "suspectCharacters": [],
+        "notSuspectCharacters": [],
+        "correctGuess": false
+    },
+    {
+        "id": 10,
+        "username": "mii",
+        "password": "mii",
+        "profilePic": "remi",
+        "startTime": "2024-05-17T14:25:35.723Z",
+        "finishingTime": "Spel Avslutat",
+        "unlockedCharacters": [
+            "Prins John",
+            "Kapten Krok",
+            "Musse"
+        ],
         "suspectCharacters": [],
         "notSuspectCharacters": [],
         "correctGuess": false

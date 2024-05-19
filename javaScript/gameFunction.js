@@ -525,12 +525,12 @@ function renderControlQuestion(charracter) {
         case "Hattmakaren":
             typeOfQuestion = "number";
             question = "Ange priset";
-            underQuestion = "Hattmakaren beställer alltid samma sak på Slottsträdgårdens Kafé. Han beställer en kopp svart te, oliver, två Chokladbollar och en glass. Ange priset för hela beställningen."
+            underQuestion = "Hattmakaren beställer alltid samma sak på Slottsträdgårdens Kafé. Han beställer en kopp svart te, oliver, två Chokladbollar och en stor bägare glass. Ange priset för hela beställningen."
             answer = 207;
             break;
         case "Hjärter Dam":
             typeOfQuestion = "word";
-            question = "Vad finner du på toppen av casinot som Prins John och Hjärter Dam har gemensamt?";
+            question = "Vad ser du på högsta toppen av casinot?";
             answer = "krona";
             break;
         case "Prins John":

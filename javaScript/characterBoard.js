@@ -398,6 +398,7 @@ function renderStory() {
     </p>
 
     <div class="playBtnBackground">
+        <input type="range" id="seekBar" value="0">
         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
             <path d="M44.2295 32.7816C45.5628 33.5514 45.5628 35.4759 44.2295 36.2457L31.1562 43.7936C29.8228 44.5634 28.1562 43.6011 28.1562 42.0615L28.1562 26.9658C28.1562 25.4262 29.8228 24.4639 31.1562 25.2337L44.2295 32.7816Z" fill="#001937"/>
@@ -418,4 +419,42 @@ function renderStory() {
     main.querySelector(".next").addEventListener("click", e => {
         renderLeaderboard(true);
     });
+
+    let audio = new Audio("http://www.maumt.se/wdu/ht22/students/HappilyNeverAfter/media/finalStory.mp3");
+
+    // Play button
+    main.querySelector(".btnPlayAudio").addEventListener("click", e => {
+        main.querySelector(".btnPlayAudio").classList.add("hidden");
+        main.querySelector(".btnPauseAudio").classList.remove("hidden");
+        audio.play();
+
+        //Change back to play button when audio ends
+        audio.addEventListener("ended", e=> {
+            main.querySelector(".btnPlayAudio").classList.remove("hidden");
+            main.querySelector(".btnPauseAudio").classList.add("hidden");
+        })
+    });
+
+    // Pause button
+    main.querySelector(".btnPauseAudio").addEventListener("click", e => {
+        main.querySelector(".btnPlayAudio").classList.remove("hidden");
+        main.querySelector(".btnPauseAudio").classList.add("hidden");
+        audio.pause()
+    });
+
+    //Progressbar
+    let seekBar = document.querySelector("#seekBar");
+
+    audio.addEventListener("timeupdate", e=> {
+        let currentTime = audio.currentTime;
+        let duration = audio.duration;
+        let progress = (currentTime/duration)*100;
+        seekBar.value = progress;
+    })
+
+    seekBar.addEventListener("input", e =>{
+        let seekTime = (audio.duration * seekBar.value)/100;
+        audio.currentTime = seekTime;
+    })
+
 }

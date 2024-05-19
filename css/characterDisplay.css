@@ -93,6 +93,10 @@ main.characterDisplay{
     flex-shrink: 0;
 }
 
+main.characterDisplay > p > span{
+    font-weight: bold;
+}
+
 .buttons {
     display: flex;
     gap: 1vh;
