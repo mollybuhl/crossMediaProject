@@ -536,7 +536,7 @@ function renderControlQuestion(charracter) {
         case "Prins John":
             typeOfQuestion = "number";
             question = "Ange ett nummer";
-            underQuestion = "Räkna flaggstängerna framför kasinot. På rouletten, börja på siffran 26 och gå lika många steg som flagstänger moturs."
+            underQuestion = "Räkna flaggstängerna framför kasinot. På rouletten, börja på siffran som korrelerar med antalet flaggstänger och gå 3 steg medurs."
             answer = 29;
             break;
     }
