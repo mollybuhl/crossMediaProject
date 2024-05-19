@@ -345,6 +345,9 @@ async function renderCharracterPage(charracter) {
                     return;
                 } else {
                     // Render character board
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
                     renderCharracterboard();
                 }
 
@@ -421,6 +424,9 @@ async function renderCharracterPage(charracter) {
                     return;
                 } else {
                     // Render character board
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
                     renderCharracterboard();
                 }
 

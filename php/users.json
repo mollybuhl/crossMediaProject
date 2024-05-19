@@ -3,7 +3,7 @@
         "id": 1,
         "username": "pumba",
         "password": "pumba",
-        "profilePic": "pascal",
+        "profilePic": "remi",
         "startTime": "2024-05-12T12:37:58.341Z",
         "finishingTime": "02:24:04",
         "unlockedCharacters": [
@@ -42,24 +42,10 @@
     },
     {
         "id": 4,
-        "username": "hej",
-        "password": "hej",
-        "profilePic": "edna",
-        "startTime": "2024-05-19T09:40:58.413Z",
-        "finishingTime": "Not finished",
-        "unlockedCharacters": [
-            "Musse"
-        ],
-        "suspectCharacters": [],
-        "notSuspectCharacters": [],
-        "correctGuess": false
-    },
-    {
-        "id": 5,
-        "username": "hejdddd",
-        "password": "hej",
-        "profilePic": "pascal",
-        "startTime": "2024-05-19T10:38:04.188Z",
+        "username": "harry",
+        "password": "harry",
+        "profilePic": "baymax",
+        "startTime": "2024-05-19T14:06:40.725Z",
         "finishingTime": "Not finished",
         "unlockedCharacters": [
             "Musse"
