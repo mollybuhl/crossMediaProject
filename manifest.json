@@ -7,7 +7,7 @@
         {
             "src": "media/gameIcon.jpg",
             "sizes": "212x212",
-            "type": "imge/png"
+            "type": "image/jpeg"
         }   
     ]
 }
