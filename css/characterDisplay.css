@@ -159,7 +159,7 @@ main.characterDisplay > p > span{
 }
 
 
-
+/* Common styles for all browsers */
 input[type="range"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -168,20 +168,38 @@ input[type="range"] {
     height: 10px;
     background: transparent;    
     outline: none;
+    position: relative; /*new*/
 }
 
-input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-moz-range-track {
+/* Track styles for Webkit (Chrome, Safari, Opera) */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    background-color: #D9D9D9; 
+    border-radius: 3px;
+    position: relative; /*new*/
+    z-index: 1; /*new*/
+}
+
+/* Track styles for Firefox */
+input[type="range"]::-moz-range-track{
     width: 100%;
     height: 3px;
     background-color: #D9D9D9; 
     border-radius: 3px;
 }
 
-input[type="range"]::-webkit-slider-thumb,input[type="range"]::-moz-range-thumb{
+/* Thumb styles for Webkit (Chrome, Safari, Opera) */
+input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+    height: 0;
+    width:0;
 }
 
+/* Thumb styles for Firefox */
 input[type="range"]::-moz-range-thumb{
     border: none; /*Removes extra border that FF applies*/
     border-radius: 0; /*Removes default border-radius that FF applies*/
@@ -190,9 +208,9 @@ input[type="range"]::-moz-range-thumb{
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #1C1B1F 0%, #1C1B1F var(--value, 50%), #D9D9D9 var(--value, 50%), #D9D9D9 100%);
-}
+    background-color: #D9D9D9;}
 
+/* Progress styles for Firefox */
 input[type="range"]::-moz-range-progress {
     background: linear-gradient(0.25turn, #F9CE69,  #CE6214); /* Color of the progress part */
     height: 3px; /* Match the height of the track */
@@ -202,10 +220,31 @@ input[type="range"]::-moz-range-track {
     background-color: #D9D9D9; /* Background color of the track */
 }
 
+/*
 input[type="range"]::-ms-fill-lower {
     background: linear-gradient(0.25turn, #F9CE69,  #CE6214); /* Color of the progress part for IE */
-}
+/*}
 
 input[type="range"]::-ms-fill-upper {
     background-color: #D9D9D9;
+}*/
+
+/* Additional styles for a more consistent look */
+input[type="range"]:focus {
+    outline: none;
+}
+
+
+
+/* Custom progress pseudo-element for Webkit */
+input[type="range"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(0.25turn, #F9CE69, #CE6214);
+    border-radius: 3px;
+    z-index: 0;
+    transition: width 0.1s ease-in-out;
 }

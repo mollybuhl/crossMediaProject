@@ -218,13 +218,13 @@ async function renderCharracterPage(charracter) {
 
 
     <div class="playBtnBackground">
-        <input type="range" id="seekBar" value="0">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
+        <input type="range" id="seekBar" min="0" max="100" value="0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 71 71" fill="none" class="btnPlayAudio">
             <circle cx="35.1191" cy="35.1191" r="35.1191" fill="#D9D9D9"/>
             <path d="M44.2295 32.7816C45.5628 33.5514 45.5628 35.4759 44.2295 36.2457L31.1562 43.7936C29.8228 44.5634 28.1562 43.6011 28.1562 42.0615L28.1562 26.9658C28.1562 25.4262 29.8228 24.4639 31.1562 25.2337L44.2295 32.7816Z" fill="#001937"/>
         </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 71 71" fill="none" class="btnPauseAudio hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 71 71" fill="none" class="btnPauseAudio hidden">
             <circle cx="35.1191" cy="35.1191" r="34.1191" fill="#000E1E" stroke="#D9D9D9" stroke-width="2"/>
             <mask id="mask0_385_154" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="21" width="29" height="29">
                 <rect x="21" y="21" width="29" height="29" fill="#D9D9D9"/>
